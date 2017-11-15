@@ -31,7 +31,7 @@
 |---|---|---|---|---|---|---|
 | ID | ID | idUser | ID | ID | ID | idUser |
 | Name | Name | idList | Name | idList | Name | idProject |
-| Username | idCategory | Color | | Name | Description |   |
+| Username | idCategory |  | Color | Name | Description |   |
 | Email | isArchived |   |   | Date | Color |   |
 | Password | idProject |   |   | Level | isArchived |   |
 | Photo |   |   |   |   |   |   |
