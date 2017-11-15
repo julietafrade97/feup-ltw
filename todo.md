@@ -24,3 +24,15 @@
 - [ ] Permitir a criação de projetos. Cada projeto tem um conjunto de users e listas.
 - [ ] Mecanismo de pesquisa avançado.
 - [ ] Outros...
+
+### Base de Dados
+
+| User | List | UserList | Category | Task | Project | ProjectUser |
+|---|---|---|---|---|---|---|
+| ID | ID | idUser | ID | ID | ID | idUser |
+| Name | Name | idList | Name | idList | Name | idProject |
+| Username | idCategory |  | Color | Name | Description |   |
+| Email | isArchived |   |   | Date | Color |   |
+| Password | idProject |   |   | Level | isArchived |   |
+| Photo |   |   |   |   |   |   |
+
