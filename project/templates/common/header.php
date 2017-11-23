@@ -13,7 +13,7 @@
 
 <body>
 
-    <div id="container">
+    <div id="main_container">
 
     <header>
         <div id="info">
