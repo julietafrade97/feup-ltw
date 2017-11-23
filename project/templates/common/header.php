@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Title</title>
+    <title>Elysian</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
@@ -12,6 +12,8 @@
 </head>
 
 <body>
+
+    <div id="container">
 
     <header>
         <div id="info">
