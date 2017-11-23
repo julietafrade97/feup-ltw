@@ -9,10 +9,43 @@
             <p>Projects</p>
         </div>
         <div class="menu_option">
-                <span class="lnr lnr-file-empty"></span>
+            <span class="lnr lnr-file-empty"></span>
             <p>Lists</p>
         </div>
 
         <hr>
+
+        <div class="tabs">
+
+            <input id="tab1" type="radio" name="tabs" checked>
+            <label for="tab1">Labels</label>
+
+            <input id="tab2" type="radio" name="tabs">
+            <label for="tab2">Filters</label>
+
+            <section id="content1">
+                <div class="menu_option">
+                    <div class="circle"></div>
+                    <p>Label</p>
+                </div>
+                <div class="menu_option">
+                    <div class="circle"></div>
+                    <p>Label</p>
+                </div>
+                <div class="menu_option">
+                    <div class="circle"></div>
+                    <p>Label</p>
+                </div>
+                <div class="menu_option">
+                    <div class="circle"></div>
+                    <p>Label</p>
+                </div>
+            </section>
+
+            <section id="content2">
+                <p>Filters content.</p>
+            </section>
+
+        </div>
     </div>
 </nav>

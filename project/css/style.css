@@ -78,7 +78,6 @@ nav {
 #menu_container {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: flex-start;
   margin: 2em 1em 2em 1em;
 }
@@ -101,10 +100,65 @@ nav {
   font-size: 1.5em;
 }
 
+.menu_option .circle {
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  background: #865766;
+}
+
 #menu_container hr {
   width: 100%;
-  border-top: 1px solid #948F8C;
+  border-top: 1px solid #948f8c;
   margin: 1em 0;
+}
+
+.tabs {
+  margin: 1em 0;
+  width: 100%;
+  text-align: center;
+}
+
+.tabs section {
+  display: none;
+}
+
+.tabs input {
+  display: none;
+}
+
+.tabs label {
+  display: inline-block;
+  margin: 0 -0.4em 1em 0;
+  padding: 0.3em 1em;
+  background-color: white;
+  color: #948f8c;
+  font-weight: 500;
+  font-size: 0.9em;
+  border: 1px solid #948f8c;
+}
+
+.tabs label:hover {
+  cursor: pointer;
+}
+
+.tabs input:checked + label {
+  color: #3d3d3b;
+  background-color: #f6f5f3;
+  border-bottom: 1px solid transparent;
+}
+
+.tabs #tab1:checked ~ #content1,
+.tabs #tab2:checked ~ #content2 {
+  display: block;
+}
+
+.tabs p {
+  font-weight: 300;
+  font-size: 0.9em;
+  text-align: left;
 }
 
 /*
