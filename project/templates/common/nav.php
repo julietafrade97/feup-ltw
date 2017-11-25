@@ -1,10 +1,6 @@
 <nav>
     <div id="menu_container">
         <div class="menu_option">
-            <span class="lnr lnr-calendar-full"></span>
-            <p>Calendar</p>
-        </div>
-        <div class="menu_option">
             <span class="lnr lnr-book"></span>
             <p>Projects</p>
         </div>
@@ -24,26 +20,53 @@
             <label for="tab2">Filters</label>
 
             <section id="content1">
-                <div class="menu_option">
+                <div class="label_option">
                     <div class="circle"></div>
                     <p>Label</p>
                 </div>
-                <div class="menu_option">
+                <div class="label_option">
                     <div class="circle"></div>
                     <p>Label</p>
                 </div>
-                <div class="menu_option">
+                <div class="label_option">
                     <div class="circle"></div>
                     <p>Label</p>
                 </div>
-                <div class="menu_option">
+                <div class="label_option">
                     <div class="circle"></div>
                     <p>Label</p>
+                </div>
+                <div class="label_option">
+                    <span class="lnr lnr-plus-circle"></span>
+                    <p>Add Label</p>
                 </div>
             </section>
 
             <section id="content2">
-                <p>Filters content.</p>
+                <div class="label_option">
+                    <div class="circle"></div>
+                    <p>Filter</p>
+                </div>
+                <div class="label_option">
+                    <div class="circle"></div>
+                    <p>Filter</p>
+                </div>
+                <div class="label_option">
+                    <div class="circle"></div>
+                    <p>Filter</p>
+                </div>
+                <div class="label_option">
+                    <div class="circle"></div>
+                    <p>Filter</p>
+                </div>
+                <div class="label_option">
+                    <div class="circle"></div>
+                    <p>Filter</p>
+                </div>
+                <div class="label_option">
+                    <span class="lnr lnr-plus-circle"></span>
+                    <p>Add Filter</p>
+                </div>
             </section>
 
         </div>

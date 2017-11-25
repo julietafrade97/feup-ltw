@@ -12,18 +12,8 @@
 </head>
 
 <body>
-
-    <div id="main_container">
-
-    <header>
-        <div id="info">
-            <a href="index.php">
-                <img src="assets/logo.svg">
-            </a>
-            <h1>
-                <a href="index.php">lacuna</a>
-            </h1>
-            <span class="lnr lnr-magnifier"></span>
-            <span class="lnr lnr-cog"></span>
-        </div>
-    </header>
+    <div id="login">
+            <img src="assets/logo.svg">
+            <h1>Lacuna</h1>
+            <div id="login_box"></div>
+    </div>

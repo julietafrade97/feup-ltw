@@ -3,6 +3,7 @@
 */
 body {
   margin: 0 auto;
+  background-color: #222a3f;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -15,6 +16,36 @@ body {
     "nav content"
     "footer footer";
   height: 100vh;
+}
+
+/*
+* LOGIN
+*/
+
+#login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+#login img {
+  margin: 10vh 0 -10vh 0;
+  width: 25vh;
+}
+
+#login h1 {
+  font-size: 5em;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: white;
+}
+
+#login_box {
+  background-color: #f6f5f3;
+  height: 30vh;
+  width: 60vh;
 }
 
 /*
@@ -100,7 +131,26 @@ nav {
   font-size: 1.5em;
 }
 
-.menu_option .circle {
+.label_option {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 2em;
+  color: #3d3d3b;
+  margin: -1em 0;
+}
+
+.label_option p {
+  font-size: 1.2em;
+  font-weight: 400;
+  padding-left: 1em;
+}
+
+.label_option span {
+  font-size: 1em;
+}
+
+.label_option .circle {
   width: 1em;
   height: 1em;
   border-radius: 50%;
@@ -112,7 +162,7 @@ nav {
 #menu_container hr {
   width: 100%;
   border-top: 1px solid #948f8c;
-  margin: 1em 0;
+  margin: 2em 0;
 }
 
 .tabs {
@@ -123,6 +173,7 @@ nav {
 
 .tabs section {
   display: none;
+  margin: 1em 0;
 }
 
 .tabs input {
@@ -167,6 +218,7 @@ nav {
 
 main {
   grid-area: content;
+  background-color: #948f8c;
 }
 
 /*
