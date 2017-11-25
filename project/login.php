@@ -17,5 +17,6 @@
             <img src="assets/logo.svg">
             <h1>Lacuna</h1>
             <div id="login_box"></div>
-            <a href="sign_up.php" class="button">Sign Up</a>
+                <a href="sign_up.php" class="button">Sign Up</a>
+                <a href="test.php" class="button">Test Data Base</a>
     </div>
