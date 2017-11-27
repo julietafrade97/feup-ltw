@@ -1,4 +1,14 @@
 <div id="test">
+	<script type="text/javascript" src="js/api_register.js"></script>
+	<div id="loginBox">
+		<form onsubmit="" action="" method="post">
+			<input type="text" placeholder="write your username" id="username"><br>
+			<input type="password" placeholder="write your password" id="password"><br>
+			<input type="submit" id="SubmitLogin" value="Login">
+		</form>
+		<p></p>
+	</div>
+	
 	<p>*Show user lists:*</p>
 	<a href="templates/lists/list.php" class="button">List1</a>
 	<p></p>
