@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Lacuna</title>
+    <title>Meraki</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
@@ -21,7 +21,7 @@
                 <img src="assets/logo.svg">
             </a>
             <h1>
-                <a href="index.php">lacuna</a>
+                <a href="index.php">Meraki</a>
             </h1>
             <span class="lnr lnr-magnifier"></span>
             <span class="lnr lnr-cog"></span>
