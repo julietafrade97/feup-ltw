@@ -35,10 +35,14 @@ body {
 #login_header {
   grid-area: header;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0 -1em 0;
 }
 
 #login_header img {
-  margin: 10vh 0 -10vh 0;
+  margin: -5vh 0 -10vh 0;
   width: 25vh;
 }
 
@@ -50,12 +54,62 @@ body {
   color: white;
 }
 
+.signup_button {
+  background-color: #f6f5f3;
+  color: #222a3f;
+  padding: 0.5em 1.5em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: 600;
+  border-radius: 0.2em;
+  margin: 2em;
+  align-self: flex-end;
+}
+
 #login_content {
   grid-area: content;
   justify-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   background-color: #f6f5f3;
-  height: 30vh;
-  width: 60vh;
+  padding: 3em;
+  height: 25vh;
+  width: 50vh;
+}
+
+#login_content h1 {
+  font-size: 1em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #222a3f;
+}
+
+input {
+  width: 95%;
+  height: 10%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  padding: 0.5em;
+  font-size: 0.8em;
+  color: #666666;
+  margin: 0.5em 0;
+}
+
+.default_button {
+  background-color: #222a3f;
+  color: white;
+  padding: 0.5em 1.5em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.7em;
+  font-weight: 600;
+  border-radius: 1em;
+  align-self: flex-end;
+  margin: 1em 0;
 }
 
 /*
