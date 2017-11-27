@@ -2,16 +2,14 @@
 include_once('includes/init.php');
 include_once('database/user.php');
 
- if (registerNewUser($_POST['username'], $_POST['password'], $_POST['name'], $_POST['email'], $_POST['profilePhoto'])) {
+ if (($userID = registerNewUser($_POST['username'], $_POST['password'], $_POST['name'], $_POST['email'], $_POST['profilePhoto'])) != -1) {
+
   		echo 'User Registered successfully';
- 		//setCurrentUser($_POST['username'], $_POST['profilePhoto']);
- 		
-  }
-  else{
+ 		setCurrentUser($userID, $_POST['username']);	
+ }
+ else{
 
   		echo 'ERROR';
-  }
-
-  //header('Location: ' . $_SERVER['HTTP_REFERER']);
+ }
 
  ?>
