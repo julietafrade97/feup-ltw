@@ -15,15 +15,15 @@
 
     <div id="main_container">
 
-    <header>
-        <div id="info">
-            <a href="index.php">
-                <img src="assets/logo.svg">
-            </a>
-            <h1>
-                <a href="index.php">Meraki</a>
-            </h1>
-            <span class="lnr lnr-magnifier"></span>
-            <span class="lnr lnr-cog"></span>
-        </div>
-    </header>
+        <header>
+            <div id="info">
+                <a href="index.php">
+                    <img src="assets/logo.svg">
+                </a>
+                <h1>
+                    <a href="index.php">Meraki</a>
+                </h1>
+                <span class="lnr lnr-magnifier"></span>
+                <span class="lnr lnr-cog"></span>
+            </div>
+        </header>

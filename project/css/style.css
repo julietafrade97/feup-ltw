@@ -143,7 +143,7 @@ header {
 }
 
 #info img {
-  width: 50px;
+  width: 2em;
   padding: 0 0.5em;
 }
 
@@ -151,7 +151,7 @@ header {
   font-size: 1.5em;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 0.1em;
   flex-grow: 1;
   padding: 0 0.5em;
 }
@@ -178,22 +178,36 @@ nav {
   margin: 2em 1em 2em 1em;
 }
 
+#menu_container hr {
+  width: 100%;
+  border-top: 1px solid #948f8c;
+  margin: 2em 0;
+}
+
 .menu_option {
-  display: flex;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-auto-rows: auto;
+  grid-template-areas: "icon text";
   align-items: center;
-  padding-left: 2em;
   color: #3d3d3b;
+  width: 100%;
+}
+
+.menu_option:hover {
+  background-color: white;
 }
 
 .menu_option p {
+  grid-area: text;
   font-size: 1.2em;
   font-weight: 400;
-  padding-left: 1em;
 }
 
 .menu_option span {
+  grid-area: icon;
   font-size: 1.5em;
+  margin: 0 0.8em 0 1.4em;
 }
 
 .label_option {
@@ -224,12 +238,6 @@ nav {
   background: #865766;
 }
 
-#menu_container hr {
-  width: 100%;
-  border-top: 1px solid #948f8c;
-  margin: 2em 0;
-}
-
 .tabs {
   margin: 1em 0;
   width: 100%;
@@ -247,12 +255,12 @@ nav {
 
 .tabs label {
   display: inline-block;
+  font-weight: 500;
+  font-size: 0.9em;
   margin: 0 -0.4em 1em 0;
   padding: 0.3em 1em;
   background-color: white;
   color: #948f8c;
-  font-weight: 500;
-  font-size: 0.9em;
   border: 1px solid #948f8c;
 }
 
@@ -284,6 +292,7 @@ nav {
 main {
   grid-area: content;
   background-color: #948f8c;
+  overflow: auto;
 }
 
 #grid_container {
