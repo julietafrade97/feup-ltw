@@ -421,19 +421,13 @@ main {
   font-weight: 600;
 }
 
-/*Codigo copiado de https://codepen.io/valerypatorius/pen/oXGMGL
-TODO: - mudar pxs para ems
-      - misturar com https://codepen.io/derekmorash/pen/Eydxab */
-
-input[type="checkbox"] {
-  display: none;
-}
+input[type="checkbox"] { display: none; }
 
 input[type="checkbox"] + label {
   display: block;
   position: relative;
-  padding-left: 35px;
-  padding-bottom: 1em;
+  padding-left: 1.8em;
+  padding-bottom: 0.7em;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -447,21 +441,21 @@ input[type="checkbox"] + label:last-child {
 input[type="checkbox"] + label:before {
   content: "";
   display: block;
-  width: 15px;
-  height: 15px;
-  border: 1px solid black;
+  width: 1em;
+  height: 1em;
+  border: 0.08em solid black;
   position: absolute;
   left: 0;
   top: 0;
-  opacity: 0.6;
-  -webkit-transition: all 0.12s, border-color 0.08s;
-  transition: all 0.12s, border-color 0.08s;
+  opacity: 0.5;
+  -webkit-transition: all .12s,  border-color .08s;
+  transition: all .12s, border-color .08s;
 }
 
 input[type="checkbox"]:checked + label:before {
-  width: 10px;
-  top: -5px;
-  left: 5px;
+  width: 0.5em;
+  top: -0.2em;
+  left: 0.2em;
   border-radius: 0;
   opacity: 1;
   border-top-color: transparent;
@@ -470,18 +464,26 @@ input[type="checkbox"]:checked + label:before {
   transform: rotate(45deg);
 }
 
-#list_box #task_list ul {
-  list-style-type: none;
-  padding: 0em;
+input[type="checkbox"]:checked + label{
+  text-decoration: line-through;
+  animation: strikeMove 0.2s;
+
 }
 
-#list_box #task_list li {
-  font-weight: 200;
-  padding: 0.2em 0em;
+@keyframes strikeMove {
+  from { text-decoration-color: transparent; }
+  to { text-decoration-color: auto; }
 }
-#list_box #task_list p {
-  font-weight: 200;
-  padding: 0.2em 0em;
+
+#list_box #task_list #test label {
+  font-weight: 400;
+  vertical-align: text-top;
+}
+
+#list_box #task_list p{
+  font-weight: 400;
+  text-align: justify;
+  padding-left: 2em;
   margin: 0em;
 }
 
