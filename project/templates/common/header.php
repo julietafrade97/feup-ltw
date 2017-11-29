@@ -23,6 +23,9 @@
                 <h1>
                     <a href="index.php">Meraki</a>
                 </h1>
+                <div class="plus">
+                    <span class="lnr lnr-cross"></span>
+                </div>
                 <span class="lnr lnr-magnifier"></span>
                 <span class="lnr lnr-cog"></span>
             </div>

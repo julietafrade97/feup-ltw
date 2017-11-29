@@ -162,6 +162,12 @@ header {
   padding: 0 0.5em;
 }
 
+#info .plus {
+  -ms-transform: rotate(45deg); /* IE 9 */
+  -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+  transform: rotate(45deg);
+}
+
 /*
 * NAVIGATION
 */
@@ -330,7 +336,8 @@ main {
   overflow: hidden;
   text-overflow: ellipsis;
   -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical; /* Mozilla */
+  -webkit-box-orient: vertical; /* WebKit */
 }
 
 #project_box span {
@@ -354,11 +361,9 @@ main {
 }
 
 #member_list .member {
-  background: url("../assets/portrait.png");
   width: 2em;
   height: 2em;
-  background-size: cover;
-  background-position: center;
+  object-fit: cover;
   border-radius: 50%;
   border: 0.5px solid #979797;
   margin: 0.5em 0.5em 0.5em 0;
@@ -368,7 +373,7 @@ main {
 * PROJECTS
 */
 #list_box {
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
@@ -376,7 +381,7 @@ main {
   padding: 0 1em 1em 1em;
 }
 
-#list_box h1{
+#list_box h1 {
   color: black;
   font-size: 1.5em;
   font-weight: 600;
@@ -395,10 +400,12 @@ input[type="checkbox"] + label {
   -ms-user-select: none;
 }
 
-input[type="checkbox"] + label:last-child { margin-bottom: 0; }
+input[type="checkbox"] + label:last-child {
+  margin-bottom: 0;
+}
 
 input[type="checkbox"] + label:before {
-  content: '';
+  content: "";
   display: block;
   width: 1em;
   height: 1em;
