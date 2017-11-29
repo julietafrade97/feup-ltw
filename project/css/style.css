@@ -162,6 +162,12 @@ header {
   padding: 0 0.5em;
 }
 
+#info .plus {
+  -ms-transform: rotate(45deg); /* IE 9 */
+  -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+  transform: rotate(45deg);
+}
+
 /*
 * NAVIGATION
 */
@@ -330,7 +336,8 @@ main {
   overflow: hidden;
   text-overflow: ellipsis;
   -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical; /* Mozilla */
+  -webkit-box-orient: vertical; /* WebKit */
 }
 
 #project_box span {
@@ -354,11 +361,9 @@ main {
 }
 
 #member_list .member {
-  background: url("../assets/portrait.png");
   width: 2em;
   height: 2em;
-  background-size: cover;
-  background-position: center;
+  object-fit: cover;
   border-radius: 50%;
   border: 0.5px solid #979797;
   margin: 0.5em 0.5em 0.5em 0;
@@ -368,7 +373,7 @@ main {
 * PROJECTS
 */
 #list_box {
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
@@ -376,7 +381,7 @@ main {
   padding: 0 1em 1em 1em;
 }
 
-#list_box h1{
+#list_box h1 {
   color: black;
   font-size: 1.5em;
   font-weight: 600;
@@ -386,7 +391,9 @@ main {
 TODO: - mudar pxs para ems
       - misturar com https://codepen.io/derekmorash/pen/Eydxab */
 
-input[type="checkbox"] { display: none; }
+input[type="checkbox"] {
+  display: none;
+}
 
 input[type="checkbox"] + label {
   display: block;
@@ -399,10 +406,12 @@ input[type="checkbox"] + label {
   -ms-user-select: none;
 }
 
-input[type="checkbox"] + label:last-child { margin-bottom: 0; }
+input[type="checkbox"] + label:last-child {
+  margin-bottom: 0;
+}
 
 input[type="checkbox"] + label:before {
-  content: '';
+  content: "";
   display: block;
   width: 15px;
   height: 15px;
@@ -410,9 +419,9 @@ input[type="checkbox"] + label:before {
   position: absolute;
   left: 0;
   top: 0;
-  opacity: .6;
-  -webkit-transition: all .12s, border-color .08s;
-  transition: all .12s, border-color .08s;
+  opacity: 0.6;
+  -webkit-transition: all 0.12s, border-color 0.08s;
+  transition: all 0.12s, border-color 0.08s;
 }
 
 input[type="checkbox"]:checked + label:before {
@@ -427,18 +436,18 @@ input[type="checkbox"]:checked + label:before {
   transform: rotate(45deg);
 }
 
-#list_box #task_list ul{
+#list_box #task_list ul {
   list-style-type: none;
-  padding:0em;
+  padding: 0em;
 }
 
-#list_box #task_list li{
+#list_box #task_list li {
   font-weight: 200;
-  padding:0.2em 0em;
+  padding: 0.2em 0em;
 }
-#list_box #task_list p{
+#list_box #task_list p {
   font-weight: 200;
-  padding:0.2em 0em;
+  padding: 0.2em 0em;
   margin: 0em;
 }
 

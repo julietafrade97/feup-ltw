@@ -2,10 +2,10 @@
     <h1>Project</h1>
     <p>Lorem ipsum dolor sit amet, consecter adipiscing elit.</p>
     <div id="member_list">
-        <div class="member"></div>
-        <div class="member"></div>
-        <div class="member"></div>
-        <div class="member"></div>
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
         <p>...</p>
     </div>
     <span class="lnr lnr-chevron-right-circle"></span>
@@ -16,9 +16,9 @@
     <p>Lorem ipsum dolor sit amet, consecter adipiscing elit. Lorem ipsum dolor sit amet, consecter adipiscing elit. Lorem ipsum
         dolor sit amet, consecter adipiscing elit. Lorem ipsum dolor sit amet, consecter adipiscing elit.</p>
     <div id="member_list">
-        <div class="member"></div>
-        <div class="member"></div>
-        <div class="member"></div>
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
     </div>
     <span class="lnr lnr-chevron-right-circle"></span>
 </div>
@@ -27,10 +27,10 @@
     <h1>Project</h1>
     <p>Lorem ipsum dolor sit amet, consecter adipiscing elit.</p>
     <div id="member_list">
-        <div class="member"></div>
-        <div class="member"></div>
-        <div class="member"></div>
-        <div class="member"></div>
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
         <p>...</p>
     </div>
     <span class="lnr lnr-chevron-right-circle"></span>
@@ -40,10 +40,10 @@
     <h1>Project</h1>
     <p>Lorem ipsum dolor sit amet, consecter adipiscing elit.</p>
     <div id="member_list">
-        <div class="member"></div>
-        <div class="member"></div>
-        <div class="member"></div>
-        <div class="member"></div>
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
         <p>...</p>
     </div>
     <span class="lnr lnr-chevron-right-circle"></span>
@@ -53,10 +53,10 @@
     <h1>Project</h1>
     <p>Lorem ipsum dolor sit amet, consecter adipiscing elit.</p>
     <div id="member_list">
-        <div class="member"></div>
-        <div class="member"></div>
-        <div class="member"></div>
-        <div class="member"></div>
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
         <p>...</p>
     </div>
     <span class="lnr lnr-chevron-right-circle"></span>
@@ -66,10 +66,10 @@
     <h1>Project</h1>
     <p>Lorem ipsum dolor sit amet, consecter adipiscing elit.</p>
     <div id="member_list">
-        <div class="member"></div>
-        <div class="member"></div>
-        <div class="member"></div>
-        <div class="member"></div>
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
         <p>...</p>
     </div>
     <span class="lnr lnr-chevron-right-circle"></span>
@@ -79,10 +79,10 @@
     <h1>Project</h1>
     <p>Lorem ipsum dolor sit amet, consecter adipiscing elit.</p>
     <div id="member_list">
-        <div class="member"></div>
-        <div class="member"></div>
-        <div class="member"></div>
-        <div class="member"></div>
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
         <p>...</p>
     </div>
     <span class="lnr lnr-chevron-right-circle"></span>
@@ -92,10 +92,10 @@
     <h1>Project</h1>
     <p>Lorem ipsum dolor sit amet, consecter adipiscing elit.</p>
     <div id="member_list">
-        <div class="member"></div>
-        <div class="member"></div>
-        <div class="member"></div>
-        <div class="member"></div>
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
         <p>...</p>
     </div>
     <span class="lnr lnr-chevron-right-circle"></span>
@@ -105,10 +105,10 @@
     <h1>Project</h1>
     <p>Lorem ipsum dolor sit amet, consecter adipiscing elit.</p>
     <div id="member_list">
-        <div class="member"></div>
-        <div class="member"></div>
-        <div class="member"></div>
-        <div class="member"></div>
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
         <p>...</p>
     </div>
     <span class="lnr lnr-chevron-right-circle"></span>
@@ -118,10 +118,10 @@
     <h1>Project</h1>
     <p>Lorem ipsum dolor sit amet, consecter adipiscing elit.</p>
     <div id="member_list">
-        <div class="member"></div>
-        <div class="member"></div>
-        <div class="member"></div>
-        <div class="member"></div>
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
         <p>...</p>
     </div>
     <span class="lnr lnr-chevron-right-circle"></span>
@@ -131,10 +131,10 @@
     <h1>Project</h1>
     <p>Lorem ipsum dolor sit amet, consecter adipiscing elit.</p>
     <div id="member_list">
-        <div class="member"></div>
-        <div class="member"></div>
-        <div class="member"></div>
-        <div class="member"></div>
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
         <p>...</p>
     </div>
     <span class="lnr lnr-chevron-right-circle"></span>
@@ -144,10 +144,10 @@
     <h1>Project</h1>
     <p>Lorem ipsum dolor sit amet, consecter adipiscing elit.</p>
     <div id="member_list">
-        <div class="member"></div>
-        <div class="member"></div>
-        <div class="member"></div>
-        <div class="member"></div>
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
         <p>...</p>
     </div>
     <span class="lnr lnr-chevron-right-circle"></span>
@@ -157,10 +157,10 @@
     <h1>Project</h1>
     <p>Lorem ipsum dolor sit amet, consecter adipiscing elit.</p>
     <div id="member_list">
-        <div class="member"></div>
-        <div class="member"></div>
-        <div class="member"></div>
-        <div class="member"></div>
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
         <p>...</p>
     </div>
     <span class="lnr lnr-chevron-right-circle"></span>
@@ -170,10 +170,10 @@
     <h1>Project</h1>
     <p>Lorem ipsum dolor sit amet, consecter adipiscing elit.</p>
     <div id="member_list">
-        <div class="member"></div>
-        <div class="member"></div>
-        <div class="member"></div>
-        <div class="member"></div>
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
         <p>...</p>
     </div>
     <span class="lnr lnr-chevron-right-circle"></span>
@@ -183,10 +183,10 @@
     <h1>Project</h1>
     <p>Lorem ipsum dolor sit amet, consecter adipiscing elit.</p>
     <div id="member_list">
-        <div class="member"></div>
-        <div class="member"></div>
-        <div class="member"></div>
-        <div class="member"></div>
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
         <p>...</p>
     </div>
     <span class="lnr lnr-chevron-right-circle"></span>
@@ -196,10 +196,10 @@
     <h1>Project</h1>
     <p>Lorem ipsum dolor sit amet, consecter adipiscing elit.</p>
     <div id="member_list">
-        <div class="member"></div>
-        <div class="member"></div>
-        <div class="member"></div>
-        <div class="member"></div>
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
         <p>...</p>
     </div>
     <span class="lnr lnr-chevron-right-circle"></span>
@@ -209,10 +209,10 @@
     <h1>Project</h1>
     <p>Lorem ipsum dolor sit amet, consecter adipiscing elit.</p>
     <div id="member_list">
-        <div class="member"></div>
-        <div class="member"></div>
-        <div class="member"></div>
-        <div class="member"></div>
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
         <p>...</p>
     </div>
     <span class="lnr lnr-chevron-right-circle"></span>
@@ -222,10 +222,10 @@
     <h1>Project</h1>
     <p>Lorem ipsum dolor sit amet, consecter adipiscing elit.</p>
     <div id="member_list">
-        <div class="member"></div>
-        <div class="member"></div>
-        <div class="member"></div>
-        <div class="member"></div>
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
         <p>...</p>
     </div>
     <span class="lnr lnr-chevron-right-circle"></span>
@@ -235,10 +235,10 @@
     <h1>Project</h1>
     <p>Lorem ipsum dolor sit amet, consecter adipiscing elit.</p>
     <div id="member_list">
-        <div class="member"></div>
-        <div class="member"></div>
-        <div class="member"></div>
-        <div class="member"></div>
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
+        <img class="member" src="assets/portrait.png">
         <p>...</p>
     </div>
     <span class="lnr lnr-chevron-right-circle"></span>
