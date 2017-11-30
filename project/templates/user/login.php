@@ -5,6 +5,7 @@
     <title>Meraki</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="assets/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/linearicons/Web Font/style.css">
@@ -24,7 +25,7 @@
             <form action="action_login.php" method="post">
                 <input name="username" class="w3-input w3-border" type="text" placeholder="Username" required="required">
                 <input name="password" class="w3-input w3-border" type="password" placeholder="Password" required="required">
-                <input type="submit" name="Submit" class="default_button" value="Next">
+                <input type="submit" name="Submit" value="Next">
             </form>
             <a href="test.php" class="button">Test Data Base</a>
         </div>
