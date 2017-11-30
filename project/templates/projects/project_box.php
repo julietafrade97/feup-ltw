@@ -1,7 +1,7 @@
 <div id="project_box">
     <h1>Project</h1>
     <p>Lorem ipsum dolor sit amet, consecter adipiscing elit.</p>
-    <div id="member_list">
+    <div id="tiny_members">
         <img class="member" src="assets/portrait.png">
         <img class="member" src="assets/portrait.png">
         <img class="member" src="assets/portrait.png">
@@ -15,7 +15,7 @@
     <h1>Project</h1>
     <p>Lorem ipsum dolor sit amet, consecter adipiscing elit. Lorem ipsum dolor sit amet, consecter adipiscing elit. Lorem ipsum
         dolor sit amet, consecter adipiscing elit. Lorem ipsum dolor sit amet, consecter adipiscing elit.</p>
-    <div id="member_list">
+    <div id="tiny_members">
         <img class="member" src="assets/portrait.png">
         <img class="member" src="assets/portrait.png">
         <img class="member" src="assets/portrait.png">
@@ -26,7 +26,7 @@
 <div id="project_box">
     <h1>Project</h1>
     <p>Lorem ipsum dolor sit amet, consecter adipiscing elit.</p>
-    <div id="member_list">
+    <div id="tiny_members">
         <img class="member" src="assets/portrait.png">
         <img class="member" src="assets/portrait.png">
         <img class="member" src="assets/portrait.png">
@@ -39,7 +39,7 @@
 <div id="project_box">
     <h1>Project</h1>
     <p>Lorem ipsum dolor sit amet, consecter adipiscing elit.</p>
-    <div id="member_list">
+    <div id="tiny_members">
         <img class="member" src="assets/portrait.png">
         <img class="member" src="assets/portrait.png">
         <img class="member" src="assets/portrait.png">
@@ -52,7 +52,7 @@
 <div id="project_box">
     <h1>Project</h1>
     <p>Lorem ipsum dolor sit amet, consecter adipiscing elit.</p>
-    <div id="member_list">
+    <div id="tiny_members">
         <img class="member" src="assets/portrait.png">
         <img class="member" src="assets/portrait.png">
         <img class="member" src="assets/portrait.png">
@@ -65,7 +65,7 @@
 <div id="project_box">
     <h1>Project</h1>
     <p>Lorem ipsum dolor sit amet, consecter adipiscing elit.</p>
-    <div id="member_list">
+    <div id="tiny_members">
         <img class="member" src="assets/portrait.png">
         <img class="member" src="assets/portrait.png">
         <img class="member" src="assets/portrait.png">
@@ -78,7 +78,7 @@
 <div id="project_box">
     <h1>Project</h1>
     <p>Lorem ipsum dolor sit amet, consecter adipiscing elit.</p>
-    <div id="member_list">
+    <div id="tiny_members">
         <img class="member" src="assets/portrait.png">
         <img class="member" src="assets/portrait.png">
         <img class="member" src="assets/portrait.png">
@@ -91,7 +91,7 @@
 <div id="project_box">
     <h1>Project</h1>
     <p>Lorem ipsum dolor sit amet, consecter adipiscing elit.</p>
-    <div id="member_list">
+    <div id="tiny_members">
         <img class="member" src="assets/portrait.png">
         <img class="member" src="assets/portrait.png">
         <img class="member" src="assets/portrait.png">
@@ -104,7 +104,7 @@
 <div id="project_box">
     <h1>Project</h1>
     <p>Lorem ipsum dolor sit amet, consecter adipiscing elit.</p>
-    <div id="member_list">
+    <div id="tiny_members">
         <img class="member" src="assets/portrait.png">
         <img class="member" src="assets/portrait.png">
         <img class="member" src="assets/portrait.png">
@@ -117,7 +117,7 @@
 <div id="project_box">
     <h1>Project</h1>
     <p>Lorem ipsum dolor sit amet, consecter adipiscing elit.</p>
-    <div id="member_list">
+    <div id="tiny_members">
         <img class="member" src="assets/portrait.png">
         <img class="member" src="assets/portrait.png">
         <img class="member" src="assets/portrait.png">
@@ -130,7 +130,7 @@
 <div id="project_box">
     <h1>Project</h1>
     <p>Lorem ipsum dolor sit amet, consecter adipiscing elit.</p>
-    <div id="member_list">
+    <div id="tiny_members">
         <img class="member" src="assets/portrait.png">
         <img class="member" src="assets/portrait.png">
         <img class="member" src="assets/portrait.png">
@@ -143,7 +143,7 @@
 <div id="project_box">
     <h1>Project</h1>
     <p>Lorem ipsum dolor sit amet, consecter adipiscing elit.</p>
-    <div id="member_list">
+    <div id="tiny_members">
         <img class="member" src="assets/portrait.png">
         <img class="member" src="assets/portrait.png">
         <img class="member" src="assets/portrait.png">
@@ -156,7 +156,7 @@
 <div id="project_box">
     <h1>Project</h1>
     <p>Lorem ipsum dolor sit amet, consecter adipiscing elit.</p>
-    <div id="member_list">
+    <div id="tiny_members">
         <img class="member" src="assets/portrait.png">
         <img class="member" src="assets/portrait.png">
         <img class="member" src="assets/portrait.png">
@@ -169,7 +169,7 @@
 <div id="project_box">
     <h1>Project</h1>
     <p>Lorem ipsum dolor sit amet, consecter adipiscing elit.</p>
-    <div id="member_list">
+    <div id="tiny_members">
         <img class="member" src="assets/portrait.png">
         <img class="member" src="assets/portrait.png">
         <img class="member" src="assets/portrait.png">
@@ -182,7 +182,7 @@
 <div id="project_box">
     <h1>Project</h1>
     <p>Lorem ipsum dolor sit amet, consecter adipiscing elit.</p>
-    <div id="member_list">
+    <div id="tiny_members">
         <img class="member" src="assets/portrait.png">
         <img class="member" src="assets/portrait.png">
         <img class="member" src="assets/portrait.png">
@@ -195,7 +195,7 @@
 <div id="project_box">
     <h1>Project</h1>
     <p>Lorem ipsum dolor sit amet, consecter adipiscing elit.</p>
-    <div id="member_list">
+    <div id="tiny_members">
         <img class="member" src="assets/portrait.png">
         <img class="member" src="assets/portrait.png">
         <img class="member" src="assets/portrait.png">
@@ -208,7 +208,7 @@
 <div id="project_box">
     <h1>Project</h1>
     <p>Lorem ipsum dolor sit amet, consecter adipiscing elit.</p>
-    <div id="member_list">
+    <div id="tiny_members">
         <img class="member" src="assets/portrait.png">
         <img class="member" src="assets/portrait.png">
         <img class="member" src="assets/portrait.png">
@@ -221,7 +221,7 @@
 <div id="project_box">
     <h1>Project</h1>
     <p>Lorem ipsum dolor sit amet, consecter adipiscing elit.</p>
-    <div id="member_list">
+    <div id="tiny_members">
         <img class="member" src="assets/portrait.png">
         <img class="member" src="assets/portrait.png">
         <img class="member" src="assets/portrait.png">
@@ -234,7 +234,7 @@
 <div id="project_box">
     <h1>Project</h1>
     <p>Lorem ipsum dolor sit amet, consecter adipiscing elit.</p>
-    <div id="member_list">
+    <div id="tiny_members">
         <img class="member" src="assets/portrait.png">
         <img class="member" src="assets/portrait.png">
         <img class="member" src="assets/portrait.png">
