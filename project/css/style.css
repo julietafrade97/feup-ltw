@@ -501,20 +501,20 @@ main {
   padding: 0 1em 1em 1em;
 }
 
-#hover_box{
-  display:none;
+#hover_box {
+  display: none;
   background-color: white;
   width: 100%;
-  transition: background-color .5s;
+  transition: background-color 0.5s;
 }
 
 #list_box #more #etc:hover + #hover_box {
-  display:block;
+  display: block;
   background-color: #576886;
   opacity: 50%;
 }
 
-#list_box #list_box_header{
+#list_box #list_box_header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -523,19 +523,20 @@ main {
 
 #list_box h1 {
   color: black;
-  font-size: 1.6em;
-  font-weight: 600;
+  font-size: 1.2em;
+  font-weight: 500;
 }
 
 #list_box i {
   margin-top: -0.1em;
-  font-size: 2.5em;
+  font-size: 2em;
   color: #865766;
-  align-self: flex-start;  
+  align-self: flex-start;
 }
 
-input[type="checkbox"] { display: none; }
-
+input[type="checkbox"] {
+  display: none;
+}
 
 input[type="checkbox"] + label {
   display: block;
@@ -543,6 +544,9 @@ input[type="checkbox"] + label {
   padding-left: 1.8em;
   padding-bottom: 0.7em;
   cursor: pointer;
+  color: #3d3d3b;
+  font-size: 0.8em;
+  font-weight: 300;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -597,7 +601,7 @@ input[type="checkbox"]:checked + label {
   vertical-align: text-top;
 }
 
-#list_box #more #etc{
+#list_box #more #etc {
   font-weight: 400;
   text-align: justify;
   padding-left: 2em;

@@ -28,65 +28,175 @@
         <h1>Lists</h1>
         <a href="#">
             <span class="lnr lnr-plus-circle"></span> Add List</a>
-            <div id="carousel">
-                <div id="grid_container">
-                    
-                    
-                    <div id="project_box">
-                        <h1>Project</h1>
-                        <p>Lorem ipsum dolor sit amet, consecter adipiscing elit.</p>
-                        <div id="tiny_members">
-                            <img class="member" src="assets/portrait.png">
-                            <img class="member" src="assets/portrait.png">
-                            <img class="member" src="assets/portrait.png">
-                            <img class="member" src="assets/portrait.png">
-                            <p>...</p>
-                        </div>
-                        <span class="lnr lnr-chevron-right-circle"></span>
+        <div id="carousel">
+            <div id="grid_container">
+
+<!-- CHANGE -->
+                <div id="list_box">
+                    <div id="list_box_header">
+                        <h1> Title </h1>
+                        <i class="fa fa-bookmark" aria-hidden="true"></i>
                     </div>
-                    
-                    <div id="project_box">
-                        <h1>Project</h1>
-                        <p>Lorem ipsum dolor sit amet, consecter adipiscing elit. Lorem ipsum dolor sit amet, consecter adipiscing elit. Lorem ipsum
-                            dolor sit amet, consecter adipiscing elit. Lorem ipsum dolor sit amet, consecter adipiscing elit.</p>
-                        <div id="tiny_members">
-                            <img class="member" src="assets/portrait.png">
-                            <img class="member" src="assets/portrait.png">
-                            <img class="member" src="assets/portrait.png">
-                        </div>
-                        <span class="lnr lnr-chevron-right-circle"></span>
+                    <div id="task_list">
+                        <input type="checkbox" id="box-1">
+                        <label for="box-1">Task</label>
+                        <input type="checkbox" id="box-2">
+                        <label for="box-2">Task</label>
+                        <input type="checkbox" id="box-3">
+                        <label for="box-3">Task</label>
+                        <input type="checkbox" id="box-4">
+                        <label for="box-4">Task</label>
                     </div>
-                    
-                    <div id="project_box">
-                        <h1>Project</h1>
-                        <p>Lorem ipsum dolor sit amet, consecter adipiscing elit.</p>
-                        <div id="tiny_members">
-                            <img class="member" src="assets/portrait.png">
-                            <img class="member" src="assets/portrait.png">
-                            <img class="member" src="assets/portrait.png">
-                            <img class="member" src="assets/portrait.png">
-                            <p>...</p>
+                    <div id="more">
+                        <p id="etc">. . .</p>
+                        <div id="hover_box">
+                            <p> SEE MORE </p>
                         </div>
-                        <span class="lnr lnr-chevron-right-circle"></span>
                     </div>
-                    
-                    <div id="project_box">
-                        <h1>Project</h1>
-                        <p>Lorem ipsum dolor sit amet, consecter adipiscing elit.</p>
-                        <div id="tiny_members">
-                            <img class="member" src="assets/portrait.png">
-                            <img class="member" src="assets/portrait.png">
-                            <img class="member" src="assets/portrait.png">
-                            <img class="member" src="assets/portrait.png">
-                            <p>...</p>
-                        </div>
-                        <span class="lnr lnr-chevron-right-circle"></span>
-                    </div>
-                
-        
-        
-        
                 </div>
+
+                <div id="list_box">
+                    <div id="list_box_header">
+                        <h1> Title </h1>
+                        <i class="fa fa-bookmark" aria-hidden="true"></i>
+                    </div>
+                    <div id="task_list">
+                        <input type="checkbox" id="box-1">
+                        <label for="box-1">Task</label>
+                        <input type="checkbox" id="box-2">
+                        <label for="box-2">Task</label>
+                        <input type="checkbox" id="box-3">
+                        <label for="box-3">Task</label>
+                        <input type="checkbox" id="box-4">
+                        <label for="box-4">Task</label>
+                    </div>
+                    <div id="more">
+                        <p id="etc">. . .</p>
+                        <div id="hover_box">
+                            <p> SEE MORE </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="list_box">
+                    <div id="list_box_header">
+                        <h1> Title </h1>
+                        <i class="fa fa-bookmark" aria-hidden="true"></i>
+                    </div>
+                    <div id="task_list">
+                        <input type="checkbox" id="box-1">
+                        <label for="box-1">Task</label>
+                        <input type="checkbox" id="box-2">
+                        <label for="box-2">Task</label>
+                        <input type="checkbox" id="box-3">
+                        <label for="box-3">Task</label>
+                        <input type="checkbox" id="box-4">
+                        <label for="box-4">Task</label>
+                    </div>
+                    <div id="more">
+                        <p id="etc">. . .</p>
+                        <div id="hover_box">
+                            <p> SEE MORE </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="list_box">
+                    <div id="list_box_header">
+                        <h1> Title </h1>
+                        <i class="fa fa-bookmark" aria-hidden="true"></i>
+                    </div>
+                    <div id="task_list">
+                        <input type="checkbox" id="box-1">
+                        <label for="box-1">Task</label>
+                        <input type="checkbox" id="box-2">
+                        <label for="box-2">Task</label>
+                        <input type="checkbox" id="box-3">
+                        <label for="box-3">Task</label>
+                        <input type="checkbox" id="box-4">
+                        <label for="box-4">Task</label>
+                    </div>
+                    <div id="more">
+                        <p id="etc">. . .</p>
+                        <div id="hover_box">
+                            <p> SEE MORE </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="list_box">
+                    <div id="list_box_header">
+                        <h1> Title </h1>
+                        <i class="fa fa-bookmark" aria-hidden="true"></i>
+                    </div>
+                    <div id="task_list">
+                        <input type="checkbox" id="box-1">
+                        <label for="box-1">Task</label>
+                        <input type="checkbox" id="box-2">
+                        <label for="box-2">Task</label>
+                        <input type="checkbox" id="box-3">
+                        <label for="box-3">Task</label>
+                        <input type="checkbox" id="box-4">
+                        <label for="box-4">Task</label>
+                    </div>
+                    <div id="more">
+                        <p id="etc">. . .</p>
+                        <div id="hover_box">
+                            <p> SEE MORE </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="list_box">
+                    <div id="list_box_header">
+                        <h1> Title </h1>
+                        <i class="fa fa-bookmark" aria-hidden="true"></i>
+                    </div>
+                    <div id="task_list">
+                        <input type="checkbox" id="box-1">
+                        <label for="box-1">Task</label>
+                        <input type="checkbox" id="box-2">
+                        <label for="box-2">Task</label>
+                        <input type="checkbox" id="box-3">
+                        <label for="box-3">Task</label>
+                        <input type="checkbox" id="box-4">
+                        <label for="box-4">Task</label>
+                    </div>
+                    <div id="more">
+                        <p id="etc">. . .</p>
+                        <div id="hover_box">
+                            <p> SEE MORE </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="list_box">
+                    <div id="list_box_header">
+                        <h1> Title </h1>
+                        <i class="fa fa-bookmark" aria-hidden="true"></i>
+                    </div>
+                    <div id="task_list">
+                        <input type="checkbox" id="box-1">
+                        <label for="box-1">Task</label>
+                        <input type="checkbox" id="box-2">
+                        <label for="box-2">Task</label>
+                        <input type="checkbox" id="box-3">
+                        <label for="box-3">Task</label>
+                        <input type="checkbox" id="box-4">
+                        <label for="box-4">Task</label>
+                    </div>
+                    <div id="more">
+                        <p id="etc">. . .</p>
+                        <div id="hover_box">
+                            <p> SEE MORE </p>
+                        </div>
+                    </div>
+                </div>
+
+<!-- CHANGE -->
+
+
             </div>
+        </div>
     </div>
 </div>
