@@ -297,8 +297,8 @@ nav {
 
 main {
   grid-area: content;
-  background-color: #948f8c;
   overflow: auto;
+  background-color: white;
 }
 
 #grid_container {
@@ -306,11 +306,12 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
   grid-auto-rows: auto;
   grid-gap: 0.5em;
-  margin: 0.5em;
+  padding: 0.5em;
+  background-color: #948f8c;
 }
 
 /*
-* PROJECTS
+* PROJECTS GRID
 */
 #project_box {
   display: flex;
@@ -336,8 +337,7 @@ main {
   overflow: hidden;
   text-overflow: ellipsis;
   -webkit-line-clamp: 4;
-  -moz-box-orient: vertical; /* Mozilla */
-  -webkit-box-orient: vertical; /* WebKit */
+  -webkit-box-orient: vertical;
 }
 
 #project_box span {
@@ -346,31 +346,150 @@ main {
   margin-top: auto;
 }
 
-#project_box #member_list {
+#project_box #tiny_members {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
 }
 
-#member_list p {
+#tiny_members p {
   color: #3d3d3b;
   font-weight: 500;
   letter-spacing: 0.5em;
   align-self: flex-end;
 }
 
-#member_list .member {
+#tiny_members .member {
   width: 2em;
   height: 2em;
   object-fit: cover;
   border-radius: 50%;
-  border: 0.5px solid #979797;
+  border: 1px solid #979797;
   margin: 0.5em 0.5em 0.5em 0;
 }
 
 /*
-* PROJECTS
+* PROJECT
+*/
+#project_container {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+  grid-template-rows: 0.5fr 1.5fr;
+  grid-template-areas:
+    "bio members"
+    "lists lists";
+  height: 100%;
+}
+
+#project_container #bio {
+  grid-area: bio;
+  padding: 1em 2em;
+}
+
+#project_container .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#bio h1 {
+  font-size: 1.5em;
+  font-weight: 500;
+  color: black;
+  flex-grow: 1;
+}
+
+#bio span {
+  font-size: 1.1em;
+  color: #222a3f;
+  margin: 0 0 0 1em;
+}
+
+#bio p {
+  font-size: 0.8em;
+  font-weight: 300;
+  text-align: justify;
+}
+
+#project_container #members {
+  grid-area: members;
+  padding: 1em 2em;
+}
+
+#members h1 {
+  font-size: 1.5em;
+  font-weight: 500;
+  color: black;
+}
+
+#members span {
+  font-size: 1.1em;
+  color: #222a3f;
+  margin: 0 0 0 1em;
+}
+
+#members a {
+  font-size: 0.8em;
+  font-weight: 300;
+  color: #222a3f;
+  text-decoration: none;
+  text-transform: lowercase;
+}
+
+#members #member_list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+#member_list .member {
+  width: 2.5em;
+  height: 2.5em;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid #979797;
+  margin: 0 1em 0 0;
+}
+
+#project_container #lists {
+  grid-area: lists;
+  background-color: #948f8c;
+  padding: 1em 2em;
+  display: flex;
+  flex-direction: column;
+}
+
+#lists h1 {
+  font-size: 1.5em;
+  font-weight: 500;
+  color: white;
+}
+
+#lists a {
+  font-size: 0.8em;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+  flex-grow: 1;
+}
+
+#lists span {
+  padding-right: 0.5em;
+}
+
+#lists #carousel {
+  margin: 0.5em -0.5em;
+  flex-grow: 1;
+}
+
+#carousel h1 {
+  color: black;
+}
+
+/*
+* LIST GRID
 */
 #list_box {
   display: flex;
@@ -417,6 +536,7 @@ main {
 
 input[type="checkbox"] { display: none; }
 
+
 input[type="checkbox"] + label {
   display: block;
   position: relative;
@@ -442,8 +562,8 @@ input[type="checkbox"] + label:before {
   left: 0;
   top: 0;
   opacity: 0.5;
-  -webkit-transition: all .12s,  border-color .08s;
-  transition: all .12s, border-color .08s;
+  -webkit-transition: all 0.12s, border-color 0.08s;
+  transition: all 0.12s, border-color 0.08s;
 }
 
 input[type="checkbox"]:checked + label:before {
@@ -458,15 +578,18 @@ input[type="checkbox"]:checked + label:before {
   transform: rotate(45deg);
 }
 
-input[type="checkbox"]:checked + label{
+input[type="checkbox"]:checked + label {
   text-decoration: line-through;
   animation: strikeMove 0.2s;
-
 }
 
 @keyframes strikeMove {
-  from { text-decoration-color: transparent; }
-  to { text-decoration-color: auto; }
+  from {
+    text-decoration-color: transparent;
+  }
+  to {
+    text-decoration-color: auto;
+  }
 }
 
 #list_box #task_list #test label {

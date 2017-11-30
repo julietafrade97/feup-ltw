@@ -2,14 +2,26 @@
 include_once('includes/init.php');
 include_once('database/user.php');
 
- if (($userID = registerNewUser($_POST['username'], $_POST['password'], $_POST['name'], $_POST['email'], $_POST['profilePhoto'])) != -1) {
+	if(duplicateUsername($_POST['username'])){
+		$_SESSION['ERROR'] = 'Duplicated Username';
+		header("Location:".$_SERVER['HTTP_REFERER']."");
+	}
+	else if(duplicateEmail($_POST['email'])){
+		$_SESSION['ERROR'] = 'Duplicated Email';
+		header("Location:".$_SERVER['HTTP_REFERER']."");
+	}
+ 	else if (($userID = registerNewUser($_POST['username'], $_POST['password'], $_POST['name'], $_POST['email'], $_POST['profilePhoto'])) != -1) {
 
   		echo 'User Registered successfully';
- 		setCurrentUser($userID, $_POST['username']);	
- }
- else{
+ 		setCurrentUser($userID, $_POST['username']);
+ 		header("location:index.php");	
+ 	}
+ 	else{
 
-  		echo 'ERROR';
- }
+  		$_SESSION['ERROR'] = 'ERROR';
+  		header("Location:".$_SERVER['HTTP_REFERER']."");
+ 	}
+
+
 
  ?>
