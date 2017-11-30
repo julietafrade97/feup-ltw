@@ -21,8 +21,10 @@
         </div>
         <div id="login_content">
             <h1>Login</h1>
-            <input name="username" class="w3-input w3-border" type="text" placeholder="Username">
-            <input name="password" class="w3-input w3-border" type="password" placeholder="Password">
-            <a href="#" class="default_button">Next</a>
+            <form action="action_login.php" method="post">
+                <input name="username" class="w3-input w3-border" type="text" placeholder="Username" required="required">
+                <input name="password" class="w3-input w3-border" type="password" placeholder="Password" required="required">
+                <input type="submit" name="Submit" class="default_button" value="Next">
+            </form>
             <a href="test.php" class="button">Test Data Base</a>
         </div>
