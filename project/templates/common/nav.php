@@ -36,10 +36,10 @@
                     <div class="circle"></div>
                     <p>Label</p>
                 </div>
-                <div class="label_option">
+                <button class="label_option">
                     <span class="lnr lnr-plus-circle"></span>
                     <p>Add Label</p>
-                </div>
+                </button>
             </section>
 
             <section id="content2">
