@@ -10,15 +10,20 @@
 	function createCategoryUser($categoryName, $categoryColor, $userID){
 
         global $dbh;
-  		$stmt = $dbh->prepare('INSERT INTO Category(Name, Color, ProjectID, UserID) VALUES (:Name, :Color, :ProjectID, :UserID)');
-  		$stmt->bindParam(':Name', $categoryName);
-        $stmt->bindParam(':Color', $categoryColor);
-        $stmt->bindValue(':ProjectID', null, PDO::PARAM_NULL);
-        $stmt->bindParam(':UserID', $userID);
-        if($stmt->execute())
-            return $dbh->lastInsertId();
-        else
+        try {
+  		    $stmt = $dbh->prepare('INSERT INTO Category(Name, Color, ProjectID, UserID) VALUES (:Name, :Color, :ProjectID, :UserID)');
+  		    $stmt->bindParam(':Name', $categoryName);
+            $stmt->bindParam(':Color', $categoryColor);
+            $stmt->bindValue(':ProjectID', null, PDO::PARAM_NULL);
+            $stmt->bindParam(':UserID', $userID);
+            if($stmt->execute())
+                return $dbh->lastInsertId();
+            else
+                return -1;
+
+        }catch(PDOException $e) {
             return -1;
+        }
            
     }
 
@@ -31,9 +36,14 @@
     function getUserCategories($userID) {
         
         global $dbh;
-        $stmt = $dbh->prepare('SELECT ID, Name, Color FROM Category WHERE UserID = ?');
-        $stmt->execute(array($userID));
-        return $stmt->fetchAll();
+        try {
+            $stmt = $dbh->prepare('SELECT ID, Name, Color FROM Category WHERE UserID = ?');
+            $stmt->execute(array($userID));
+            return $stmt->fetchAll();
+
+        }catch(PDOException $e) {
+            return null;
+        }
     }
 
     /**
@@ -46,9 +56,14 @@
     function getUserCategoriesAfterID($userID, $firstCategoryID) {
 
         global $dbh;
-        $stmt = $dbh->prepare('SELECT ID, Name, Color FROM Category WHERE UserID = ? AND ID >= ?');
-        $stmt->execute(array($userID, $firstCategoryID));
-        return $stmt->fetchAll();
+        try {
+            $stmt = $dbh->prepare('SELECT ID, Name, Color FROM Category WHERE UserID = ? AND ID >= ?');
+            $stmt->execute(array($userID, $firstCategoryID));
+            return $stmt->fetchAll();
+        
+        } catch(PDOException $e) {
+            return null;
+        }
     }
 
     
@@ -63,15 +78,20 @@
 	function createCategoryProject($categoryName, $categoryColor, $projectID){
         
         global $dbh;
-        $stmt = $dbh->prepare('INSERT INTO Category(Name, Color, ProjectID, UserID) VALUES (:Name, :Color, :ProjectID, :UserID)');
-        $stmt->bindParam(':Name', $categoryName);
-        $stmt->bindParam(':Color', $categoryColor);
-        $stmt->bindParam(':ProjectID', $projectID);  
-        $stmt->bindValue(':UserID', null, PDO::PARAM_NULL);
-        if($stmt->execute())
-            return $dbh->lastInsertId();
-        else
+        try {
+            $stmt = $dbh->prepare('INSERT INTO Category(Name, Color, ProjectID, UserID) VALUES (:Name, :Color, :ProjectID, :UserID)');
+            $stmt->bindParam(':Name', $categoryName);
+            $stmt->bindParam(':Color', $categoryColor);
+            $stmt->bindParam(':ProjectID', $projectID);  
+            $stmt->bindValue(':UserID', null, PDO::PARAM_NULL);
+            if($stmt->execute())
+                return $dbh->lastInsertId();
+            else
+                return -1;
+
+        }catch(PDOException $e) {
             return -1;
+        }
     }
 
     /**
@@ -83,9 +103,14 @@
     function getProjectCategories($projectID) {
         
         global $dbh;
-        $stmt = $dbh->prepare('SELECT ID, Name, Color FROM Category WHERE ProjectID = ?');
-        $stmt->execute(array($projectID));
-        return $stmt->fetchAll();
+        try {
+            $stmt = $dbh->prepare('SELECT ID, Name, Color FROM Category WHERE ProjectID = ?');
+            $stmt->execute(array($projectID));
+            return $stmt->fetchAll();
+
+        }catch(PDOException $e) {
+            return null;
+        }
     }
 
     /**
@@ -98,9 +123,15 @@
     function getProjectCategoriesAfterID($projectID, $firstCategoryID) {
         
         global $dbh;
-        $stmt = $dbh->prepare('SELECT ID, Name, Color FROM Category WHERE ProjectID = ? AND ID >= ?');
-        $stmt->execute(array($projectID, $firstCategoryID));
-        return $stmt->fetchAll();
+        try {
+            $stmt = $dbh->prepare('SELECT ID, Name, Color FROM Category WHERE ProjectID = ? AND ID >= ?');
+            $stmt->execute(array($projectID, $firstCategoryID));
+            return $stmt->fetchAll();
+
+        }catch(PDOException $e) {
+            return null;
+        }
+
     }
 
     

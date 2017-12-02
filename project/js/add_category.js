@@ -19,14 +19,12 @@
 		console.log(isUserValue);
 		let request = new XMLHttpRequest();
 		request.addEventListener("load", finishRegister);
-		request.open('post', 'action_add_category.php', true);
+		request.open('post', 'api_add_category.php', true);
 		request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 		request.send(encodeForAjax({categoryName: nameValue, categoryColor: colorValue, foreignID: foreignIDValue, isUser: isUserValue}));
 	}
 
 	function finishRegister(event){
-		console.log(this.responseText);
 		let categories = JSON.parse(this.responseText);
-		console.log(categories);
 
 	}

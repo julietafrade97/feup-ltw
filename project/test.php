@@ -33,7 +33,7 @@
 
 <?php
 include_once('templates/common/header.php'); ?>
-<script src="js/api_add_category.js" defer></script>
+<script src="js/add_category.js" defer></script>
 <?php 
 include_once('templates/categories/add_category.php'); 
 include_once('templates/common/footer.php');
