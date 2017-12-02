@@ -5,7 +5,7 @@
      * @param $categoryName Category's Name
      * @param $categoryColor Category's Color
      * @param $userID ID of the user that is creating the category
-     * @return returns True if is was created and False otherwise 
+     * @return Returns the ID of the new Category if is was created and -1 otherwise 
      */
 	function createCategoryUser($categoryName, $categoryColor, $userID){
 
@@ -22,6 +22,12 @@
            
     }
 
+    /**
+     * Get All Categories from a user
+     * 
+     * @param $userID User's ID
+     * @return Returns all the categories from the user with $userID
+     */
     function getUserCategories($userID) {
         
         global $dbh;
@@ -30,6 +36,13 @@
         return $stmt->fetchAll();
     }
 
+    /**
+     * Get All categories added to a user after the one with ID $firstCategoryID
+     * 
+     * @param $userID User's ID
+     * @param $firstCategoryID ID of the first category to be returned
+     * @return Returns all the user's categories which ID is equal or greater than $firstCategoryID
+     */
     function getUserCategoriesAfterID($userID, $firstCategoryID) {
 
         global $dbh;
@@ -45,6 +58,7 @@
      * @param $categoryName Category's Name
      * @param $categoryColor Category's Color
      * @param $projectID ID of the project for which this category is being created
+     * @return Returns the ID of the new Category if is was created and -1 otherwise
      */
 	function createCategoryProject($categoryName, $categoryColor, $projectID){
         
@@ -60,7 +74,12 @@
             return -1;
     }
 
-
+    /**
+     * Get All Categories from a project
+     * 
+     * @param $projectID Project's ID
+     * @return Returns all the categories from the project with $projectID
+     */
     function getProjectCategories($projectID) {
         
         global $dbh;
@@ -69,6 +88,13 @@
         return $stmt->fetchAll();
     }
 
+    /**
+     * Get All categories added to a project after the one with ID $firstCategoryID
+     * 
+     * @param $projectID Project's ID
+     * @param $firstCategoryID ID of the first category to be returned
+     * @return Returns all the project's categories which ID is equal or greater than $firstCategoryID
+     */
     function getProjectCategoriesAfterID($projectID, $firstCategoryID) {
         
         global $dbh;
