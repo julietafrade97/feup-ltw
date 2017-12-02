@@ -396,7 +396,7 @@ main {
 
 #project_container #bio {
   grid-area: bio;
-  padding: 1em 2em;
+  padding: 2em 2em 0.5em 2em;
 }
 
 #project_container .header {
@@ -426,7 +426,7 @@ main {
 
 #project_container #members {
   grid-area: members;
-  padding: 1em 2em;
+  padding: 2em 2em 0.5em 2em;
 }
 
 #members h1 {
@@ -634,4 +634,161 @@ footer p {
   color: white;
   font-size: 0.8em;
   font-weight: 200;
+}
+
+/*
+* SETTINGS
+*/
+#settings {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "title"
+    "content";
+  height: 100%;
+  padding: 0 2em;
+}
+
+#settings h1 {
+  grid-area: title;
+  font-size: 1.5em;
+  font-weight: 500;
+  color: black;
+  padding: 1.3em 0 0 0;
+}
+
+#settings #content {
+  grid-area: content;
+}
+
+/*
+* ACCOUNT
+*/
+
+#settings #account {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "fields photo";
+}
+
+#account #fields {
+  grid-area: fields;
+}
+
+#account label {
+  display: block;
+  font-size: 1em;
+  font-weight: 300;
+  margin: 1em 0 0 0;
+}
+
+#fields input[type="text"] {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8em;
+  font-weight: 300;
+  color: #666666;
+  padding: 0.5em;
+  margin: 0.5em 0;
+  width: 95%;
+  height: 10%;
+}
+
+#fields input[type="email"] {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8em;
+  font-weight: 300;
+  color: #666666;
+  padding: 0.5em;
+  margin: 0.5em 0;
+  width: 95%;
+  height: 10%;
+}
+
+#fields input[type="password"] {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8em;
+  font-weight: 300;
+  color: #666666;
+  padding: 0.5em;
+  margin: 0.5em 0;
+  width: 95%;
+  height: 10%;
+}
+
+#fields input[type="submit"] {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.7em;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background-color: #222a3f;
+  color: white;
+  margin: 1em 0;
+  padding: 0.5em 1.5em;
+  border-radius: 1em;
+  width: auto;
+  border: none;
+}
+
+#fields hr {
+  width: 100%;
+  border: 0.5px solid #948f8c;
+  margin: 1em 0;
+}
+
+#account #photo_field {
+  grid-area: photo;
+  margin-left: 3em;
+}
+
+#photo_field #photo {
+  width: 10em;
+  height: 10em;
+  object-fit: cover;
+  border: 1px solid #979797;
+  border-radius: 5%;
+  margin: 1em 0;
+}
+
+#photo_field input[type="file"] {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8em;
+  font-weight: 300;
+  color: #666666;
+  margin: 1em 0;
+  width: 100%;
+}
+
+#photo_field input[type="submit"] {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.7em;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background-color: #576886;
+  color: white;
+  margin: 1em 0;
+  padding: 0.5em 1.5em;
+  border-radius: 1em;
+  width: auto;
+  border: none;
+}
+
+/*
+* THEME
+*/
+
+#themes select {
+  border: none;
+  width: 50%;
+}
+
+#themes option {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5em;
+  font-weight: 300;
+  color: #3D3D3B;
+  padding: 1em 0;
 }
