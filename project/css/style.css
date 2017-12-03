@@ -625,13 +625,9 @@ main {
   visibility: hidden;
   opacity: 0;
   transform: scale(1.2);
-<<<<<<< HEAD
   transition: all 0.4s cubic-bezier(.55,0,.1,1);
   transition-delay: 1s;
   overflow: scroll;  
-=======
-  transition: all 0.4s cubic-bezier(0.55, 0, 0.1, 1);
->>>>>>> 6326158fa72064ff981688b329d64afd001393ca
 }
 .overlay:target {
   display:block;
@@ -695,7 +691,6 @@ main {
 #popup_task_list {
   max-height: 30%;
   overflow: auto;
-<<<<<<< HEAD
   word-break:break-all;
 }
 
@@ -764,11 +759,6 @@ main {
   padding-right: 1em;
   padding-left: 0.15em;
 }
-
-
-=======
-}
->>>>>>> 6326158fa72064ff981688b329d64afd001393ca
 
 /*
 * FOOTER
