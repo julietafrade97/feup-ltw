@@ -312,7 +312,7 @@ nav {
 main {
   grid-area: content;
   overflow: auto;
-  background-color: #948f8c;
+  background-color: white;
 }
 
 #grid_container {
@@ -505,7 +505,7 @@ main {
 }
 
 /*
-* LIST FLEX
+* LISTS GRID
 */
 
 #list_box {
@@ -516,7 +516,7 @@ main {
   flex-wrap: wrap;
   background-color: white;
   padding: 0 1em 0em 1em;
-  word-break:break-all;
+  word-break: break-all;
 }
 
 #list_box #list_box_header {
@@ -596,7 +596,7 @@ input[type="checkbox"]:checked + label {
   }
 }
 
-#more{
+#more {
   font-size: 0.6em;
   font-weight: 700;
   text-align: center;
@@ -605,14 +605,14 @@ input[type="checkbox"]:checked + label {
   color: #222a3f;
   margin: 1em 0;
   padding: 0.5em 1.5em;
-  border:none;
+  border: none;
   border-radius: 1em;
   align-self: center;
 }
 
-#more:hover{
+#more:hover {
   background-color: #222a3f;
-  color:white;
+  color: white;
 }
 
 .overlay {
@@ -626,8 +626,7 @@ input[type="checkbox"]:checked + label {
   visibility: hidden;
   opacity: 0;
   transform: scale(1.2);
-  transition: all 0.4s cubic-bezier(.55,0,.1,1);
-
+  transition: all 0.4s cubic-bezier(0.55, 0, 0.1, 1);
 }
 .overlay:target {
   visibility: visible;
@@ -665,7 +664,7 @@ input[type="checkbox"]:checked + label {
 .popup .content {
   max-height: 30%;
   overflow: auto;
-} 
+}
 
 /*
 * FOOTER
