@@ -1,6 +1,7 @@
 /*
-* GERAL
+* GENERAL
 */
+
 body {
   margin: 0 auto;
   background-color: #222a3f;
@@ -33,6 +34,7 @@ body {
 /*
 * LOGIN
 */
+
 #login_header {
   grid-area: header;
   display: flex;
@@ -88,7 +90,7 @@ body {
   color: #222a3f;
 }
 
-#login_content input {
+#login_content input[type="text"] {
   font-family: "Montserrat", sans-serif;
   font-size: 0.8em;
   font-weight: 300;
@@ -99,18 +101,30 @@ body {
   height: 10%;
 }
 
-.default_button {
+#login_content input[type="password"] {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8em;
+  font-weight: 300;
+  color: #666666;
+  padding: 0.5em;
+  margin: 0.5em 0;
+  width: 95%;
+  height: 10%;
+}
+
+#login_content input[type="submit"] {
+  font-family: "Montserrat", sans-serif;
   font-size: 0.7em;
   font-weight: 600;
-  text-align: center;
-  text-decoration: none;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   background-color: #222a3f;
   color: white;
   margin: 1em 0;
   padding: 0.5em 1.5em;
   border-radius: 1em;
-  align-self: flex-end;
+  width: 25%;
+  float: right;
 }
 
 /*
@@ -313,6 +327,7 @@ main {
 /*
 * PROJECTS GRID
 */
+
 #project_box {
   display: flex;
   flex-direction: column;
@@ -372,6 +387,7 @@ main {
 /*
 * PROJECT
 */
+
 #project_container {
   display: grid;
   grid-template-columns: 1fr 0.5fr;
@@ -384,7 +400,7 @@ main {
 
 #project_container #bio {
   grid-area: bio;
-  padding: 1em 2em;
+  padding: 2em 2em 0.5em 2em;
 }
 
 #project_container .header {
@@ -414,7 +430,7 @@ main {
 
 #project_container #members {
   grid-area: members;
-  padding: 1em 2em;
+  padding: 2em 2em 0.5em 2em;
 }
 
 #members h1 {
@@ -491,6 +507,7 @@ main {
 /*
 * LIST FLEX
 */
+
 #list_box {
   display: flex;
   flex-direction: column;
@@ -502,7 +519,7 @@ main {
   word-break:break-all;
 }
 
-#list_box #list_box_header{
+#list_box #list_box_header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -511,19 +528,20 @@ main {
 
 #list_box h1 {
   color: black;
-  font-size: 1.6em;
-  font-weight: 600;
+  font-size: 1.2em;
+  font-weight: 500;
 }
 
 #list_box i {
   margin-top: -0.1em;
   font-size: 2em;
   color: #865766;
-  align-self: flex-start;  
+  align-self: flex-start;
 }
 
-input[type="checkbox"] { display: none; }
-
+input[type="checkbox"] {
+  display: none;
+}
 
 input[type="checkbox"] + label {
   display: block;
@@ -663,4 +681,235 @@ footer p {
   color: white;
   font-size: 0.8em;
   font-weight: 200;
+}
+
+/*
+* SETTINGS
+*/
+
+#settings {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "title"
+    "content";
+  height: 100%;
+  padding: 0 2em;
+}
+
+#settings h1 {
+  grid-area: title;
+  font-size: 1.5em;
+  font-weight: 500;
+  color: black;
+  padding: 1.3em 0 0 0;
+}
+
+#settings #content {
+  grid-area: content;
+}
+
+/*
+* ACCOUNT
+*/
+
+#settings #account {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "fields photo";
+}
+
+#account #fields {
+  grid-area: fields;
+}
+
+#account label {
+  display: block;
+  font-size: 1em;
+  font-weight: 300;
+  margin: 1em 0 0 0;
+}
+
+#fields input[type="text"] {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8em;
+  font-weight: 300;
+  color: #666666;
+  padding: 0.5em;
+  margin: 0.5em 0;
+  width: 95%;
+  height: 10%;
+}
+
+#fields input[type="email"] {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8em;
+  font-weight: 300;
+  color: #666666;
+  padding: 0.5em;
+  margin: 0.5em 0;
+  width: 95%;
+  height: 10%;
+}
+
+#fields input[type="password"] {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8em;
+  font-weight: 300;
+  color: #666666;
+  padding: 0.5em;
+  margin: 0.5em 0;
+  width: 95%;
+  height: 10%;
+}
+
+#fields input[type="submit"] {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.7em;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background-color: #222a3f;
+  color: white;
+  margin: 1em 0;
+  padding: 0.5em 1.5em;
+  border-radius: 1em;
+  width: auto;
+  border: none;
+}
+
+#fields hr {
+  width: 100%;
+  border: 0.5px solid #948f8c;
+  margin: 1em 0;
+}
+
+#account #photo_field {
+  grid-area: photo;
+  margin-left: 3em;
+}
+
+#photo_field #photo {
+  width: 10em;
+  height: 10em;
+  object-fit: cover;
+  border: 1px solid #979797;
+  border-radius: 5%;
+  margin: 1em 0;
+}
+
+#photo_field input[type="file"] {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8em;
+  font-weight: 300;
+  color: #666666;
+  margin: 1em 0;
+  width: 100%;
+}
+
+#photo_field input[type="submit"] {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.7em;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background-color: #576886;
+  color: white;
+  margin: 1em 0;
+  padding: 0.5em 1.5em;
+  border-radius: 1em;
+  width: auto;
+  border: none;
+}
+
+/*
+* THEME
+*/
+
+#themes select {
+  border: none;
+  width: 50%;
+}
+
+#themes option {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5em;
+  font-weight: 300;
+  color: #3d3d3b;
+  padding: 1em 0;
+}
+
+/*
+* ARCHIVE
+*/
+
+#settings #archive {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: "lists projects" "button button";
+}
+
+#archive h2 {
+  font-size: 1.3em;
+  font-weight: 300;
+}
+
+#archive ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-size: 1em;
+  font-weight: 300;
+}
+
+#archive li {
+  padding: 0.5em 0;
+}
+
+#archive span {
+  color: #222a3f;
+  padding-right: 1em;
+}
+
+#archive input[type="submit"] {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.7em;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background-color: #222a3f;
+  color: white;
+  margin: 1em 0;
+  padding: 0.5em 1.5em;
+  border-radius: 1em;
+  width: auto;
+  border: none;
+}
+
+#archive #archived_lists {
+  grid-area: lists;
+}
+
+#archive #archived_projects {
+  grid-area: projects;
+}
+
+#archive #archive_button {
+  grid-area: buttons;
+}
+
+/*
+* ABOUT
+*/
+
+#about p {
+  font-size: 1em;
+  font-weight: 300;
+  color: #3d3d3b;
+  text-align: justify;
+  width: 80%;
 }

@@ -1,4 +1,4 @@
-<div id="test">
+<!--<div id="test">
 	<script type="text/javascript" src="js/api_register.js"></script>
 	<div id="loginBox">
 		<form onsubmit="" action="" method="post">
@@ -29,4 +29,12 @@
 	<a href="templates/projects/project.php" class="button">Project2</a>
 	<p></p>
 	<a href="templates/projects/add_project.php" class="button">Add Project</a>
-</div>
+</div>-->
+
+<?php
+include_once('templates/common/header.php'); ?>
+<script src="js/add_category.js" defer></script>
+<?php 
+include_once('templates/categories/add_category.php'); 
+include_once('templates/common/footer.php');
+?>
