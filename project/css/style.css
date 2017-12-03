@@ -298,7 +298,7 @@ nav {
 main {
   grid-area: content;
   overflow: auto;
-  background-color: white;
+  background-color: #948f8c;
 }
 
 #grid_container {
@@ -489,7 +489,7 @@ main {
 }
 
 /*
-* LIST GRID
+* LIST FLEX
 */
 #list_box {
   display: flex;
@@ -498,20 +498,8 @@ main {
   align-items: flex-start;
   flex-wrap: wrap;
   background-color: white;
-  padding: 0 1em 1em 1em;
-}
-
-#hover_box{
-  display:none;
-  background-color: white;
-  width: 100%;
-  transition: background-color .5s;
-}
-
-#list_box #more #etc:hover + #hover_box {
-  display:block;
-  background-color: #576886;
-  opacity: 50%;
+  padding: 0 1em 0em 1em;
+  word-break:break-all;
 }
 
 #list_box #list_box_header{
@@ -529,7 +517,7 @@ main {
 
 #list_box i {
   margin-top: -0.1em;
-  font-size: 2.5em;
+  font-size: 2em;
   color: #865766;
   align-self: flex-start;  
 }
@@ -543,9 +531,6 @@ input[type="checkbox"] + label {
   padding-left: 1.8em;
   padding-bottom: 0.7em;
   cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
 }
 
 input[type="checkbox"] + label:last-child {
@@ -562,6 +547,7 @@ input[type="checkbox"] + label:before {
   left: 0;
   top: 0;
   opacity: 0.5;
+  z-index: 1;
   -webkit-transition: all 0.12s, border-color 0.08s;
   transition: all 0.12s, border-color 0.08s;
 }
@@ -592,17 +578,76 @@ input[type="checkbox"]:checked + label {
   }
 }
 
-#list_box #task_list #test label {
-  font-weight: 400;
-  vertical-align: text-top;
+#more{
+  font-size: 0.6em;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  background-color: white;
+  color: #222a3f;
+  margin: 1em 0;
+  padding: 0.5em 1.5em;
+  border:none;
+  border-radius: 1em;
+  align-self: center;
 }
 
-#list_box #more #etc{
-  font-weight: 400;
-  text-align: justify;
-  padding-left: 2em;
-  margin: 0em;
+#more:hover{
+  background-color: #222a3f;
+  color:white;
 }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(1.2);
+  transition: all 0.4s cubic-bezier(.55,0,.1,1);
+
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.popup {
+  box-shadow: 0 0 1em 0.2em rgba(0, 0, 0, 0.2);
+  margin: 5em auto;
+  padding: 1.5em;
+  background: #fff;
+  width: 30%;
+  position: relative;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: black;
+  font-family: Tahoma, Arial, sans-serif;
+}
+
+/*to delete*/
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+}
+
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+} 
 
 /*
 * FOOTER
