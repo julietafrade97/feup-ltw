@@ -1,5 +1,6 @@
 <div id="listPopup" class="overlay">
     <div class="popup">
+<<<<<<< HEAD
         <div id="pop_up_header">
             <span class="lnr lnr-trash"></span>
             <a id="pop_up_close" href="#"> <span class="lnr lnr-cross"></span></a>
@@ -31,6 +32,12 @@
         <div id="add_task">
             <span class="lnr lnr-plus-circle"></span>
             <p>Add Task</p>
+=======
+        <h2>Here i am</h2>
+        <a class="close" href="#">×</a>
+        <div class="content">
+            Thanks for pop me out of that button, but now i'm done so you can close this window.
+>>>>>>> 6326158fa72064ff981688b329d64afd001393ca
         </div>
     </div>
 </div>
@@ -50,7 +57,7 @@
         <input type="checkbox" id="box-4">
         <label for="box-4">Task</label>
     </div>
-    <a id="more" href="#listPopup" type="button" >SEE MORE</a> 
+    <a id="more" href="#listPopup" type="button">SEE MORE</a>
 </div>
 
 <div id="list_box">
@@ -67,7 +74,7 @@
         <input type="checkbox" id="box-8">
         <label for="box-8">Task</label>
     </div>
-    <a id="more" href="#listPopup" type="button" >SEE MORE</a> 
+    <a id="more" href="#listPopup" type="button">SEE MORE</a>
 </div>
 
 <div id="list_box">
@@ -85,7 +92,7 @@
         <input type="checkbox" id="box-12">
         <label for="box-12">Task</label>
     </div>
-    <a id="more" href="#listPopup" type="button" >SEE MORE</a>  
+    <a id="more" href="#listPopup" type="button">SEE MORE</a>
 </div>
 
 <div id="list_box">
@@ -103,7 +110,7 @@
         <input type="checkbox" id="box-16">
         <label for="box-16">Task</label>
     </div>
-    <a id="more" href="#listPopup" type="button" >SEE MORE</a> 
+    <a id="more" href="#listPopup" type="button">SEE MORE</a>
 </div>
 
 
@@ -116,12 +123,18 @@
         <label for="box-17">Task</label>
         <input type="checkbox" id="box-18">
         <label for="box-18">Task</label>
+<<<<<<< HEAD
         <input type="checkbox" id="box-19"> 
         <label for="box-19">Task</label>
         <input type="checkbox" id="box-20"> 
+=======
+        <input type="checkbox" id="box-19">
+        <label for="box-19">Task</label>
+        <input type="checkbox" id="box-20">
+>>>>>>> 6326158fa72064ff981688b329d64afd001393ca
         <label for="box-20">Task</label>
     </div>
-    <a id="more" href="#listPopup" type="button" >SEE MORE</a> 
+    <a id="more" href="#listPopup" type="button">SEE MORE</a>
 </div>
 
 
@@ -131,6 +144,7 @@
         <i class="fa fa-bookmark" aria-hidden="true"></i>
     </div>
     <div id="task_list">
+<<<<<<< HEAD
         <input type="checkbox" id="box-21"> 
         <label for="box-21">Task</label>
         <input type="checkbox" id="box-22"> 
@@ -138,7 +152,16 @@
         <input type="checkbox" id="box-23"> 
         <label for="box-23">Task</label>
         <input type="checkbox" id="box-24"> 
+=======
+        <input type="checkbox" id="box-21">
+        <label for="box-21">Task</label>
+        <input type="checkbox" id="box-22">
+        <label for="box-22">Task</label>
+        <input type="checkbox" id="box-23">
+        <label for="box-23">Task</label>
+        <input type="checkbox" id="box-24">
+>>>>>>> 6326158fa72064ff981688b329d64afd001393ca
         <label for="box-24">Task</label>
     </div>
-    <a id="more" href="#listPopup" type="button" >SEE MORE</a> 
+    <a id="more" href="#listPopup" type="button">SEE MORE</a>
 </div>

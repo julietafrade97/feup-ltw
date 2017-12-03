@@ -312,7 +312,7 @@ nav {
 main {
   grid-area: content;
   overflow: auto;
-  background-color: #948f8c;
+  background-color: white;
 }
 
 #grid_container {
@@ -505,7 +505,7 @@ main {
 }
 
 /*
-* LIST FLEX
+* LISTS GRID
 */
 
 #list_box {
@@ -515,7 +515,7 @@ main {
   align-items: flex-start;
   background-color: white;
   padding: 0 1em 0em 1em;
-  word-break:break-all;
+  word-break: break-all;
 }
 
 #list_box #list_box_header {
@@ -594,7 +594,7 @@ main {
   }
 }
 
-#more{
+#more {
   font-size: 0.6em;
   font-weight: 700;
   text-align: center;
@@ -603,14 +603,14 @@ main {
   color: #222a3f;
   margin: 1em 0;
   padding: 0.5em 1.5em;
-  border:none;
+  border: none;
   border-radius: 1em;
   align-self: center;
 }
 
-#more:hover{
+#more:hover {
   background-color: #222a3f;
-  color:white;
+  color: white;
 }
 
 .overlay {
@@ -625,9 +625,13 @@ main {
   visibility: hidden;
   opacity: 0;
   transform: scale(1.2);
+<<<<<<< HEAD
   transition: all 0.4s cubic-bezier(.55,0,.1,1);
   transition-delay: 1s;
   overflow: scroll;  
+=======
+  transition: all 0.4s cubic-bezier(0.55, 0, 0.1, 1);
+>>>>>>> 6326158fa72064ff981688b329d64afd001393ca
 }
 .overlay:target {
   display:block;
@@ -691,6 +695,7 @@ main {
 #popup_task_list {
   max-height: 30%;
   overflow: auto;
+<<<<<<< HEAD
   word-break:break-all;
 }
 
@@ -761,6 +766,9 @@ main {
 }
 
 
+=======
+}
+>>>>>>> 6326158fa72064ff981688b329d64afd001393ca
 
 /*
 * FOOTER
