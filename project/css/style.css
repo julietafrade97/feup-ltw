@@ -42,7 +42,6 @@ body {
   align-items: center;
   text-align: center;
   margin: 0 0 -1em 0;
-  
 }
 
 .register_header img {
@@ -95,7 +94,9 @@ body {
   width: 100%;
 }
 
-.register_content input[type="text"], .register_content input[type="password"], .register_content input[type="email"] {
+.register_content input[type="text"],
+.register_content input[type="password"],
+.register_content input[type="email"] {
   font-family: "Montserrat", sans-serif;
   font-size: 0.8em;
   font-weight: 300;
@@ -232,12 +233,6 @@ header {
   float: right;
 }
 
-.sidenav hr {
-  width: 100%;
-  border: 0.5px solid #948f8c;
-  margin: 2em 0;
-}
-
 /*
 * ASIDE
 */
@@ -273,7 +268,8 @@ nav a {
   grid-area: content;
 }
 
-#aside_content hr {
+#aside_content hr,
+.sidenav hr {
   width: 100%;
   border: 0.5px solid #948f8c;
   margin: 2em 0;
@@ -309,80 +305,43 @@ nav a {
   margin: 0 0.8em 0 1.4em;
 }
 
+#aside_content h2,
+.sidenav h2 {
+  font-size: 1em;
+  font-weight: 500;
+  text-align: center;
+  width: 100%;
+}
+
+#aside_content section,
+.sidenav section {
+  padding-top: 1em;
+}
+
 .label_option {
-  display: flex;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-auto-rows: auto;
+  grid-template-areas: "circle text";
   align-items: center;
-  padding-left: 2em;
   color: #3d3d3b;
-  margin: -1em 0;
+  margin: -1em 2em;
 }
 
 .label_option p {
-  font-size: 1.2em;
-  font-weight: 400;
+  grid-area: text;
+  font-size: 0.9em;
+  font-weight: 300;
   padding-left: 1em;
+  word-break: break-all;
 }
 
 .label_option .circle {
+  grid-area: circle;
   width: 1em;
   height: 1em;
   border-radius: 50%;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
   background: #865766;
-}
-
-.tabs {
-  margin: 1em 0;
-  width: 100%;
-  text-align: center;
-}
-
-.tabs section {
-  display: none;
-  margin: 1em 0;
-}
-
-.tabs input {
-  display: none;
-}
-
-.tabs label {
-  display: inline-block;
-  font-weight: 500;
-  font-size: 0.9em;
-  margin: 0 -0.4em 1em 0;
-  padding: 0.3em 1em;
-  background-color: white;
-  color: #948f8c;
-  border: 1px solid #948f8c;
-}
-
-.tabs label:hover {
-  cursor: pointer;
-}
-
-.tabs input:checked + label {
-  color: #3d3d3b;
-  background-color: #f6f5f3;
-  border-bottom: 1px solid transparent;
-}
-
-.tabs #tab1:checked ~ #content1,
-.tabs #tab2:checked ~ #content2 {
-  display: block;
-}
-
-.tabs #tab3:checked ~ #content3,
-.tabs #tab4:checked ~ #content4 {
-  display: block;
-}
-
-.tabs p {
-  font-weight: 300;
-  font-size: 0.9em;
-  text-align: left;
 }
 
 .label_button {
@@ -390,16 +349,21 @@ nav a {
   justify-content: flex-start;
   align-items: center;
   font-family: "Montserrat", sans-serif;
-  font-size: 1em;
-  font-weight: 400;
   color: #222a3f;
   border: none;
   width: 100%;
-  padding-left: 2em;
+  padding-left: 1.5em;
   margin: 1em 0;
 }
 
 .label_button p {
+  font-size: 1.3em;
+  font-weight: 300;
+  padding-left: 1em;
+}
+
+.label_button span {
+  font-size: 1.5em;
   padding-left: 1em;
 }
 

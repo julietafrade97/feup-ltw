@@ -46,67 +46,30 @@
                         </nav>
 
                         <hr>
+                        <h2>Labels</h2>
 
-                        <div class="tabs">
-
-                            <input id="tab3" type="radio" name="tabs" checked>
-                            <label for="tab3">Labels</label>
-
-                            <input id="tab4" type="radio" name="tabs">
-                            <label for="tab4">Filters</label>
-
-                            <section id="content3">
-                                <div class="label_option">
-                                    <div class="circle"></div>
-                                    <p>Label</p>
-                                </div>
-                                <div class="label_option">
-                                    <div class="circle"></div>
-                                    <p>Label</p>
-                                </div>
-                                <div class="label_option">
-                                    <div class="circle"></div>
-                                    <p>Label</p>
-                                </div>
-                                <div class="label_option">
-                                    <div class="circle"></div>
-                                    <p>Label</p>
-                                </div>
-                                <button class="label_button">
-                                    <span class="lnr lnr-plus-circle"></span>
-                                    <p>Add Label</p>
-                                </button>
-                            </section>
-
-                            <section id="content4">
-                                <div class="label_option">
-                                    <div class="circle"></div>
-                                    <p>Filter</p>
-                                </div>
-                                <div class="label_option">
-                                    <div class="circle"></div>
-                                    <p>Filter</p>
-                                </div>
-                                <div class="label_option">
-                                    <div class="circle"></div>
-                                    <p>Filter</p>
-                                </div>
-                                <div class="label_option">
-                                    <div class="circle"></div>
-                                    <p>Filter</p>
-                                </div>
-                                <div class="label_option">
-                                    <div class="circle"></div>
-                                    <p>Filter</p>
-                                </div>
-                                <button class="label_button">
-                                    <span class="lnr lnr-plus-circle"></span>
-                                    <p>Add Filter</p>
-                                </button>
-                            </section>
-
-
-                        </div>
+                        <section>
+                            <div class="label_option">
+                                <div class="circle"></div>
+                                <p>Label</p>
+                            </div>
+                            <div class="label_option">
+                                <div class="circle"></div>
+                                <p>Label</p>
+                            </div>
+                            <div class="label_option">
+                                <div class="circle"></div>
+                                <p>Label</p>
+                            </div>
+                            <div class="label_option">
+                                <div class="circle"></div>
+                                <p>Label</p>
+                            </div>
+                            <button class="label_button">
+                                <span class="lnr lnr-plus-circle"></span>
+                                <p>Add Label</p>
+                            </button>
+                        </section>
                 </nav>
 
                 <a href="index.php">

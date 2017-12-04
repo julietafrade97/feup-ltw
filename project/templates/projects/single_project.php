@@ -3,7 +3,7 @@
         <div class="header">
             <h1>Project</h1>
             <span class="lnr lnr-pencil"></span>
-            <span class="lnr lnr-inbox"></span>
+            <span class="lnr lnr-exit"></span>
             <span class="lnr lnr-trash"></span>
         </div>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porttitor eget quam non gravida. Proin quis risus
