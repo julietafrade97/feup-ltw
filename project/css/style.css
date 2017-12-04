@@ -341,7 +341,6 @@ nav a {
   width: 1em;
   height: 1em;
   border-radius: 50%;
-  background: #865766;
 }
 
 .label_button {
@@ -460,6 +459,11 @@ main {
   height: 100%;
 }
 
+#project_container h1 {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
 #project_container #bio {
   grid-area: bio;
   padding: 2em 2em 0.5em 2em;
@@ -471,14 +475,14 @@ main {
   align-items: center;
 }
 
-#bio h1 {
-  font-size: 1.5em;
-  font-weight: 500;
+#bio h1,
+#members h1 {
   color: black;
   flex-grow: 1;
 }
 
-#bio span {
+#bio span,
+#members span {
   font-size: 1.1em;
   color: #222a3f;
   margin: 0 0 0 1em;
@@ -493,18 +497,6 @@ main {
 #project_container #members {
   grid-area: members;
   padding: 2em 2em 0.5em 2em;
-}
-
-#members h1 {
-  font-size: 1.5em;
-  font-weight: 500;
-  color: black;
-}
-
-#members span {
-  font-size: 1.1em;
-  color: #222a3f;
-  margin: 0 0 0 1em;
 }
 
 #members a {
@@ -540,18 +532,11 @@ main {
 }
 
 #lists h1 {
-  font-size: 1.5em;
-  font-weight: 500;
   color: white;
 }
 
-#lists #carousel {
+#lists #grid {
   margin: 0.5em -0.5em;
-  flex-grow: 1;
-}
-
-#carousel h1 {
-  color: black;
 }
 
 /*
@@ -872,28 +857,8 @@ footer p {
   margin: 1em 0 0 0;
 }
 
-#fields input[type="text"] {
-  font-family: "Montserrat", sans-serif;
-  font-size: 0.8em;
-  font-weight: 300;
-  color: #666666;
-  padding: 0.5em;
-  margin: 0.5em 0;
-  width: 95%;
-  height: 10%;
-}
-
-#fields input[type="email"] {
-  font-family: "Montserrat", sans-serif;
-  font-size: 0.8em;
-  font-weight: 300;
-  color: #666666;
-  padding: 0.5em;
-  margin: 0.5em 0;
-  width: 95%;
-  height: 10%;
-}
-
+#fields input[type="text"],
+#fields input[type="email"],
 #fields input[type="password"] {
   font-family: "Montserrat", sans-serif;
   font-size: 0.8em;

@@ -50,19 +50,19 @@
 
                         <section>
                             <div class="label_option">
-                                <div class="circle"></div>
+                                <div class="circle" style="background: #865766"></div>
                                 <p>Label</p>
                             </div>
                             <div class="label_option">
-                                <div class="circle"></div>
+                                <div class="circle" style="background: #865766"></div>
                                 <p>Label</p>
                             </div>
                             <div class="label_option">
-                                <div class="circle"></div>
+                                <div class="circle" style="background: #865766"></div>
                                 <p>Label</p>
                             </div>
                             <div class="label_option">
-                                <div class="circle"></div>
+                                <div class="circle" style="background: #865766"></div>
                                 <p>Label</p>
                             </div>
                             <button class="label_button">
