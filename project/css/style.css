@@ -9,7 +9,7 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-.register_container {
+#register_container {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;
@@ -45,7 +45,7 @@ body {
 }
 
 .register_header img {
-  margin: -5vh 0 -8vh 0;
+  margin: -6vh 0 -8vh 0;
   width: 25vh;
 }
 
@@ -120,6 +120,7 @@ body {
   border-radius: 1em;
   width: 25%;
   float: right;
+  border: none;
 }
 
 /*
