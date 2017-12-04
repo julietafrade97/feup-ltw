@@ -14,13 +14,13 @@
 </head>
 
 <body>
-    <div id="login_container">
-        <div id="login_header">
-            <a href="sign_up.php" class="signup_button">Sign Up</a>
+    <div class="register_container">
+        <div class="register_header">
+            <a href="sign_up.php" class="register_button">Sign Up</a>
             <img src="assets/logo.svg">
             <h1>Meraki</h1>
         </div>
-        <div id="login_content">
+        <div class="register_content">
             <h1>Login</h1>
             <form action="action_login.php" method="post">
                 <input name="username" class="w3-input w3-border" type="text" placeholder="Username" required="required">
@@ -29,3 +29,4 @@
             </form>
             <a href="test.php" class="button">Test Data Base</a>
         </div>
+    </div>
