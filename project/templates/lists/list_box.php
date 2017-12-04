@@ -2,7 +2,9 @@
     <div class="popup">
         <div id="pop_up_header">
             <span class="lnr lnr-trash"></span>
-            <a id="pop_up_close" href="#"> <span class="lnr lnr-cross"></span></a>
+            <a id="pop_up_close" href="#">
+                <span class="lnr lnr-cross"></span>
+            </a>
         </div>
         <div id="pop_up_title">
             <h1>Title</h1>
@@ -25,7 +27,7 @@
                 <input type="checkbox" id="box-F">
                 <label for="box-F">Task</label>
                 <input type="checkbox" id="box-G">
-                <label for="box-G">Task</label>                
+                <label for="box-G">Task</label>
             </div>
         </div>
         <div id="add_task">
@@ -116,9 +118,9 @@
         <label for="box-17">Task</label>
         <input type="checkbox" id="box-18">
         <label for="box-18">Task</label>
-        <input type="checkbox" id="box-19"> 
+        <input type="checkbox" id="box-19">
         <label for="box-19">Task</label>
-        <input type="checkbox" id="box-20"> 
+        <input type="checkbox" id="box-20">
         <label for="box-20">Task</label>
     </div>
     <a id="more" href="#listPopup" type="button">SEE MORE</a>
@@ -131,13 +133,13 @@
         <i class="fa fa-bookmark" aria-hidden="true"></i>
     </div>
     <div id="task_list">
-        <input type="checkbox" id="box-21"> 
+        <input type="checkbox" id="box-21">
         <label for="box-21">Task</label>
-        <input type="checkbox" id="box-22"> 
+        <input type="checkbox" id="box-22">
         <label for="box-22">Task</label>
-        <input type="checkbox" id="box-23"> 
+        <input type="checkbox" id="box-23">
         <label for="box-23">Task</label>
-        <input type="checkbox" id="box-24"> 
+        <input type="checkbox" id="box-24">
         <label for="box-24">Task</label>
     </div>
     <a id="more" href="#listPopup" type="button">SEE MORE</a>

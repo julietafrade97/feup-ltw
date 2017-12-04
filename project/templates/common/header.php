@@ -18,6 +18,97 @@
 
         <header>
             <div id="info">
+                <nav id="nav_sidebar">
+
+                    <span id="menu-icon" onclick="openNav()">
+                        <span class="lnr lnr-menu"></span>
+                    </span>
+
+                    <div id="mySidenav" class="sidenav">
+                        <a href="javascript:void(0)" onclick="closeNav()">
+                            <div class="closebtn">
+                                <span class="lnr lnr-cross"></span>
+                            </div>
+                        </a>
+                        <nav>
+                            <a href="#">
+                                <div class="menu_option">
+                                    <span class="lnr lnr-book"></span>
+                                    <p>Projects</p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="menu_option">
+                                    <span class="lnr lnr-file-empty"></span>
+                                    <p>Lists</p>
+                                </div>
+                            </a>
+                        </nav>
+
+                        <hr>
+
+                        <div class="tabs">
+
+                            <input id="tab3" type="radio" name="tabs" checked>
+                            <label for="tab3">Labels</label>
+
+                            <input id="tab4" type="radio" name="tabs">
+                            <label for="tab4">Filters</label>
+
+                            <section id="content3">
+                                <div class="label_option">
+                                    <div class="circle"></div>
+                                    <p>Label</p>
+                                </div>
+                                <div class="label_option">
+                                    <div class="circle"></div>
+                                    <p>Label</p>
+                                </div>
+                                <div class="label_option">
+                                    <div class="circle"></div>
+                                    <p>Label</p>
+                                </div>
+                                <div class="label_option">
+                                    <div class="circle"></div>
+                                    <p>Label</p>
+                                </div>
+                                <button class="label_button">
+                                    <span class="lnr lnr-plus-circle"></span>
+                                    <p>Add Label</p>
+                                </button>
+                            </section>
+
+                            <section id="content4">
+                                <div class="label_option">
+                                    <div class="circle"></div>
+                                    <p>Filter</p>
+                                </div>
+                                <div class="label_option">
+                                    <div class="circle"></div>
+                                    <p>Filter</p>
+                                </div>
+                                <div class="label_option">
+                                    <div class="circle"></div>
+                                    <p>Filter</p>
+                                </div>
+                                <div class="label_option">
+                                    <div class="circle"></div>
+                                    <p>Filter</p>
+                                </div>
+                                <div class="label_option">
+                                    <div class="circle"></div>
+                                    <p>Filter</p>
+                                </div>
+                                <button class="label_button">
+                                    <span class="lnr lnr-plus-circle"></span>
+                                    <p>Add Filter</p>
+                                </button>
+                            </section>
+
+
+                        </div>
+                </nav>
+
                 <a href="index.php">
                     <img src="assets/logo.svg">
                 </a>
@@ -57,5 +148,5 @@
                     </ul>
 
                 </nav>
-            </div>
+                </div>
         </header>
