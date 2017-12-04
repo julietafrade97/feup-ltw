@@ -417,10 +417,17 @@ main {
   -webkit-box-orient: vertical;
 }
 
-#project_box span {
+#project_box button {
   align-self: flex-end;
+  font-size: 1em;
   color: #222a3f;
   margin-top: auto;
+  background-color: transparent;
+  border: none;
+}
+
+#project_box button:hover {
+  cursor: pointer;
 }
 
 #project_box #tiny_members {
