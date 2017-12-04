@@ -26,8 +26,6 @@
     </div>
     <div id="lists">
         <h1>Lists</h1>
-        <a href="#">
-            <span class="lnr lnr-plus-circle"></span> Add List</a>
         <div id="carousel">
             <div id="grid_container">
 
@@ -193,7 +191,7 @@
                     </div>
                 </div>
 
-<!-- CHANGE -->
+                <!-- CHANGE -->
 
 
             </div>

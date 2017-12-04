@@ -24,10 +24,38 @@
                 <h1>
                     <a href="index.php">Meraki</a>
                 </h1>
-                <div class="plus">
-                    <span class="lnr lnr-cross"></span>
-                </div>
-                <span class="lnr lnr-magnifier"></span>
-                <span class="lnr lnr-cog"></span>
+
+                <nav>
+
+                    <a href="#" id="more-icon">
+                        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                    </a>
+
+                    <ul>
+
+                        <li>
+                            <a href="#" class="current">
+                                <div class="plus">
+                                    <span class="lnr lnr-cross"></span>
+                                </div>
+                                <p>Create New</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="lnr lnr-magnifier"></span>
+                                <p>Search</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="lnr lnr-cog"></span>
+                                <p>Settings</p>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </nav>
             </div>
         </header>
