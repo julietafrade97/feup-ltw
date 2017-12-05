@@ -993,13 +993,6 @@ footer p {
 * ARCHIVE
 */
 
-#settings #archive {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto 1fr;
-  grid-template-areas: "lists projects" "button button";
-}
-
 #archive h2 {
   font-size: 1.3em;
   font-weight: 300;
@@ -1031,23 +1024,11 @@ footer p {
   text-transform: uppercase;
   background-color: #222a3f;
   color: white;
-  margin: 1em 0;
+  margin: 2.5em 0;
   padding: 0.5em 1.5em;
   border-radius: 1em;
   width: auto;
   border: none;
-}
-
-#archive #archived_lists {
-  grid-area: lists;
-}
-
-#archive #archived_projects {
-  grid-area: projects;
-}
-
-#archive #archive_button {
-  grid-area: buttons;
 }
 
 /*
