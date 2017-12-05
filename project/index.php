@@ -6,7 +6,7 @@
   	  include_once('templates/common/footer.php');
   
   } else {
-  	header("Location:homepage.php");
+  	header("Location:pages/lists.php");
   }
 
 ?>
