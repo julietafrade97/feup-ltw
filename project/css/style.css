@@ -410,7 +410,7 @@ nav a {
 main {
   grid-area: content;
   overflow: auto;
-  background-color: white;
+  background-color: #948f8c;
 }
 
 #grid_container {
@@ -604,31 +604,31 @@ main {
   word-break: break-all;
 }
 
-#list_box #list_box_header {
+#list_box_header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
 
-#list_box h1 {
+#list_box_header h1 {
   color: black;
   font-size: 1.2em;
   font-weight: 600;
 }
 
-#list_box i {
+#list_box_header i {
   margin-top: -0.1em;
   font-size: 2em;
   color: #865766;
   align-self: flex-start;
 }
 
-#list_box input[type="checkbox"] {
+#task_list input[type="checkbox"] {
   display: none;
 }
 
-#list_box input[type="checkbox"] + label {
+#task_list input[type="checkbox"] + label {
   display: block;
   position: relative;
   padding-left: 1.8em;
@@ -637,11 +637,11 @@ main {
   cursor: pointer;
 }
 
-#list_box input[type="checkbox"] + label:last-child {
+#task_list input[type="checkbox"] + label:last-child {
   margin-bottom: 0;
 }
 
-#list_box input[type="checkbox"] + label:before {
+#task_list input[type="checkbox"] + label:before {
   content: "";
   display: block;
   width: 1em;
@@ -655,7 +655,7 @@ main {
   transition: all 0.12s, border-color 0.08s;
 }
 
-#list_box input[type="checkbox"]:checked + label:before {
+#task_list input[type="checkbox"]:checked + label:before {
   width: 0.5em;
   top: 0.2em;
   left: 0.2em;
@@ -666,7 +666,7 @@ main {
   transform: rotate(45deg);
 }
 
-#list_box input[type="checkbox"]:checked + label {
+#task_list input[type="checkbox"]:checked + label {
   text-decoration: line-through;
   animation: strikeMove 0.2s;
 }
@@ -699,6 +699,22 @@ main {
   color: white;
 }
 
+
+/*
+* QUESTION POP UP
+*/
+.question{
+  box-shadow: 0 0 1em 0.2em rgba(0, 0, 0, 0.2);
+  margin: 5em auto;
+  padding: 1.5em;
+  background: #fff;
+  width: 30%;
+  position: relative;
+}
+
+/*
+* LIST POP UP
+*/
 .overlay {
   position: absolute;
   display: none;
@@ -732,6 +748,7 @@ main {
   position: relative;
 }
 
+
 #pop_up_header {
   display: flex;
   justify-content: flex-end;
@@ -742,10 +759,6 @@ main {
 
 #pop_up_header > span {
   padding-right: 0.5em;
-}
-
-#pop_up_header a {
-  text-decoration: none;
 }
 
 #pop_up_title {
@@ -777,13 +790,37 @@ main {
   word-break: break-all;
 }
 
+.task_line{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: 0.05em solid #3d3d3b;
+}
+
+.popup a{
+  text-decoration: none;
+}
+
+.task_line a:first-of-type{
+  margin-left: auto;
+  padding-right: 0.3em;
+}
+
+.task_line a{
+  visibility: hidden;
+  font-size: 1.15em;
+}
+
+.task_line:hover > a{
+  visibility: visible;
+}
+
 #popup_task_list input[type="checkbox"] {
   display: none;
 }
 
 #popup_task_list input[type="checkbox"] + label {
   font-size: 1.15em;
-  border-bottom: 0.05em solid #3d3d3b;
   display: block;
   position: relative;
   padding-left: 1.8em;

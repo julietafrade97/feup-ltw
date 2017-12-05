@@ -1,39 +1,80 @@
+<div id="verifyDeleteList" class="overlay">
+    <div class="question">
+        <a href="#"><span class="lnr lnr-cross"></span></a>
+        <p> Are you sure you want to delete this list? </p>
+        <button>Yes</button>
+        <a href="#"> No </a>
+    </div>
+</div>
+
+<div id="verifyDeleteTask" class="overlay">
+    <div class="question">
+        <a href="#"><span class="lnr lnr-cross"></span></a>
+        <p> Are you sure you want to delete this task? </p>
+        <button>Yes</button>
+        <a href="#"> No </a>
+    </div>
+</div>
+
 <div id="listPopup" class="overlay">
     <div class="popup">
         <div id="pop_up_header">
-            <span class="lnr lnr-trash"></span>
-            <a id="pop_up_close" href="#">
-                <span class="lnr lnr-cross"></span>
-            </a>
+            <a href="#verifyDeleteList"><span class="lnr lnr-trash"></a>
+            <span class="lnr lnr-inbox"></span>
+            <a href="#"><span class="lnr lnr-cross"></a>        
         </div>
         <div id="pop_up_title">
             <h1>Title</h1>
             <div id="rectangle"></div>
         </div>
         <div id="popup_task_list">
-            <div class="content">
-                <div class="task">
+                <div class="task_line">
                     <input type="checkbox" id="box-A">
-                    <label for="box-A">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod </label>
+                    <label for="box-A">Task </label>
+                    <a><span class="lnr lnr-star"></span></a>
+                    <a href="#verifyDeleteTask"><span class="lnr lnr-cross"></a>
                 </div>
-                <input type="checkbox" id="box-B">
-                <label for="box-B">Task</label>
-                <input type="checkbox" id="box-C">
-                <label for="box-C">Task</label>
-                <input type="checkbox" id="box-D">
-                <label for="box-D">Task</label>
-                <input type="checkbox" id="box-E">
-                <label for="box-E">Task</label>
-                <input type="checkbox" id="box-F">
-                <label for="box-F">Task</label>
-                <input type="checkbox" id="box-G">
-                <label for="box-G">Task</label>
-            </div>
+                <div class="task_line">
+                    <input type="checkbox" id="box-B">
+                    <label for="box-B">Task</label>
+                    <a><span class="lnr lnr-star"></span></a>
+                    <a href="#verifyDeleteTask"><span class="lnr lnr-cross"></a>
+                </div>
+                <div class="task_line">
+                    <input type="checkbox" id="box-C">
+                    <label for="box-C">Task</label>
+                    <a><span class="lnr lnr-star"></span></a>
+                    <a href="#verifyDeleteTask"><span class="lnr lnr-cross"></a>
+                </div>
+                <div class="task_line">
+                    <input type="checkbox" id="box-D">
+                    <label for="box-D">Task</label>
+                    <a><span class="lnr lnr-star"></span></a>
+                    <a href="#verifyDeleteTask"><span class="lnr lnr-cross"></a>
+                </div>
+                <div class="task_line">
+                    <input type="checkbox" id="box-E">
+                    <label for="box-E">Task</label>
+                    <a><span class="lnr lnr-star"></span></a>
+                    <a href="#verifyDeleteTask"><span class="lnr lnr-cross"></a>
+                </div>
+                <div class="task_line">
+                    <input type="checkbox" id="box-F">
+                    <label for="box-F">Task</label>
+                    <a><span class="lnr lnr-star"></span></a>
+                    <a href="#verifyDeleteTask"><span class="lnr lnr-cross"></a>
+                </div>
+                <div class="task_line">
+                    <input type="checkbox" id="box-G">
+                    <label for="box-G">Task</label>
+                    <a><span class="lnr lnr-star"></span></a>
+                    <a href="#verifyDeleteTask"><span class="lnr lnr-cross"></a>
+                </div>
         </div>
-        <div id="add_task">
+        <button id="add_task">
             <span class="lnr lnr-plus-circle"></span>
-            <p>Add Task</p>
-        </div>
+            Add Task
+        </button>
     </div>
 </div>
 
