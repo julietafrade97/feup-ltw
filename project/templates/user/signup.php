@@ -16,17 +16,21 @@
 <body>
     <div id="register_container">
         <div class="register_header">
-            <a href="sign_up.php" class="register_button">Sign Up</a>
+            <a href="index.php" class="register_button">Login</a>
             <img src="assets/logo.svg">
             <h1>Meraki</h1>
         </div>
-        <div class="register_content">
-            <h1>Login</h1>
-            <form action="action_login.php" method="post">
+        <div id="sign_up_content" class="register_content">
+            <h1>Sign Up</h1>
+            <form action="action_sign_up.php" method="post">
                 <input name="username" class="w3-input w3-border" type="text" placeholder="Username" required="required">
                 <input name="password" class="w3-input w3-border" type="password" placeholder="Password" required="required">
-                <input type="submit" name="Submit" value="Next">
+                <input name="name" class="w3-input w3-border" type="text" placeholder="Name">
+                <input name="email" class="w3-input w3-border" type="email" placeholder="Email" required="required">
+                <input name="Submit" class="w3-input w3-border" type="submit" value="Sign up">
             </form>
-            <a href="test.php" class="button">Test Data Base</a>
         </div>
+        <p>
+            <?php echo $error ?>
+        </p>
     </div>
