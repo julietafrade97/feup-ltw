@@ -6,9 +6,11 @@
             <button class="edit">
                 <span class="lnr lnr-pencil"></span>
             </button>
-            <button>
-                <span class="lnr lnr-exit"></span>
-            </button>
+            <a href="#verifyLeaveProject">
+                <button>
+                    <span class="lnr lnr-exit"></span>
+                </button>
+            </a>
         </div>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porttitor eget quam non gravida. Proin quis risus
             nisi. Phasellus eu purus lectus. In pharetra molestie.</p>
@@ -114,15 +116,16 @@
             </div>
         </div>
     </div>
+</div>
 
-    <div id="verifyDeleteList" class="overlay">
-        <div class="question">
+<div id="verifyLeaveProject" class="overlay">
+    <div class="question">
+        <p>You're about to leave this project, are you sure?</p>
+        <div class="buttons">
             <a href="#">
-                <span class="lnr lnr-cross"></span>
+                <button>Cancel</button>
             </a>
-            <p> Are you sure you want to delete this list? </p>
-            <button>Yes</button>
-            <a href="#"> No </a>
+            <button>Leave</button>
         </div>
     </div>
 </div>

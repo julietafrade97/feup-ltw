@@ -495,6 +495,7 @@ main {
   font-size: 1.1em;
   color: #222a3f;
   margin: 0 0 0 1em;
+  outline: none;
 }
 
 #project_container .button_text {
@@ -708,14 +709,39 @@ main {
 * QUESTION POP UP
 */
 .question {
-  box-shadow: 0 0 1em 0.2em rgba(0, 0, 0, 0.2);
-  margin: 5em auto;
-  padding: 1.5em;
-  background: #fff;
-  width: 30%;
   position: relative;
+  margin: 0 auto;
+  top: 25%;
+  padding: 1.5em;
+  background: white;
+  width: 30%;
+  box-shadow: 0 0 1em 0.2em rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
 }
 
+.question .buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.question button {
+  font-size: 0.7em;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background-color: #222a3f;
+  color: white;
+  margin: 2em 0 2em 1em;
+  padding: 0.5em 1.5em;
+  border-radius: 1em;
+  border: none;
+}
+
+.question button:hover {
+  background-color: #948f8c;
+  cursor: pointer;
+}
 /*
 * LIST POP UP
 */
@@ -1183,5 +1209,15 @@ footer p {
 
   #info nav:hover ul {
     display: block;
+  }
+
+  .question .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .question button {
+    margin: 1em 2em;
   }
 }
