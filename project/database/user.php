@@ -52,6 +52,18 @@
     }
   }
 
+  function deleteUser($userID) {
+    global $dbh;
+    try {
+      $stmt = $dbh->prepare('DELETE FROM User WHERE ID = ?');
+      $stmt->execute(array($userID));
+      return true;
+    }
+    catch(PDOException $e) {
+      return false;
+    }
+  }
+
   function getID($username) {
     global $dbh;
     try {

@@ -14,9 +14,7 @@
         </div>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porttitor eget quam non gravida. Proin quis risus
             nisi. Phasellus eu purus lectus. In pharetra molestie.</p>
-        <textarea></textarea>
     </div>
-
     <div id="members">
         <div class="header">
             <h1>Members</h1>
@@ -41,7 +39,7 @@
         <div id="grid">
             <div id="grid_container">
 
-                <!-- CHANGE -->
+<!-- CHANGE -->
                 <div id="list_box">
                     <div id="list_box_header">
                         <h1> Title </h1>
@@ -57,7 +55,11 @@
                         <input type="checkbox" id="box-4">
                         <label for="box-4">Task</label>
                     </div>
-                    <a id="more" href="#listPopup" type="button">SEE MORE</a>
+                    <div id="more">
+                        <div id="hover_box">
+                            <p> SEE MORE </p>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="list_box">
@@ -75,7 +77,11 @@
                         <input type="checkbox" id="box-4">
                         <label for="box-4">Task</label>
                     </div>
-                    <a id="more" href="#listPopup" type="button">SEE MORE</a>
+                    <div id="more">
+                        <div id="hover_box">
+                            <p> SEE MORE </p>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="list_box">
@@ -93,7 +99,11 @@
                         <input type="checkbox" id="box-4">
                         <label for="box-4">Task</label>
                     </div>
-                    <a id="more" href="#listPopup" type="button">SEE MORE</a>
+                    <div id="more">
+                        <div id="hover_box">
+                            <p> SEE MORE </p>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="list_box">
@@ -111,7 +121,11 @@
                         <input type="checkbox" id="box-4">
                         <label for="box-4">Task</label>
                     </div>
-                    <a id="more" href="#listPopup" type="button">SEE MORE</a>
+                    <div id="more">
+                        <div id="hover_box">
+                            <p> SEE MORE </p>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- CHANGE -->

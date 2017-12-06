@@ -423,7 +423,7 @@ main {
   font-size: 1em;
   color: #222a3f;
   margin-top: auto;
-  background: none;
+  background-color: transparent;
   border: none;
 }
 
@@ -492,9 +492,8 @@ main {
   flex-grow: 1;
 }
 
-#project_container button {
-  background: none;
-  border: none;
+#bio span,
+#members span {
   font-size: 1.1em;
   color: #222a3f;
   margin: 0 0 0 1em;
@@ -518,6 +517,14 @@ main {
 #project_container #members {
   grid-area: members;
   padding: 2em 2em 0.5em 2em;
+}
+
+#members a {
+  font-size: 0.8em;
+  font-weight: 300;
+  color: #222a3f;
+  text-decoration: none;
+  text-transform: lowercase;
 }
 
 #members #member_list {
@@ -551,48 +558,6 @@ main {
 
 #lists #grid {
   margin: 0.5em -0.5em;
-}
-
-#project_container input[type="text"] {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.5em;
-  font-weight: 500;
-  color: #3d3d3bb2;
-  flex-grow: 1;
-  padding: 0.5em 0;
-  margin: 0.1em 0 0.4em 0;
-  border: 1px solid #ddd;
-}
-
-#project_container textarea {
-  font-family: "Montserrat", sans-serif;
-  font-size: 0.8em;
-  font-weight: 300;
-  color: #3d3d3bb2;
-  padding: 0.5em 0;
-  width: 100%;
-  resize: none;
-  border: 1px solid #ddd;
-}
-
-#project_container input[type="text"]:focus,
-#project_container textarea:focus {
-  color: #3d3d3b;
-}
-
-#project_container input[type="text"],
-#project_container textarea {
-  display: none;
-}
-
-#project_container .editMode input[type="text"],
-#project_container .editMode textarea {
-  display: block;
-}
-
-#project_container .editMode h1,
-#project_container .editMode p {
-  display: none;
 }
 
 /*
