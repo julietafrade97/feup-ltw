@@ -427,7 +427,9 @@ main {
   border: none;
 }
 
-#project_box button:hover {
+#project_box button:hover,
+#project_container button:hover {
+  color: #948f8c;
   cursor: pointer;
 }
 
@@ -505,11 +507,6 @@ main {
   text-transform: lowercase;
   margin: 1em 0;
   float: right;
-}
-
-#project_container button:hover {
-  color: #948f8c;
-  cursor: pointer;
 }
 
 #bio p {
@@ -984,6 +981,25 @@ footer p {
   grid-area: content;
 }
 
+#settings input[type="submit"] {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.7em;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: white;
+  margin: 1em 0;
+  padding: 0.5em 1.5em;
+  border-radius: 1em;
+  width: auto;
+  border: none;
+}
+
+#settings input[type="submit"]:hover {
+  background-color: #948f8c;
+  cursor: pointer;
+}
+
 /*
 * ACCOUNT
 */
@@ -1020,18 +1036,7 @@ footer p {
 }
 
 #fields input[type="submit"] {
-  font-family: "Montserrat", sans-serif;
-  font-size: 0.7em;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
   background-color: #222a3f;
-  color: white;
-  margin: 1em 0;
-  padding: 0.5em 1.5em;
-  border-radius: 1em;
-  width: auto;
-  border: none;
 }
 
 #fields hr {
@@ -1064,18 +1069,7 @@ footer p {
 }
 
 #photo_field input[type="submit"] {
-  font-family: "Montserrat", sans-serif;
-  font-size: 0.7em;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
   background-color: #576886;
-  color: white;
-  margin: 1em 0;
-  padding: 0.5em 1.5em;
-  border-radius: 1em;
-  width: auto;
-  border: none;
 }
 
 /*
@@ -1099,6 +1093,10 @@ footer p {
 * ARCHIVE
 */
 
+#archive {
+  width: 80%;
+}
+
 #archive h2 {
   font-size: 1.3em;
   font-weight: 300;
@@ -1114,27 +1112,42 @@ footer p {
 }
 
 #archive li {
-  padding: 0.5em 0;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #576886;
+}
+
+#archive p {
+  flex-grow: 1;
+  padding: 0 1em;
 }
 
 #archive span {
   color: #222a3f;
-  padding-right: 1em;
 }
 
 #archive input[type="submit"] {
-  font-family: "Montserrat", sans-serif;
-  font-size: 0.7em;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
   background-color: #222a3f;
-  color: white;
   margin: 2.5em 0;
-  padding: 0.5em 1.5em;
-  border-radius: 1em;
-  width: auto;
+}
+
+#archive li button {
+  background: none;
   border: none;
+  font-size: 1em;
+  color: #222a3f;
+  outline: none;
+}
+
+#archive li:hover {
+  cursor: pointer;
+  font-weight: normal;
+  background-color: #f6f5f36e;
+}
+
+#archive li span:hover {
+  cursor: pointer;
+  color: #948f8c;
 }
 
 /*
