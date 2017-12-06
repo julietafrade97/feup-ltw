@@ -6,7 +6,7 @@
             <button class="edit">
                 <span class="lnr lnr-pencil"></span>
             </button>
-            <a href="#verifyLeaveProject">
+            <a href="#dialogLeaveProject">
                 <button>
                     <span class="lnr lnr-exit"></span>
                 </button>
@@ -20,9 +20,11 @@
     <div id="members">
         <div class="header">
             <h1>Members</h1>
-            <button>
-                <span class="lnr lnr-users"></span>
-            </button>
+            <a href="#dialogAddMember">
+                <button>
+                    <span class="lnr lnr-users"></span>
+                </button>
+            </a>
         </div>
         <div id="member_list">
             <img class="member" src="assets/portrait.png">
@@ -30,7 +32,9 @@
             <img class="member" src="assets/portrait.png">
             <img class="member" src="assets/portrait.png">
         </div>
-        <button class="button_text">See All</button>
+        <a href="#dialogSeeMembers">
+            <button class="button_text">See All</button>
+        </a>
     </div>
     <div id="lists">
         <h1>Lists</h1>
@@ -118,7 +122,7 @@
     </div>
 </div>
 
-<div id="verifyLeaveProject" class="overlay">
+<div id="dialogLeaveProject" class="overlay">
     <div class="question">
         <p>You're about to leave this project, are you sure?</p>
         <div class="buttons">
@@ -129,3 +133,49 @@
         </div>
     </div>
 </div>
+
+<div id="dialogAddMember" class="overlay">
+    <div class="question">
+        <p>Add member to project.</p>
+        <input name="username" class="w3-input w3-border" type="text" placeholder="Username">
+        <div class="buttons">
+            <a href="#">
+                <button>Cancel</button>
+            </a>
+            <button>Confirm</button>
+        </div>
+    </div>
+</div>
+
+<div id="dialogSeeMembers" class="overlay">
+        <div class="question">
+            <p>Members</p>
+            <div id="member_list">
+                    <img class="member" src="assets/portrait.png">
+                    <img class="member" src="assets/portrait.png">
+                    <img class="member" src="assets/portrait.png">
+                    <img class="member" src="assets/portrait.png">
+                    <img class="member" src="assets/portrait.png">
+                    <img class="member" src="assets/portrait.png">
+                    <img class="member" src="assets/portrait.png">
+                    <img class="member" src="assets/portrait.png">
+                    <img class="member" src="assets/portrait.png">
+                    <img class="member" src="assets/portrait.png">
+                    <img class="member" src="assets/portrait.png">
+                    <img class="member" src="assets/portrait.png">
+                    <img class="member" src="assets/portrait.png">
+                    <img class="member" src="assets/portrait.png">
+                    <img class="member" src="assets/portrait.png">
+                    <img class="member" src="assets/portrait.png">
+                    <img class="member" src="assets/portrait.png">
+                    <img class="member" src="assets/portrait.png">
+                    <img class="member" src="assets/portrait.png">
+                    <img class="member" src="assets/portrait.png">
+                </div>
+            <div class="buttons">
+                <a href="#">
+                    <button>Close</button>
+                </a>
+            </div>
+        </div>
+    </div>

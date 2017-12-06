@@ -96,7 +96,8 @@ body {
 
 .register_content input[type="text"],
 .register_content input[type="password"],
-.register_content input[type="email"] {
+.register_content input[type="email"],
+.question input[type="text"] {
   font-family: "Montserrat", sans-serif;
   font-size: 0.8em;
   font-weight: 300;
