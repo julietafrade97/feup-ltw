@@ -1,9 +1,13 @@
 <div id="listPopUp" class="overlay">
     <div class="popup">
         <div id="pop_up_header">
-            <a href="#verifyDeleteList"><span class="lnr lnr-trash"></a>
+            <a href="#verifyDeleteList">
+                <span class="lnr lnr-trash">
+            </a>
             <span class="lnr lnr-inbox"></span>
-            <a href="#"><span class="lnr lnr-cross"></a>        
+            <a href="#">
+                <span class="lnr lnr-cross">
+            </a>
         </div>
         <div id="pop_up_title">
             <h1 contentEditable="true">Title</h1>

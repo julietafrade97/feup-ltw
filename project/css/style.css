@@ -96,7 +96,8 @@ body {
 
 .register_content input[type="text"],
 .register_content input[type="password"],
-.register_content input[type="email"] {
+.register_content input[type="email"],
+.question input[type="text"] {
   font-family: "Montserrat", sans-serif;
   font-size: 0.8em;
   font-weight: 300;
@@ -374,7 +375,7 @@ nav a {
 main {
   grid-area: content;
   overflow: auto;
-  background-color: #948f8c;
+  background-color: white;
 }
 
 #grid_container {
@@ -422,7 +423,7 @@ main {
   font-size: 1em;
   color: #222a3f;
   margin-top: auto;
-  background-color: transparent;
+  background: none;
   border: none;
 }
 
@@ -489,11 +490,26 @@ main {
   flex-grow: 1;
 }
 
-#bio span,
-#members span {
+#project_container button {
+  background: none;
+  border: none;
   font-size: 1.1em;
   color: #222a3f;
   margin: 0 0 0 1em;
+  outline: none;
+}
+
+#project_container .button_text {
+  font-size: 0.8em;
+  font-weight: 300;
+  text-transform: lowercase;
+  margin: 1em 0;
+  float: right;
+}
+
+#project_container button:hover {
+  color: #948f8c;
+  cursor: pointer;
 }
 
 #bio p {
@@ -505,14 +521,6 @@ main {
 #project_container #members {
   grid-area: members;
   padding: 2em 2em 0.5em 2em;
-}
-
-#members a {
-  font-size: 0.8em;
-  font-weight: 300;
-  color: #222a3f;
-  text-decoration: none;
-  text-transform: lowercase;
 }
 
 #members #member_list {
@@ -545,6 +553,48 @@ main {
 
 #lists #grid {
   margin: 0.5em -0.5em;
+}
+
+#project_container input[type="text"] {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5em;
+  font-weight: 500;
+  color: #3d3d3bb2;
+  flex-grow: 1;
+  padding: 0.5em 0;
+  margin: 0.1em 0 0.4em 0;
+  border: 1px solid #ddd;
+}
+
+#project_container textarea {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8em;
+  font-weight: 300;
+  color: #3d3d3bb2;
+  padding: 0.5em 0;
+  width: 100%;
+  resize: none;
+  border: 1px solid #ddd;
+}
+
+#project_container input[type="text"]:focus,
+#project_container textarea:focus {
+  color: #3d3d3b;
+}
+
+#project_container input[type="text"],
+#project_container textarea {
+  display: none;
+}
+
+#project_container .editMode input[type="text"],
+#project_container .editMode textarea {
+  display: block;
+}
+
+#project_container .editMode h1,
+#project_container .editMode p {
+  display: none;
 }
 
 /*
@@ -659,15 +709,40 @@ main {
 /*
 * QUESTION POP UP
 */
-.question{
-  box-shadow: 0 0 1em 0.2em rgba(0, 0, 0, 0.2);
-  margin: 5em auto;
-  padding: 1.5em;
-  background: #fff;
-  width: 30%;
+.question {
   position: relative;
+  margin: 0 auto;
+  top: 25%;
+  padding: 1.5em;
+  background: white;
+  width: 30%;
+  box-shadow: 0 0 1em 0.2em rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
 }
 
+.question .buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.question button {
+  font-size: 0.7em;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background-color: #222a3f;
+  color: white;
+  margin: 2em 0 2em 1em;
+  padding: 0.5em 1.5em;
+  border-radius: 1em;
+  border: none;
+}
+
+.question button:hover {
+  background-color: #948f8c;
+  cursor: pointer;
+}
 /*
 * LIST POP UP
 */
@@ -997,13 +1072,6 @@ footer p {
 * ARCHIVE
 */
 
-#settings #archive {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto 1fr;
-  grid-template-areas: "lists projects" "button button";
-}
-
 #archive h2 {
   font-size: 1.3em;
   font-weight: 300;
@@ -1035,23 +1103,11 @@ footer p {
   text-transform: uppercase;
   background-color: #222a3f;
   color: white;
-  margin: 1em 0;
+  margin: 2.5em 0;
   padding: 0.5em 1.5em;
   border-radius: 1em;
   width: auto;
   border: none;
-}
-
-#archive #archived_lists {
-  grid-area: lists;
-}
-
-#archive #archived_projects {
-  grid-area: projects;
-}
-
-#archive #archive_button {
-  grid-area: buttons;
 }
 
 /*
@@ -1158,5 +1214,15 @@ footer p {
 
   #info nav:hover ul {
     display: block;
+  }
+
+  .question .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .question button {
+    margin: 1em 2em;
   }
 }
