@@ -5,6 +5,7 @@
 </div>
 
 <script src="js/sidebar.js"></script>
+<script src="js/task.js"></script>
 
 </body>
 

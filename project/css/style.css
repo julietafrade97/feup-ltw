@@ -656,7 +656,6 @@ main {
   color: white;
 }
 
-
 /*
 * QUESTION POP UP
 */
@@ -683,39 +682,57 @@ main {
   z-index: 2;
   visibility: hidden;
   opacity: 0;
-  transform: scale(1.2);
-  transition: all 0.4s cubic-bezier(0.55, 0, 0.1, 1);
-  transition-delay: 1s;
 }
 .overlay:target {
   display: block;
   visibility: visible;
   opacity: 1;
-  transform: scale(1);
 }
 
+/* Basic Style */
 .popup {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  flex-shrink: 0;
   box-shadow: 0 0 1em 0.2em rgba(0, 0, 0, 0.2);
   margin: 5em auto;
   padding: 1.5em;
   background: #fff;
   width: 30%;
+  max-height: 70%;
   position: relative;
+  overflow-y: auto;
 }
 
+.popup a{
+  text-decoration: none;
+}
 
+#listPopUp ul {
+  margin: 0;
+  padding: 0;
+  word-break:break-all;
+}
+
+input, button {
+  outline: none;
+}
+
+#listPopUp button {
+  background: none;
+  border: 0;
+  font-size: 1.15em;
+  cursor: pointer;
+}
+
+/* Heading */
 #pop_up_header {
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
   width: 100%;
   font-size: 1.4em;
-}
-
-#pop_up_header > span {
-  padding-right: 0.5em;
 }
 
 #pop_up_title {
@@ -741,100 +758,85 @@ main {
   z-index: 1;
 }
 
-#popup_task_list {
-  max-height: 30%;
-  overflow: auto;
-  word-break: break-all;
+#listPopUp h3 {
+  font-weight: 700;
+  font-size: 0.7em;
+  padding: 2em 0 1em;
+  margin: 0;
+  text-transform: uppercase;
+}
+#listPopUp input[type="text"] {
+  font-size: 1em;
+  height: 2em;
+  padding-left: 1em;
+  margin: 0.5em 0;
+  background: #e2dcd8;
+  border:0;
+  border-radius: 3em;
+  color:rgb(90, 90, 90);
+  font-family: "Montserrat", sans-serif;
 }
 
+#listPopUp .new_task{
+  margin-bottom: 1.5em;
+}
+
+/* Task Line */
 .task_line{
   display: flex;
-  align-items: center;
   justify-content: flex-start;
-  border-bottom: 0.05em solid #3d3d3b;
+  align-items: center;
+  border-bottom: 0.07em solid #3d3d3b;
 }
 
-.popup a{
-  text-decoration: none;
-}
-
-.task_line a:first-of-type{
+.task_line button:first-of-type{
   margin-left: auto;
-  padding-right: 0.3em;
 }
 
-.task_line a{
+.task_line button{
   visibility: hidden;
-  font-size: 1.15em;
 }
 
-.task_line:hover > a{
+.task_line:hover > button{
   visibility: visible;
 }
 
-#popup_task_list input[type="checkbox"] {
-  display: none;
-}
-
-#popup_task_list input[type="checkbox"] + label {
-  font-size: 1.15em;
-  display: block;
-  position: relative;
-  padding-left: 1.8em;
-  padding-bottom: 0.4em;
-  padding-top: 0.7em;
-  cursor: pointer;
-}
-
-#popup_task_list input[type="checkbox"] + label:last-child {
-  margin-bottom: 0;
-}
-
-#popup_task_list input[type="checkbox"] + label:before {
-  content: "";
-  display: block;
-  width: 1em;
-  height: 1em;
-  border: 0.065em solid #3d3d3b;
-  position: absolute;
-  left: 0;
-  top: 0.7em;
-  z-index: 1;
-  -webkit-transition: all 0.12s, border-color 0.08s;
-  transition: all 0.12s, border-color 0.08s;
-}
-
-#popup_task_list input[type="checkbox"]:checked + label:before {
-  width: 0.5em;
-  top: 0.5em;
-  left: 0.2em;
-  border-radius: 0;
-  border-top-color: transparent;
-  border-left-color: transparent;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-#popup_task_list input[type="checkbox"]:checked + label {
-  text-decoration: line-through;
-  animation: strikeMove 0.2s;
-}
-
-#add_task {
-  display: flex;
-  color: #222a3f;
-  justify-content: flex-start;
-  align-items: center;
-  font-weight: 500;
-  font-size: 1.15em;
+/* New Task */
+#listPopUp input#new-task {
   width: 100%;
 }
 
-#add_task span {
-  font-size: 0.9em;
-  font-weight: bold;
-  padding-right: 1em;
-  padding-left: 0.15em;
+.new_task{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#listPopUp li > label {
+  font-size:1em;
+  line-height: 3em;
+  padding-left: 0.7em;
+}
+#listPopUp li >  input[type="text"] {
+  width: 100%;
+}
+
+/* Completed */
+#completed-tasks label {
+  text-decoration: line-through;
+}
+
+/* Edit Task */
+#listPopUp ul li input[type=text] {
+  display:none;
+}
+
+#listPopUp ul li.editMode input[type=text] {
+  display:block;
+}
+
+#listPopUp ul li.editMode label {
+  display:none;
 }
 
 /*
