@@ -1,3 +1,4 @@
+
 INSERT INTO User (ID, Username, Password, Name, Email, Photo) VALUES (14, 'TesteUm', '387f380808157d07c559c5e8415588dc35c5ceaff7301fdb379a8181f337f6c7', 'Teste Um', 'testeum@test.com', '');
 INSERT INTO User (ID, Username, Password, Name, Email, Photo) VALUES (15, 'julietafrade', '576d40d4abfcf16bb27d2a7898084bd47d646463d71aec216526316070f7eb0d', 'Julieta Frade', 'julietafrade@julietafrade.pt', '');
 INSERT INTO User (ID, Username, Password, Name, Email, Photo) VALUES (16, 'TesteDois', '576d40d4abfcf16bb27d2a7898084bd47d646463d71aec216526316070f7eb0d', 'Teste Dois', 'testedois@test.com', NULL);

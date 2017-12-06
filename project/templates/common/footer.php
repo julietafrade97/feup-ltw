@@ -4,9 +4,9 @@
 
 </div>
 
-<script type="text/javascript" src="js/sidebar.js"></script>
-<script type="text/javascript" src="js/project_edit.js"></script>
-
+<script src="../js/sidebar.js"></script>
+<script src="../js/change_main_page.js"></script>
+<script src="../js/upload_user_photo.js"></script>
 </body>
 
 </html>

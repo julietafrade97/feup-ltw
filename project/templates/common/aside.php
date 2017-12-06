@@ -1,13 +1,13 @@
 <aside>
     <div id="aside_container">
         <nav>
-            <a href="#">
+            <a href="projects.php">
                 <div class="menu_option">
                     <span class="lnr lnr-book"></span>
                     <p>Projects</p>
                 </div>
             </a>
-            <a href="#">
+            <a href="lists.php">
                 <div class="menu_option">
                     <span class="lnr lnr-file-empty"></span>
                     <p>Lists</p>

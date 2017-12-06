@@ -1,4 +1,4 @@
-PRAGMA foreign_keys = on;
+PRAGMA foreign_keys = ON;
 .mode columns
 .headers on
 .nullvalue NULL
@@ -12,8 +12,8 @@ CREATE TABLE Category (
     ID        INTEGER PRIMARY KEY AUTOINCREMENT,
     Name      STRING,
     Color     INTEGER,
-    ProjectID INTEGER REFERENCES Project (ID),
-    UserID    INTEGER REFERENCES User (ID) 
+    ProjectID INTEGER REFERENCES Project (ID) ON DELETE CASCADE,
+    UserID    INTEGER REFERENCES User (ID) ON DELETE CASCADE 
 );
 
 -- Table: List
@@ -30,8 +30,8 @@ CREATE TABLE List (
 DROP TABLE IF EXISTS ListCategory;
 
 CREATE TABLE ListCategory (
-    idCategory INTEGER REFERENCES Category (ID),
-    idList     INTEGER REFERENCES List (ID),
+    idCategory INTEGER REFERENCES Category (ID) ON DELETE CASCADE,
+    idList     INTEGER REFERENCES List (ID) ON DELETE CASCADE,
      PRIMARY KEY (
         idCategory,
         idList
@@ -54,8 +54,8 @@ CREATE TABLE Project (
 DROP TABLE IF EXISTS ProjectUser;
 
 CREATE TABLE ProjectUser (
-    idUser    INTEGER REFERENCES User (ID),
-    idProject INTEGER REFERENCES Project (ID),
+    idUser    INTEGER REFERENCES User (ID) ON DELETE CASCADE,
+    idProject INTEGER REFERENCES Project (ID) ON DELETE CASCADE,
     PRIMARY KEY (
         idUser,
         idProject
@@ -67,7 +67,7 @@ DROP TABLE IF EXISTS Task;
 
 CREATE TABLE Task (
     ID     INTEGER PRIMARY KEY AUTOINCREMENT,
-    idList INTEGER REFERENCES List (ID),
+    idList INTEGER REFERENCES List (ID) ON DELETE CASCADE,
     Name   STRING  NOT NULL,
     Level  INTEGER,
     Date   DATE

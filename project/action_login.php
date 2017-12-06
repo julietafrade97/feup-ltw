@@ -5,7 +5,7 @@ include_once("database/user.php");
 if(($userID = isLoginCorrect($_POST['username'], $_POST['password'])) != -1){
 
 	setCurrentUser($userID, $_POST['username']);
-	header("Location:homepage.php");
+	header("Location:pages/lists.php");
 
 } else {
 	$_SESSION['ERROR'] = 'Incorrect username or password';
