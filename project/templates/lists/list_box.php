@@ -14,32 +14,53 @@
         <div id="pop_up_title">
             <h1 contentEditable="true">Title</h1>
             <div id="rectangle"></div>
-        </div>        
+        </div>
         <h3>Todo</h3>
         <ul id="incomplete-tasks">
             <li class="task_line">
-                <input type="checkbox"><label>Pay Bills</label><input type="text">
-                <button class="edit"><span class="lnr lnr-pencil"></button>
-                <button class="delete"><span class="lnr lnr-cross"></button>
+                <input type="checkbox">
+                <label>Pay Bills</label>
+                <input type="text">
+                <button class="edit">
+                    <span class="lnr lnr-pencil">
+                </button>
+                <button class="delete">
+                    <span class="lnr lnr-cross">
+                </button>
             </li>
             <li class="editMode task_line">
-                <input type="checkbox"><label>Go Shopping</label> <input type="text" value="Go Shopping">
-                <button class="edit"><span class="lnr lnr-pencil"></button>
-                <button class="delete"><span class="lnr lnr-cross"></button>
-            </li> 
+                <input type="checkbox">
+                <label>Go Shopping</label>
+                <input type="text" value="Go Shopping">
+                <button class="edit">
+                    <span class="lnr lnr-pencil">
+                </button>
+                <button class="delete">
+                    <span class="lnr lnr-cross">
+                </button>
+            </li>
         </ul>
         <h3>Completed</h3>
         <ul id="completed-tasks">
             <li class="task_line">
-                <input type="checkbox" checked><label>See the Doctor</label><input type="text">
-                <button class="edit"><span class="lnr lnr-pencil"></button>
-                <button class="delete"><span class="lnr lnr-cross"></button>
+                <input type="checkbox" checked>
+                <label>See the Doctor</label>
+                <input type="text">
+                <button class="edit">
+                    <span class="lnr lnr-pencil">
+                </button>
+                <button class="delete">
+                    <span class="lnr lnr-cross">
+                </button>
             </li>
         </ul>
         <h3>Add Item</h3>
         <div class="new_task">
-            <label for="new-task"></label><input id="new-task" type="text">
-            <button id="add_button"><span class="lnr lnr-plus-circle"></span></button>
+            <label for="new-task"></label>
+            <input id="new-task" type="text">
+            <button id="add_button">
+                <span class="lnr lnr-plus-circle"></span>
+            </button>
         </div>
     </div>
 </div>
