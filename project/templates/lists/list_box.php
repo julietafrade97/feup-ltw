@@ -1,10 +1,12 @@
 <div id="listPopUp" class="overlay">
     <div class="popup">
         <div id="pop_up_header">
-            <a href="#verifyDeleteList">
+            <a href="#dialogDeleteList">
                 <span class="lnr lnr-trash">
             </a>
-            <span class="lnr lnr-inbox"></span>
+            <button class="delete">
+                <span class="lnr lnr-inbox">
+            </button>
             <a href="#">
                 <span class="lnr lnr-cross">
             </a>
@@ -42,12 +44,16 @@
     </div>
 </div>
 
-<div id="verifyDeleteList" class="overlay">
+
+<div id="dialogDeleteList" class="overlay">
     <div class="question">
-        <a href="#"><span class="lnr lnr-cross"></span></a>
-        <p> Are you sure you want to delete this list? </p>
-        <button>Yes</button>
-        <a href="#"> No </a>
+        <p>Are you sure you want to delete this list?</p>
+        <div class="buttons">
+            <a href="#">
+                <button>Cancel</button>
+            </a>
+            <button>Delete</button>
+        </div>
     </div>
 </div>
 

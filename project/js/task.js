@@ -26,7 +26,6 @@ var createNewTaskElement = function(taskString) {
   //button.edit
   var editButton = document.createElement("button");
   var editSpan = document.createElement("span");
-
   //button.delete
   var deleteButton = document.createElement("button");
   var deleteSpan = document.createElement("span");

@@ -19,9 +19,9 @@ var editProject = function() {
   bioContainer.classList.toggle("editMode");
 };
 
-var bindTaskEvents = function() {
+var bindProjectEvents = function() {
   var editButton = bioContainer.querySelector("button.edit");
   editButton.onclick = editProject;
 };
 
-bindTaskEvents();
+bindProjectEvents();
