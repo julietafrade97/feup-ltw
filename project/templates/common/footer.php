@@ -4,7 +4,8 @@
 
 </div>
 
-<script src="js/sidebar.js"></script>
+<script type="text/javascript" src="js/sidebar.js"></script>
+<script type="text/javascript" src="js/project_edit.js"></script>
 
 </body>
 
