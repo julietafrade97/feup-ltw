@@ -720,6 +720,7 @@ main {
   box-shadow: 0 0 1em 0.2em rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
+  max-height: 50%;
 }
 
 .question .buttons {
@@ -752,6 +753,7 @@ main {
 #members_list {
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
 }
 
 #members_list .info {
@@ -759,6 +761,7 @@ main {
   align-items: center;
   padding: 0.5em 0;
   border-bottom: 1px solid #576886;
+  min-height: min-content;
 }
 
 #members_list .info p {

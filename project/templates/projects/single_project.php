@@ -156,13 +156,37 @@
                 <p>John Doe</p>
             </div>
             <div class="info">
-                    <img class="member" src="assets/portrait.png">
-                    <p>John Doe</p>
-                </div>
-                <div class="info">
-                        <img class="member" src="assets/portrait.png">
-                        <p>John Doe</p>
-                    </div>
+                <img class="member" src="assets/portrait.png">
+                <p>John Doe</p>
+            </div>
+            <div class="info">
+                <img class="member" src="assets/portrait.png">
+                <p>John Doe</p>
+            </div>
+            <div class="info">
+                <img class="member" src="assets/portrait.png">
+                <p>John Doe</p>
+            </div>
+            <div class="info">
+                <img class="member" src="assets/portrait.png">
+                <p>John Doe</p>
+            </div>
+            <div class="info">
+                <img class="member" src="assets/portrait.png">
+                <p>John Doe</p>
+            </div>
+            <div class="info">
+                <img class="member" src="assets/portrait.png">
+                <p>John Doe</p>
+            </div>
+            <div class="info">
+                <img class="member" src="assets/portrait.png">
+                <p>John Doe</p>
+            </div>
+            <div class="info">
+                <img class="member" src="assets/portrait.png">
+                <p>John Doe</p>
+            </div>
         </div>
         <div class="buttons">
             <a href="#">
