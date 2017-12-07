@@ -1,15 +1,14 @@
 <?php
 
 
-    function createProject($userID, $Name, $Description, $Color) {
+    function createProject($userID, $Name, $Description) {
 
         global $dbh;
         try {
 
-            $stmt->prepare('INSERT INTO Project(Name, Description, Color, isArchived) VALUES(:Name, :Description, :Color, : isArchived)');
+            $stmt = $dbh->prepare('INSERT INTO Project(Name, Description, isArchived) VALUES(:Name, :Description, : isArchived)');
             $stmt->bindParam(':Name', $Name);
             $stmt->bindParam(':Description', $Description);
-            $stmt->bindParam(':Color', $Color);
             $stmt->bindParam(':isArchived', FALSE);
             if($stmt->execute())
                 $projectID =  $dbh->lastInsertedId();
@@ -32,7 +31,7 @@
         global $dbh;
         try {
 
-            $stmt->prepare('INSERT INTO ProjectUser(UserID, ProjectID) VALUES(:UserID, :ProjectID)');
+            $stmt = $dbh->prepare('INSERT INTO ProjectUser(UserID, ProjectID) VALUES(:UserID, :ProjectID)');
             $stmt->bindParam(':UserID', $userID);
             $stmt->bindParam('projectID', $projectID);
             if($stmt->execute())
@@ -50,7 +49,7 @@
         global $dbh;
         try {
 
-            $stmt->prepare('SELECT Project.ID, Project.Name, Project.Description, Project.Color FROM ProjectUser AND Project WHERE ProjectUser.UserID = ? AND Project.ID = ProjectUser.ProjectID AND Project.isArchived = ?');
+            $stmt = $dbh->prepare('SELECT Project.ID, Project.Name, Project.Description FROM ProjectUser, Project WHERE ProjectUser.UserID = ? AND Project.ID = ProjectUser.ProjectID AND Project.isArchived = ?');
             $stmt->execute(array($userID, $isArchived));
             return $stmt->fetchAll();
         
@@ -63,7 +62,7 @@
         global $dbh;
         try {
 
-            $stmt->prepare('SELECT User.ID, User.Name, User.Photo FROM ProjectUser, User WHERE ProjectUser.ProjectID = ? AND User.ID = ProjectUser.UserID');
+            $stmt = $dbh->prepare('SELECT User.ID, User.Name, User.Photo FROM ProjectUser, User WHERE ProjectUser.ProjectID = ? AND User.ID = ProjectUser.UserID');
             $stmt->execute(array($projectID));
             return $stmt->fetchAll();
         

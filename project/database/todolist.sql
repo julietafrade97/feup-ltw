@@ -30,11 +30,11 @@ CREATE TABLE List (
 DROP TABLE IF EXISTS ListCategory;
 
 CREATE TABLE ListCategory (
-    idCategory INTEGER REFERENCES Category (ID) ON DELETE CASCADE,
-    idList     INTEGER REFERENCES List (ID) ON DELETE CASCADE,
+    CategoryID INTEGER REFERENCES Category (ID) ON DELETE CASCADE,
+    ListID     INTEGER REFERENCES List (ID) ON DELETE CASCADE,
      PRIMARY KEY (
-        idCategory,
-        idList
+        CategoryID,
+        ListID
     )
 );
 
@@ -45,7 +45,6 @@ CREATE TABLE Project (
     ID          INTEGER PRIMARY KEY AUTOINCREMENT,
     Name        STRING  NOT NULL,
     Description TEXT    NOT NULL,
-    Color       STRING,
     isArchived  BOOLEAN NOT NULL
                         DEFAULT FALSE
 );
@@ -54,11 +53,11 @@ CREATE TABLE Project (
 DROP TABLE IF EXISTS ProjectUser;
 
 CREATE TABLE ProjectUser (
-    idUser    INTEGER REFERENCES User (ID) ON DELETE CASCADE,
-    idProject INTEGER REFERENCES Project (ID) ON DELETE CASCADE,
+    UserID    INTEGER REFERENCES User (ID) ON DELETE CASCADE,
+    ProjectID INTEGER REFERENCES Project (ID) ON DELETE CASCADE,
     PRIMARY KEY (
-        idUser,
-        idProject
+        UserID,
+        ProjectID
     )
 );
 
@@ -67,7 +66,7 @@ DROP TABLE IF EXISTS Task;
 
 CREATE TABLE Task (
     ID     INTEGER PRIMARY KEY AUTOINCREMENT,
-    idList INTEGER REFERENCES List (ID) ON DELETE CASCADE,
+    ListID INTEGER REFERENCES List (ID) ON DELETE CASCADE,
     Name   STRING  NOT NULL,
     Level  INTEGER,
     Date   DATE

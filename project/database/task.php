@@ -22,7 +22,7 @@ function createTask($listID, $Name, $Level, $Date) {
 function getTasks($listID) {
     global $dbh;
     try{
-        $stmt = $dbh->prepare('SELECT Name, Level, Date FROM Task(listID, Name, Level, Date) WHERE listID = ?');
+        $stmt = $dbh->prepare('SELECT Name, Level, Date FROM Task WHERE ListID = ?');
         $stmt->execute(array($listID));
         return $stmt->fetchAll();
 
