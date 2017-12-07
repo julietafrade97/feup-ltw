@@ -1299,4 +1299,9 @@ footer p {
   .question button {
     margin: 1em 2em;
   }
+
+  .popup {
+    width: 70%;
+  }
+
 }
