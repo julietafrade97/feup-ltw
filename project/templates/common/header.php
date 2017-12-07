@@ -79,11 +79,6 @@
                     <a href="lists.php">Meraki</a>
                 </h1>
 
-                <div id="search_box">
-                    <i class="fa fa-search"></i>
-                    <input type="search" id="search" placeholder="Search..." />
-                </div>
-
                 <nav>
 
                     <a href="#" id="more-icon">
