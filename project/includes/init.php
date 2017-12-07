@@ -9,4 +9,8 @@
   } else {
   	$error = "";
   }
+
+  if((getUserID() === null || getUsername() === null) && basename($_SERVER['PHP_SELF']) != 'signup.php')
+    header('Location:../pages/login.php');
+
 ?>

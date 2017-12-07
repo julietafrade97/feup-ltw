@@ -1,4 +1,4 @@
-document.onload = change_page_settings("About");
+
 function encodeForAjax(data) {
     return Object.keys(data)
       .map(function(k) {
