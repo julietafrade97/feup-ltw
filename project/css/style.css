@@ -863,8 +863,6 @@ button {
   font-size: 1.4em;
 }
 
-
-
 #pop_up_title {
   display: flex;
   align-items: center;
@@ -919,17 +917,38 @@ button {
   border-bottom: 0.07em solid #3d3d3b;
 }
 
-.task_line button:first-of-type {
-  margin-left: auto;
-}
-
-.task_line button {
+.task_line button{
   visibility: hidden;
+  padding: 0 0 0 0.3em;
 }
 
 .task_line:hover > button {
   visibility: visible;
 }
+
+.task_line .edit{
+  margin-left: auto;
+}
+
+.star .lnr-star-empty{
+  display:block;
+}
+
+.star .lnr-star{
+  display:none;
+}
+
+.task_line.priorityMode .star .lnr-star{
+  display:block;
+}
+
+.task_line.priorityMode .star .lnr-star-empty{
+  display:none;
+}
+.task_line.priorityMode{
+  font-weight: 500;
+}
+
 
 /* New Task */
 #listPopUp input#new-task {

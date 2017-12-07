@@ -26,6 +26,10 @@ var createNewTaskElement = function(taskString) {
   //button.edit
   var editButton = document.createElement("button");
   var editSpan = document.createElement("span");
+  //button.star
+  var starButton = document.createElement("button");
+  var starSpanEmpty = document.createElement("span");
+  var starSpanFull = document.createElement("span");
   //button.delete
   var deleteButton = document.createElement("button");
   var deleteSpan = document.createElement("span");
@@ -39,6 +43,10 @@ var createNewTaskElement = function(taskString) {
   editButton.className = "edit";
   editSpan.className = "lnr lnr-pencil";
 
+  starButton.className = "star";
+  starSpanEmpty.className = "lnr lnr-star-empty";
+  starSpanFull.className = "lnr lnr-star";
+
   deleteButton.className = "delete";
   deleteSpan.className = "lnr lnr-cross";
   
@@ -49,11 +57,14 @@ var createNewTaskElement = function(taskString) {
 
   editButton.appendChild(editSpan);
   deleteButton.appendChild(deleteSpan);
+  starButton.appendChild(starSpanEmpty);
+  starButton.appendChild(starSpanFull);
 
   listItem.appendChild(checkBox);
   listItem.appendChild(label);
   listItem.appendChild(editInput);
   listItem.appendChild(editButton);
+  listItem.appendChild(starButton);
   listItem.appendChild(deleteButton);
 
   return listItem;
@@ -97,6 +108,21 @@ var editTask = function() {
  
 }
 
+var changeLevel = function(){
+  console.log("Edit Level...");
+
+  var listItem = this.parentNode;
+
+  var containsClass = listItem.classList.contains("priorityMode");
+
+  if(containsClass) {
+    listItem.classList.remove("priorityMode");
+  } else {
+    listItem.classList.add("priorityMode");
+  }
+
+}
+
 
 // Delete an existing task
 var deleteTask = function() {
@@ -133,6 +159,7 @@ var bindTaskEvents = function(taskListItem, checkBoxEventHandler) {
   var checkBox = taskListItem.querySelector("input[type=checkbox]");
   var editButton = taskListItem.querySelector("button.edit");
   var deleteButton = taskListItem.querySelector("button.delete");
+  var levelHolder = taskListItem.querySelector("button.star");
   
   //bind editTask to edit button
   editButton.onclick = editTask;
@@ -142,6 +169,9 @@ var bindTaskEvents = function(taskListItem, checkBoxEventHandler) {
   
   //bind checkBoxEventHandler to checkbox
   checkBox.onchange = checkBoxEventHandler;
+
+  //bind deleteTask to delete button
+  levelHolder.onclick = changeLevel;
 }
 
 var ajaxRequest = function() {

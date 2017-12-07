@@ -17,15 +17,19 @@
         </div>
         <h3>Todo</h3>
         <ul id="incomplete-tasks">
-            <li class="task_line">
+            <li class="task_line priorityMode">
                 <input type="checkbox">
                 <label>Pay Bills</label>
                 <input type="text">
                 <button class="edit">
-                    <span class="lnr lnr-pencil">
+                    <span class="lnr lnr-pencil icon">
+                </button>
+                <button class="star">
+                    <span class="lnr lnr-star-empty"></span>
+                    <span class="lnr lnr-star"></span>
                 </button>
                 <button class="delete">
-                    <span class="lnr lnr-cross">
+                    <span class="lnr lnr-cross icon">
                 </button>
             </li>
             <li class="editMode task_line">
@@ -34,6 +38,10 @@
                 <input type="text" value="Go Shopping">
                 <button class="edit">
                     <span class="lnr lnr-pencil">
+                </button>
+                <button class="star">
+                    <span class="lnr lnr-star-empty"></span>
+                    <span class="lnr lnr-star"></span>
                 </button>
                 <button class="delete">
                     <span class="lnr lnr-cross">
@@ -48,6 +56,10 @@
                 <input type="text">
                 <button class="edit">
                     <span class="lnr lnr-pencil">
+                </button>
+                <button class="star">
+                    <span class="lnr lnr-star-empty"></span>
+                    <span class="lnr lnr-star"></span>
                 </button>
                 <button class="delete">
                     <span class="lnr lnr-cross">
