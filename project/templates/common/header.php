@@ -52,23 +52,37 @@
                             <div class="label_option">
                                 <div class="circle" style="background: #865766"></div>
                                 <p>Label</p>
+                                <a href="#dialogLabel">
+                                    <span class="lnr lnr-pencil"></span>
+                                </a>
                             </div>
                             <div class="label_option">
                                 <div class="circle" style="background: #865766"></div>
                                 <p>Label</p>
+                                <a href="#dialogLabel">
+                                    <span class="lnr lnr-pencil"></span>
+                                </a>
                             </div>
                             <div class="label_option">
                                 <div class="circle" style="background: #865766"></div>
                                 <p>Label</p>
+                                <a href="#dialogLabel">
+                                    <span class="lnr lnr-pencil"></span>
+                                </a>
                             </div>
                             <div class="label_option">
                                 <div class="circle" style="background: #865766"></div>
                                 <p>Label</p>
+                                <a href="#dialogLabel">
+                                    <span class="lnr lnr-pencil"></span>
+                                </a>
                             </div>
-                            <button class="label_button">
-                                <span class="lnr lnr-plus-circle"></span>
-                                <p>Add Label</p>
-                            </button>
+                            <a href="#dialogLabel">
+                                <button class="label_button">
+                                    <span class="lnr lnr-plus-circle"></span>
+                                    <p>Add Label</p>
+                                </button>
+                            </a>
                         </section>
                 </nav>
 
