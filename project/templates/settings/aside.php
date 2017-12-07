@@ -1,7 +1,7 @@
 <aside>
     <div id="aside_container">
         <nav>
-            <a href="main_page.php">
+            <a href="lists.php">
                 <div class="menu_option">
                     <span class="lnr lnr-home"></span>
                     <p>Home</p>
@@ -28,6 +28,3 @@
         </nav>
     </div>
 </aside>
-<main>
-    <div id="settings"></div>
-</main>

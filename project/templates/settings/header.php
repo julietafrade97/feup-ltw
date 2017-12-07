@@ -64,7 +64,7 @@
                 </h1>
 
                 <nav>
-                    <a href="#">
+                    <a href="../actions/action_logout.php">
                         <span class="lnr lnr-power-switch"></span>
                     </a>
                 </nav>
