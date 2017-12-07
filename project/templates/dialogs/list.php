@@ -76,16 +76,3 @@
         </div>
     </div>
 </div>
-
-
-<div id="dialogDeleteList" class="overlay">
-    <div class="question">
-        <p>Are you sure you want to delete this list?</p>
-        <div class="buttons">
-            <a href="#">
-                <button>Cancel</button>
-            </a>
-            <button>Delete</button>
-        </div>
-    </div>
-</div>
