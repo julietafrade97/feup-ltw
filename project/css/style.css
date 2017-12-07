@@ -97,15 +97,19 @@ body {
 .register_content input[type="text"],
 .register_content input[type="password"],
 .register_content input[type="email"],
-.question input[type="text"] {
+.question input[type="text"],
+#fields input[type="text"],
+#fields input[type="email"],
+#fields input[type="password"] {
   font-family: "Montserrat", sans-serif;
   font-size: 0.8em;
   font-weight: 300;
   color: #666666;
   padding: 0.5em;
   margin: 0.5em 0;
-  width: 95%;
+  width: 100%;
   height: 10%;
+  box-sizing: border-box;
 }
 
 .register_content input[type="submit"] {
@@ -650,7 +654,7 @@ main {
 #list_box_header h1 {
   color: black;
   font-size: 1.2em;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 #list_box_header i {
@@ -658,6 +662,10 @@ main {
   font-size: 2em;
   color: #865766;
   align-self: flex-start;
+}
+
+#task_list label {
+  font-weight: 300;
 }
 
 #task_list input[type="checkbox"] {
@@ -754,9 +762,11 @@ main {
 .question .buttons {
   display: flex;
   justify-content: flex-end;
+  min-height: min-content;
 }
 
-.question button {
+.question input[type="submit"],
+.question input[type="button"] {
   font-size: 0.7em;
   font-weight: 800;
   letter-spacing: 0.1em;
@@ -769,7 +779,8 @@ main {
   border: none;
 }
 
-.question button:hover {
+.question input[type="submit"]:hover,
+.question input[type="button"]:hover {
   background-color: #948f8c;
   cursor: pointer;
 }
@@ -869,8 +880,8 @@ button {
 }
 
 #pop_up_header span {
-  padding-left: 0.3em;
-  font-size: 1.4em;
+  margin-left: 0.6em;
+  font-size: 1.2em;
 }
 
 #pop_up_title {
@@ -880,7 +891,7 @@ button {
 
 #pop_up_title h1 {
   font-size: 1.7em;
-  font-weight: 600;
+  font-weight: 500;
   color: black;
   background-color: white;
   padding: 0 0.2em;
@@ -903,16 +914,17 @@ button {
   margin: 0;
   text-transform: uppercase;
 }
+
 #listPopUp input[type="text"] {
+  font-family: "Montserrat", sans-serif;
   font-size: 1em;
   height: 2em;
-  padding-left: 1em;
+  padding-left: 0.7em;
   margin: 0.5em 0;
   background: #eee8e4;
   border: 0;
-  border-radius: 3em;
+  border-radius: 1em;
   color: rgb(90, 90, 90);
-  font-family: "Montserrat", sans-serif;
 }
 
 #listPopUp .new_task {
@@ -924,12 +936,18 @@ button {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  font-weight: 300;
   border-bottom: 0.07em solid #3d3d3b;
 }
 
 .task_line button {
   visibility: hidden;
   padding: 0 0 0 0.3em;
+}
+
+.task_line button span {
+  font-size: 0.8em;
+  margin-left: 0.4em;
 }
 
 .task_line:hover > button {
@@ -955,13 +973,15 @@ button {
 .task_line.priorityMode .star .lnr-star-empty {
   display: none;
 }
+
 .task_line.priorityMode {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 /* New Task */
 #listPopUp input#new-task {
   width: 100%;
+  font-weight: 300;
 }
 
 .new_task {
@@ -986,6 +1006,7 @@ button {
 /* Edit Task */
 #listPopUp ul li input[type="text"] {
   display: none;
+  font-weight: 300;
 }
 
 #listPopUp ul li.editMode input[type="text"] {
@@ -1078,19 +1099,6 @@ footer p {
   font-size: 1em;
   font-weight: 300;
   margin: 1em 0 0 0;
-}
-
-#fields input[type="text"],
-#fields input[type="email"],
-#fields input[type="password"] {
-  font-family: "Montserrat", sans-serif;
-  font-size: 0.8em;
-  font-weight: 300;
-  color: #666666;
-  padding: 0.5em;
-  margin: 0.5em 0;
-  width: 95%;
-  height: 10%;
 }
 
 #fields input[type="submit"] {
@@ -1298,43 +1306,44 @@ footer p {
     display: block;
   }
 
+  .popup {
+    width: 70%;
+  }
+
   .question .buttons {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 3em;
   }
 
-  .question button {
+  .question input[type="submit"],
+  .question input[type="button"] {
     margin: 1em 2em;
-  }
-
-  .popup {
-    width: 70%;
   }
 }
 
 /*
-* ADD LABEL
+* LABEL FORM
 */
 
-#color_box {
+#color_form {
   width: 100%;
   overflow-y: auto;
+  padding-right: 1em;
 }
 
-#color_box input[type="radio"] {
+#color_form input[type="radio"] {
   display: none;
 }
 
-#color_box .active-label,
+#color_form .active-label,
 label:focus,
 label:hover,
 label:active,
 input:checked + label {
   color: #222a3f;
 }
-#color_box .active-label:before,
+#color_form .active-label:before,
 label:focus:before,
 label:hover:before,
 label:active:before,
@@ -1343,7 +1352,7 @@ input:checked + label:before {
   border-color: #222a3f;
 }
 
-#color_box label {
+#color_form label {
   font-size: 0.8em;
   font-weight: 300;
   cursor: pointer;
@@ -1357,10 +1366,10 @@ input:checked + label:before {
   transition: all 0.15s ease;
 }
 
-#color_box label:first-of-type {
+#color_form label:first-of-type {
   border: 0;
 }
-#color_box label:before {
+#color_form label:before {
   content: "";
   position: absolute;
   left: 1rem;
@@ -1371,7 +1380,7 @@ input:checked + label:before {
   border: 0.2em solid #ccc;
 }
 
-#color_box input:checked + label:before {
+#color_form input:checked + label:before {
   border-color: #222a3f;
   background: #222a3f;
 }

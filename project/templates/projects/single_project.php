@@ -137,76 +137,8 @@
     </div>
 </div>
 
-<div id="dialogLeaveProject" class="overlay">
-    <div class="question">
-        <p>You're about to leave this project, are you sure?</p>
-        <div class="buttons">
-            <a href="#">
-                <button>Cancel</button>
-            </a>
-            <button>Leave</button>
-        </div>
-    </div>
-</div>
-
-<div id="dialogAddMember" class="overlay">
-    <div class="question">
-        <p>Add member to project.</p>
-        <input name="username" class="w3-input w3-border" type="text" placeholder="Username" oninput="addUserProject(this)">
-        <div class="buttons">
-            <a href="">
-                <button>Cancel</button>
-            </a>
-            <button>Confirm</button>
-        </div>
-    </div>
-</div>
-
-<div id="dialogSeeMembers" class="overlay">
-    <div class="question">
-        <p>Members</p>
-        <div id="members_list">
-            <div class="info">
-                <img class="member" src="../assets/portrait.png">
-                <p>John Doe</p>
-            </div>
-            <div class="info">
-                <img class="member" src="../assets/portrait.png">
-                <p>John Doe</p>
-            </div>
-            <div class="info">
-                <img class="member" src="../assets/portrait.png">
-                <p>John Doe</p>
-            </div>
-            <div class="info">
-                <img class="member" src="../assets/portrait.png">
-                <p>John Doe</p>
-            </div>
-            <div class="info">
-                <img class="member" src="../assets/portrait.png">
-                <p>John Doe</p>
-            </div>
-            <div class="info">
-                <img class="member" src="../assets/portrait.png">
-                <p>John Doe</p>
-            </div>
-            <div class="info">
-                <img class="member" src="../assets/portrait.png">
-                <p>John Doe</p>
-            </div>
-            <div class="info">
-                <img class="member" src="../assets/portrait.png">
-                <p>John Doe</p>
-            </div>
-            <div class="info">
-                <img class="member" src="../assets/portrait.png">
-                <p>John Doe</p>
-            </div>
-        </div>
-        <div class="buttons">
-            <a href="#">
-                <button>Close</button>
-            </a>
-        </div>
-    </div>
-</div>
+<?php
+include_once('../templates/dialogs/add_member.php');
+include_once('../templates/dialogs/members.php');
+include_once('../templates/dialogs/leave_project.php');
+?>

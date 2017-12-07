@@ -32,7 +32,7 @@
                     <span class="lnr lnr-cross icon">
                 </button>
             </li>
-            <li class="editMode task_line">
+            <li class="task_line editMode">
                 <input type="checkbox">
                 <label>Go Shopping</label>
                 <input type="text" value="Go Shopping">
@@ -73,19 +73,6 @@
             <button id="add_button">
                 <span class="lnr lnr-plus-circle"></span>
             </button>
-        </div>
-    </div>
-</div>
-
-
-<div id="dialogDeleteList" class="overlay">
-    <div class="question">
-        <p>Are you sure you want to delete this list?</p>
-        <div class="buttons">
-            <a href="#">
-                <button>Cancel</button>
-            </a>
-            <button>Delete</button>
         </div>
     </div>
 </div>
