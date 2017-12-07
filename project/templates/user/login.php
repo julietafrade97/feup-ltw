@@ -27,6 +27,5 @@
                 <input name="password" class="w3-input w3-border" type="password" placeholder="Password" required="required">
                 <input type="submit" name="Submit" value="Next">
             </form>
-            <a href="test.php" class="button">Test Data Base</a>
         </div>
     </div>

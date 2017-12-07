@@ -9,6 +9,8 @@
 <script type="text/javascript" src="../js/change_main_page.js"></script>
 <script type="text/javascript" src="../js/upload_user_photo.js"></script>
 <script type="text/javascript" src="../js/project_edit.js"></script>
+<script type="text/javascript" src="../js/plus_button.js"></script>
+
 
 </body>
 

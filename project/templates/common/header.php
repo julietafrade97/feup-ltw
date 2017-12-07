@@ -88,7 +88,7 @@
                     <ul>
 
                         <li>
-                            <a href="#" class="current">
+                            <a href="javascript:void(0)" onclick="plus_button()" class="current">
                                 <div class="plus">
                                     <span class="lnr lnr-cross"></span>
                                 </div>
