@@ -68,5 +68,11 @@
                 <h1>
                     <a href="lists.php">Meraki</a>
                 </h1>
+
+                <nav>
+                    <a href="#">
+                        <span class="lnr lnr-power-switch"></span>
+                    </a>
+                </nav>
             </div>
         </header>

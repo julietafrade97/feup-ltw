@@ -79,6 +79,11 @@
                     <a href="lists.php">Meraki</a>
                 </h1>
 
+                <div id="search_box">
+                    <i class="fa fa-search"></i>
+                    <input type="search" id="search" placeholder="Search..." />
+                </div>
+
                 <nav>
 
                     <a href="#" id="more-icon">
@@ -93,12 +98,6 @@
                                     <span class="lnr lnr-cross"></span>
                                 </div>
                                 <p>Create New</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="lnr lnr-magnifier"></span>
-                                <p>Search</p>
                             </a>
                         </li>
                         <li>
