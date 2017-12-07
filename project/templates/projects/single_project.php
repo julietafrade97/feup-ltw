@@ -154,7 +154,7 @@
         <p>Add member to project.</p>
         <input name="username" class="w3-input w3-border" type="text" placeholder="Username" oninput="addUserProject(this)">
         <div class="buttons">
-            <a href="#">
+            <a href="">
                 <button>Cancel</button>
             </a>
             <button>Confirm</button>
