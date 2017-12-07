@@ -36,12 +36,27 @@
                     <div class="circle" style="background: #865766"></div>
                     <p>Label</p>
                 </div>
-                <button class="label_button">
-                    <span class="lnr lnr-plus-circle"></span>
-                    <p>Add Label</p>
-                </button>
+                <a href="#dialogAddLabel">
+                    <button class="label_button">
+                        <span class="lnr lnr-plus-circle"></span>
+                        <p>Add Label</p>
+                    </button>
+                </a>
             </section>
 
         </div>
 
 </aside>
+
+<div id="dialogAddLabel" class="overlay">
+    <div class="question">
+        <p>Add Label</p>
+        <input name="username" class="w3-input w3-border" type="text" placeholder="Label Name">
+        <div class="buttons">
+            <a href="#">
+                <button>Cancel</button>
+            </a>
+            <button>Confirm</button>
+        </div>
+    </div>
+</div>

@@ -14,6 +14,7 @@
         </div>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porttitor eget quam non gravida. Proin quis risus
             nisi. Phasellus eu purus lectus. In pharetra molestie.</p>
+        <textarea></textarea>
     </div>
     <div id="members">
         <div class="header">
@@ -25,10 +26,10 @@
             </a>
         </div>
         <div id="member_list">
-            <img class="member" src="assets/portrait.png">
-            <img class="member" src="assets/portrait.png">
-            <img class="member" src="assets/portrait.png">
-            <img class="member" src="assets/portrait.png">
+            <img class="member" src="../assets/portrait.png">
+            <img class="member" src="../assets/portrait.png">
+            <img class="member" src="../assets/portrait.png">
+            <img class="member" src="../assets/portrait.png">
         </div>
         <a href="#dialogSeeMembers">
             <button class="button_text">See All</button>
@@ -39,7 +40,7 @@
         <div id="grid">
             <div id="grid_container">
 
-<!-- CHANGE -->
+                <!-- CHANGE -->
                 <div id="list_box">
                     <div id="list_box_header">
                         <h1> Title </h1>
@@ -166,39 +167,39 @@
         <p>Members</p>
         <div id="members_list">
             <div class="info">
-                <img class="member" src="assets/portrait.png">
+                <img class="member" src="../assets/portrait.png">
                 <p>John Doe</p>
             </div>
             <div class="info">
-                <img class="member" src="assets/portrait.png">
+                <img class="member" src="../assets/portrait.png">
                 <p>John Doe</p>
             </div>
             <div class="info">
-                <img class="member" src="assets/portrait.png">
+                <img class="member" src="../assets/portrait.png">
                 <p>John Doe</p>
             </div>
             <div class="info">
-                <img class="member" src="assets/portrait.png">
+                <img class="member" src="../assets/portrait.png">
                 <p>John Doe</p>
             </div>
             <div class="info">
-                <img class="member" src="assets/portrait.png">
+                <img class="member" src="../assets/portrait.png">
                 <p>John Doe</p>
             </div>
             <div class="info">
-                <img class="member" src="assets/portrait.png">
+                <img class="member" src="../assets/portrait.png">
                 <p>John Doe</p>
             </div>
             <div class="info">
-                <img class="member" src="assets/portrait.png">
+                <img class="member" src="../assets/portrait.png">
                 <p>John Doe</p>
             </div>
             <div class="info">
-                <img class="member" src="assets/portrait.png">
+                <img class="member" src="../assets/portrait.png">
                 <p>John Doe</p>
             </div>
             <div class="info">
-                <img class="member" src="assets/portrait.png">
+                <img class="member" src="../assets/portrait.png">
                 <p>John Doe</p>
             </div>
         </div>

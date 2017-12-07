@@ -315,6 +315,10 @@ nav a {
   width: 100%;
 }
 
+#aside_content a {
+  text-decoration: none;
+}
+
 #aside_content section,
 .sidenav section {
   padding-top: 1em;
@@ -351,10 +355,16 @@ nav a {
   align-items: center;
   font-family: "Montserrat", sans-serif;
   color: #222a3f;
+  background: none;
   border: none;
   width: 100%;
   padding-left: 1.5em;
   margin: 1em 0;
+}
+
+.label_button:hover {
+  color: #948f8c;
+  cursor: pointer;
 }
 
 .label_button p {
@@ -428,6 +438,7 @@ main {
 }
 
 #project_box button:hover,
+#project_container span:hover,
 #project_container button:hover {
   color: #948f8c;
   cursor: pointer;
@@ -500,6 +511,14 @@ main {
   outline: none;
 }
 
+#project_container button {
+  background: none;
+  border: none;
+  font-size: 1.1em;
+  color: #222a3f;
+  outline: none;
+}
+
 #project_container .button_text {
   font-size: 0.8em;
   font-weight: 300;
@@ -517,14 +536,6 @@ main {
 #project_container #members {
   grid-area: members;
   padding: 2em 2em 0.5em 2em;
-}
-
-#members a {
-  font-size: 0.8em;
-  font-weight: 300;
-  color: #222a3f;
-  text-decoration: none;
-  text-transform: lowercase;
 }
 
 #members #member_list {
@@ -558,6 +569,48 @@ main {
 
 #lists #grid {
   margin: 0.5em -0.5em;
+}
+
+#project_container input[type="text"] {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5em;
+  font-weight: 500;
+  color: #3d3d3bb2;
+  flex-grow: 1;
+  padding: 0.5em 0;
+  margin: 0.1em 0 0.4em 0;
+  border: 1px solid #ddd;
+}
+
+#project_container textarea {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8em;
+  font-weight: 300;
+  color: #3d3d3bb2;
+  padding: 0.5em 0;
+  width: 100%;
+  resize: none;
+  border: 1px solid #ddd;
+}
+
+#project_container input[type="text"]:focus,
+#project_container textarea:focus {
+  color: #3d3d3b;
+}
+
+#project_container input[type="text"],
+#project_container textarea {
+  display: none;
+}
+
+#project_container .editMode input[type="text"],
+#project_container .editMode textarea {
+  display: block;
+}
+
+#project_container .editMode h1,
+#project_container .editMode p {
+  display: none;
 }
 
 /*
@@ -1226,6 +1279,7 @@ footer p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 3em;
   }
 
   .question button {
