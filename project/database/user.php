@@ -102,4 +102,16 @@
     }
   }
   
+  function getUsersLike($username) {
+    global $dbh;
+    try {
+
+      $stmt = $dbh->prepare('SELECT username FROM User WHERE lower(username) LIKE lower(?) LIMIT 4');
+      $stmt->execute(array("$username%"));
+      return $stmt->fetchAll();
+    
+    }catch(PDOException $e) {
+      return null;
+    }
+  }
 ?>
