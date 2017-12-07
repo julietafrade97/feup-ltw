@@ -963,8 +963,7 @@ button {
 
 #listPopUp li > label {
   font-size: 1em;
-  line-height: 3em;
-  padding-left: 0.7em;
+  padding: 1em 0 1em 0.7em;
 }
 #listPopUp li > input[type="text"] {
   width: 100%;
