@@ -1094,23 +1094,6 @@ footer p {
 }
 
 /*
-* THEME
-*/
-
-#themes select {
-  border: none;
-  width: 50%;
-}
-
-#themes option {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.5em;
-  font-weight: 300;
-  color: #3d3d3b;
-  padding: 1em 0;
-}
-
-/*
 * ARCHIVE
 */
 

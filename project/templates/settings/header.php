@@ -43,12 +43,6 @@
                         </a>
                         <a href="#">
                             <div class="menu_option">
-                                <span class="lnr lnr-magic-wand"></span>
-                                <p>Theme</p>
-                            </div>
-                        </a>
-                        <a href="#">
-                            <div class="menu_option">
                                 <span class="lnr lnr-inbox"></span>
                                 <p>Archive</p>
                             </div>

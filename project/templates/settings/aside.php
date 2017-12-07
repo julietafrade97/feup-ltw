@@ -13,12 +13,6 @@
                     <p>Account</p>
                 </div>
             </a>
-            <a href="#">
-                <div class="menu_option">
-                    <span class="lnr lnr-magic-wand"></span>
-                    <p>Theme</p>
-                </div>
-            </a>
             <a onclick='change_page_settings("Archive", <?php echo json_encode($userinfo['Name']) ?>, <?php echo json_encode($userinfo['Username'])?>,<?php echo json_encode($userinfo['Email'])?> )'>
                 <div class="menu_option">
                     <span class="lnr lnr-inbox"></span>
