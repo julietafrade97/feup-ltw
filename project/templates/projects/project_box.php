@@ -24,9 +24,11 @@
         <img class="member" src="../assets/portrait.png">
         <img class="member" src="../assets/portrait.png">
     </div>
-    <button>
-        <span class="lnr lnr-chevron-right-circle"></span>
-    </button>
+    <a href="project.php">
+        <button>
+            <span class="lnr lnr-chevron-right-circle"></span>
+        </button>
+    </a>
 </div>
 
 <div id="project_box">
@@ -39,9 +41,11 @@
         <img class="member" src="../assets/portrait.png">
         <p>...</p>
     </div>
-    <button>
-        <span class="lnr lnr-chevron-right-circle"></span>
-    </button>
+    <a href="project.php">
+        <button>
+            <span class="lnr lnr-chevron-right-circle"></span>
+        </button>
+    </a>
 </div>
 
 <div id="project_box">
@@ -54,9 +58,11 @@
         <img class="member" src="../assets/portrait.png">
         <p>...</p>
     </div>
-    <button>
-        <span class="lnr lnr-chevron-right-circle"></span>
-    </button>
+    <a href="project.php">
+        <button>
+            <span class="lnr lnr-chevron-right-circle"></span>
+        </button>
+    </a>
 </div>
 
 <div id="project_box">
@@ -69,7 +75,9 @@
         <img class="member" src="../assets/portrait.png">
         <p>...</p>
     </div>
-    <button>
-        <span class="lnr lnr-chevron-right-circle"></span>
-    </button>
+    <a href="project.php">
+        <button>
+            <span class="lnr lnr-chevron-right-circle"></span>
+        </button>
+    </a>
 </div>

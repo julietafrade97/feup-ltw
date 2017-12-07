@@ -428,11 +428,14 @@ main {
   -webkit-box-orient: vertical;
 }
 
-#project_box button {
+#project_box a {
   align-self: flex-end;
+  margin-top: auto;
+}
+
+#project_box button {
   font-size: 1em;
   color: #222a3f;
-  margin-top: auto;
   background-color: transparent;
   border: none;
 }
