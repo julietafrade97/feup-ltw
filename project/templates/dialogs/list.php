@@ -32,7 +32,7 @@
                     <span class="lnr lnr-cross icon">
                 </button>
             </li>
-            <li class="editMode task_line">
+            <li class="task_line editMode">
                 <input type="checkbox">
                 <label>Go Shopping</label>
                 <input type="text" value="Go Shopping">
