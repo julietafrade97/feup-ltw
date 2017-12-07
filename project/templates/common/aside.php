@@ -2,15 +2,15 @@
     <div id="aside_container">
         <nav>
             <a href="projects.php">
-                <div class="menu_option">
+                <div id="projects_menu_option" class="menu_option">
                     <span class="lnr lnr-book"></span>
-                    <p>Projects</p>
+                    <p id="projects_menu_text">Projects</p>
                 </div>
             </a>
             <a href="lists.php">
-                <div class="menu_option">
+                <div id="lists_menu_option" class="menu_option">
                     <span class="lnr lnr-file-empty"></span>
-                    <p>Lists</p>
+                    <p id="lists_menu_text">Lists</p>
                 </div>
             </a>
         </nav>
