@@ -6,7 +6,6 @@ function plus_button(){
 }
 
 function add_list(){
-  /*alert("Add list");*/
 
   let list_grid = document.getElementById("grid_container");
 

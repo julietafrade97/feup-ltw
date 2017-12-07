@@ -4,9 +4,9 @@
             <a href="#dialogDeleteList">
                 <span class="lnr lnr-trash">
             </a>
-            <button class="delete">
+            <a>
                 <span class="lnr lnr-inbox">
-            </button>
+            </a>
             <a href="#">
                 <span class="lnr lnr-cross">
             </a>
