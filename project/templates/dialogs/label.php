@@ -1,10 +1,11 @@
 <div id="dialogLabel" class="overlay">
     <div class="question">
-        <p>Pick a Name</p>
-        <input name="username" class="w3-input w3-border" type="text" placeholder="Label Name">
 
-        <p>Pick a Color</p>
-        <div id="color_box">
+        <form id="color_form" action="#">
+            <p>Pick a Name</p>
+            <input name="username" class="w3-input w3-border" type="text" placeholder="Label Name">
+
+            <p>Pick a Color</p>
 
             <input type="radio" id="radio1" name="radio1" value="#865757" />
             <label for="radio1">Red</label>
@@ -23,15 +24,11 @@
 
             <input type="radio" id="radio6" name="radio1" value="#705786" />
             <label for="radio6">Purple</label>
-        </div>
 
-        <div class="buttons">
-            <a href="#">
-                <button>Cancel</button>
-            </a>
-            <a href="#">
-                <button>Confirm</button>
-            </a>
-        </div>
+            <div class="buttons">
+                <input type="button" value="Cancel">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
     </div>
 </div>

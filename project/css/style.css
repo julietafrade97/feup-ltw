@@ -754,9 +754,11 @@ main {
 .question .buttons {
   display: flex;
   justify-content: flex-end;
+  min-height: min-content;
 }
 
-.question button {
+.question input[type="submit"],
+.question input[type="button"] {
   font-size: 0.7em;
   font-weight: 800;
   letter-spacing: 0.1em;
@@ -769,7 +771,8 @@ main {
   border: none;
 }
 
-.question button:hover {
+.question input[type="submit"]:hover,
+.question input[type="button"]:hover {
   background-color: #948f8c;
   cursor: pointer;
 }
@@ -1298,17 +1301,6 @@ footer p {
     display: block;
   }
 
-  .question .buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 3em;
-  }
-
-  .question button {
-    margin: 1em 2em;
-  }
-
   .popup {
     width: 70%;
   }
@@ -1318,23 +1310,23 @@ footer p {
 * ADD LABEL
 */
 
-#color_box {
+#color_form {
   width: 100%;
   overflow-y: auto;
 }
 
-#color_box input[type="radio"] {
+#color_form input[type="radio"] {
   display: none;
 }
 
-#color_box .active-label,
+#color_form .active-label,
 label:focus,
 label:hover,
 label:active,
 input:checked + label {
   color: #222a3f;
 }
-#color_box .active-label:before,
+#color_form .active-label:before,
 label:focus:before,
 label:hover:before,
 label:active:before,
@@ -1343,7 +1335,7 @@ input:checked + label:before {
   border-color: #222a3f;
 }
 
-#color_box label {
+#color_form label {
   font-size: 0.8em;
   font-weight: 300;
   cursor: pointer;
@@ -1357,10 +1349,10 @@ input:checked + label:before {
   transition: all 0.15s ease;
 }
 
-#color_box label:first-of-type {
+#color_form label:first-of-type {
   border: 0;
 }
-#color_box label:before {
+#color_form label:before {
   content: "";
   position: absolute;
   left: 1rem;
@@ -1371,7 +1363,7 @@ input:checked + label:before {
   border: 0.2em solid #ccc;
 }
 
-#color_box input:checked + label:before {
+#color_form input:checked + label:before {
   border-color: #222a3f;
   background: #222a3f;
 }
