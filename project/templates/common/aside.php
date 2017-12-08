@@ -16,22 +16,6 @@
             <h2>Labels</h2>
 
             <section>
-<<<<<<< HEAD
-                <?php if(isset($categories))
-                        foreach($categories as $category) {?>
-                            <div class="label_option">
-                            <div class="circle" style="background: <?php echo $category['Color']?>"></div>
-                            <p><?php echo $category['Name']?></p>
-                            <a href="#dialogLabel">
-                                <span class="lnr lnr-pencil"></span>
-                            </a>
-                            </div>
-                        <?php } ?>
-                <a href="#dialogLabel">
-                    <button class="label_button">
-                        <span class="lnr lnr-plus-circle"></span>
-                        <p>Add Label</p>
-=======
 
                 <input type="radio" id="reset" name="label" />
                 <label for="reset" class="label_option">
@@ -72,7 +56,6 @@
                     <p>Blue</p>
                     <button>
                         <span class="lnr lnr-pencil"></span>
->>>>>>> origin/master
                     </button>
                     <button>
                         <span class="lnr lnr-cross"></span>
