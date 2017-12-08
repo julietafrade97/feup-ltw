@@ -1,7 +1,9 @@
 <div id="list_box">
     <div id="list_box_header">
         <h1> Title </h1>
-        <i class="fa fa-bookmark" aria-hidden="true"></i>
+        <a href="#dialogChangeLabel">
+            <i class="fa fa-bookmark" aria-hidden="true"></i>
+        </a>
     </div>
     <div id="task_list">
         <input type="checkbox" id="box-1">
