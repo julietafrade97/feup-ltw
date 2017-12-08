@@ -244,6 +244,7 @@ header {
 aside {
   grid-area: aside;
   background-color: #f6f5f3;
+  overflow-y: hidden;
 }
 
 aside #aside_container {
@@ -323,40 +324,18 @@ nav a {
 
 #aside_content section,
 .sidenav section {
-  padding-top: 1em;
+  margin-top: 1em;
+  overflow-y: auto;
+  max-height: 45%;
 }
 
 .label_option {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  grid-auto-rows: auto;
-  grid-template-areas: "circle text button";
+  display: flex;
   align-items: center;
   color: #3d3d3b;
-  margin: -1em 2em;
-}
-
-.label_option a {
-  grid-area: button;
-  font-size: 0.7em;
-  color: #222a3f;
-  visibility: hidden;
-}
-
-.label_option a:hover {
-  color: #948f8c;
-}
-
-.label_option:hover > a {
-  visibility: visible;
-}
-
-.label_option p {
-  grid-area: text;
-  font-size: 0.9em;
-  font-weight: 300;
-  padding-left: 1em;
-  word-break: break-all;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 1em 1em 1em 2.3em;
 }
 
 .label_option .circle {
@@ -364,35 +343,59 @@ nav a {
   width: 1em;
   height: 1em;
   border-radius: 50%;
+  min-width: 1em;
 }
 
-.label_button {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  font-family: "Montserrat", sans-serif;
+.label_option p {
+  font-size: 0.9em;
+  font-weight: 300;
+  margin: 0 1em;
+  flex-grow: 1;
+  word-break: break-all;
+}
+
+.label_option button {
+  visibility: hidden;
   color: #222a3f;
   background: none;
-  border: none;
-  width: 100%;
-  padding-left: 1.5em;
-  margin: 1em 0;
+  padding: 0;
+  margin-left: 1em;
 }
 
-.label_button:hover {
+.label_option button:hover {
   color: #948f8c;
+  background: none;
+}
+
+.label_option:hover > button {
+  visibility: visible;
+}
+
+section input[type="radio"] {
+  display: none;
+}
+
+section input[type="radio"]:checked + .label_option {
+  background-color: white;
+}
+
+section button {
+  display: block;
+  margin: auto;
+  font-size: 0.7em;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background-color: #222a3f;
+  color: white;
+  padding: 0.5em 1.5em;
+  border-radius: 1em;
+  border: none;
+}
+
+section button:hover {
+  background-color: #948f8c;
   cursor: pointer;
-}
-
-.label_button p {
-  font-size: 1.3em;
-  font-weight: 300;
-  padding-left: 1em;
-}
-
-.label_button span {
-  font-size: 1.5em;
-  padding-left: 1em;
 }
 
 /*
@@ -1215,7 +1218,7 @@ footer p {
 * MOBILE
 */
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 950px) {
   #main_container {
     display: grid;
     grid-template-columns: 0.4fr 1.6fr;
