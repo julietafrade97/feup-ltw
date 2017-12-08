@@ -1384,3 +1384,32 @@ input:checked + label:before {
   border-color: #222a3f;
   background: #222a3f;
 }
+
+/*
+* NOT FOUND PAGE
+*/
+#notFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 94vh;
+}
+
+#notFound img {
+  width: 60vh;
+  margin-top: 3em;
+}
+
+#notFound h1 {
+  font-size: 2em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: white;
+}
+
+#notFound h2 {
+  font-size: 1em;
+  font-weight: 300;
+  color: white;
+}

@@ -6,5 +6,4 @@
   } else {
   	header("Location:pages/lists.php");
   }
-
 ?>
