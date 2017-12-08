@@ -10,7 +10,7 @@
             <input type="radio" id="radio1" name="radio1" value="#865757" />
             <label for="radio1">Red</label>
 
-            <input type="radio" id="radio2" name="radio1" value="#865766" />
+            <input type="radio" id="radio2" name="radio1" value="#865786" />
             <label for="radio2">Pink</label>
 
             <input type="radio" id="radio3" name="radio1" value="#576886" />

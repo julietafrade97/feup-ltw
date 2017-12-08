@@ -49,41 +49,84 @@
                         <h2>Labels</h2>
 
                         <section>
-                            <div class="label_option">
-                                <div class="circle" style="background: #865766"></div>
-                                <p>Label</p>
-                                <a href="#dialogLabel">
+
+                            <input type="radio" id="mobile_reset" name="label" />
+                            <label for="mobile_reset" class="label_option">
+                                <div class="circle" style="background: black"></div>
+                                <p>Reset</p>
+                                <button>
                                     <span class="lnr lnr-pencil"></span>
-                                </a>
-                            </div>
-                            <div class="label_option">
-                                <div class="circle" style="background: #865766"></div>
-                                <p>Label</p>
-                                <a href="#dialogLabel">
-                                    <span class="lnr lnr-pencil"></span>
-                                </a>
-                            </div>
-                            <div class="label_option">
-                                <div class="circle" style="background: #865766"></div>
-                                <p>Label</p>
-                                <a href="#dialogLabel">
-                                    <span class="lnr lnr-pencil"></span>
-                                </a>
-                            </div>
-                            <div class="label_option">
-                                <div class="circle" style="background: #865766"></div>
-                                <p>Label</p>
-                                <a href="#dialogLabel">
-                                    <span class="lnr lnr-pencil"></span>
-                                </a>
-                            </div>
-                            <a href="#dialogLabel">
-                                <button class="label_button">
-                                    <span class="lnr lnr-plus-circle"></span>
-                                    <p>Add Label</p>
                                 </button>
+                                <button>
+                                    <span class="lnr lnr-cross"></span>
+                                </button>
+                            </label>
+
+                            <input type="radio" id="mobile_red" name="label" />
+                            <label for="mobile_red" class="label_option">
+                                <div class="circle" style="background: #865757"></div>
+                                <p>Red</p>
+                                <button>
+                                    <span class="lnr lnr-pencil"></span>
+                                </button>
+                                <button>
+                                    <span class="lnr lnr-cross"></span>
+                                </button>
+                            </label>
+
+                            <input type="radio" id="mobile_pink" name="label" />
+                            <label for="mobile_pink" class="label_option">
+                                <div class="circle" style="background: #865786"></div>
+                                <p>Pink</p>
+                                <button>
+                                    <span class="lnr lnr-pencil"></span>
+                                </button>
+                                <button>
+                                    <span class="lnr lnr-cross"></span>
+                                </button>
+                            </label>
+
+                            <input type="radio" id="mobile_blue" name="label" />
+                            <label for="mobile_blue" class="label_option">
+                                <div class="circle" style="background: #576886"></div>
+                                <p>Blue</p>
+                                <button>
+                                    <span class="lnr lnr-pencil"></span>
+                                </button>
+                                <button>
+                                    <span class="lnr lnr-cross"></span>
+                                </button>
+                            </label>
+
+                            <input type="radio" id="mobile_purple" name="label" />
+                            <label for="mobile_purple" class="label_option">
+                                <div class="circle" style="background: #705786"></div>
+                                <p>Purple</p>
+                                <button>
+                                    <span class="lnr lnr-pencil"></span>
+                                </button>
+                                <button>
+                                    <span class="lnr lnr-cross"></span>
+                                </button>
+                            </label>
+
+                            <input type="radio" id="mobile_brown" name="label" />
+                            <label for="mobile_brown" class="label_option">
+                                <div class="circle" style="background: #866B57"></div>
+                                <p>Brown</p>
+                                <button>
+                                    <span class="lnr lnr-pencil"></span>
+                                </button>
+                                <button>
+                                    <span class="lnr lnr-cross"></span>
+                                </button>
+                            </label>
+                            <br>
+                            <a href="#dialogLabel">
+                                <button>Add Label</button>
                             </a>
                         </section>
+
                 </nav>
 
                 <a href="lists.php">
