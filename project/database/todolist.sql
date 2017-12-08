@@ -22,21 +22,11 @@ DROP TABLE IF EXISTS List;
 CREATE TABLE List (
     ID         INTEGER PRIMARY KEY AUTOINCREMENT,
     Name       STRING,
+    CategoryID INTEGER REFERENCES Category(ID) ON DELETE CASCADE,
     isArchived BOOLEAN NOT NULL
                        DEFAULT FALSE
 );
 
--- Table: ListCategory
-DROP TABLE IF EXISTS ListCategory;
-
-CREATE TABLE ListCategory (
-    CategoryID INTEGER REFERENCES Category (ID) ON DELETE CASCADE,
-    ListID     INTEGER REFERENCES List (ID) ON DELETE CASCADE,
-     PRIMARY KEY (
-        CategoryID,
-        ListID
-    )
-);
 
 -- Table: Project
 DROP TABLE IF EXISTS Project;
@@ -69,7 +59,9 @@ CREATE TABLE Task (
     ListID INTEGER REFERENCES List (ID) ON DELETE CASCADE,
     Name   STRING  NOT NULL,
     Level  INTEGER,
-    Date   DATE
+    Date   DATE,
+    isDone BOOLEAN NOT NULL
+                       DEFAULT FALSE
 );
 
 -- Table: User
@@ -87,3 +79,26 @@ CREATE TABLE User (
 );
 
 COMMIT TRANSACTION;
+
+-- Trigger: Add default category to a new user
+
+DROP TRIGGER IF EXISTS addCategoryNewUser;
+
+CREATE TRIGGER addCategoryNewUser
+AFTER INSERT ON User
+WHEN NOT EXISTS(SELECT Category.ID FROM Category WHERE Category.UserID = new.ID)
+BEGIN  
+    INSERT INTO Category(Name, Color, ProjectID, UserID) VALUES("Default", "#222A3F", NULL, new.ID);
+END;
+
+
+-- Trigger: Add default category to a new project
+
+DROP TRIGGER IF EXISTS addCategoryNewProject;
+
+CREATE TRIGGER addCategoryNewProject
+AFTER INSERT ON Project
+WHEN NOT EXISTS(SELECT Category.ID FROM Category WHERE Category.ProjectID = new.ID)
+BEGIN  
+    INSERT INTO Category(Name, Color, ProjectID, UserID) VALUES("Default", "#222A3F", new.ID, NULL);
+END;

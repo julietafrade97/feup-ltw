@@ -5,8 +5,9 @@
 		global $dbh;
 		try {
 
-			$stmt = $dbh->prepare('INSERT INTO List(Name, isArchived) VALUES (:Name, :isArchived)');
-  			$stmt->bindParam(':Name', $listName);
+			$stmt = $dbh->prepare('INSERT INTO List(Name, CategoryID ,isArchived) VALUES (:Name, :CategoryID ,:isArchived)');
+			$stmt->bindParam(':Name', $listName);
+			$stmt->bindParam(':CategoryID', $categoryID);
 			if($stmt->execute())
 		 		$listID = $dbh->lastInsertId();
 			else
@@ -14,56 +15,31 @@
 		} catch(PDOException $e) {
 			return -1;
 		}
-
-		//add db connection betweeen list and category
-		if(addListCategory($listID, $categoryID))
-			return $listID;
-		else
-			return -1;
 		
 	}
 
-	function addListCategory($listID, $categoryID) {
-
+	function getUserLists($userID, $isArchived) {
 		global $dbh;
-		$stmt = $dbh->prepare('INSERT INTO ListCategory(CategoryID, ListID) VALUES (:CategoryID, :ListID)');
 		try {
-
-			$stmt->bindParam(':CategoryID', $categoryID);
-			$stmt->bindParam(':ListID', $listID);
-			if($stmt->execute())
-				return true;
-			else
-				return false;
-
-		}catch(PDOException $pdo_error) {
-			return false;
+			$stmt = $dbh->prepare('SELECT List.ID, List.Name, Category.Color FROM List JOIN Category ON Category.ID = List.CategoryID WHERE Category.UserID = ? AND List.isArchived = ? ORDER BY Category.Color');
+			$stmt->execute(array($userID, $isArchived));
+			return $stmt->fetchAll();
+		
+		} catch(PDOException $e) {
+			return null;
 		}
 	}
 
-	function getLists($categoryID, $isArchived) {
+	function getCategoryLists($categoryID, $isArchived) {
 		global $dbh;
-		try{
-			$stmt = $dbh->prepare('SELECT Slist.ID, Slist.Name FROM List AS Slist, ListCategory AS SlistCat WHERE SlistCat.CategoryID = ? AND Slist.ID = SlistCat.ListID AND Slist.isArchived = ?');
+		try {
+			$stmt = $dbh->prepare('SELECT ID, Name FROM List WHERE CategoryID = ? AND isArchived = ?');
 			$stmt->execute(array($categoryID, $isArchived));
 			return $stmt->fetchAll();
 
 		} catch(PDOException $e) {
 			return null;
 		}
-	}
-
-	function getListCategories($listID) {
-		global $dbh;
-		try {
-			$stmt = $dbh->prepare('SELECT CategoryID FROM ListCategory WHERE ListID = ?');
-			$stmt->execute(array($listID));
-			return $stmt->fetchAll(); 
-		
-		}catch(PDOException $e) {
-			return null;
-		}
-
 	}
 
 ?>

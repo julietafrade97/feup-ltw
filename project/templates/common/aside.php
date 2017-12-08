@@ -20,34 +20,16 @@
             <h2>Labels</h2>
 
             <section>
-                <div class="label_option">
-                    <div class="circle" style="background: #865766"></div>
-                    <p>Label</p>
-                    <a href="#dialogLabel">
-                        <span class="lnr lnr-pencil"></span>
-                    </a>
-                </div>
-                <div class="label_option">
-                    <div class="circle" style="background: #865766"></div>
-                    <p>Label</p>
-                    <a href="#dialogLabel">
-                        <span class="lnr lnr-pencil"></span>
-                    </a>
-                </div>
-                <div class="label_option">
-                    <div class="circle" style="background: #865766"></div>
-                    <p>Label</p>
-                    <a href="#dialogLabel">
-                        <span class="lnr lnr-pencil"></span>
-                    </a>
-                </div>
-                <div class="label_option">
-                    <div class="circle" style="background: #865766"></div>
-                    <p>Label</p>
-                    <a href="#dialogLabel">
-                        <span class="lnr lnr-pencil"></span>
-                    </a>
-                </div>
+                <?php if(isset($categories))
+                        foreach($categories as $category) {?>
+                            <div class="label_option">
+                            <div class="circle" style="background: <?php echo $category['Color']?>"></div>
+                            <p><?php echo $category['Name']?></p>
+                            <a href="#dialogLabel">
+                                <span class="lnr lnr-pencil"></span>
+                            </a>
+                            </div>
+                        <?php } ?>
                 <a href="#dialogLabel">
                     <button class="label_button">
                         <span class="lnr lnr-plus-circle"></span>

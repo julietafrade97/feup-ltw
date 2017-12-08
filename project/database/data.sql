@@ -9,23 +9,16 @@ INSERT INTO Project (ID, Name, Description, isArchived) VALUES (2, 'Project2', '
 INSERT INTO ProjectUser (UserID, ProjectID) VALUES (15, 1);
 INSERT INTO ProjectUser (UserID, ProjectID) VALUES (15, 2);
 
-INSERT INTO Category (ID, Name, Color, ProjectID, UserID) VALUES (1, 'Categoria1', '#11111111', NULL, 15);
-INSERT INTO Category (ID, Name, Color, ProjectID, UserID) VALUES (2, 'Categoria2', '#22222222', 1, 15);
-INSERT INTO Category (ID, Name, Color, ProjectID, UserID) VALUES (3, 'Categoria3', '#33333333', 2, 15);
+INSERT INTO Category (ID, Name, Color, ProjectID, UserID) VALUES (6, 'Categoria1', '#204177', NULL, 15);
+INSERT INTO Category (ID, Name, Color, ProjectID, UserID) VALUES (7, 'Categoria2', '#22222222', 1, NULL);
+INSERT INTO Category (ID, Name, Color, ProjectID, UserID) VALUES (8, 'Categoria3', '#33333333', 2, NULL);
 
-INSERT INTO List (ID, Name, isArchived) VALUES (1, 'List1', 'FALSE');
-INSERT INTO List (ID, Name, isArchived) VALUES (2, 'List2', 'FALSE');
-INSERT INTO List (ID, Name, isArchived) VALUES (3, 'List3', 'FALSE');
-INSERT INTO List (ID, Name, isArchived) VALUES (4, 'List4', 'FALSE');
-INSERT INTO List (ID, Name, isArchived) VALUES (5, 'List5', 'FALSE');
-INSERT INTO List (ID, Name, isArchived) VALUES (6, 'List6', 'FALSE');
-
-INSERT INTO ListCategory (CategoryID, ListID) VALUES (2, 1);
-INSERT INTO ListCategory (CategoryID, ListID) VALUES (2, 2);
-INSERT INTO ListCategory (CategoryID, ListID) VALUES (2, 3);
-INSERT INTO ListCategory (CategoryID, ListID) VALUES (1, 4);
-INSERT INTO ListCategory (CategoryID, ListID) VALUES (1, 5);
-INSERT INTO ListCategory (CategoryID, ListID) VALUES (3, 6);
+INSERT INTO List (ID, Name, CategoryID, isArchived) VALUES (1, 'List1', 2, 'FALSE');
+INSERT INTO List (ID, Name, CategoryID, isArchived) VALUES (2, 'List2', 2, 'FALSE');
+INSERT INTO List (ID, Name, CategoryID, isArchived) VALUES (3, 'List3', 2, 'FALSE');
+INSERT INTO List (ID, Name, CategoryID, isArchived) VALUES (4, 'List4', 1, 'FALSE');
+INSERT INTO List (ID, Name, CategoryID, isArchived) VALUES (5, 'List5', 1, 'FALSE');
+INSERT INTO List (ID, Name, CategoryID, isArchived) VALUES (6, 'List6', 3, 'FALSE');
 
 INSERT INTO Task (ID, ListID, Name, Level, Date) VALUES (1, 1, 'Task1', 1, '2017-11-27');
 INSERT INTO Task (ID, ListID, Name, Level, Date) VALUES (2, 1, 'Task2', 1, '2017-11-27');
