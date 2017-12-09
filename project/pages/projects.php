@@ -2,7 +2,7 @@
 include_once('../includes/init.php');
 include_once('../database/project.php');
 $projects = getUserProjects(getUserID(), 'FALSE');
-
+ 
 for($i=0; $i<count($projects); $i++) {
     $users[$i] = getProjectUsers($projects[$i]['ID']);
 }

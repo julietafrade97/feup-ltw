@@ -25,7 +25,3 @@ function imageUploaded(event) {
     alert(this.responseText);
     //document.getElementById('photo').src = t
 }
-
-function imageFailed(event) {
-
-}

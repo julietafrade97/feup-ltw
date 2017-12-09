@@ -1,12 +1,14 @@
 let username = document.querySelector('form input[name=username]');
-username.addEventListener('input', validateUsername, false);
+if(username) username.addEventListener('input', validateUsername, false);
+let currpassword = document.querySelector("form input[name=currpassword]");
+if(currpassword) currpassword.addEventListener('input', validatePassword, false);
 let password = document.querySelector("form input[name=password]");
-password.addEventListener('input', validatePassword, false);
-let newpassword = document.querySelector("form input[name=newpassword]");
-newpassword.addEventListener('input', validatePassword, false);
+if(password) password.addEventListener('input', validatePassword, false);
 let passwordagain = document.querySelector("form input[name=passwordagain]");
-passwordagain.addEventListener('keyup', validateRepeat.bind(passwordagain, newpassword), false);
+if(passwordagain) passwordagain.addEventListener('keyup', validateRepeat.bind(passwordagain, password), false);
 
+let register = document.querySelector('.register_form form');
+if(register) register.addEventListener('submit', validateRegister, false);
 
 function validateUsername() {
     console.log(this.value);
@@ -28,4 +30,11 @@ function validateUsername() {
       this.classList.add('invalid');
     else
       this.classList.remove('invalid');
+  }
+
+  function validateRegister(event) {
+    let inputs = this.querySelectorAll('input');
+    for (let i = 0; i < inputs.length; i++)
+      if (inputs[i].classList.contains('invalid'))
+       event.preventDefault();
   }
