@@ -3,7 +3,10 @@
         <p>You're about to leave this project, are you sure?</p>
         <div class="buttons">
             <input onclick="closeDialog('Leave Project')" type="button" value="Cancel">
-            <input type="button" value="Leave">
+            <form action="../actions/action_leave_project.php" method="post">
+                <input type="submit" value="Leave">
+                <input type="hidden" name="project_id" value="<?php echo $_GET['project_id']; ?>">
+            </form>
         </div>
     </div>
 </div>
