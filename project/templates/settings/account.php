@@ -13,12 +13,12 @@
                 <div id="fields">
                     <form action="action_login.php" method="post">
                         <label>Name</label>
-                        <input name="name" class="w3-input w3-border" type="text" placeholder="John Doe" value="<?php echo $userinfo['Name'] ?>" required="required">
+                        <input name="name" class="w3-input w3-border" type="text" placeholder="Name" value="<?php echo $userinfo['Name'] ?>" required="required">
                         <label>Username</label>
-                        <input name="username" class="w3-input w3-border" type="text" placeholder="johndoe123" value="<?php echo $userinfo['Username'] ?>" required="required">
+                        <input name="username" class="w3-input w3-border" type="text" placeholder="Username" value="<?php echo $userinfo['Username'] ?>" required="required">
                         <span class="hint">Only lowercase, at least 6 characters</span>
                         <label>Email</label>
-                        <input name="email" class="w3-input w3-border" type="email" placeholder="johndoe@gmail.com" value="<?php echo $userinfo['Email'] ?>" required="required">
+                        <input name="email" class="w3-input w3-border" type="email" placeholder="Email" value="<?php echo $userinfo['Email'] ?>" required="required">
                         <label>Password</label>
                         <input name="password" class="w3-input w3-border" type="password" placeholder="Password" required="required">
                         <span class="hint">One uppercase, 1 symbol, 1 number, at least 6 characters</span>
