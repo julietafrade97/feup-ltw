@@ -88,9 +88,9 @@
                         <span class="lnr lnr-cross"></span>
                     </button>
                 </label>
-                <br>
-                <button onclick="openDialog('Add Label')">Add Label</button>
             </section>
+
+            <button class="btn_addlabel" onclick="openDialog('Add Label')">Add Label</button>
 
         </div>
 
