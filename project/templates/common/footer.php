@@ -11,7 +11,7 @@
 <script type="text/javascript" src="../js/project_edit.js"></script>
 <script type="text/javascript" src="../js/plus_button.js"></script>
 <script type="text/javascript" src="../js/dialog.js"></script>
-
+<script type="text/javascript" src="../js/user_info.js"></script>
 </body>
 
 </html>

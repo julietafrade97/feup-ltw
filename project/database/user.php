@@ -43,7 +43,7 @@
   function getUser($username) {
     global $dbh;
     try {
-      $stmt = $dbh->prepare('SELECT * FROM User WHERE username = ?');
+      $stmt = $dbh->prepare('SELECT Name, Username, Email FROM User WHERE Username = ?');
       $stmt->execute(array($username));
       return $stmt->fetch();
     
