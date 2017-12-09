@@ -24,7 +24,7 @@
                     <button>
                         <span class="lnr lnr-pencil"></span>
                     </button>
-                    <button>
+                    <button onclick="openDialog('Delete Label')">
                         <span class="lnr lnr-cross"></span>
                     </button>
                 </label>
@@ -35,6 +35,9 @@
                     <p>Red</p>
                     <button>
                         <span class="lnr lnr-pencil"></span>
+                    </button>
+                    <button>
+                        <span class="lnr lnr-cross"></span>
                     </button>
                 </label>
 
@@ -86,9 +89,7 @@
                     </button>
                 </label>
                 <br>
-                <a href="#dialogLabel">
-                    <button>Add Label</button>
-                </a>
+                <button onclick="openDialog('Add Label')">Add Label</button>
             </section>
 
         </div>
@@ -97,4 +98,5 @@
 
 <?php
 include_once('../templates/dialogs/label.php');
+include_once('../templates/dialogs/delete_label.php');
 ?>

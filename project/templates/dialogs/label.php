@@ -1,6 +1,5 @@
-<div id="dialogLabel" class="overlay">
-    <div class="question">
-
+<div id="dialog1" class="modal">
+    <div class="modal-content">
         <form id="color_form" action="#">
             <p>Pick a Name</p>
             <input name="username" class="w3-input w3-border" type="text" placeholder="Label Name">
@@ -26,7 +25,7 @@
             <label for="radio6">Purple</label>
 
             <div class="buttons">
-                <input type="button" value="Cancel">
+                <input onclick="closeDialog('Add Label')" type="button" value="Cancel">
                 <input type="submit" value="Submit">
             </div>
         </form>

@@ -10,7 +10,7 @@
 <script type="text/javascript" src="../js/upload_user_photo.js"></script>
 <script type="text/javascript" src="../js/project_edit.js"></script>
 <script type="text/javascript" src="../js/plus_button.js"></script>
-
+<script type="text/javascript" src="../js/dialog.js"></script>
 
 </body>
 

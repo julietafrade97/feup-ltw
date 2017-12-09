@@ -1,5 +1,5 @@
-<div id="dialogSeeMembers" class="overlay">
-    <div class="question">
+<div id="dialog5" class="modal">
+    <div class="modal-content">
         <p>Members</p>
         <div id="members_list">
             <div class="info">
@@ -40,7 +40,7 @@
             </div>
         </div>
         <div class="buttons">
-            <input type="button" value="Close">
+            <input onclick="closeDialog('All Members')" type="button" value="Close">
         </div>
     </div>
 </div>

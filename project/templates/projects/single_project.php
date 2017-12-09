@@ -6,11 +6,9 @@
             <button class="edit">
                 <span class="lnr lnr-pencil"></span>
             </button>
-            <a href="#dialogLeaveProject">
-                <button>
-                    <span class="lnr lnr-exit"></span>
-                </button>
-            </a>
+            <button onclick="openDialog('Leave Project')">
+                <span class="lnr lnr-exit"></span>
+            </button>
         </div>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porttitor eget quam non gravida. Proin quis risus
             nisi. Phasellus eu purus lectus. In pharetra molestie.</p>
@@ -19,11 +17,9 @@
     <div id="members">
         <div class="header">
             <h1>Members</h1>
-            <a href="#dialogAddMember">
-                <button>
-                    <span class="lnr lnr-users"></span>
-                </button>
-            </a>
+            <button onclick="openDialog('Add Member')">
+                <span class="lnr lnr-users"></span>
+            </button>
         </div>
         <div id="member_list">
             <img class="member" src="../assets/portrait.png">
@@ -31,9 +27,7 @@
             <img class="member" src="../assets/portrait.png">
             <img class="member" src="../assets/portrait.png">
         </div>
-        <a href="#dialogSeeMembers">
-            <button class="button_text">See All</button>
-        </a>
+        <button class="button_text" onclick="openDialog('All Members')">See All</button>
     </div>
     <div id="lists">
         <h1>Lists</h1>

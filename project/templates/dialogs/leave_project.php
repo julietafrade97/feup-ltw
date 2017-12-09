@@ -1,8 +1,8 @@
-<div id="dialogLeaveProject" class="overlay">
-    <div class="question">
+<div id="dialog3" class="modal">
+    <div class="modal-content">
         <p>You're about to leave this project, are you sure?</p>
         <div class="buttons">
-            <input type="button" value="Cancel">
+            <input onclick="closeDialog('Leave Project')" type="button" value="Cancel">
             <input type="button" value="Leave">
         </div>
     </div>

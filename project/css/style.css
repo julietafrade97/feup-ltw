@@ -9,6 +9,13 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+button,
+input[type="button"] {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
 #register_container {
   display: grid;
   grid-template-columns: 1fr;
@@ -97,7 +104,7 @@ body {
 .register_content input[type="text"],
 .register_content input[type="password"],
 .register_content input[type="email"],
-.question input[type="text"],
+.modal-content input[type="text"],
 #fields input[type="text"],
 #fields input[type="email"],
 #fields input[type="password"] {
@@ -390,7 +397,6 @@ section button {
   color: white;
   padding: 0.5em 1.5em;
   border-radius: 1em;
-  border: none;
 }
 
 section button:hover {
@@ -459,7 +465,6 @@ main {
   font-size: 1em;
   color: #222a3f;
   background-color: transparent;
-  border: none;
 }
 
 #project_box button:hover,
@@ -533,15 +538,12 @@ main {
   font-size: 1.1em;
   color: #222a3f;
   margin: 0 0 0 1em;
-  outline: none;
 }
 
 #project_container button {
   background: none;
-  border: none;
   font-size: 1.1em;
   color: #222a3f;
-  outline: none;
 }
 
 #project_container .button_text {
@@ -571,7 +573,7 @@ main {
 }
 
 #member_list .member,
-.question .member {
+.modal-content .member {
   width: 2.5em;
   height: 2.5em;
   object-fit: cover;
@@ -747,48 +749,6 @@ main {
 }
 
 /*
-* QUESTION POP UP
-*/
-.question {
-  position: relative;
-  margin: 0 auto;
-  top: 25%;
-  padding: 1.5em;
-  background: white;
-  width: 30%;
-  box-shadow: 0 0 1em 0.2em rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column;
-  max-height: 50%;
-}
-
-.question .buttons {
-  display: flex;
-  justify-content: flex-end;
-  min-height: min-content;
-}
-
-.question input[type="submit"],
-.question input[type="button"] {
-  font-size: 0.7em;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  background-color: #222a3f;
-  color: white;
-  margin: 2em 0 2em 1em;
-  padding: 0.5em 1.5em;
-  border-radius: 1em;
-  border: none;
-}
-
-.question input[type="submit"]:hover,
-.question input[type="button"]:hover {
-  background-color: #948f8c;
-  cursor: pointer;
-}
-
-/*
 * ALL MEMBERS
 */
 
@@ -848,26 +808,20 @@ main {
   overflow-y: auto;
 }
 
-.popup a {
-  text-decoration: none;
-  color: #3d3d3b;
-}
-
 #listPopUp ul {
   margin: 0;
   padding: 0;
   word-break: break-all;
 }
 
-input,
-button {
-  outline: none;
+#listPopUp a {
+  text-decoration: none;
+  color: #222a3f;
 }
 
 #listPopUp button {
   background: none;
   border: 0;
-  font-size: 1.15em;
   cursor: pointer;
 }
 
@@ -883,8 +837,7 @@ button {
 }
 
 #pop_up_header span {
-  margin-left: 0.6em;
-  font-size: 1.2em;
+  font-size: 1.6em;
 }
 
 #pop_up_title {
@@ -949,7 +902,7 @@ button {
 }
 
 .task_line button span {
-  font-size: 0.8em;
+  font-size: 1.2em;
   margin-left: 0.4em;
 }
 
@@ -962,7 +915,7 @@ button {
 }
 
 .star .lnr-star-empty {
-  display: block;
+  display: inline-flex;
 }
 
 .star .lnr-star {
@@ -970,7 +923,7 @@ button {
 }
 
 .task_line.priorityMode .star .lnr-star {
-  display: block;
+  display: inline-flex;
 }
 
 .task_line.priorityMode .star .lnr-star-empty {
@@ -991,6 +944,10 @@ button {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+}
+
+.new_task span {
+  font-size: 1.6em;
 }
 
 #listPopUp li > label {
@@ -1185,10 +1142,8 @@ footer p {
 
 #archive li button {
   background: none;
-  border: none;
   font-size: 1em;
   color: #222a3f;
-  outline: none;
 }
 
 #archive li:hover {
@@ -1313,14 +1268,14 @@ footer p {
     width: 70%;
   }
 
-  .question .buttons {
+  .modal-content .buttons {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .question input[type="submit"],
-  .question input[type="button"] {
+  .modal-content input[type="submit"],
+  .modal-content input[type="button"] {
     margin: 1em 2em;
   }
 }
@@ -1386,4 +1341,55 @@ input:checked + label:before {
 #color_form input:checked + label:before {
   border-color: #222a3f;
   background: #222a3f;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 2; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  max-height: 50%;
+  width: 30%;
+  padding: 1.5em;
+  margin: 10% auto;
+  background: white;
+  box-shadow: 0 0 1em 0.2em rgba(0, 0, 0, 0.2);
+}
+
+.modal-content .buttons {
+  display: flex;
+  justify-content: flex-end;
+  min-height: min-content;
+}
+
+.modal-content input[type="submit"],
+.modal-content input[type="button"] {
+  font-size: 0.7em;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background-color: #222a3f;
+  color: white;
+  margin: 2em 0 2em 1em;
+  padding: 0.5em 1.5em;
+  border-radius: 1em;
+  border: none;
+}
+
+.modal-content input[type="submit"]:hover,
+.modal-content input[type="button"]:hover {
+  background-color: #948f8c;
+  cursor: pointer;
 }

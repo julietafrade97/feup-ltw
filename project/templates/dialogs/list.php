@@ -1,14 +1,16 @@
 <div id="listPopUp" class="overlay">
     <div class="popup">
         <div id="pop_up_header">
-            <a href="#dialogDeleteList">
+            <button onclick="openDialog('Delete List')">
                 <span class="lnr lnr-trash">
-            </a>
-            <a>
+            </button>
+            <button>
                 <span class="lnr lnr-inbox">
-            </a>
+            </button>
             <a href="#">
-                <span class="lnr lnr-cross">
+                <button>
+                    <span class="lnr lnr-cross">
+                </button>
             </a>
         </div>
         <div id="pop_up_title">

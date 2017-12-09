@@ -24,9 +24,8 @@
                         <input type="submit" name="Submit" value="Update">
                     </form>
                     <hr>
-                    <form action="../actions/action_delete_account.php" method="post">
-                        <input type="submit" name="Submit" value="Delete Account">
-                    </form>
+                    <input onclick="openDialog('Delete Account')" type="submit" value="Delete Account">
+
                 </div>
                 <div id="photo_field">
                     <form method="post">
@@ -40,3 +39,7 @@
         </div>
     </div>
 </main>
+
+<?php
+include_once('../templates/dialogs/delete_account.php');
+?>
