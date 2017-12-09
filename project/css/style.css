@@ -748,7 +748,16 @@ main {
   margin-top: -0.3em;
   background-color: Transparent;
   align-self: flex-start;
+  cursor: pointer;
 }
+
+#list_box_header button:hover{
+  margin-top:-0.45em;
+  transform: scale(1.5);
+  transform-origin:top;
+}
+
+
 
 
 #more {
