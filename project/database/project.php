@@ -44,6 +44,21 @@
         }
     }
 
+    function removeUserFromProject($userID, $projectID) {
+
+        global $dbh;
+        try {
+
+            $stmt = $dbh->prepare('DELETE FROM ProjectUser WHERE UserID = ? AND ProjectID = ?');
+            $stmt->execute(array($userID, $projectID));
+            return true;
+
+        } catch(PDOException $e) {
+
+            return false;
+        }
+    }
+
     function getUserProjects($userID, $isArchived) {
 
         global $dbh;
@@ -70,3 +85,5 @@
             return null;
         }
     }
+
+?>

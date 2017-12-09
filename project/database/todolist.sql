@@ -102,3 +102,14 @@ WHEN NOT EXISTS(SELECT Category.ID FROM Category WHERE Category.ProjectID = new.
 BEGIN  
     INSERT INTO Category(Name, Color, ProjectID, UserID) VALUES("Default", "#222A3F", new.ID, NULL);
 END;
+
+-- Trigger: Delete project without users
+
+DROP TRIGGER IF EXISTS deleteEmptyProject;
+
+CREATE TRIGGER deleteEmptyProject
+AFTER DELETE ON ProjectUser
+WHEN NOT EXISTS(SELECT UserID FROM ProjectUser WHERE ProjectID = OLD.ProjectID)
+BEGIN
+    DELETE FROM Project WHERE ID = OLD.ProjectID;
+END;
