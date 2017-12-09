@@ -1,6 +1,7 @@
 <?php
 include_once('../includes/init.php');
 include_once('../database/category.php');
+include_once('../database/project.php');
 include_once('../database/list.php');
 include_once('../database/task.php');
 
@@ -12,8 +13,13 @@ if(!is_numeric($projectID))
 
 $categories = getProjectCategories($projectID);
 
-if(empty($categories))
-    header('Location:notfound.php');    
+if(empty($categories) || $categories == null)
+    header('Location:notfound.php');
+
+$projectBio = getProject($projectID);
+
+if(empty($projectBio) || $projectBio == null)
+    header('Location:notfound.php');
 
 include_once('../templates/common/header.php');
 include_once('../templates/common/aside.php');

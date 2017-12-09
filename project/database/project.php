@@ -93,9 +93,21 @@
             $stmt = $dbh->prepare('UPDATE Project SET Name = ?, Description = ? WHERE ID = ?');
             $stmt->execute(array($newTitle, $newDescription, $projectID));
             return true;
-            
+
         } catch(PDOException $e) {
             return false;
+        }
+    }
+
+    function getProject($projectID) {
+        global $dbh;
+        try {
+            $stmt = $dbh->prepare('SELECT * FROM Project WHERE ID = ?');
+            $stmt->execute(array($projectID));
+            return $stmt->fetch();
+
+        } catch(PDOException $e) {
+            return null;
         }
     }
 

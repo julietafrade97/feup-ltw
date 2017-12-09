@@ -1,7 +1,7 @@
 <div id="project_container">
     <div id="bio">
         <div class="header">
-            <h1>Project</h1>
+            <h1><?php echo $projectBio['Name']?></h1>
             <input type="text">
             <button class="edit">
                 <span class="lnr lnr-pencil"></span>
@@ -10,8 +10,7 @@
                 <span class="lnr lnr-exit"></span>
             </button>
         </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porttitor eget quam non gravida. Proin quis risus
-            nisi. Phasellus eu purus lectus. In pharetra molestie.</p>
+        <p><?php echo $projectBio['Description'] ?></p>
         <textarea></textarea>
     </div>
     <div id="members">
