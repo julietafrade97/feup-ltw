@@ -8,7 +8,7 @@
                 <span class="lnr lnr-inbox">
             </button>
             <a href="#">
-                <button>
+                <button onclick="closeDialog('List')">
                     <span class="lnr lnr-cross">
                 </button>
             </a>
