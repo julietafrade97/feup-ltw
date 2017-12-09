@@ -7,17 +7,17 @@ function encodeForAjax(data) {
 }
 
 
-var bioContainer = document.getElementById("bio");
+let bioContainer = document.getElementById("bio");
 if(bioContainer !== null) {
   var editTitle = bioContainer.querySelector("input[type=text]");
   var editDescription = bioContainer.querySelector("textarea");
 }
 
-var editProject = function() {
-  var labelTitle = bioContainer.querySelector("h1");
-  var labelDescription = bioContainer.querySelector("p");
+let editProject = function() {
+  let labelTitle = bioContainer.querySelector("h1");
+  let labelDescription = bioContainer.querySelector("p");
 
-  var containsClass = bioContainer.classList.contains("editMode");
+  let containsClass = bioContainer.classList.contains("editMode");
 
   if (containsClass) {
     labelTitle.innerText = editTitle.value;
@@ -31,8 +31,8 @@ var editProject = function() {
   bioContainer.classList.toggle("editMode");
 };
 
-var bindProjectEvents = function() {
-  var editButton = bioContainer.querySelector("button.edit");
+let bindProjectEvents = function() {
+  let editButton = bioContainer.querySelector("button.edit");
   editButton.onclick = editProject;
 };
 
