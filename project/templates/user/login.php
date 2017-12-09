@@ -19,6 +19,7 @@
             <a href="signup.php" class="register_button">Sign Up</a>
             <img src="../assets/logo.svg">
             <h1>Meraki</h1>
+            <p>Do something with soul.</p>
         </div>
         <div class="register_content">
             <h1>Login</h1>
