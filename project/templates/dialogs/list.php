@@ -13,7 +13,7 @@
         </div>
         <div id="pop_up_title">
             <h1 contentEditable="true">Title</h1>
-            <div id="rectangle" style="background: #865766;"></div>
+            <div id="rectangle" style="background: #865766"></div>
         </div>
         <h3>Todo</h3>
         <ul id="incomplete-tasks">
