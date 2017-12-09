@@ -1,5 +1,5 @@
-<div id="listPopUp" class="overlay">
-    <div class="popup">
+<div id="dialog9"  class="modal">
+    <div class="list_popup">
         <div id="pop_up_header">
             <button onclick="openDialog('Delete List')">
                 <span class="lnr lnr-trash">

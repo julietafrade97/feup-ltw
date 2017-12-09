@@ -793,7 +793,7 @@ main {
 }
 
 /* Basic Style */
-.popup {
+.list_popup {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -808,24 +808,24 @@ main {
   overflow-y: auto;
 }
 
-#listPopUp ul {
+#dialog9 ul {
   margin: 0;
   padding: 0;
   word-break: break-all;
 }
 
-#listPopUp a {
+#dialog9 a {
   text-decoration: none;
   color: #222a3f;
 }
 
-#listPopUp button {
+#dialog9 button {
   background: none;
   border: 0;
   cursor: pointer;
 }
 
-#listPopUp span:hover {
+#dialog9 span:hover {
   cursor: pointer;
   color: #948f8c;
 }
@@ -863,7 +863,7 @@ main {
   z-index: 1;
 }
 
-#listPopUp h3 {
+#dialog9 h3 {
   font-weight: 700;
   font-size: 0.7em;
   padding: 2em 0 1em;
@@ -871,7 +871,7 @@ main {
   text-transform: uppercase;
 }
 
-#listPopUp input[type="text"] {
+#dialog9 input[type="text"] {
   font-family: "Montserrat", sans-serif;
   font-size: 1em;
   height: 2em;
@@ -883,7 +883,7 @@ main {
   color: rgb(90, 90, 90);
 }
 
-#listPopUp .new_task {
+#dialog9 .new_task {
   margin-bottom: 1.5em;
 }
 
@@ -935,7 +935,7 @@ main {
 }
 
 /* New Task */
-#listPopUp input#new-task {
+#dialog9 input#new-task {
   width: 100%;
   font-weight: 300;
 }
@@ -950,11 +950,11 @@ main {
   font-size: 1.6em;
 }
 
-#listPopUp li > label {
+#dialog9 li > label {
   font-size: 1em;
   padding: 1em 0 1em 0.7em;
 }
-#listPopUp li > input[type="text"] {
+#dialog9 li > input[type="text"] {
   width: 100%;
 }
 
@@ -964,16 +964,16 @@ main {
 }
 
 /* Edit Task */
-#listPopUp ul li input[type="text"] {
+#dialog9 ul li input[type="text"] {
   display: none;
   font-weight: 300;
 }
 
-#listPopUp ul li.editMode input[type="text"] {
+#dialog9 ul li.editMode input[type="text"] {
   display: block;
 }
 
-#listPopUp ul li.editMode label {
+#dialog9 ul li.editMode label {
   display: none;
 }
 

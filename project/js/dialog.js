@@ -7,6 +7,7 @@
  * dialog 6 : delete list
  * dialog 7: delete account
  * dialog 8: change label
+ * dialog 9: list
  */
 
 // Load the dialogs
@@ -18,6 +19,7 @@ var dialog5 = document.getElementById("dialog5");
 var dialog6 = document.getElementById("dialog6");
 var dialog7 = document.getElementById("dialog7");
 var dialog8 = document.getElementById("dialog8");
+var dialog9 = document.getElementById("dialog9");
 
 function openDialog(value) {
   switch (value) {
@@ -44,6 +46,9 @@ function openDialog(value) {
       break;
     case "Change Label":
       dialog8.style.display = "block";
+      break;
+    case "List":
+      dialog9.style.display = "block";
       break;
   }
 }
@@ -72,7 +77,10 @@ function closeDialog(value) {
       dialog7.style.display = "none";
       break;
     case "Change Label":
-      dialog8.style.display = "block";
+      dialog8.style.display = "none";
+      break;
+    case "List":
+      dialog9.style.display = "none";
       break;
   }
 }
@@ -102,6 +110,9 @@ window.onclick = function(event) {
       break;
     case dialog8:
       dialog8.style.display = "none";
+      break;
+    case dialog9:
+      dialog9.style.display = "none";
       break;
   }
 };

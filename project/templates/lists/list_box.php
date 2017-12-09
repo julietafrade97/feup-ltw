@@ -14,6 +14,8 @@
             </li>
         <?php } ?>
     </div>
-    <a id="more" href="#listPopUp" type="button">SEE MORE</a>
+    <button  id="more" onclick="openDialog('List')">
+        SEE MORE
+    </button>
 </div>
 <?php }?>
