@@ -1284,17 +1284,20 @@ footer p {
 * LABEL FORM
 */
 
-#color_form {
+#color_form,
+#label_form {
   width: 100%;
   overflow-y: auto;
   padding-right: 1em;
 }
 
-#color_form input[type="radio"] {
+#color_form input[type="radio"],
+#label_form input[type="radio"] {
   display: none;
 }
 
 #color_form .active-label,
+#label_form .active-label,
 label:focus,
 label:hover,
 label:active,
@@ -1302,6 +1305,7 @@ input:checked + label {
   color: #222a3f;
 }
 #color_form .active-label:before,
+#label_form .active-label:before,
 label:focus:before,
 label:hover:before,
 label:active:before,
@@ -1310,7 +1314,8 @@ input:checked + label:before {
   border-color: #222a3f;
 }
 
-#color_form label {
+#color_form label,
+#label_form label {
   font-size: 0.8em;
   font-weight: 300;
   cursor: pointer;
@@ -1324,10 +1329,12 @@ input:checked + label:before {
   transition: all 0.15s ease;
 }
 
-#color_form label:first-of-type {
+#color_form label:first-of-type,
+#label_form label:first-of-type {
   border: 0;
 }
-#color_form label:before {
+#color_form label:before,
+#label_form label:before {
   content: "";
   position: absolute;
   left: 1rem;
@@ -1338,25 +1345,27 @@ input:checked + label:before {
   border: 0.2em solid #ccc;
 }
 
-#color_form input:checked + label:before {
+#color_form input:checked + label:before,
+#label_form input:checked + label:before {
   border-color: #222a3f;
   background: #222a3f;
 }
 
-/* The Modal (background) */
+/*
+* MODAL WINDOW AKA POP UP
+*/
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 2; /* Sit on top */
+  display: none;
+  position: fixed;
+  z-index: 2;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
-/* Modal Content/Box */
 .modal-content {
   display: flex;
   flex-direction: column;
@@ -1392,4 +1401,33 @@ input:checked + label:before {
 .modal-content input[type="button"]:hover {
   background-color: #948f8c;
   cursor: pointer;
+}
+
+/*
+* NOT FOUND PAGE
+*/
+#notFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 94vh;
+}
+
+#notFound img {
+  width: 60vh;
+  margin-top: 3em;
+}
+
+#notFound h1 {
+  font-size: 2em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: white;
+}
+
+#notFound h2 {
+  font-size: 1em;
+  font-weight: 300;
+  color: white;
 }
