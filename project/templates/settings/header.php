@@ -13,22 +13,23 @@
 </head>
 
 <body>
+
     <div id="main_container">
 
         <header>
             <div id="info">
-                <nav id="nav_sidebar">
 
-                    <span id="menu-icon" onclick="openNav()">
-                        <span class="lnr lnr-menu"></span>
-                    </span>
+                <span id="menu-icon" onclick="openNav()">
+                    <span class="lnr lnr-menu"></span>
+                </span>
 
-                    <div id="mySidenav" class="sidenav">
-                        <a href="javascript:void(0)" onclick="closeNav()">
-                            <div class="closebtn">
-                                <span class="lnr lnr-cross"></span>
-                            </div>
-                        </a>
+                <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" onclick="closeNav()">
+                        <div class="closebtn">
+                            <span class="lnr lnr-cross"></span>
+                        </div>
+                    </a>
+                    <nav>
                         <a href="#">
                             <div class="menu_option">
                                 <span class="lnr lnr-home"></span>
@@ -53,20 +54,18 @@
                                 <p>About</p>
                             </div>
                         </a>
-                    </div>
-                </nav>
+                    </nav>
+                </div>
 
-                <a href="lists.php">
+                <a id="logo" href="lists.php">
                     <img src="../assets/logo.svg">
+                    <h1>Meraki</h1>
                 </a>
-                <h1>
-                    <a href="lists.php">Meraki</a>
-                </h1>
 
-                <nav>
+                <div id="header_buttons">
                     <a href="../actions/action_logout.php">
                         <span class="lnr lnr-power-switch"></span>
                     </a>
-                </nav>
+                </div>
             </div>
         </header>
