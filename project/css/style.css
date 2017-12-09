@@ -833,6 +833,7 @@ main {
 #pop_up_header {
   display: flex;
   justify-content: flex-end;
+  flex-shrink: 0;
 }
 
 #pop_up_header span {
@@ -842,6 +843,7 @@ main {
 #pop_up_title {
   display: flex;
   align-items: center;
+  flex-shrink: 0;
 }
 
 #pop_up_title h1 {
@@ -868,6 +870,7 @@ main {
   padding: 2em 0 1em;
   margin: 0;
   text-transform: uppercase;
+  flex-shrink: 0;
 }
 
 #dialog9 input[type="text"] {
@@ -884,6 +887,7 @@ main {
 
 #dialog9 .new_task {
   margin-bottom: 1.5em;
+  flex-shrink: 0;
 }
 
 /* Task Line */
@@ -1207,7 +1211,7 @@ footer p {
     display: inline-flex;
   }
 
-  .popup {
+  .list_popup {
     width: 70%;
   }
 
