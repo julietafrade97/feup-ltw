@@ -1329,17 +1329,20 @@ footer p {
 * LABEL FORM
 */
 
-#color_form {
+#color_form,
+#label_form {
   width: 100%;
   overflow-y: auto;
   padding-right: 1em;
 }
 
-#color_form input[type="radio"] {
+#color_form input[type="radio"],
+#label_form input[type="radio"] {
   display: none;
 }
 
 #color_form .active-label,
+#label_form .active-label,
 label:focus,
 label:hover,
 label:active,
@@ -1347,6 +1350,7 @@ input:checked + label {
   color: #222a3f;
 }
 #color_form .active-label:before,
+#label_form .active-label:before,
 label:focus:before,
 label:hover:before,
 label:active:before,
@@ -1355,7 +1359,8 @@ input:checked + label:before {
   border-color: #222a3f;
 }
 
-#color_form label {
+#color_form label,
+#label_form label {
   font-size: 0.8em;
   font-weight: 300;
   cursor: pointer;
@@ -1369,10 +1374,12 @@ input:checked + label:before {
   transition: all 0.15s ease;
 }
 
-#color_form label:first-of-type {
+#color_form label:first-of-type,
+#label_form label:first-of-type {
   border: 0;
 }
-#color_form label:before {
+#color_form label:before,
+#label_form label:before {
   content: "";
   position: absolute;
   left: 1rem;
@@ -1383,7 +1390,8 @@ input:checked + label:before {
   border: 0.2em solid #ccc;
 }
 
-#color_form input:checked + label:before {
+#color_form input:checked + label:before,
+#label_form input:checked + label:before {
   border-color: #222a3f;
   background: #222a3f;
 }
