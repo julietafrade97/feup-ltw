@@ -6,6 +6,7 @@
  * dialog 5 : all members
  * dialog 6 : delete list
  * dialog 7: delete account
+ * dialog 8: change label
  */
 
 // Load the dialogs
@@ -16,6 +17,7 @@ var dialog4 = document.getElementById("dialog4");
 var dialog5 = document.getElementById("dialog5");
 var dialog6 = document.getElementById("dialog6");
 var dialog7 = document.getElementById("dialog7");
+var dialog8 = document.getElementById("dialog8");
 
 function openDialog(value) {
   switch (value) {
@@ -39,6 +41,9 @@ function openDialog(value) {
       break;
     case "Delete Account":
       dialog7.style.display = "block";
+      break;
+    case "Change Label":
+      dialog8.style.display = "block";
       break;
   }
 }
@@ -66,6 +71,9 @@ function closeDialog(value) {
     case "Delete Account":
       dialog7.style.display = "none";
       break;
+    case "Change Label":
+      dialog8.style.display = "block";
+      break;
   }
 }
 
@@ -91,6 +99,9 @@ window.onclick = function(event) {
       break;
     case dialog7:
       dialog7.style.display = "none";
+      break;
+    case dialog8:
+      dialog8.style.display = "none";
       break;
   }
 };

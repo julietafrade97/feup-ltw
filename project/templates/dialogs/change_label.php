@@ -1,6 +1,5 @@
-<div id="dialogChangeLabel" class="overlay">
-    <div class="question">
-
+<div id="dialog8" class="modal">
+    <div class="modal-content">
         <form id="label_form" action="#">
             <p>Pick a Label</p>
 

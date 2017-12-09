@@ -2,9 +2,9 @@
 <div id="list_box">
     <div id="list_box_header">
         <h1><?php echo $lists[$i]['Name']?></h1>
-        <a href="#dialogChangeLabel">
+        <button onclick="openDialog('Change Label')">
             <i class="fa fa-bookmark" aria-hidden="true" style="color: <?php echo $lists[$i]['Color']?>"></i>
-        </a>
+        </button>
     </div>
     <div id="task_list">
         <?php for($j=0; $j<count($tasks[$i]); $j++) {?>
