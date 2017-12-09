@@ -12,7 +12,7 @@ if(!is_numeric($projectID))
 
 $categories = getProjectCategories($projectID);
 
-if($categories === null)
+if(empty($categories))
     header('Location:notfound.php');    
 
 include_once('../templates/common/header.php');
