@@ -7,7 +7,7 @@ echo $projectID;
 echo $userID;
 
 if(!is_numeric($userID) || !is_numeric($projectID))
-header("Location:../pages/lists.php");
+    header("Location:../pages/lists.php");
 
 if(removeUserFromProject($userID, $projectID)) {
     header("Location:../pages/lists.php");

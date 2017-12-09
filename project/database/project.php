@@ -86,4 +86,17 @@
         }
     }
 
+    function changeBioProject($projectID, $newTitle, $newDescription) {
+        global $dbh;
+        try {
+
+            $stmt = $dbh->prepare('UPDATE Project SET Name = ?, Description = ? WHERE ID = ?');
+            $stmt->execute(array($newTitle, $newDescription, $projectID));
+            return true;
+            
+        } catch(PDOException $e) {
+            return false;
+        }
+    }
+
 ?>

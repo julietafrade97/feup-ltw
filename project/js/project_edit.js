@@ -1,9 +1,18 @@
+function encodeForAjax(data) {
+  return Object.keys(data)
+    .map(function(k) {
+      return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
+    })
+    .join("&");
+}
+
+
 var bioContainer = document.getElementById("bio");
+var editTitle = bioContainer.querySelector("input[type=text]");
+var editDescription = bioContainer.querySelector("textarea");
 
 var editProject = function() {
-  var editTitle = bioContainer.querySelector("input[type=text]");
   var labelTitle = bioContainer.querySelector("h1");
-  var editDescription = bioContainer.querySelector("textarea");
   var labelDescription = bioContainer.querySelector("p");
 
   var containsClass = bioContainer.classList.contains("editMode");
@@ -11,6 +20,7 @@ var editProject = function() {
   if (containsClass) {
     labelTitle.innerText = editTitle.value;
     labelDescription.innerText = editDescription.value;
+    changeProjectBio();
   } else {
     editTitle.value = labelTitle.innerText;
     editDescription.value = labelDescription.innerText;
@@ -27,6 +37,25 @@ var bindProjectEvents = function() {
 };
 
 bindProjectEvents();
+
+
+//update project bio information in database
+function changeProjectBio() {
+  let request = new XMLHttpRequest();
+  request.open("POST", "../actions/action_change_project_bio.php", true);
+  request.addEventListener("load", finishProjectBio);
+  request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+  window.$_GET = new URLSearchParams(location.search);
+  request.send(encodeForAjax({title: editTitle.value, description: editDescription.value, projectID: $_GET.get('project_id')}));
+}
+
+function finishProjectBio(event) {
+  event.preventDefault();
+  if(this.responseText !== "") {
+    alert(this.responseText);
+  }
+}
+
 
 // ADD A NEW USER TO THE PROJECT
 
