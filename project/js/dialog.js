@@ -11,15 +11,15 @@
  */
 
 // Load the dialogs
-var dialog1 = document.getElementById("dialog1");
-var dialog2 = document.getElementById("dialog2");
-var dialog3 = document.getElementById("dialog3");
-var dialog4 = document.getElementById("dialog4");
-var dialog5 = document.getElementById("dialog5");
-var dialog6 = document.getElementById("dialog6");
-var dialog7 = document.getElementById("dialog7");
-var dialog8 = document.getElementById("dialog8");
-var dialog9 = document.getElementById("dialog9");
+let dialog1 = document.getElementById("dialog1");
+let dialog2 = document.getElementById("dialog2");
+let dialog3 = document.getElementById("dialog3");
+let dialog4 = document.getElementById("dialog4");
+let dialog5 = document.getElementById("dialog5");
+let dialog6 = document.getElementById("dialog6");
+let dialog7 = document.getElementById("dialog7");
+let dialog8 = document.getElementById("dialog8");
+let dialog9 = document.getElementById("dialog9");
 
 function openDialog(value) {
   switch (value) {

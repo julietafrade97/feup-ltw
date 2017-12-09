@@ -1122,6 +1122,27 @@ footer p {
   background-color: #576886;
 }
 
+#account h5{
+  color: #222a3f;
+  margin-bottom:0.5em;
+}
+
+form .hint {
+  font-size: 0.6em;
+  padding: 0.5em;
+  align-self: center;
+  display: none;
+}
+
+form input.invalid {
+  border: 1px solid red;
+  box-shadow: red 0 0 2px 2px;
+}
+
+form input.invalid + .hint{
+  display: block;
+}
+
 /*
 * ARCHIVE
 */
@@ -1396,23 +1417,4 @@ input:checked + label:before {
   font-size: 1em;
   font-weight: 300;
   color: white;
-}
-
-
-/*LUIS*/
-
-form .hint {
-  font-size: 0.6em;
-  padding: 0.5em;
-  align-self: center;
-  display: none;
-}
-
-form input.invalid {
-  border: 1px solid red;
-  box-shadow: red 0 0 2px 2px;
-}
-
-form input.invalid + .hint{
-  display: block;
 }
