@@ -37,7 +37,7 @@ var createNewTaskElement = function(taskString) {
   //Each element needs modifying
   listItem.className="task_line checkboxAndLabel";
   
-  checkox.id = "-1";
+  checkBox.id = "-1";
   label.htmlFor ="-1";
   
   checkBox.type = "checkbox";

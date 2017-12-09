@@ -10,7 +10,8 @@ body {
 }
 
 button,
-input[type="button"] {
+input[type="button"],
+input[type="submit"] {
   border: none;
   outline: none;
   cursor: pointer;
@@ -157,8 +158,8 @@ header {
 #info {
   display: flex;
   align-items: center;
+  padding: 0 2.3em;
   flex-grow: 1;
-  padding: 0 1.5em;
 }
 
 #info a {
@@ -166,14 +167,14 @@ header {
   color: white;
 }
 
-#info > a {
-  font-size: 1.5em;
-  align-self: flex-end;
+#info #logo {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
 }
 
 #info img {
-  width: 2em;
-  padding: 0 0.5em;
+  width: 3em;
 }
 
 #info h1 {
@@ -181,8 +182,11 @@ header {
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  flex-grow: 1;
-  padding: 0 0.5em;
+  padding-left: 1em;
+}
+
+#info #header_buttons {
+  display: flex;
 }
 
 #info span {
@@ -206,23 +210,8 @@ header {
   cursor: pointer;
 }
 
-#info #nav_sidebar,
-#info nav p {
+#info nav {
   display: none;
-}
-
-#info #more-icon {
-  display: none;
-  font-size: 1.2em;
-  text-align: center;
-}
-
-#info nav ul {
-  list-style: none;
-}
-
-#info nav li {
-  display: inline-block;
 }
 
 .sidenav {
@@ -331,9 +320,9 @@ nav a {
 
 #aside_content section,
 .sidenav section {
-  margin-top: 1em;
+  margin: 1em 0;
   overflow-y: auto;
-  max-height: 45%;
+  max-height: 33.5vh;
 }
 
 .label_option {
@@ -386,7 +375,7 @@ section input[type="radio"]:checked + .label_option {
   background-color: white;
 }
 
-section button {
+#aside_content .btn_addlabel {
   display: block;
   margin: auto;
   font-size: 0.7em;
@@ -399,7 +388,7 @@ section button {
   border-radius: 1em;
 }
 
-section button:hover {
+#aside_content .btn_addlabel:hover {
   background-color: #948f8c;
   cursor: pointer;
 }
@@ -1196,82 +1185,26 @@ footer p {
   }
 
   #info {
-    display: flex;
-    align-items: center;
     justify-content: space-around;
-    padding: 0 1em;
+    flex: none;
+    padding: 0;
     width: 100%;
   }
 
-  #info a {
-    text-decoration: none;
-    color: white;
-  }
-
-  #info > a {
-    font-size: 1em;
-    align-self: flex-end;
-  }
-
-  #info img {
-    display: none;
-  }
-
-  #info h1 {
-    font-size: 1em;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    text-align: center;
-  }
-
-  #info span {
-    font-size: 1.5em;
-    padding: 0;
+  #info #logo {
+    flex: none;
   }
 
   aside {
     display: none;
   }
 
-  #info #nav_sidebar {
+  #info nav {
     display: block;
   }
 
   #info #menu-icon {
-    display: inline-block;
-  }
-
-  #info #more-icon {
-    display: inline-block;
-  }
-
-  #info nav p {
-    display: block;
-  }
-
-  #info nav ul,
-  #info nav:active ul {
-    display: none;
-    position: absolute;
-    background-color: #222a3f;
-    border: 1px solid white;
-    padding: 1em;
-    right: 15px;
-    top: 15px;
-    width: 40%;
-    border-radius: 0.5em 0 0.5em 0.5em;
-  }
-
-  #info nav li {
-    text-align: center;
-    width: 100%;
-    padding: 0.5em 0;
-    margin: 0;
-  }
-
-  #info nav:hover ul {
-    display: block;
+    display: inline-flex;
   }
 
   .popup {
