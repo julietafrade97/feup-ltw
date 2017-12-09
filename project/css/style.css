@@ -663,9 +663,14 @@ main {
 }
 
 #list_box_header i {
-  margin-top: -0.1em;
-  font-size: 2em;
+  font-size: 2.5em;
   color: #865766;
+  align-self: flex-start;
+}
+
+#list_box_header button{
+  margin-top: -0.3em;
+  background-color: Transparent;
   align-self: flex-start;
 }
 

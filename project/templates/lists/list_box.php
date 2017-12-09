@@ -8,7 +8,7 @@
     </div>
     <div id="task_list">
         <?php for($j=0; $j<count($tasks[$i]); $j++) {?>
-            <li class="task_line priorityMode">
+            <li class="task_line">
                 <input type="checkbox">
                 <label><?php echo $tasks[$i][$j]['Name']?></label>
             </li>
