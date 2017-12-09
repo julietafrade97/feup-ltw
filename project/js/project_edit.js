@@ -8,8 +8,10 @@ function encodeForAjax(data) {
 
 
 var bioContainer = document.getElementById("bio");
-var editTitle = bioContainer.querySelector("input[type=text]");
-var editDescription = bioContainer.querySelector("textarea");
+if(bioContainer !== null) {
+  var editTitle = bioContainer.querySelector("input[type=text]");
+  var editDescription = bioContainer.querySelector("textarea");
+}
 
 var editProject = function() {
   var labelTitle = bioContainer.querySelector("h1");
@@ -30,10 +32,8 @@ var editProject = function() {
 };
 
 var bindProjectEvents = function() {
-  if(bioContainer !== null){
-    var editButton = bioContainer.querySelector("button.edit");
-    editButton.onclick = editProject;
-  }
+  var editButton = bioContainer.querySelector("button.edit");
+  editButton.onclick = editProject;
 };
 
 bindProjectEvents();
