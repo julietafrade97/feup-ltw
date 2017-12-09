@@ -35,7 +35,10 @@ var createNewTaskElement = function(taskString) {
   var deleteSpan = document.createElement("span");
   
   //Each element needs modifying
-  listItem.className="task_line";
+  listItem.className="task_line checkboxAndLabel";
+  
+  checkBox.id = "-1";
+  label.htmlFor ="-1";
   
   checkBox.type = "checkbox";
   editInput.type = "text";
@@ -73,13 +76,21 @@ var createNewTaskElement = function(taskString) {
 // Add a new task
 var addTask = function() {
   console.log("Add task...");
-  //Create a new list item with the text from #new-task:
-  var listItem = createNewTaskElement(taskInput.value);
-  //Append listItem to incompleteTasksHolder
-  incompleteTasksHolder.appendChild(listItem);
-  bindTaskEvents(listItem, taskCompleted);  
+
+  let elems = document.getElementsByClassName("editMode");
+
+  console.log(elems);
   
-  taskInput.value = "";   
+  if(elems.length==0){
+    //Create a new list item with the text from #new-task:
+    var listItem = createNewTaskElement(taskInput.value);
+    //Append listItem to incompleteTasksHolder
+    incompleteTasksHolder.appendChild(listItem);
+    bindTaskEvents(listItem, taskCompleted);  
+    
+    taskInput.value = "";  
+  }
+ 
 }
 
 // Edit an existing task
@@ -180,18 +191,31 @@ var ajaxRequest = function() {
 
 // Set the click handler to the addTask function
 //addButton.onclick = addTask;
-addButton.addEventListener("click", addTask);
+
+
+
+if(addButton !== null){
+  addButton.addEventListener("click", addTask);
+}
+
 //addButton.addEventListener("click", ajaxRequest);
 
 
-// Cycle over the incompleteTaskHolder ul list items
-for(var i = 0; i <  incompleteTasksHolder.children.length; i++) {
+if(incompleteTasksHolder !== null){
+    // Cycle over the incompleteTaskHolder ul list items
+  for(var i = 0; i <  incompleteTasksHolder.children.length; i++) {
     // bind events to list item's children (taskCompleted)
-  bindTaskEvents(incompleteTasksHolder.children[i], taskCompleted);
+    bindTaskEvents(incompleteTasksHolder.children[i], taskCompleted);
+  }
 }
-// Cycle over the completeTaskHolder ul list items
-for(var i = 0; i <  completedTasksHolder.children.length; i++) {
+
+
+if(completedTasksHolder !== null){
+  // Cycle over the completeTaskHolder ul list items
+  for(var i = 0; i <  completedTasksHolder.children.length; i++) {
     // bind events to list item's children (taskIncompleted)
-  bindTaskEvents(completedTasksHolder.children[i], taskIncomplete); 
+    bindTaskEvents(completedTasksHolder.children[i], taskIncomplete); 
+
+  }
 
 }

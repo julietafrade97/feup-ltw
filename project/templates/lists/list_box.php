@@ -6,12 +6,10 @@
             <i class="fa fa-bookmark" aria-hidden="true" style="color: <?php echo $lists[$i]['Color']?>"></i>
         </button>
     </div>
-    <div id="task_list">
+    <div class="checkboxAndLabel">
         <?php for($j=0; $j<count($tasks[$i]); $j++) {?>
-            <li class="task_line">
-                <input type="checkbox">
-                <label><?php echo $tasks[$i][$j]['Name']?></label>
-            </li>
+            <input type="checkbox" id=<?php echo $tasks[$i][$j]['ID']?>>
+            <label for= <?php echo $tasks[$i][$j]['ID']?>> <?php echo $tasks[$i][$j]['Name']?> </label>
         <?php } ?>
     </div>
     <button  id="more" onclick="openDialog('List')">

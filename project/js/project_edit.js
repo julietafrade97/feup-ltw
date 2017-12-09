@@ -20,8 +20,10 @@ var editProject = function() {
 };
 
 var bindProjectEvents = function() {
-  var editButton = bioContainer.querySelector("button.edit");
-  editButton.onclick = editProject;
+  if(bioContainer !== null){
+    var editButton = bioContainer.querySelector("button.edit");
+    editButton.onclick = editProject;
+  }
 };
 
 bindProjectEvents();
