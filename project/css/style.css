@@ -644,6 +644,69 @@ main {
 * LIST GRID
 */
 
+/* CHECKBOXS */
+
+.checkboxAndLabel label {
+  font-weight: 300;
+}
+
+.checkboxAndLabel input[type="checkbox"] {
+  display: none;
+}
+
+.checkboxAndLabel input[type="checkbox"] + label {
+  display: block;
+  position: relative;
+  padding-left: 1.8em;
+  padding-bottom: 0.2em;
+  padding-top: 0.5em;
+  cursor: pointer;
+}
+
+.checkboxAndLabel input[type="checkbox"] + label:last-child {
+  margin-bottom: 0;
+}
+
+.checkboxAndLabel input[type="checkbox"] + label:before {
+  content: "";
+  display: block;
+  width: 1em;
+  height: 1em;
+  border: 0.08em solid #3d3d3b;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  -webkit-transition: all 0.12s, border-color 0.08s;
+  transition: all 0.12s, border-color 0.08s;
+}
+
+.checkboxAndLabel input[type="checkbox"]:checked + label:before {
+  width: 0.5em;
+  /*top: 0.2em;*/
+  left: 0.2em;
+  border-radius: 0;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.checkboxAndLabel input[type="checkbox"]:checked + label {
+  text-decoration: line-through;
+  animation: strikeMove 0.2s;
+}
+
+@keyframes strikeMove {
+  from {
+    text-decoration-color: transparent;
+  }
+  to {
+    text-decoration-color: auto;
+  }
+}
+
+/*---*/
+
 #list_box {
   padding: 0 1em 0em 1em;
   word-break: break-all;
@@ -674,65 +737,6 @@ main {
   align-self: flex-start;
 }
 
-#task_list label {
-  font-weight: 300;
-}
-
-#task_list input[type="checkbox"] {
-  display: none;
-}
-
-#task_list input[type="checkbox"] + label {
-  display: block;
-  position: relative;
-  padding-left: 1.8em;
-  padding-bottom: 0.2em;
-  padding-top: 0.5em;
-  cursor: pointer;
-}
-
-#task_list input[type="checkbox"] + label:last-child {
-  margin-bottom: 0;
-}
-
-#task_list input[type="checkbox"] + label:before {
-  content: "";
-  display: block;
-  width: 1em;
-  height: 1em;
-  border: 0.08em solid #3d3d3b;
-  position: absolute;
-  left: 0;
-  top: 0.5em;
-  z-index: 1;
-  -webkit-transition: all 0.12s, border-color 0.08s;
-  transition: all 0.12s, border-color 0.08s;
-}
-
-#task_list input[type="checkbox"]:checked + label:before {
-  width: 0.5em;
-  top: 0.2em;
-  left: 0.2em;
-  border-radius: 0;
-  border-top-color: transparent;
-  border-left-color: transparent;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-#task_list input[type="checkbox"]:checked + label {
-  text-decoration: line-through;
-  animation: strikeMove 0.2s;
-}
-
-@keyframes strikeMove {
-  from {
-    text-decoration-color: transparent;
-  }
-  to {
-    text-decoration-color: auto;
-  }
-}
 
 #more {
   font-size: 0.6em;
@@ -752,6 +756,7 @@ main {
   background-color: #222a3f;
   color: white;
 }
+
 
 /*
 * ALL MEMBERS
@@ -935,7 +940,7 @@ main {
   display: none;
 }
 
-.task_line.priorityMode {
+.task_line.priorityMode label{
   font-weight: 500;
 }
 
@@ -957,7 +962,7 @@ main {
 
 #dialog9 li > label {
   font-size: 1em;
-  padding: 1em 0 1em 0.7em;
+  padding: 1em 0 1em 2em;
 }
 #dialog9 li > input[type="text"] {
   width: 100%;

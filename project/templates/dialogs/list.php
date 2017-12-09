@@ -7,11 +7,9 @@
             <button>
                 <span class="lnr lnr-inbox">
             </button>
-            <a href="#">
-                <button onclick="closeDialog('List')">
-                    <span class="lnr lnr-cross">
-                </button>
-            </a>
+            <button onclick="closeDialog('List')">
+                <span class="lnr lnr-cross">
+            </button>
         </div>
         <div id="pop_up_title">
             <h1 contentEditable="true">Title</h1>
@@ -19,9 +17,9 @@
         </div>
         <h3>Todo</h3>
         <ul id="incomplete-tasks">
-            <li class="task_line priorityMode">
-                <input type="checkbox">
-                <label>Pay Bills</label>
+            <li class="task_line checkboxAndLabel priorityMode">
+                <input type="checkbox" id="task1">
+                <label for="task1">Pay Bills</label>
                 <input type="text">
                 <button class="edit">
                     <span class="lnr lnr-pencil icon">
@@ -34,9 +32,9 @@
                     <span class="lnr lnr-cross icon">
                 </button>
             </li>
-            <li class="task_line editMode">
-                <input type="checkbox">
-                <label>Go Shopping</label>
+            <li class="task_line checkboxAndLabel">
+                <input type="checkbox" id="task2">
+                <label for="task2">Go Shopping</label>
                 <input type="text" value="Go Shopping">
                 <button class="edit">
                     <span class="lnr lnr-pencil">
@@ -52,9 +50,9 @@
         </ul>
         <h3>Completed</h3>
         <ul id="completed-tasks">
-            <li class="task_line">
-                <input type="checkbox" checked>
-                <label>See the Doctor</label>
+            <li class="task_line checkboxAndLabel">
+                <input type="checkbox" checked id="task3">
+                <label for="task3">See the Doctor</label>
                 <input type="text">
                 <button class="edit">
                     <span class="lnr lnr-pencil">
