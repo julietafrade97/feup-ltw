@@ -17,12 +17,18 @@ input[type="submit"] {
   cursor: pointer;
 }
 
+a:hover,
 button:hover,
 input[type="button"]:hover,
 input[type="submit"]:hover {
   border: none;
   outline: none;
   cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: #222a3f;
 }
 
 #register_container {
@@ -85,7 +91,6 @@ input[type="submit"]:hover {
   font-size: 0.9em;
   font-weight: 600;
   text-align: center;
-  text-decoration: none;
   text-transform: uppercase;
   background-color: #f6f5f3;
   color: #222a3f;
@@ -188,7 +193,6 @@ header {
 }
 
 #info a {
-  text-decoration: none;
   color: white;
 }
 
@@ -286,7 +290,6 @@ aside #aside_container {
 }
 
 nav a {
-  text-decoration: none;
   width: 100%;
 }
 
@@ -337,10 +340,6 @@ nav a {
   font-weight: 500;
   text-align: center;
   width: 100%;
-}
-
-#aside_content a {
-  text-decoration: none;
 }
 
 #aside_content section,
@@ -744,25 +743,23 @@ main {
   align-self: flex-start;
 }
 
-#list_box_header button{
+#list_box_header button {
   margin-top: -0.3em;
   background-color: Transparent;
   align-self: flex-start;
-  cursor:pointer;
+  cursor: pointer;
 }
 
-#list_box_header button:hover{
-  margin-top:-0.45em;
+#list_box_header button:hover {
+  margin-top: -0.45em;
   transform: scale(1.5);
   transform-origin: top;
 }
-
 
 #more {
   font-size: 0.6em;
   font-weight: 700;
   text-align: center;
-  text-decoration: none;
   background-color: white;
   color: #222a3f;
   margin: 1em 0;
@@ -776,7 +773,6 @@ main {
   background-color: #222a3f;
   color: white;
 }
-
 
 /*
 * ALL MEMBERS
@@ -842,11 +838,6 @@ main {
   margin: 0;
   padding: 0;
   word-break: break-all;
-}
-
-#dialog9 a {
-  text-decoration: none;
-  color: #222a3f;
 }
 
 #dialog9 button {
@@ -963,7 +954,7 @@ main {
   display: none;
 }
 
-.task_line.priorityMode label{
+.task_line.priorityMode label {
   font-weight: 500;
 }
 
@@ -1038,7 +1029,7 @@ footer p {
     "title"
     "content";
   height: 100%;
-  padding: 0 2em;
+  padding: 0 3em;
 }
 
 #settings h1 {
@@ -1129,9 +1120,9 @@ footer p {
   background-color: #576886;
 }
 
-#account h5{
+#account h5 {
   color: #222a3f;
-  margin-bottom:0.5em;
+  margin-bottom: 0.5em;
 }
 
 form .hint {
@@ -1146,7 +1137,7 @@ form input.invalid {
   box-shadow: red 0 0 2px 2px;
 }
 
-form input.invalid + .hint{
+form input.invalid + .hint {
   display: block;
 }
 
@@ -1204,8 +1195,8 @@ form input.invalid + .hint{
   background-color: #f6f5f36e;
 }
 
-#archive li span:hover {
-  cursor: pointer;
+#archive .lnr-heart-pulse:hover,
+#archive .lnr-cross:hover {
   color: #948f8c;
 }
 

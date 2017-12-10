@@ -1,23 +1,18 @@
-<main>
-    <div id="settings">
-        <h1>About</h1>
-        <div id="content">
-            <div id="about">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a purus dolor. Nullam fermentum tristique
-                    lobortis. Cras ac aliquet libero. Phasellus cursus malesuada nunc. Proin est lacus, accumsan ut venenatis
-                    consequat, bibendum quis nisl. Curabitur dolor leo, tempus vel diam sed, lacinia viverra nisl. Vestibulum
-                    hendrerit justo in justo lacinia, ac rutrum dui commodo. Sed viverra, tortor in venenatis vehicula, tellus
-                    tortor aliquet dui, nec facilisis libero ante sed est.
-                </p>
-                <p>
-                    Ut lacinia semper mauris vel lacinia. Integer convallis scelerisque imperdiet. Class aptent taciti sociosqu ad litora torquent
-                    per conubia nostra, per inceptos himenaeos. Fusce ultricies fermentum odio, in consectetur quam aliquet
-                    ut. Mauris nec sagittis purus, sit amet iaculis nisl. Suspendisse dignissim, purus hendrerit euismod
-                    blandit, ipsum quam tristique dolor, ut varius nisi dolor non justo. Duis quis nisi mattis, ultrices
-                    nunc nec, consectetur nibh.
-                </p>
-                <p>Enjoy.</p>
-            </div>
-        </div>
+<h1>About</h1>
+<div id="content">
+    <div id="about">
+        <p> Meraki is a word that modern Greeks often use to describe doing something with soul, creativity, or love - when you
+            put
+            <i>"something of yourself"</i> into what you're doing, whatever it may be. This word inspired us to develop a website,
+            in order to help you organize your life and stay productive. From creating lists of tasks to projects that you
+            can share with people. It's a website thoughtfully designed, beautifully crafted to be simple, clean and easy
+            to use.
+        </p>
+        <p>
+            This project was developed for the Web Languages and Technologies (LTW) class of the Master in Informatics and Computer Engineering
+            (MIEIC) at the Faculty of Engineering of the University of Porto (FEUP), by Bárbara Sofia Silva, Julieta Frade
+            and Luís Martins in 2017.
+        </p>
+        <p>Enjoy.</p>
     </div>
-</main>
+</div>
