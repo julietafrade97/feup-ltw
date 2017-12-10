@@ -69,3 +69,31 @@ function finishAddLabel(event) {
   closeDialog('Add Label');
   
 }
+
+
+function searchLabel(color) {
+  let all = document.querySelectorAll("#list_box");
+  if(all == null)
+    return;
+  for (var i = 0; i < all.length; i++) {
+    all[i].style.display = "none";
+  }
+  let newcolor = '.'+color;
+  let selected = document.querySelectorAll(newcolor);
+  
+  if(selected == null)
+    return;
+  for (var i = 0; i < selected.length; i++) {
+    selected[i].style.display = "block";
+  }
+
+}
+
+function resetSearchLabel() {
+  let all = document.querySelectorAll("#list_box");
+  if(all == null)
+    return;
+  for (var i = 0; i < all.length; i++) {
+    all[i].style.display = "block";
+  }
+}

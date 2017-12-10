@@ -18,7 +18,7 @@
             <section id="labels_section">
                 <?php if($categories !== null) {
                     foreach($categories as $category) { ?>
-                        <div onclick="" class="label_option">
+                        <div onclick="searchLabel('<?php echo "color".substr($category['Color'],1)?>')" class="label_option">
                             <div class="circle" style="background: <?php echo $category['Color'] ?>"></div>
                             <p><?php echo $category['Name'] ?></p>
                             <button>
@@ -33,7 +33,7 @@
             </section>
 
             <button class="addlabel" onclick="openDialog('Add Label')">Add Label</button>
-
+            <button class="addlabel" onclick="resetSearchLabel()">Reset Labels</button>
         </div>
 
 </aside>
