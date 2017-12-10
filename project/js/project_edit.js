@@ -70,6 +70,13 @@ let timeoutCurrentValue = null;
 function addUserProject(input) {
   if (timeoutCurrentValue != null) {
     clearTimeout(timeoutCurrentValue);
+
+    //clearlist
+    let dataList = document.getElementById('usernamesList');
+    while (dataList.firstChild) {
+        dataList.removeChild(dataList.firstChild);
+    }
+
   }
   timeoutCurrentValue = setTimeout(function() {
     getSimilarUsers(input.value);
@@ -78,6 +85,7 @@ function addUserProject(input) {
 
 function getSimilarUsers(input) {
   let request = new XMLHttpRequest();
+
   request.addEventListener("load", usersReceived);
   request.open(
     "get",
@@ -88,8 +96,16 @@ function getSimilarUsers(input) {
 }
 
 function usersReceived() {
-  let users = JSON.parse(this.responseText);
-  for (let i = 0; i < users.length; i++) {
-    alert(users[i].Username);
-  }
+
+    let users = JSON.parse(this.responseText);
+
+    for (let i = 0; i < users.length; i++) {
+      let dataList = document.getElementById('usernamesList');
+
+      let option = document.createElement('option');
+
+      option.value = users[i].Username;
+      dataList.appendChild(option);
+    }
+
 }
