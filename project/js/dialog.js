@@ -50,10 +50,8 @@ function openDialog(value, id) {
       dialog8.style.display = "block";
       break;
     case "List":
-      if(id != null){
         getTasks(id);
         dialog9.style.display = "block";
-      }
       break;
     case "Add Project":
       dialog10.style.display = "block";
