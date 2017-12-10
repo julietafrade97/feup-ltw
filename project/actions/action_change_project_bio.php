@@ -5,10 +5,11 @@
     $title = $_POST['title'];
     $description = $_POST['description'];
     $projecID = $_POST['projectID'];
+
     if($title !== null && $description !== null && is_numeric($projecID)) {
-        if(changeBioProject($projecID, $title, $description))
+        if(changeBioProject($projecID, $title, $description) )
             echo "";
         else
             echo "Error changing Project's Bio";
-    }       
+    }    
 ?>

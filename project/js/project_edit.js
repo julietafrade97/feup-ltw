@@ -10,11 +10,12 @@ let bioContainer = document.getElementById("bio");
 if (bioContainer !== null) {
   var editTitle = bioContainer.querySelector("input[type=text]");
   var editDescription = bioContainer.querySelector("textarea");
+  var labelTitle = bioContainer.querySelector("h1");
+  var labelDescription = bioContainer.querySelector("p");
+
 }
 
 let editProject = function() {
-  let labelTitle = bioContainer.querySelector("h1");
-  let labelDescription = bioContainer.querySelector("p");
 
   let containsClass = bioContainer.classList.contains("editMode");
 
@@ -39,6 +40,9 @@ bindProjectEvents();
 
 //update project bio information in database
 function changeProjectBio() {
+  if(editTitle.value == labelTitle.innerText && editDescription.value == labelDescription.innerText)
+    return true;
+    
   let request = new XMLHttpRequest();
   request.open("POST", "../actions/action_change_project_bio.php", true);
   request.addEventListener("load", finishProjectBio);
@@ -46,8 +50,8 @@ function changeProjectBio() {
   window.$_GET = new URLSearchParams(location.search);
   request.send(
     encodeForAjax({
-      title: editTitle.value,
-      description: editDescription.value,
+      title: editTitle,
+      description: editDescription,
       projectID: $_GET.get("project_id")
     })
   );
