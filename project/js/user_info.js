@@ -17,8 +17,7 @@ let register = document.querySelector(".register_form form");
 if (register) register.addEventListener("submit", validateRegister, false);
 
 function validateUsername() {
-  console.log(this.value);
-  if (!/^[a-z]{6,}$/.test(this.value)) this.classList.add("invalid");
+  if (!/^[0-9a-z]{6,}$/.test(this.value)) this.classList.add("invalid");
   else this.classList.remove("invalid");
 }
 

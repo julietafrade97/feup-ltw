@@ -8,7 +8,7 @@
                 <input name="name" class="w3-input w3-border" type="text" placeholder="Name" value="<?php echo $_SESSION['userinfo']['Name'] ?>" required="required">
                 <label>Username</label>
                 <input name="username" class="w3-input w3-border" type="text" placeholder="Username" value="<?php echo $_SESSION['userinfo']['Username'] ?>" required="required">
-                <span class="hint">Only lowercase, at least 6 characters</span>
+                <span class="hint">Only lowercase and numbers, at least 6 characters</span>
                 <label>Email</label>
                 <input name="email" class="w3-input w3-border" type="email" placeholder="Email" value="<?php echo $_SESSION['userinfo']['Email'] ?>" required="required">
                 <label>Password</label>

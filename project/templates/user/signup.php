@@ -23,7 +23,7 @@
             <form action="../action_sign_up.php" method="post" class="register_form">
                 <input name="name" class="w3-input w3-border" type="text" placeholder="Name" required="required">
                 <input name="username" class="w3-input w3-border" type="text" placeholder="Username" required="required">
-                <span class="hint">Only lowercase, at least 6 characters</span>
+                <span class="hint">Only lowercase and numbers, at least 6 characters</span>
                 <input name="email" class="w3-input w3-border" type="email" placeholder="Email" required="required">
                 <input name="password" class="w3-input w3-border" type="password" placeholder="Password">
                 <span class="hint">One uppercase, 1 symbol, 1 number, at least 6 characters</span>
