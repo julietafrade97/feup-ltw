@@ -1,40 +1,40 @@
-let username = document.querySelector('form input[name=username]');
-if(username) username.addEventListener('input', validateUsername, false);
+let username = document.querySelector("form input[name=username]");
+if (username) username.addEventListener("input", validateUsername, false);
 let currpassword = document.querySelector("form input[name=currpassword]");
-if(currpassword) currpassword.addEventListener('input', validatePassword, false);
+if (currpassword)
+  currpassword.addEventListener("input", validatePassword, false);
 let password = document.querySelector("form input[name=password]");
-if(password) password.addEventListener('input', validatePassword, false);
+if (password) password.addEventListener("input", validatePassword, false);
 let passwordagain = document.querySelector("form input[name=passwordagain]");
-if(passwordagain) passwordagain.addEventListener('keyup', validateRepeat.bind(passwordagain, password), false);
+if (passwordagain)
+  passwordagain.addEventListener(
+    "keyup",
+    validateRepeat.bind(passwordagain, password),
+    false
+  );
 
-let register = document.querySelector('.register_form form');
-if(register) register.addEventListener('submit', validateRegister, false);
+let register = document.querySelector(".register_form form");
+if (register) register.addEventListener("submit", validateRegister, false);
 
 function validateUsername() {
-    console.log(this.value);
-    if (!/^[a-z]{6,}$/.test(this.value))
-        this.classList.add('invalid');
-    else
-      this.classList.remove('invalid');
+  console.log(this.value);
+  if (!/^[a-z]{6,}$/.test(this.value)) this.classList.add("invalid");
+  else this.classList.remove("invalid");
 }
-  
-  function validatePassword(other) {
-    if (!/^.*(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9]).{6,}$/.test(this.value))
-      this.classList.add('invalid');
-    else
-      this.classList.remove('invalid');
-  }
-  
-  function validateRepeat(password) {
-    if (this.value !== password.value)
-      this.classList.add('invalid');
-    else
-      this.classList.remove('invalid');
-  }
 
-  function validateRegister(event) {
-    let inputs = this.querySelectorAll('input');
-    for (let i = 0; i < inputs.length; i++)
-      if (inputs[i].classList.contains('invalid'))
-       event.preventDefault();
-  }
+function validatePassword(other) {
+  if (!/^.*(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9]).{6,}$/.test(this.value))
+    this.classList.add("invalid");
+  else this.classList.remove("invalid");
+}
+
+function validateRepeat(password) {
+  if (this.value !== password.value) this.classList.add("invalid");
+  else this.classList.remove("invalid");
+}
+
+function validateRegister(event) {
+  let inputs = this.querySelectorAll("input");
+  for (let i = 0; i < inputs.length; i++)
+    if (inputs[i].classList.contains("invalid")) event.preventDefault();
+}

@@ -6,9 +6,8 @@ function encodeForAjax(data) {
     .join("&");
 }
 
-
 let bioContainer = document.getElementById("bio");
-if(bioContainer !== null) {
+if (bioContainer !== null) {
   var editTitle = bioContainer.querySelector("input[type=text]");
   var editDescription = bioContainer.querySelector("textarea");
 }
@@ -38,7 +37,6 @@ let bindProjectEvents = function() {
 
 bindProjectEvents();
 
-
 //update project bio information in database
 function changeProjectBio() {
   let request = new XMLHttpRequest();
@@ -46,16 +44,21 @@ function changeProjectBio() {
   request.addEventListener("load", finishProjectBio);
   request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
   window.$_GET = new URLSearchParams(location.search);
-  request.send(encodeForAjax({title: editTitle.value, description: editDescription.value, projectID: $_GET.get('project_id')}));
+  request.send(
+    encodeForAjax({
+      title: editTitle.value,
+      description: editDescription.value,
+      projectID: $_GET.get("project_id")
+    })
+  );
 }
 
 function finishProjectBio(event) {
   event.preventDefault();
-  if(this.responseText !== "") {
+  if (this.responseText !== "") {
     alert(this.responseText);
   }
 }
-
 
 // ADD A NEW USER TO THE PROJECT
 
@@ -64,19 +67,25 @@ function addUserProject(input) {
   if (timeoutCurrentValue != null) {
     clearTimeout(timeoutCurrentValue);
   }
-  timeoutCurrentValue = setTimeout(function() { getSimilarUsers(input.value) }, 1000);  
+  timeoutCurrentValue = setTimeout(function() {
+    getSimilarUsers(input.value);
+  }, 1000);
 }
 
 function getSimilarUsers(input) {
   let request = new XMLHttpRequest();
   request.addEventListener("load", usersReceived);
-  request.open("get", "../actions/action_get_users.php?username=" + input, true);
+  request.open(
+    "get",
+    "../actions/action_get_users.php?username=" + input,
+    true
+  );
   request.send();
 }
 
 function usersReceived() {
   let users = JSON.parse(this.responseText);
-  for(let i=0; i<users.length; i++) {
+  for (let i = 0; i < users.length; i++) {
     alert(users[i].Username);
   }
 }
