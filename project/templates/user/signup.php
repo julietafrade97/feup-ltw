@@ -18,7 +18,7 @@
             <a href="login.php" class="register_button">Login</a>
             <p>Welcome.<br>Thanks for joining us.</p>
         </div>
-        <div id="sign_up_content" class="register_content signup">
+        <div class="register_content signup">
             <h1>Sign Up</h1>
             <form action="../action_sign_up.php" method="post" class="register_form">
                 <input name="name" class="w3-input w3-border" type="text" placeholder="Name" required="required">
