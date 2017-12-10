@@ -23,7 +23,7 @@ let dialog8 = document.getElementById("dialog8");
 let dialog9 = document.getElementById("dialog9");
 let dialog10 = document.getElementById("dialog10");
 
-function openDialog(value) {
+function openDialog(value, id) {
   switch (value) {
     case "Add Label":
       dialog1.style.display = "block";
@@ -50,6 +50,7 @@ function openDialog(value) {
       dialog8.style.display = "block";
       break;
     case "List":
+      getTasks(id.value);
       dialog9.style.display = "block";
       break;
     case "Add Project":

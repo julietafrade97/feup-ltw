@@ -31,4 +31,16 @@ function getTasks($listID, $isDone) {
     }
 }
 
+function getLastTasks($listID, $isDone) {
+    global $dbh;
+    try{
+        $stmt = $dbh->prepare('SELECT ID, Name, Level, Date FROM Task WHERE ListID = ? AND isDone = ? LIMIT 5');
+        $stmt->execute(array($listID, $isDone));
+        return $stmt->fetchAll();
+
+    } catch(PDOException $e) {
+        return null;
+    }
+}
+
 ?>

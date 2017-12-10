@@ -206,3 +206,18 @@ if (completedTasksHolder !== null) {
     bindTaskEvents(completedTasksHolder.children[i], taskIncomplete);
   }
 }
+
+
+function getTasks(listIDValue) {
+    let request = new XMLHttpRequest();
+    request.addEventListener("load", finishGetTasks);
+    request.open("post", "../actions/api_get_list.php", true);
+    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    request.send(encodeForAjax({listID: listIDValue}));
+}
+
+function finishGetTasks(event) {
+  console.log(this.responseText);
+  document.getElementById('dialog9').innerHTML = this.responseText;
+  event.preventDefault();
+}
