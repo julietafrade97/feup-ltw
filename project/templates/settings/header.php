@@ -19,43 +19,45 @@
         <header>
             <div id="info">
 
-                <span id="menu-icon" onclick="openNav()">
-                    <span class="lnr lnr-menu"></span>
-                </span>
+                <nav>
+                    <span id="menu-icon" onclick="openNav()">
+                        <span class="lnr lnr-menu"></span>
+                    </span>
 
-                <div id="mySidenav" class="sidenav">
-                    <a href="javascript:void(0)" onclick="closeNav()">
-                        <div class="closebtn">
-                            <span class="lnr lnr-cross"></span>
-                        </div>
-                    </a>
-                    <nav>
-                        <a href="#">
-                            <div class="menu_option">
-                                <span class="lnr lnr-home"></span>
-                                <p>Home</p>
+                    <div id="mySidenav" class="sidenav">
+                        <a href="javascript:void(0)" onclick="closeNav()">
+                            <div class="closebtn">
+                                <span class="lnr lnr-cross"></span>
                             </div>
                         </a>
-                        <a href="#">
-                            <div class="menu_option">
-                                <span class="lnr lnr-user"></span>
-                                <p>Account</p>
-                            </div>
-                        </a>
-                        <a href="#">
-                            <div class="menu_option">
-                                <span class="lnr lnr-inbox"></span>
-                                <p>Archive</p>
-                            </div>
-                        </a>
-                        <a href="#">
-                            <div class="menu_option">
-                                <span class="lnr lnr-heart"></span>
-                                <p>About</p>
-                            </div>
-                        </a>
-                    </nav>
-                </div>
+                        <nav>
+                            <a href="#">
+                                <div class="menu_option">
+                                    <span class="lnr lnr-home"></span>
+                                    <p>Home</p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="menu_option">
+                                    <span class="lnr lnr-user"></span>
+                                    <p>Account</p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="menu_option">
+                                    <span class="lnr lnr-inbox"></span>
+                                    <p>Archive</p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="menu_option">
+                                    <span class="lnr lnr-heart"></span>
+                                    <p>About</p>
+                                </div>
+                            </a>
+                        </nav>
+                    </div>
+                </nav>
 
                 <a id="logo" href="lists.php">
                     <img src="../assets/logo.svg" alt="Meraki Logo (Cup of Coffee)">
