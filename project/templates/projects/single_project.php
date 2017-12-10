@@ -32,14 +32,15 @@
         <h1>Lists</h1>
         <div id="grid">
             <div id="grid_container">
-
                 <!-- CHANGE -->
                 <div id="list_box">
                     <div id="list_box_header">
                         <h1> Title </h1>
-                        <i class="fa fa-bookmark" aria-hidden="true"></i>
+                        <button onclick="openDialog('Change Label')">
+                            <i class="fa fa-bookmark" aria-hidden="true" style="color:#948f8c"></i>
+                        </button>
                     </div>
-                    <div id="task_list">
+                    <div class="checkboxAndLabel">
                         <input type="checkbox" id="box-1">
                         <label for="box-1">Task</label>
                         <input type="checkbox" id="box-2">
@@ -49,82 +50,11 @@
                         <input type="checkbox" id="box-4">
                         <label for="box-4">Task</label>
                     </div>
-                    <div id="more">
-                        <div id="hover_box">
-                            <p> SEE MORE </p>
-                        </div>
-                    </div>
+                    <button  id="more" onclick="openDialog('List')">
+                        SEE MORE
+                    </button>
                 </div>
-
-                <div id="list_box">
-                    <div id="list_box_header">
-                        <h1> Title </h1>
-                        <i class="fa fa-bookmark" aria-hidden="true"></i>
-                    </div>
-                    <div id="task_list">
-                        <input type="checkbox" id="box-1">
-                        <label for="box-1">Task</label>
-                        <input type="checkbox" id="box-2">
-                        <label for="box-2">Task</label>
-                        <input type="checkbox" id="box-3">
-                        <label for="box-3">Task</label>
-                        <input type="checkbox" id="box-4">
-                        <label for="box-4">Task</label>
-                    </div>
-                    <div id="more">
-                        <div id="hover_box">
-                            <p> SEE MORE </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="list_box">
-                    <div id="list_box_header">
-                        <h1> Title </h1>
-                        <i class="fa fa-bookmark" aria-hidden="true"></i>
-                    </div>
-                    <div id="task_list">
-                        <input type="checkbox" id="box-1">
-                        <label for="box-1">Task</label>
-                        <input type="checkbox" id="box-2">
-                        <label for="box-2">Task</label>
-                        <input type="checkbox" id="box-3">
-                        <label for="box-3">Task</label>
-                        <input type="checkbox" id="box-4">
-                        <label for="box-4">Task</label>
-                    </div>
-                    <div id="more">
-                        <div id="hover_box">
-                            <p> SEE MORE </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="list_box">
-                    <div id="list_box_header">
-                        <h1> Title </h1>
-                        <i class="fa fa-bookmark" aria-hidden="true"></i>
-                    </div>
-                    <div id="task_list">
-                        <input type="checkbox" id="box-1">
-                        <label for="box-1">Task</label>
-                        <input type="checkbox" id="box-2">
-                        <label for="box-2">Task</label>
-                        <input type="checkbox" id="box-3">
-                        <label for="box-3">Task</label>
-                        <input type="checkbox" id="box-4">
-                        <label for="box-4">Task</label>
-                    </div>
-                    <div id="more">
-                        <div id="hover_box">
-                            <p> SEE MORE </p>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- CHANGE -->
-
-
             </div>
         </div>
     </div>
