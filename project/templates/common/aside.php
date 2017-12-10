@@ -32,8 +32,8 @@
                 <?php } ?>
             </section>
 
-            <button class="addlabel" onclick="openDialog('Add Label')">Add Label</button>
-            <button class="addlabel" onclick="resetSearchLabel()">Reset Labels</button>
+            <button class="managelabel" onclick="resetSearchLabel()">Reset</button>
+            <button class="managelabel" onclick="openDialog('Add Label')">Add Label</button>
         </div>
 
 </aside>

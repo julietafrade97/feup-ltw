@@ -17,47 +17,44 @@
     <div id="main_container">
 
         <header>
-            <div id="info">
+            <nav>
+                <span id="menu-icon" onclick="openNav()">
+                    <span class="lnr lnr-menu"></span>
+                </span>
 
-                <nav>
-                    <span id="menu-icon" onclick="openNav()">
-                        <span class="lnr lnr-menu"></span>
-                    </span>
-
-                    <div id="sidenav">
-                        <a class="closebtn" onclick="closeNav()">
-                            <span class="lnr lnr-cross"></span>
-                        </a>
-                        <nav>
-                            <a class="menu_option" href="lists.php">
-                                <span class="lnr lnr-home"></span>
-                                <p>Home</p>
-                            </a>
-                            <a id="account_menu_option" class="menu_option" onclick='change_page_settings("Account")'>
-                                <span class="lnr lnr-user"></span>
-                                <p>Account</p>
-                            </a>
-                            <a id="archive_menu_option" class="menu_option" onclick='change_page_settings("Archive")'>
-                                <span class="lnr lnr-inbox"></span>
-                                <p>Archive</p>
-                            </a>
-                            <a id="about_menu_option" class="menu_option" onclick='change_page_settings("About")'>
-                                <span class="lnr lnr-heart"></span>
-                                <p>About</p>
-                            </a>
-                        </nav>
-                    </div>
-                </nav>
-
-                <a id="logo" href="lists.php">
-                    <img src="../assets/logo.svg" alt="Meraki Logo (Cup of Coffee)">
-                    <h1>Meraki</h1>
-                </a>
-
-                <div id="header_buttons">
-                    <a href="../actions/action_logout.php">
-                        <span class="lnr lnr-power-switch"></span>
+                <div id="sidenav">
+                    <a class="closebtn" onclick="closeNav()">
+                        <span class="lnr lnr-cross"></span>
                     </a>
+                    <nav>
+                        <a class="menu_option" href="lists.php">
+                            <span class="lnr lnr-home"></span>
+                            <p>Home</p>
+                        </a>
+                        <a id="account_menu_option" class="menu_option" onclick='change_page_settings("Account")'>
+                            <span class="lnr lnr-user"></span>
+                            <p>Account</p>
+                        </a>
+                        <a id="archive_menu_option" class="menu_option" onclick='change_page_settings("Archive")'>
+                            <span class="lnr lnr-inbox"></span>
+                            <p>Archive</p>
+                        </a>
+                        <a id="about_menu_option" class="menu_option" onclick='change_page_settings("About")'>
+                            <span class="lnr lnr-heart"></span>
+                            <p>About</p>
+                        </a>
+                    </nav>
                 </div>
+            </nav>
+
+            <a id="logo" href="lists.php">
+                <img src="../assets/logo.svg" alt="Meraki Logo (Cup of Coffee)">
+                <h1>Meraki</h1>
+            </a>
+
+            <div id="header_buttons">
+                <a href="../actions/action_logout.php">
+                    <span class="lnr lnr-power-switch"></span>
+                </a>
             </div>
         </header>

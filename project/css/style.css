@@ -151,9 +151,9 @@ input[type="email"] {
   flex-direction: column;
   align-items: flex-start;
   background-color: #f6f5f3;
-  padding: 3em;
   height: min-content;
-  width: 50vh;
+  padding: 2em 3em;
+  max-width: 30em;
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.4);
 }
 
@@ -183,33 +183,28 @@ input[type="email"] {
 header {
   grid-area: header;
   display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  background-color: #222a3f;
-}
-
-#info {
-  display: flex;
+  justify-content: flex-end;
   align-items: center;
+  background-color: #222a3f;
   padding: 0 2.3em;
-  flex-grow: 1;
 }
 
-#info a {
+header a,
+header a:hover {
   color: white;
 }
 
-#info #logo {
+header #logo {
   display: flex;
   align-items: center;
-  flex-grow: 1;
+  margin-right: auto;
 }
 
-#info img {
+header img {
   width: 3em;
 }
 
-#info h1 {
+header h1 {
   font-size: 1.5em;
   font-weight: 500;
   text-transform: uppercase;
@@ -217,32 +212,32 @@ header {
   padding-left: 1em;
 }
 
-#info #header_buttons {
+header #header_buttons {
   display: flex;
 }
 
-#info span {
+header span {
   font-size: 1.5em;
   padding: 0 0.5em;
 }
 
-#info .plus {
+header .plus {
   -ms-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-#info #menu-icon {
+header #menu-icon {
   display: none;
   font-size: 1em;
   color: white;
 }
 
-#info #menu-icon:hover {
+header #menu-icon:hover {
   cursor: pointer;
 }
 
-#info nav {
+header nav {
   display: none;
 }
 
@@ -397,7 +392,7 @@ section input[type="radio"]:checked + .label_option {
   background-color: white;
 }
 
-button.addlabel {
+button.managelabel {
   display: block;
   margin: auto;
   font-size: 0.7em;
@@ -408,9 +403,10 @@ button.addlabel {
   color: white;
   padding: 0.5em 1.5em;
   border-radius: 1em;
+  margin-top: 1.5em;
 }
 
-button.addlabel:hover {
+button.managelabel:hover {
   background-color: #948f8c;
   color: white;
 }
@@ -940,6 +936,7 @@ footer {
   grid-area: footer;
   background-color: #222a3f;
   text-align: center;
+  padding: 0 0.5em;
 }
 
 footer p {
@@ -1272,26 +1269,28 @@ input:checked + label:before {
     height: 100vh;
   }
 
-  #info {
-    justify-content: space-around;
-    flex: none;
-    padding: 0;
-    width: 100%;
+  .register_header h1 {
+    font-size: 4em;
   }
 
-  #info #logo {
-    flex: none;
+  header {
+    justify-content: space-around;
+    padding: 0;
+  }
+
+  header #logo {
+    margin: auto;
   }
 
   aside {
     display: none;
   }
 
-  #info nav {
+  header nav {
     display: block;
   }
 
-  #info #menu-icon {
+  header #menu-icon {
     display: inline-flex;
   }
 
