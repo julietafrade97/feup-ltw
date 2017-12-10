@@ -15,83 +15,25 @@
             <hr>
             <h2>Labels</h2>
 
-            <section>
-
-                <input type="radio" id="reset" name="label" />
-                <label for="reset" class="label_option">
-                    <div class="circle" style="background: black"></div>
-                    <p>Reset</p>
-                    <button>
-                        <span class="lnr lnr-pencil"></span>
-                    </button>
-                    <button onclick="openDialog('Delete Label')">
-                        <span class="lnr lnr-cross"></span>
-                    </button>
-                </label>
-
-                <input type="radio" id="red" name="label" />
-                <label for="red" class="label_option">
-                    <div class="circle" style="background: #865757"></div>
-                    <p>Red</p>
-                    <button>
-                        <span class="lnr lnr-pencil"></span>
-                    </button>
-                    <button>
-                        <span class="lnr lnr-cross"></span>
-                    </button>
-                </label>
-
-                <input type="radio" id="pink" name="label" />
-                <label for="pink" class="label_option">
-                    <div class="circle" style="background: #865786"></div>
-                    <p>Pink</p>
-                    <button>
-                        <span class="lnr lnr-pencil"></span>
-                    </button>
-                    <button>
-                        <span class="lnr lnr-cross"></span>
-                    </button>
-                </label>
-
-                <input type="radio" id="blue" name="label" />
-                <label for="blue" class="label_option">
-                    <div class="circle" style="background: #576886"></div>
-                    <p>Blue</p>
-                    <button>
-                        <span class="lnr lnr-pencil"></span>
-                    </button>
-                    <button>
-                        <span class="lnr lnr-cross"></span>
-                    </button>
-                </label>
-
-                <input type="radio" id="purple" name="label" />
-                <label for="purple" class="label_option">
-                    <div class="circle" style="background: #705786"></div>
-                    <p>Purple</p>
-                    <button>
-                        <span class="lnr lnr-pencil"></span>
-                    </button>
-                    <button>
-                        <span class="lnr lnr-cross"></span>
-                    </button>
-                </label>
-
-                <input type="radio" id="brown" name="label" />
-                <label for="brown" class="label_option">
-                    <div class="circle" style="background: #866B57"></div>
-                    <p>Brown</p>
-                    <button>
-                        <span class="lnr lnr-pencil"></span>
-                    </button>
-                    <button>
-                        <span class="lnr lnr-cross"></span>
-                    </button>
-                </label>
+            <section id="labels_section">
+                <?php if($categories !== null) {
+                    foreach($categories as $category) { ?>
+                        <div onclick="searchLabel('<?php echo "color".substr($category['Color'],1)?>')" class="label_option">
+                            <div class="circle" style="background: <?php echo $category['Color'] ?>"></div>
+                            <p><?php echo $category['Name'] ?></p>
+                            <button>
+                                <span class="lnr lnr-pencil"></span>
+                            </button>
+                            <button onclick="openDialog('Delete Label')">
+                                <span class="lnr lnr-cross"></span>
+                            </button>
+                        </div>
+                    <?php } ?>
+                <?php } ?>
             </section>
 
             <button class="addlabel" onclick="openDialog('Add Label')">Add Label</button>
-
+            <button class="addlabel" onclick="resetSearchLabel()">Reset Labels</button>
         </div>
 
 </aside>

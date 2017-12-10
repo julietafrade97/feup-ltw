@@ -24,36 +24,26 @@
                         <span class="lnr lnr-menu"></span>
                     </span>
 
-                    <div id="mySidenav" class="sidenav">
-                        <a href="javascript:void(0)" onclick="closeNav()">
-                            <div class="closebtn">
-                                <span class="lnr lnr-cross"></span>
-                            </div>
+                    <div id="sidenav">
+                        <a class="closebtn" onclick="closeNav()">
+                            <span class="lnr lnr-cross"></span>
                         </a>
                         <nav>
-                            <a href="#">
-                                <div class="menu_option">
-                                    <span class="lnr lnr-home"></span>
-                                    <p>Home</p>
-                                </div>
+                            <a class="menu_option" href="lists.php">
+                                <span class="lnr lnr-home"></span>
+                                <p>Home</p>
                             </a>
-                            <a href="#">
-                                <div class="menu_option">
-                                    <span class="lnr lnr-user"></span>
-                                    <p>Account</p>
-                                </div>
+                            <a id="account_menu_option" class="menu_option" onclick='change_page_settings("Account")'>
+                                <span class="lnr lnr-user"></span>
+                                <p>Account</p>
                             </a>
-                            <a href="#">
-                                <div class="menu_option">
-                                    <span class="lnr lnr-inbox"></span>
-                                    <p>Archive</p>
-                                </div>
+                            <a id="archive_menu_option" class="menu_option" onclick='change_page_settings("Archive")'>
+                                <span class="lnr lnr-inbox"></span>
+                                <p>Archive</p>
                             </a>
-                            <a href="#">
-                                <div class="menu_option">
-                                    <span class="lnr lnr-heart"></span>
-                                    <p>About</p>
-                                </div>
+                            <a id="about_menu_option" class="menu_option" onclick='change_page_settings("About")'>
+                                <span class="lnr lnr-heart"></span>
+                                <p>About</p>
                             </a>
                         </nav>
                     </div>
