@@ -12,7 +12,7 @@
             <label for= <?php echo $tasks[$i][$j]['ID']?>> <?php echo $tasks[$i][$j]['Name']?> </label>
         <?php } ?>
     </div>
-    <button  id="more" onclick="openDialog('List',this)" value="<?php echo $lists[$i]['ID'] ?>">
+    <button  id="more" onclick="openDialog('List',<?php echo $lists[$i]['ID'] ?>)">
         SEE MORE
     </button>
 </div>
