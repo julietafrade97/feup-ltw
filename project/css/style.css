@@ -1,7 +1,6 @@
 /*
 * GENERAL
 */
-
 body {
   margin: 0 auto;
   background-color: #222a3f;
@@ -78,7 +77,6 @@ input[type="email"] {
 /*
 * CONTAINERS
 */
-
 #register_container {
   display: grid;
   grid-template-columns: 1fr;
@@ -102,9 +100,8 @@ input[type="email"] {
 }
 
 /*
-* LOGIN
+* REGISTER
 */
-
 .register_header {
   grid-area: header;
   display: flex;

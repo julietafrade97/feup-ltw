@@ -18,113 +18,114 @@
 
         <header>
             <div id="info">
+                <nav>
+                    <span id="menu-icon" onclick="openNav()">
+                        <span class="lnr lnr-menu"></span>
+                    </span>
 
-                <span id="menu-icon" onclick="openNav()">
-                    <span class="lnr lnr-menu"></span>
-                </span>
-
-                <div id="mySidenav" class="sidenav">
-                    <a href="javascript:void(0)" onclick="closeNav()">
-                        <div class="closebtn">
-                            <span class="lnr lnr-cross"></span>
-                        </div>
-                    </a>
-                    <nav>
-                        <a href="#">
-                            <div class="menu_option">
-                                <span class="lnr lnr-book"></span>
-                                <p>Projects</p>
+                    <div id="mySidenav" class="sidenav">
+                        <a onclick="closeNav()">
+                            <div class="closebtn">
+                                <span class="lnr lnr-cross"></span>
                             </div>
                         </a>
-                        <a href="#">
-                            <div class="menu_option">
-                                <span class="lnr lnr-file-empty"></span>
-                                <p>Lists</p>
-                            </div>
-                        </a>
-                    </nav>
+                        <nav>
+                            <a href="#">
+                                <div class="menu_option">
+                                    <span class="lnr lnr-book"></span>
+                                    <p>Projects</p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="menu_option">
+                                    <span class="lnr lnr-file-empty"></span>
+                                    <p>Lists</p>
+                                </div>
+                            </a>
+                        </nav>
 
-                    <hr>
-                    <h2>Labels</h2>
+                        <hr>
+                        <h2>Labels</h2>
 
-                    <section>
+                        <section>
 
-                        <input type="radio" id="mobile_reset" name="label" />
-                        <label for="mobile_reset" class="label_option">
-                            <div class="circle" style="background: black"></div>
-                            <p>Reset</p>
-                            <button>
-                                <span class="lnr lnr-pencil"></span>
-                            </button>
-                            <button>
-                                <span class="lnr lnr-cross"></span>
-                            </button>
-                        </label>
+                            <input type="radio" id="mobile_reset" name="label" />
+                            <label for="mobile_reset" class="label_option">
+                                <div class="circle" style="background: black"></div>
+                                <p>Reset</p>
+                                <button>
+                                    <span class="lnr lnr-pencil"></span>
+                                </button>
+                                <button>
+                                    <span class="lnr lnr-cross"></span>
+                                </button>
+                            </label>
 
-                        <input type="radio" id="mobile_red" name="label" />
-                        <label for="mobile_red" class="label_option">
-                            <div class="circle" style="background: #865757"></div>
-                            <p>Red</p>
-                            <button>
-                                <span class="lnr lnr-pencil"></span>
-                            </button>
-                            <button>
-                                <span class="lnr lnr-cross"></span>
-                            </button>
-                        </label>
+                            <input type="radio" id="mobile_red" name="label" />
+                            <label for="mobile_red" class="label_option">
+                                <div class="circle" style="background: #865757"></div>
+                                <p>Red</p>
+                                <button>
+                                    <span class="lnr lnr-pencil"></span>
+                                </button>
+                                <button>
+                                    <span class="lnr lnr-cross"></span>
+                                </button>
+                            </label>
 
-                        <input type="radio" id="mobile_pink" name="label" />
-                        <label for="mobile_pink" class="label_option">
-                            <div class="circle" style="background: #865786"></div>
-                            <p>Pink</p>
-                            <button>
-                                <span class="lnr lnr-pencil"></span>
-                            </button>
-                            <button>
-                                <span class="lnr lnr-cross"></span>
-                            </button>
-                        </label>
+                            <input type="radio" id="mobile_pink" name="label" />
+                            <label for="mobile_pink" class="label_option">
+                                <div class="circle" style="background: #865786"></div>
+                                <p>Pink</p>
+                                <button>
+                                    <span class="lnr lnr-pencil"></span>
+                                </button>
+                                <button>
+                                    <span class="lnr lnr-cross"></span>
+                                </button>
+                            </label>
 
-                        <input type="radio" id="mobile_blue" name="label" />
-                        <label for="mobile_blue" class="label_option">
-                            <div class="circle" style="background: #576886"></div>
-                            <p>Blue</p>
-                            <button>
-                                <span class="lnr lnr-pencil"></span>
-                            </button>
-                            <button>
-                                <span class="lnr lnr-cross"></span>
-                            </button>
-                        </label>
+                            <input type="radio" id="mobile_blue" name="label" />
+                            <label for="mobile_blue" class="label_option">
+                                <div class="circle" style="background: #576886"></div>
+                                <p>Blue</p>
+                                <button>
+                                    <span class="lnr lnr-pencil"></span>
+                                </button>
+                                <button>
+                                    <span class="lnr lnr-cross"></span>
+                                </button>
+                            </label>
 
-                        <input type="radio" id="mobile_purple" name="label" />
-                        <label for="mobile_purple" class="label_option">
-                            <div class="circle" style="background: #705786"></div>
-                            <p>Purple</p>
-                            <button>
-                                <span class="lnr lnr-pencil"></span>
-                            </button>
-                            <button>
-                                <span class="lnr lnr-cross"></span>
-                            </button>
-                        </label>
+                            <input type="radio" id="mobile_purple" name="label" />
+                            <label for="mobile_purple" class="label_option">
+                                <div class="circle" style="background: #705786"></div>
+                                <p>Purple</p>
+                                <button>
+                                    <span class="lnr lnr-pencil"></span>
+                                </button>
+                                <button>
+                                    <span class="lnr lnr-cross"></span>
+                                </button>
+                            </label>
 
-                        <input type="radio" id="mobile_brown" name="label" />
-                        <label for="mobile_brown" class="label_option">
-                            <div class="circle" style="background: #866B57"></div>
-                            <p>Brown</p>
-                            <button>
-                                <span class="lnr lnr-pencil"></span>
-                            </button>
-                            <button>
-                                <span class="lnr lnr-cross"></span>
-                            </button>
-                        </label>
-                    </section>
+                            <input type="radio" id="mobile_brown" name="label" />
+                            <label for="mobile_brown" class="label_option">
+                                <div class="circle" style="background: #866B57"></div>
+                                <p>Brown</p>
+                                <button>
+                                    <span class="lnr lnr-pencil"></span>
+                                </button>
+                                <button>
+                                    <span class="lnr lnr-cross"></span>
+                                </button>
+                            </label>
+                        </section>
 
-                    <button class="addlabel" onclick="openDialog('Add Label')">Add Label</button>
+                        <button class="addlabel" onclick="openDialog('Add Label')">Add Label</button>
 
-                </div>
+                    </div>
+                </nav>
 
                 <a id="logo" href="lists.php">
                     <img src="../assets/logo.svg" alt="Meraki Logo (Cup of Coffee)">
