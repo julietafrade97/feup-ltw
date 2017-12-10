@@ -18,17 +18,17 @@
     <ul id="incomplete-tasks">
         <?php foreach($tasks as $task)  {?>
         <li class="task_line checkboxAndLabel <?php if($task['Level'] == 1) echo 'priorityMode' ?>">
-            <input type="checkbox" id="<?php echo $task['ID']?>">
+            <input type="checkbox" onchange="updateCheckbox(this)" id="Task<?php echo $task['ID']?>">
             <label for="Task<?php echo $task['ID']?>"><?php echo $task['Name'] ?></label>
             <input type="text">
-            <button class="edit">
+            <button class="edit" onclick="editTask(this)">
                 <span class="lnr lnr-pencil icon"></span>
             </button>
-            <button class="star">
+            <button class="star" onclick="changeLevel(this)">
                 <span class="lnr lnr-star-empty"></span>
                 <span class="lnr lnr-star"></span>
             </button>
-            <button class="delete">
+            <button class="delete" onclick="deleteTask(this)">
                 <span class="lnr lnr-cross icon"></span>
             </button>
         </li>
@@ -38,17 +38,17 @@
     <ul id="completed-tasks">
         <?php foreach($tasksdone as $taskdone)  {?>
         <li class="task_line checkboxAndLabel <?php if($taskdone['Level'] == 1) echo 'priorityMode' ?>">
-            <input type="checkbox" checked id="<?php echo $taskdone['ID']?>">
+            <input type="checkbox" checked onchange="updateCheckbox(this)" id="<?php echo $taskdone['ID']?>">
             <label for="<?php echo $taskdone['ID']?>"><?php echo $taskdone['Name'] ?></label>
             <input type="text">
-            <button class="edit">
+            <button class="edit" onclick="editTask(this)">
                 <span class="lnr lnr-pencil"></span>
             </button>
-            <button class="star">
+            <button class="star" onclick="changeLevel(this)">
                 <span class="lnr lnr-star-empty"></span>
                 <span class="lnr lnr-star"></span>
             </button>
-            <button class="delete">
+            <button class="delete" onclick="deleteTask(this)">
                 <span class="lnr lnr-cross"></span>
             </button>
         </li>
@@ -58,7 +58,7 @@
     <div class="new_task">
         <label for="new-task"></label>
         <input id="new-task" type="text">
-        <button id="add_button">
+        <button id="add_button" onclick="addTask()">
             <span class="lnr lnr-plus-circle"></span>
         </button>
     </div>
