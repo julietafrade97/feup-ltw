@@ -1,22 +1,16 @@
-<?php if(isset($_POST['name']) && isset($_POST['username']) && isset($_POST['email'])) {
-        $userinfo['Name'] = $_POST['name'];
-        $userinfo['Username'] = $_POST['username'];
-        $userinfo['Email'] = $_POST['email'];
-}
-
-?>
+<?php include_once(__DIR__.'/../../includes/init.php'); ?>
 <h1>Personal Information</h1>
 <div id="content">
     <div id="account">
         <div id="fields">
             <form action="action_login.php" method="post" class="register_form">
                 <label>Name</label>
-                <input name="name" class="w3-input w3-border" type="text" placeholder="Name" value="<?php echo $userinfo['Name'] ?>" required="required">
+                <input name="name" class="w3-input w3-border" type="text" placeholder="Name" value="<?php echo $_SESSION['userinfo']['Name'] ?>" required="required">
                 <label>Username</label>
-                <input name="username" class="w3-input w3-border" type="text" placeholder="Username" value="<?php echo $userinfo['Username'] ?>" required="required">
+                <input name="username" class="w3-input w3-border" type="text" placeholder="Username" value="<?php echo $_SESSION['userinfo']['Username'] ?>" required="required">
                 <span class="hint">Only lowercase, at least 6 characters</span>
                 <label>Email</label>
-                <input name="email" class="w3-input w3-border" type="email" placeholder="Email" value="<?php echo $userinfo['Email'] ?>" required="required">
+                <input name="email" class="w3-input w3-border" type="email" placeholder="Email" value="<?php echo $_SESSION['userinfo']['Email'] ?>" required="required">
                 <label>Password</label>
                 <input name="currpassword" class="w3-input w3-border" type="password" placeholder="Password" required="required">
                 <span class="hint">One uppercase, 1 symbol, 1 number, at least 6 characters</span>

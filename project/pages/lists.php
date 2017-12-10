@@ -7,7 +7,7 @@ $lists = getUserLists(getUserID(), 'FALSE');
 $categories = getUserCategories(getUserID());
 $tasks = null;
 for($i=0; $i<count($lists); $i++) {
-    $tasks[$i] = getTasks($lists[$i]['ID']);
+    $tasks[$i] = getTasks($lists[$i]['ID'], 'FALSE');
 }
 include_once('../templates/common/header.php');
 include_once('../templates/common/aside.php');

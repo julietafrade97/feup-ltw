@@ -15,15 +15,15 @@ INSERT INTO Category (ID, Name, Color, ProjectID, UserID) VALUES (8, 'Categoria3
 
 INSERT INTO List (ID, Name, CategoryID, isArchived) VALUES (1, 'List1', 2, 'FALSE');
 INSERT INTO List (ID, Name, CategoryID, isArchived) VALUES (2, 'List2', 2, 'FALSE');
-INSERT INTO List (ID, Name, CategoryID, isArchived) VALUES (3, 'List3', 2, 'FALSE');
+INSERT INTO List (ID, Name, CategoryID, isArchived) VALUES (3, 'List3', 6, 'FALSE');
 INSERT INTO List (ID, Name, CategoryID, isArchived) VALUES (4, 'List4', 1, 'FALSE');
 INSERT INTO List (ID, Name, CategoryID, isArchived) VALUES (5, 'List5', 1, 'FALSE');
 INSERT INTO List (ID, Name, CategoryID, isArchived) VALUES (6, 'List6', 3, 'FALSE');
 
 INSERT INTO Task (ID, ListID, Name, Level, Date) VALUES (1, 1, 'Task1', 1, '2017-11-27');
-INSERT INTO Task (ID, ListID, Name, Level, Date) VALUES (2, 1, 'Task2', 1, '2017-11-27');
+INSERT INTO Task (ID, ListID, Name, Level, Date, isDone) VALUES (2, 1, 'Task2', 1, '2017-11-27', 'TRUE');
 INSERT INTO Task (ID, ListID, Name, Level, Date) VALUES (3, 2, 'Task3', 1, '2017-11-27');
-INSERT INTO Task (ID, ListID, Name, Level, Date) VALUES (4, 3, 'Task4', 1, '2017-11-27');
+INSERT INTO Task (ID, ListID, Name, Level, Date, isDone) VALUES (4, 3, 'Task4', 1, '2017-11-27', 'TRUE');
 INSERT INTO Task (ID, ListID, Name, Level, Date) VALUES (5, 3, 'Task5', 1, '2017-11-27');
 INSERT INTO Task (ID, ListID, Name, Level, Date) VALUES (6, 4, 'Task6', 1, '2017-11-27');
 INSERT INTO Task (ID, ListID, Name, Level, Date) VALUES (7, 5, 'Task7', 1, '2017-11-27');

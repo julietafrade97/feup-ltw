@@ -1,12 +1,4 @@
-function encodeForAjax(data) {
-  return Object.keys(data)
-    .map(function(k) {
-      return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
-    })
-    .join("&");
-}
-
-function change_page_settings(page, name, username, email) {
+function change_page_settings(page) {
   let request = new XMLHttpRequest();
   switch (page) {
     case "Account":
@@ -22,8 +14,7 @@ function change_page_settings(page, name, username, email) {
       request.addEventListener("load", new_page_settings);
       break;
   }
-  request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-  request.send(encodeForAjax({ name: name, username: username, email: email }));
+  request.send();
 }
 
 function new_page_settings(event) {

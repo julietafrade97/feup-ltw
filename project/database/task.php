@@ -19,11 +19,11 @@ function createTask($listID, $Name, $Level, $Date) {
     }
 }
 
-function getTasks($listID) {
+function getTasks($listID, $isDone) {
     global $dbh;
     try{
-        $stmt = $dbh->prepare('SELECT ID, Name, Level, Date FROM Task WHERE ListID = ?');
-        $stmt->execute(array($listID));
+        $stmt = $dbh->prepare('SELECT ID, Name, Level, Date FROM Task WHERE ListID = ? AND isDone = ?');
+        $stmt->execute(array($listID, $isDone));
         return $stmt->fetchAll();
 
     } catch(PDOException $e) {
