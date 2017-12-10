@@ -9,6 +9,7 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+a,
 button,
 input[type="button"],
 input[type="submit"] {
@@ -17,18 +18,16 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-a:hover,
-button:hover,
-input[type="button"]:hover,
-input[type="submit"]:hover {
-  border: none;
-  outline: none;
-  cursor: pointer;
-}
-
-a {
+a,
+button {
   text-decoration: none;
   color: #222a3f;
+  background: none;
+}
+
+a:hover,
+button:hover {
+  color: #948f8c;
 }
 
 textarea {
@@ -121,7 +120,6 @@ input[type="submit"]:hover {
   text-align: center;
   text-transform: uppercase;
   background-color: #f6f5f3;
-  color: #222a3f;
   margin: 2em;
   padding: 0.5em 1.5em;
   border-radius: 0.2em;
@@ -389,15 +387,8 @@ nav a {
 
 .label_option button {
   visibility: hidden;
-  color: #222a3f;
-  background: none;
   padding: 0;
   margin-left: 1em;
-}
-
-.label_option button:hover {
-  color: #948f8c;
-  background: none;
 }
 
 .label_option:hover > button {
@@ -427,6 +418,7 @@ button.addlabel {
 
 button.addlabel:hover {
   background-color: #948f8c;
+  color: white;
 }
 
 /*
@@ -488,15 +480,6 @@ main {
 
 #project_box button {
   font-size: 1em;
-  color: #222a3f;
-  background-color: transparent;
-}
-
-#project_box button:hover,
-#project_container span:hover,
-#project_container button:hover {
-  color: #948f8c;
-  cursor: pointer;
 }
 
 #project_box #tiny_members {
@@ -558,17 +541,10 @@ main {
   flex-grow: 1;
 }
 
-#bio span,
-#members span {
+#bio button,
+#members button {
   font-size: 1.1em;
-  color: #222a3f;
   margin: 0 0 0 1em;
-}
-
-#project_container button {
-  background: none;
-  font-size: 1.1em;
-  color: #222a3f;
 }
 
 #project_container .button_text {
@@ -756,9 +732,7 @@ main {
 
 #list_box_header button {
   margin-top: -0.3em;
-  background-color: Transparent;
   align-self: flex-start;
-  cursor: pointer;
 }
 
 #list_box_header button:hover {
@@ -808,27 +782,6 @@ main {
   font-weight: 200;
 }
 
-/*
-* LIST POP UP
-*/
-.overlay {
-  position: absolute;
-  display: none;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.3);
-  z-index: 2;
-  visibility: hidden;
-  opacity: 0;
-}
-.overlay:target {
-  display: block;
-  visibility: visible;
-  opacity: 1;
-}
-
 /* Basic Style */
 .list_popup {
   display: flex;
@@ -838,7 +791,7 @@ main {
   box-shadow: 0 0 1em 0.2em rgba(0, 0, 0, 0.2);
   margin: 5em auto;
   padding: 1.5em;
-  background: #fff;
+  background: white;
   width: 30%;
   max-height: 70%;
   position: relative;
@@ -849,16 +802,6 @@ main {
   margin: 0;
   padding: 0;
   word-break: break-all;
-}
-
-#dialog9 button {
-  background: none;
-  border: 0;
-}
-
-#dialog9 span:hover {
-  cursor: pointer;
-  color: #948f8c;
 }
 
 /* Heading */
@@ -936,8 +879,8 @@ main {
   padding: 0 0 0 0.3em;
 }
 
-.task_line button span {
-  font-size: 1.2em;
+.task_line button {
+  font-size: 0.8em;
   margin-left: 0.4em;
 }
 
@@ -981,8 +924,8 @@ main {
   align-items: center;
 }
 
-.new_task span {
-  font-size: 1.6em;
+.new_task #add_button {
+  font-size: 1.2em;
 }
 
 #dialog9 li > label {
@@ -1168,18 +1111,12 @@ form input.invalid + .hint {
   padding: 0 1em;
 }
 
-#archive span {
-  color: #222a3f;
-}
-
 #archive input[type="submit"] {
   margin: 2.5em 0;
 }
 
 #archive li button {
-  background: none;
   font-size: 1em;
-  color: #222a3f;
 }
 
 #archive li:hover {
