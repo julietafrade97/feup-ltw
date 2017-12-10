@@ -3,6 +3,8 @@ var addButton = document.getElementById("add_button");
 var incompleteTasksHolder = document.getElementById("incomplete-tasks");
 var completedTasksHolder = document.getElementById("completed-tasks");
 
+var idCounter = -1; //id for new checkbox
+
 //New Task List Item
 var createNewTaskElement = function(taskString) {
   if (taskString == "") {
@@ -32,8 +34,9 @@ var createNewTaskElement = function(taskString) {
   //Each element needs modifying
   listItem.className = "task_line checkboxAndLabel";
 
-  checkBox.id = "-1";
-  label.htmlFor = "-1";
+  checkBox.id = "" + idCounter;
+  label.htmlFor = "" + idCounter;
+  idCounter = idCounter-1;
 
   checkBox.type = "checkbox";
   editInput.type = "text";
