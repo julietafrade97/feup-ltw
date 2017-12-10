@@ -40,6 +40,25 @@ textarea {
   border: 1px solid #ddd;
 }
 
+input[type="button"],
+input[type="submit"] {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.7em;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background-color: #222a3f;
+  color: white;
+  margin: 1em 0;
+  padding: 0.5em 1.5em;
+  border-radius: 1em;
+}
+
+input[type="button"]:hover,
+input[type="submit"]:hover {
+  background-color: #948f8c;
+}
+
 #register_container {
   display: grid;
   grid-template-columns: 1fr;
@@ -157,22 +176,7 @@ textarea {
 }
 
 .register_content input[type="submit"] {
-  font-family: "Montserrat", sans-serif;
-  font-size: 0.7em;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  background-color: #222a3f;
-  color: white;
-  margin: 1em 0;
-  padding: 0.5em 1.5em;
-  border-radius: 1em;
-  width: 25%;
   float: right;
-}
-
-.register_content input[type="submit"]:hover {
-  background-color: #948f8c;
 }
 
 /*
@@ -408,7 +412,7 @@ section input[type="radio"]:checked + .label_option {
   background-color: white;
 }
 
-.btn_addlabel {
+button.addlabel {
   display: block;
   margin: auto;
   font-size: 0.7em;
@@ -421,7 +425,7 @@ section input[type="radio"]:checked + .label_option {
   border-radius: 1em;
 }
 
-.btn_addlabel:hover {
+button.addlabel:hover {
   background-color: #948f8c;
 }
 
@@ -1051,23 +1055,6 @@ footer p {
   grid-area: content;
 }
 
-#settings input[type="submit"] {
-  font-family: "Montserrat", sans-serif;
-  font-size: 0.7em;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: white;
-  margin: 1em 0;
-  padding: 0.5em 1.5em;
-  border-radius: 1em;
-  width: auto;
-}
-
-#settings input[type="submit"]:hover {
-  background-color: #948f8c;
-}
-
 /*
 * ACCOUNT
 */
@@ -1088,10 +1075,6 @@ footer p {
   font-size: 1em;
   font-weight: 300;
   margin: 1em 0 0 0;
-}
-
-#fields input[type="submit"] {
-  background-color: #222a3f;
 }
 
 #fields hr {
@@ -1125,6 +1108,10 @@ footer p {
 
 #photo_field input[type="submit"] {
   background-color: #576886;
+}
+
+#photo_field input[type="submit"]:hover {
+  background-color: #948f8c;
 }
 
 #account h5 {
@@ -1186,7 +1173,6 @@ form input.invalid + .hint {
 }
 
 #archive input[type="submit"] {
-  background-color: #222a3f;
   margin: 2.5em 0;
 }
 
@@ -1386,20 +1372,7 @@ input:checked + label:before {
 
 .modal-content input[type="submit"],
 .modal-content input[type="button"] {
-  font-size: 0.7em;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  background-color: #222a3f;
-  color: white;
   margin: 2em 0 2em 1em;
-  padding: 0.5em 1.5em;
-  border-radius: 1em;
-}
-
-.modal-content input[type="submit"]:hover,
-.modal-content input[type="button"]:hover {
-  background-color: #948f8c;
 }
 
 /*

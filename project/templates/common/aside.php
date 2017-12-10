@@ -90,7 +90,7 @@
                 </label>
             </section>
 
-            <button class="btn_addlabel" onclick="openDialog('Add Label')">Add Label</button>
+            <button class="addlabel" onclick="openDialog('Add Label')">Add Label</button>
 
         </div>
 
