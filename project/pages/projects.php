@@ -8,6 +8,7 @@ for($i=0; $i<count($projects); $i++) {
 }
 include_once('../templates/common/header.php');
 include_once('../templates/common/aside.php');
+include_once('../templates/dialogs/add_project.php');
 include_once('../templates/contents/project_grid.php');
 include_once('../templates/common/footer.php');
 ?>

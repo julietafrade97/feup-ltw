@@ -120,11 +120,9 @@
                                 <span class="lnr lnr-cross"></span>
                             </button>
                         </label>
-                        <br>
-                        <a href="#dialogLabel">
-                            <button>Add Label</button>
-                        </a>
                     </section>
+
+                    <button class="btn_addlabel" onclick="openDialog('Add Label')">Add Label</button>
 
                 </div>
 
@@ -135,7 +133,7 @@
 
                 <div id="header_buttons">
 
-                    <a href="javascript:void(0)" onclick="plus_button()" class="current">
+                    <a onclick="plus_button()">
                         <div class="plus">
                             <span class="lnr lnr-cross"></span>
                         </div>
