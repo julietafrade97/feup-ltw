@@ -17,7 +17,7 @@
     <div id="register_container">
         <div class="register_header">
             <a href="signup.php" class="register_button">Sign Up</a>
-            <img src="../assets/logo.svg">
+            <img src="../assets/logo.svg" alt="Meraki Logo (Cup of Coffee)">
             <h1>Meraki</h1>
             <p>Do something with soul.</p>
         </div>

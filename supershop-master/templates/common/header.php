@@ -14,7 +14,7 @@
 
     <header>
       <div id="info">
-        <img src="images/site/logo.svg">
+        <img src="images/site/logo.svg" alt="Meraki Logo (Cup of Coffee)">
         <h1><a href="index.php">Ultra Shop</a></h1>
         <a href="list_cart.php"><i class="fa fa-shopping-cart"></i>(<?=getCartSize()?>)</a>
       </div>

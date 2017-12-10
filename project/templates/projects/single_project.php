@@ -21,10 +21,10 @@
             </button>
         </div>
         <div id="member_list">
-            <img class="member" src="../assets/portrait.png">
-            <img class="member" src="../assets/portrait.png">
-            <img class="member" src="../assets/portrait.png">
-            <img class="member" src="../assets/portrait.png">
+            <img class="member" src="../assets/portrait.png" alt="Project Member">
+            <img class="member" src="../assets/portrait.png" alt="Project Member">
+            <img class="member" src="../assets/portrait.png" alt="Project Member">
+            <img class="member" src="../assets/portrait.png" alt="Project Member">
         </div>
         <button class="button_text" onclick="openDialog('All Members')">See All</button>
     </div>

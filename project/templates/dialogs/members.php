@@ -3,39 +3,39 @@
         <p>Members</p>
         <div id="members_list">
             <div class="info">
-                <img class="member" src="../assets/portrait.png">
+                <img class="member" src="../assets/portrait.png" alt="Project Member">
                 <p>John Doe</p>
             </div>
             <div class="info">
-                <img class="member" src="../assets/portrait.png">
+                <img class="member" src="../assets/portrait.png" alt="Project Member">
                 <p>John Doe</p>
             </div>
             <div class="info">
-                <img class="member" src="../assets/portrait.png">
+                <img class="member" src="../assets/portrait.png" alt="Project Member">
                 <p>John Doe</p>
             </div>
             <div class="info">
-                <img class="member" src="../assets/portrait.png">
+                <img class="member" src="../assets/portrait.png" alt="Project Member">
                 <p>John Doe</p>
             </div>
             <div class="info">
-                <img class="member" src="../assets/portrait.png">
+                <img class="member" src="../assets/portrait.png" alt="Project Member">
                 <p>John Doe</p>
             </div>
             <div class="info">
-                <img class="member" src="../assets/portrait.png">
+                <img class="member" src="../assets/portrait.png" alt="Project Member">
                 <p>John Doe</p>
             </div>
             <div class="info">
-                <img class="member" src="../assets/portrait.png">
+                <img class="member" src="../assets/portrait.png" alt="Project Member">
                 <p>John Doe</p>
             </div>
             <div class="info">
-                <img class="member" src="../assets/portrait.png">
+                <img class="member" src="../assets/portrait.png" alt="Project Member">
                 <p>John Doe</p>
             </div>
             <div class="info">
-                <img class="member" src="../assets/portrait.png">
+                <img class="member" src="../assets/portrait.png" alt="Project Member">
                 <p>John Doe</p>
             </div>
         </div>

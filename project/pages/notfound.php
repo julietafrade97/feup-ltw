@@ -13,7 +13,7 @@
 
 <body>
     <div id="notFound">
-       <img src="../assets/coffee_empty.svg">
+       <img src="../assets/coffee_empty.svg" alt="Empty Cup of Coffee">
         <h1>ERROR 404 : Page not found</h1>
        <h2>Sorry, our programmers run out of coffee.</h2>
     </div>
