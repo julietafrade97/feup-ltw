@@ -23,107 +23,102 @@
                         <span class="lnr lnr-menu"></span>
                     </span>
 
-                    <div id="mySidenav" class="sidenav">
-                        <a onclick="closeNav()">
-                            <div class="closebtn">
-                                <span class="lnr lnr-cross"></span>
-                            </div>
+                    <div id="sidenav">
+                        <a class="closebtn" onclick="closeNav()">
+                            <span class="lnr lnr-cross"></span>
                         </a>
                         <nav>
-                            <a href="#">
-                                <div class="menu_option">
-                                    <span class="lnr lnr-book"></span>
-                                    <p>Projects</p>
-                                </div>
+                            <a class="menu_option" href="projects.php">
+                                <span class="lnr lnr-book"></span>
+                                <p>Projects</p>
                             </a>
-                            <a href="#">
-                                <div class="menu_option">
-                                    <span class="lnr lnr-file-empty"></span>
-                                    <p>Lists</p>
-                                </div>
+                            <a class="menu_option" href="lists.php">
+                                <span class="lnr lnr-file-empty"></span>
+                                <p>Lists</p>
                             </a>
                         </nav>
 
-                        <hr>
-                        <h2>Labels</h2>
+                        <div id="mobile_labels">
+                            <hr>
+                            <h2>Labels</h2>
 
-                        <section>
+                            <section>
 
-                            <input type="radio" id="mobile_reset" name="label" />
-                            <label for="mobile_reset" class="label_option">
-                                <div class="circle" style="background: black"></div>
-                                <p>Reset</p>
-                                <button>
-                                    <span class="lnr lnr-pencil"></span>
-                                </button>
-                                <button>
-                                    <span class="lnr lnr-cross"></span>
-                                </button>
-                            </label>
+                                <input type="radio" id="mobile_reset" name="label" />
+                                <label for="mobile_reset" class="label_option">
+                                    <div class="circle" style="background: black"></div>
+                                    <p>Reset</p>
+                                    <button>
+                                        <span class="lnr lnr-pencil"></span>
+                                    </button>
+                                    <button>
+                                        <span class="lnr lnr-cross"></span>
+                                    </button>
+                                </label>
 
-                            <input type="radio" id="mobile_red" name="label" />
-                            <label for="mobile_red" class="label_option">
-                                <div class="circle" style="background: #865757"></div>
-                                <p>Red</p>
-                                <button>
-                                    <span class="lnr lnr-pencil"></span>
-                                </button>
-                                <button>
-                                    <span class="lnr lnr-cross"></span>
-                                </button>
-                            </label>
+                                <input type="radio" id="mobile_red" name="label" />
+                                <label for="mobile_red" class="label_option">
+                                    <div class="circle" style="background: #865757"></div>
+                                    <p>Red</p>
+                                    <button>
+                                        <span class="lnr lnr-pencil"></span>
+                                    </button>
+                                    <button>
+                                        <span class="lnr lnr-cross"></span>
+                                    </button>
+                                </label>
 
-                            <input type="radio" id="mobile_pink" name="label" />
-                            <label for="mobile_pink" class="label_option">
-                                <div class="circle" style="background: #865786"></div>
-                                <p>Pink</p>
-                                <button>
-                                    <span class="lnr lnr-pencil"></span>
-                                </button>
-                                <button>
-                                    <span class="lnr lnr-cross"></span>
-                                </button>
-                            </label>
+                                <input type="radio" id="mobile_pink" name="label" />
+                                <label for="mobile_pink" class="label_option">
+                                    <div class="circle" style="background: #865786"></div>
+                                    <p>Pink</p>
+                                    <button>
+                                        <span class="lnr lnr-pencil"></span>
+                                    </button>
+                                    <button>
+                                        <span class="lnr lnr-cross"></span>
+                                    </button>
+                                </label>
 
-                            <input type="radio" id="mobile_blue" name="label" />
-                            <label for="mobile_blue" class="label_option">
-                                <div class="circle" style="background: #576886"></div>
-                                <p>Blue</p>
-                                <button>
-                                    <span class="lnr lnr-pencil"></span>
-                                </button>
-                                <button>
-                                    <span class="lnr lnr-cross"></span>
-                                </button>
-                            </label>
+                                <input type="radio" id="mobile_blue" name="label" />
+                                <label for="mobile_blue" class="label_option">
+                                    <div class="circle" style="background: #576886"></div>
+                                    <p>Blue</p>
+                                    <button>
+                                        <span class="lnr lnr-pencil"></span>
+                                    </button>
+                                    <button>
+                                        <span class="lnr lnr-cross"></span>
+                                    </button>
+                                </label>
 
-                            <input type="radio" id="mobile_purple" name="label" />
-                            <label for="mobile_purple" class="label_option">
-                                <div class="circle" style="background: #705786"></div>
-                                <p>Purple</p>
-                                <button>
-                                    <span class="lnr lnr-pencil"></span>
-                                </button>
-                                <button>
-                                    <span class="lnr lnr-cross"></span>
-                                </button>
-                            </label>
+                                <input type="radio" id="mobile_purple" name="label" />
+                                <label for="mobile_purple" class="label_option">
+                                    <div class="circle" style="background: #705786"></div>
+                                    <p>Purple</p>
+                                    <button>
+                                        <span class="lnr lnr-pencil"></span>
+                                    </button>
+                                    <button>
+                                        <span class="lnr lnr-cross"></span>
+                                    </button>
+                                </label>
 
-                            <input type="radio" id="mobile_brown" name="label" />
-                            <label for="mobile_brown" class="label_option">
-                                <div class="circle" style="background: #866B57"></div>
-                                <p>Brown</p>
-                                <button>
-                                    <span class="lnr lnr-pencil"></span>
-                                </button>
-                                <button>
-                                    <span class="lnr lnr-cross"></span>
-                                </button>
-                            </label>
-                        </section>
+                                <input type="radio" id="mobile_brown" name="label" />
+                                <label for="mobile_brown" class="label_option">
+                                    <div class="circle" style="background: #866B57"></div>
+                                    <p>Brown</p>
+                                    <button>
+                                        <span class="lnr lnr-pencil"></span>
+                                    </button>
+                                    <button>
+                                        <span class="lnr lnr-cross"></span>
+                                    </button>
+                                </label>
+                            </section>
 
-                        <button class="addlabel" onclick="openDialog('Add Label')">Add Label</button>
-
+                            <button class="addlabel" onclick="openDialog('Add Label')">Add Label</button>
+                        </div>
                     </div>
                 </nav>
 
