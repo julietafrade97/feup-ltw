@@ -884,7 +884,8 @@ main {
   display: none;
 }
 
-.task_line.priorityMode label {
+.task_line.priorityMode label,
+.checkboxAndLabel label.priorityMode {
   font-weight: 500;
 }
 

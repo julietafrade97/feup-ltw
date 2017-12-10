@@ -9,7 +9,7 @@
     <div class="checkboxAndLabel">
         <?php for($j=0; $j<count($tasks[$i]); $j++) {?>
             <input type="checkbox" id=<?php echo $tasks[$i][$j]['ID']?>>
-            <label for= <?php echo $tasks[$i][$j]['ID']?>> <?php echo $tasks[$i][$j]['Name']?> </label>
+            <label class="<?php if($tasks[$i][$j]['Level'] == 1) echo 'priorityMode' ?>" for= <?php echo $tasks[$i][$j]['ID']?>> <?php echo $tasks[$i][$j]['Name']?> </label>
         <?php } ?>
     </div>
     <button  id="more" onclick="openDialog('List',<?php echo $lists[$i]['ID'] ?>)">
