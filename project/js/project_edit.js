@@ -80,7 +80,7 @@ function addUserProject(input) {
   }
   timeoutCurrentValue = setTimeout(function() {
     getSimilarUsers(input.value);
-  }, 1000);
+  }, 500);
 }
 
 function getSimilarUsers(input) {
