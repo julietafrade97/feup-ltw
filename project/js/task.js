@@ -1,10 +1,14 @@
 var idCounter = -1; //id for new checkbox
 
+var listIDNumber = -1;
+
 //New Task List Item
 var createNewTaskElement = function(taskString) {
   if (taskString == "") {
     taskString = "New Task";
   }
+
+  addTaskAjax(taskString);
 
   //Create List Item
   let listItem = document.createElement("li");
@@ -31,9 +35,9 @@ var createNewTaskElement = function(taskString) {
   checkBox.id = "" + idCounter;
   checkBox.onchange = function() {
     updateCheckbox(this);
-  };
+  }
   label.htmlFor = "" + idCounter;
-  idCounter = idCounter - 1;
+  idCounter = idCounter-1;
 
   checkBox.type = "checkbox";
   editInput.type = "text";
@@ -41,20 +45,20 @@ var createNewTaskElement = function(taskString) {
   editButton.className = "edit";
   editButton.onclick = function() {
     editTask(this);
-  };
+  }
   editSpan.className = "lnr lnr-pencil";
 
   starButton.className = "star";
   starButton.onclick = function() {
     changeLevel(this);
-  };
+  }
   starSpanEmpty.className = "lnr lnr-star-empty";
   starSpanFull.className = "lnr lnr-star";
 
   deleteButton.className = "delete";
   deleteButton.onclick = function() {
     deleteTask(this);
-  };
+  }
   deleteSpan.className = "lnr lnr-cross";
 
   label.innerText = taskString;
@@ -108,6 +112,7 @@ var editTask = function(editButton) {
     //switch from .editMode
     //Make label text become the input's value
     label.innerText = editInput.value;
+    editTaskAjax(label.innerText, listItem);
   } else {
     //Switch to .editMode
     //input value becomes the label's text
@@ -116,25 +121,6 @@ var editTask = function(editButton) {
 
   // Toggle .editMode on the parent
   listItem.classList.toggle("editMode");
-};
-
-var editListTitle = function(editButton) {
-  console.log("Edit Task...");
-
-  let listTitle = editButton.parentNode;
-
-  let editInput = listTitle.querySelector("input[type=text]");
-  let label = listTitle.querySelector("label");
-
-  let containsClass = listTitle.classList.contains("editMode");
-
-  if (containsClass) {
-    label.innerText = editInput.value;
-  } else {
-    editInput.value = label.innerText;
-  }
-
-  listTitle.classList.toggle("editMode");
 };
 
 var changeLevel = function(levelButton) {
@@ -146,8 +132,10 @@ var changeLevel = function(levelButton) {
 
   if (containsClass) {
     listItem.classList.remove("priorityMode");
+    changePriorityAjax(0, listItem);
   } else {
     listItem.classList.add("priorityMode");
+    changePriorityAjax(1, listItem);
   }
 };
 
@@ -156,6 +144,8 @@ var deleteTask = function(deleteButton) {
   console.log("Delete task...");
   var listItem = deleteButton.parentNode;
   var ul = listItem.parentNode;
+
+  deleteTaskAjax(listItem);
 
   //Remove the parent list item from the ul
   ul.removeChild(listItem);
@@ -168,6 +158,7 @@ var taskCompleted = function(checkbox) {
   var listItem = checkbox.parentNode;
   var completedTasksHolder = document.getElementById("completed-tasks");
   completedTasksHolder.appendChild(listItem);
+
 };
 
 // Mark a task as incomplete
@@ -180,21 +171,177 @@ var taskIncomplete = function(checkbox) {
   incompleteTasksHolder.appendChild(listItem);
 };
 
-var updateCheckbox = function(checkbox) {
-  if (checkbox.checked) taskCompleted(checkbox);
+var updateCheckbox = function(checkbox){
+  if(checkbox.checked)
+    taskCompleted(checkbox);
   else taskIncomplete(checkbox);
-};
+}
+
+//-- AJAX --//
+
 
 function getTasks(listIDValue) {
-  let request = new XMLHttpRequest();
-  request.addEventListener("load", finishGetTasks);
-  request.open("post", "../actions/api_get_list.php", true);
-  request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-  request.send(encodeForAjax({ listID: listIDValue }));
+    if(listIDValue == -1) {
+      createListUser();
+
+    } else if(listIDValue == -2) {
+      createListProject();
+
+    } else {
+        listIDNumber = listIDValue; 
+        let request = new XMLHttpRequest();
+        request.addEventListener("load", finishGetTasks);
+        request.open("post", "../actions/api_get_list.php", true);
+        request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        request.send(encodeForAjax({listID: listIDValue}));
+    }
 }
 
 function finishGetTasks(event) {
   console.log(this.responseText);
-  document.getElementById("dialog9").innerHTML = this.responseText;
+  document.getElementById('dialog9').innerHTML = this.responseText;
   event.preventDefault();
+}
+
+function updateTitleListAjax() {
+
+  let request = new XMLHttpRequest();
+  request.addEventListener("load", finishSaveTasks);
+  request.open("post", "../actions/api_change_list_name.php");
+  request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+  request.send(encodeForAjax({listTitle: titleText, listID: listIDNumber}));
+}
+
+function addTaskAjax(textValue) {
+
+  let request = new XMLHttpRequest();
+  request.addEventListener("load", finishAddTask);
+  request.open("post", "../actions/api_add_task.php");
+  request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+  request.send(encodeForAjax({text: textValue, listID: listIDNumber}));
+}
+
+function finishAddTask(event) {
+  event.preventDefault();
+  if(this.responseText != "") {
+    alert(this.responseText);
+  }
+}
+
+function changePriorityAjax(newPriorityValue, listItem) {
+
+  if(listItem == null)
+    return false;
+  let id = listItem.getAttribute("id");
+  if(id == null)
+    return false;
+  let request = new XMLHttpRequest();
+  request.addEventListener("load", finishChangePriority);
+  request.open("post", "../actions/api_change_task_level.php");
+  request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+  request.send(encodeForAjax({newPriority: newPriorityValue, taskID: id}));
+}
+
+function finishChangePriority(event) {
+  event.preventDefault();
+  if(this.responseText != "") {
+    alert(this.responseText);
+  }
+}
+
+function deleteTaskAjax(listItem) {
+  if(listItem == null)
+    return false;
+  let id = listItem.getAttribute("id");
+  if(id == null)
+    return false;
+
+  let request = new XMLHttpRequest();
+  request.addEventListener("load", finishDeleteTask);
+  request.open("post", "../actions/api_delete_task.php");
+  request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+  request.send(encodeForAjax({taskID: id}));
+  
+}
+
+function finishDeleteTask(event) {
+  event.preventDefault();
+  if(this.responseText != "") {
+    alert(this.responseText);
+  }
+}
+
+function editTaskAjax(newName, listItem) {
+  if(listItem == null)
+    return false;
+  let id = listItem.getAttribute("id");
+  if(id == null)
+    return false;
+
+  let request = new XMLHttpRequest();
+  request.addEventListener("load", finishEditTaskName);
+  request.open("post", "../actions/api_edit_task_name.php");
+  request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+  request.send(encodeForAjax({taskName: newName, taskID: id}));
+  
+}
+
+function finishEditTaskName(event) {
+  event.preventDefault();
+  if(this.responseText != "") {
+    alert(this.responseText);
+  }
+}
+
+
+function saveTasksList() {
+
+  /*let TP = new Array(), T = new Array(), TDP = new Array(), TD = new Array(), TitleV = new Array();
+  let title = document.querySelector("#pop_up_title h1");
+  if(title && title.getAttribute("id") != null) {
+    TitleV[0] = 'arg[]=' + encodeURIComponent(title.innerText);
+    TitleV[1] = 'arg[]=' + encodeURIComponent(title.getAttribute("id"));
+    TitleV.join('&')
+  }
+  let tasksPriority = document.querySelectorAll("#incomplete-tasks .priorityMode");
+  if(tasksPriority) {
+    for(let i=0; i<tasksPriority.length; i++) {
+      TP.push(tasksPriority[i].innerText);
+      TP.push(tasksPriority[i].getAttribute("id"));
+    }
+  }
+  let tasks = document.querySelectorAll("#incomplete-tasks li:not(.priorityMode)");
+  if(tasks) {
+    for(let i=0; i<tasks.length; i++) {
+      T.push(tasks[i].innerText);
+      T.push(tasks[i].getAttribute("id"));
+    }
+  }
+  let tasksdonePriority = document.querySelectorAll("#completed-tasks .priorityMode");
+  if(tasksdonePriority) {
+    for(let i=0; i<tasksdonePriority.length; i++) {
+      TDP.push(tasksdonePriority[i].innerText);
+      TDP.push(tasksdonePriority[i].getAttribute("id"));
+    }
+  }
+  let tasksdone = document.querySelectorAll("#completed-tasks li:not(.priorityMode)");
+  if(tasksdone) {
+    for(let i=0; i<tasksdone.length; i++) {
+      TD.push(tasksdone[i].innerText);
+      TD.push(tasksdone[i].getAttribute("id"));
+    }
+  }
+
+  let request = new XMLHttpRequest();
+  request.addEventListener("load", finishSaveTasks);
+  request.open("post", "../actions/api_save_tasks.php");
+  request.setRequestHeader("Content-Type", "application/json");
+  request.send(encodeForAjax({titleValue: TitleV, TPValue: TP, TValue: T, TDPValue: TDP, TDValue: TD}));
+  
+
+}
+
+function finishSaveTasks(event) {
+  event.preventDefault();
+  alert(this.responseText);*/
 }

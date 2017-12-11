@@ -58,8 +58,7 @@ CREATE TABLE Task (
     ID     INTEGER PRIMARY KEY AUTOINCREMENT,
     ListID INTEGER REFERENCES List (ID) ON DELETE CASCADE,
     Name   STRING  NOT NULL,
-    Level  INTEGER,
-    Date   DATE,
+    Priority INTEGER DEFAULT 0,
     isDone BOOLEAN NOT NULL
                        DEFAULT FALSE
 );
@@ -75,7 +74,7 @@ CREATE TABLE User (
     Name     STRING,
     Email    STRING    NOT NULL
                        UNIQUE,
-    Photo    STRING
+    Photo    STRING DEFAULT "default.jpg"
 );
 
 COMMIT TRANSACTION;

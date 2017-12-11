@@ -18,6 +18,36 @@
 		
 	}
 
+	function getListName($listID) {
+		global $dbh;
+		try {
+
+			$stmt = $dbh->prepare('SELECT Name FROM List WHERE ID = ?');
+			$stmt->execute(array($listID));
+			return $stmt->fetch();
+
+		}catch(PDOExecption $e) {
+			return null;
+		}
+	}
+
+	function updateListName($newListName, $listID) {
+		global $dbh;
+		try {
+
+			$stmt = $dbh->prepare('UPDATE List SET Name = :Name WHERE ID = :ID');
+			$stmt->bindParam(':Name', $newListName);
+			$stmt->bindParam(':ID', $listID);
+			if($stmt->execute())
+				return true;
+			else
+				return false;
+		
+		} catch(PDOException $e) {
+			return false;
+		}
+	}
+
 	function getUserLists($userID, $isArchived) {
 		global $dbh;
 		try {

@@ -21,7 +21,7 @@
     <h3>Todo</h3>
     <ul id="incomplete-tasks">
         <?php foreach($tasks as $task)  {?>
-        <li class="task_line checkboxAndLabel <?php if($task['Level'] == 1) echo 'priorityMode' ?>">
+        <li class="task_line checkboxAndLabel <?php if($task['Priority'] == 1) echo 'priorityMode' ?>" id="<?php echo $task['ID']?>">
             <input type="checkbox" onchange="updateCheckbox(this)" id="Task<?php echo $task['ID']?>">
             <label for="Task<?php echo $task['ID']?>"><?php echo $task['Name'] ?></label>
             <input type="text">
@@ -41,9 +41,9 @@
     <h3>Completed</h3>
     <ul id="completed-tasks">
         <?php foreach($tasksdone as $taskdone)  {?>
-        <li class="task_line checkboxAndLabel <?php if($taskdone['Level'] == 1) echo 'priorityMode' ?>">
-            <input type="checkbox" checked onchange="updateCheckbox(this)" id="<?php echo $taskdone['ID']?>">
-            <label for="<?php echo $taskdone['ID']?>"><?php echo $taskdone['Name'] ?></label>
+        <li class="task_line checkboxAndLabel <?php if($taskdone['Priority'] == 1) echo 'priorityMode' ?>" id="<?php echo $taskdone['ID']?>">
+            <input type="checkbox" checked onchange="updateCheckbox(this)" id="Task<?php echo $taskdone['ID']?>">
+            <label for="Task<?php echo $taskdone['ID']?>"><?php echo $taskdone['Name'] ?></label>
             <input type="text">
             <button class="edit" onclick="editTask(this)">
                 <span class="lnr lnr-pencil"></span>

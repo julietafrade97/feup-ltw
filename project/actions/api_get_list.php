@@ -1,10 +1,12 @@
 <?php
 include_once('../includes/init.php');
+include_once('../database/list.php');
 include_once('../database/task.php');
 $listID = $_POST['listID'];
 
 if(!is_numeric($listID))
     echo "";
+$listName = getListName($listID);
 $tasks = getTasks($listID, 'FALSE');
 $tasksdone = getTasks($listID, 'TRUE');
 
