@@ -1237,23 +1237,23 @@ input:checked + label:before {
   height: 94vh;
 }
 
-.cups{
+.cups {
   width: 60vh;
   margin-top: 3em;
   height: 60%;
   cursor: pointer;
 }
 
-.cups #cupcoffee{
-  display:none;
+.cups #cupcoffee {
+  display: none;
 }
 
 .cups:hover #cupcoffee {
-  display:block;
+  display: block;
 }
 
-.cups:hover #emptycupcoffee{
-  display:none;
+.cups:hover #emptycupcoffee {
+  display: none;
 }
 
 #notFound h1 {
