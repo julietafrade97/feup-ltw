@@ -12,8 +12,8 @@
             <label class="<?php if($tasks[$i][$j]['Level'] == 1) echo 'priorityMode' ?>" for= <?php echo $tasks[$i][$j]['ID']?>> <?php echo $tasks[$i][$j]['Name']?> </label>
         <?php } ?>
     </div>
-    <button  id="more" onclick="openDialog('List',<?php echo $lists[$i]['ID'] ?>)">
-        SEE MORE
+    <button id="more" onclick="openDialog('List',<?php echo $lists[$i]['ID'] ?>)">
+        See More
     </button>
 </div>
 <?php }?>
