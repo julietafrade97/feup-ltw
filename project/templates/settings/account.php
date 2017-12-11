@@ -27,7 +27,7 @@
 
         </div>
         <div id="photo_field">
-            <form action="../actions/upload.php" method="post" enctype="multipart/form-data">
+            <form action="../actions/api_upload_photo.php" method="post" enctype="multipart/form-data">
                 <label>Photo</label>
                 <img id="photo" src="<?php echo  '../profilePictures/'.$_SESSION['userinfo']['Photo'] ?>" alt="Profile Picture">
                 <input type="file" name="fileToUpload" id="fileToUpload">
