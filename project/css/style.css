@@ -803,7 +803,7 @@ main {
   flex-shrink: 0;
 }
 
-#pop_up_title h1 {
+#pop_up_title label {
   font-size: 1.7em;
   font-weight: 500;
   color: black;
@@ -821,6 +821,38 @@ main {
   z-index: 1;
 }
 
+#pop_up_title button{
+  display:none;
+}
+
+#pop_up_title:hover > button{
+  display:block;
+  background-color: white;
+  z-index:2;
+}
+
+#pop_up_title input[type="text"] {
+  display: none;
+  font-weight: 300;
+  font-size:1.7em;
+  height: 1.7em;
+  font-size: 1.3em;
+  padding-left: 0.7em;
+  background: #eee8e4;
+  border: 0;
+  border-radius: 1em;
+  color: rgb(90, 90, 90);
+}
+
+#pop_up_title.editMode input[type="text"] {
+  display: block;
+}
+
+#pop_up_title.editMode label,
+#pop_up_title.editMode #rectangle {
+  display: none;
+}
+
 #dialog9 h3 {
   font-weight: 700;
   font-size: 0.7em;
@@ -830,7 +862,8 @@ main {
   flex-shrink: 0;
 }
 
-#dialog9 input[type="text"] {
+#dialog9 ul input[type="text"],
+#dialog9 #new-task {
   font-size: 1em;
   height: 2em;
   padding-left: 0.7em;

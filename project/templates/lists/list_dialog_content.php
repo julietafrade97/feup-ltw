@@ -11,7 +11,11 @@
         </button>
     </div>
     <div id="pop_up_title">
-        <h1 contentEditable="true">Title</h1>
+        <label> Title </label>
+        <input type="text">
+        <button class="edit" onclick="editListTitle(this)">
+            <span class="lnr lnr-pencil icon"></span>
+        </button>
         <div id="rectangle" style="background: #865766"></div>
     </div>
     <h3>Todo</h3>

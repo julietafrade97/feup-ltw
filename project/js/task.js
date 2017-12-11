@@ -118,6 +118,25 @@ var editTask = function(editButton) {
   listItem.classList.toggle("editMode");
 };
 
+var editListTitle = function(editButton) {
+  console.log("Edit Task...");
+
+  let listTitle = editButton.parentNode;
+
+  let editInput = listTitle.querySelector("input[type=text]");
+  let label = listTitle.querySelector("label");
+
+  let containsClass = listTitle.classList.contains("editMode");
+
+  if (containsClass) {
+    label.innerText = editInput.value;
+  } else {
+    editInput.value = label.innerText;
+  }
+
+  listTitle.classList.toggle("editMode");
+};
+
 var changeLevel = function(levelButton) {
   console.log("Edit Level...");
 
