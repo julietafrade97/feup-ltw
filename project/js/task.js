@@ -31,9 +31,9 @@ var createNewTaskElement = function(taskString) {
   checkBox.id = "" + idCounter;
   checkBox.onchange = function() {
     updateCheckbox(this);
-  }
+  };
   label.htmlFor = "" + idCounter;
-  idCounter = idCounter-1;
+  idCounter = idCounter - 1;
 
   checkBox.type = "checkbox";
   editInput.type = "text";
@@ -41,20 +41,20 @@ var createNewTaskElement = function(taskString) {
   editButton.className = "edit";
   editButton.onclick = function() {
     editTask(this);
-  }
+  };
   editSpan.className = "lnr lnr-pencil";
 
   starButton.className = "star";
   starButton.onclick = function() {
     changeLevel(this);
-  }
+  };
   starSpanEmpty.className = "lnr lnr-star-empty";
   starSpanFull.className = "lnr lnr-star";
 
   deleteButton.className = "delete";
   deleteButton.onclick = function() {
     deleteTask(this);
-  }
+  };
   deleteSpan.className = "lnr lnr-cross";
 
   label.innerText = taskString;
@@ -149,7 +149,6 @@ var taskCompleted = function(checkbox) {
   var listItem = checkbox.parentNode;
   var completedTasksHolder = document.getElementById("completed-tasks");
   completedTasksHolder.appendChild(listItem);
-
 };
 
 // Mark a task as incomplete
@@ -162,22 +161,21 @@ var taskIncomplete = function(checkbox) {
   incompleteTasksHolder.appendChild(listItem);
 };
 
-var updateCheckbox = function(checkbox){
-  if(checkbox.checked)
-    taskCompleted(checkbox);
+var updateCheckbox = function(checkbox) {
+  if (checkbox.checked) taskCompleted(checkbox);
   else taskIncomplete(checkbox);
-}
+};
 
 function getTasks(listIDValue) {
-    let request = new XMLHttpRequest();
-    request.addEventListener("load", finishGetTasks);
-    request.open("post", "../actions/api_get_list.php", true);
-    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    request.send(encodeForAjax({listID: listIDValue}));
+  let request = new XMLHttpRequest();
+  request.addEventListener("load", finishGetTasks);
+  request.open("post", "../actions/api_get_list.php", true);
+  request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+  request.send(encodeForAjax({ listID: listIDValue }));
 }
 
 function finishGetTasks(event) {
   console.log(this.responseText);
-  document.getElementById('dialog9').innerHTML = this.responseText;
+  document.getElementById("dialog9").innerHTML = this.responseText;
   event.preventDefault();
 }

@@ -1299,6 +1299,11 @@ input:checked + label:before {
     width: 70%;
   }
 
+  .modal-content {
+    width: 80%;
+    margin: 40% auto;
+  }
+
   .modal-content .buttons {
     display: flex;
     flex-direction: column;
