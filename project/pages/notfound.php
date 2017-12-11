@@ -13,9 +13,14 @@
 
 <body>
     <div id="notFound">
-       <img src="../assets/coffee_empty.svg" alt="Empty Cup of Coffee">
+        <div class="cups">
+            <img id="emptycupcoffee" src="../assets/coffee_empty.svg" alt="Empty Cup of Coffee">
+            <a href="lists.php">
+                <img id="cupcoffee" src="../assets/logo.svg" alt="Meraki Logo (Cup of Coffee)">
+            </a>
+        </div>
         <h1>ERROR 404 : Page not found</h1>
-       <h2>Sorry, our programmers run out of coffee.</h2>
+        <h2>Sorry, our programmers run out of coffee.</h2>
     </div>
 <body>
 
