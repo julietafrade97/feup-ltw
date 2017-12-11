@@ -38,7 +38,7 @@
             <div id="grid_container">
 
                 <!-- CHANGE -->
-                <div id="list_box">
+                <div class="list_box">
                     <div id="list_box_header">
                         <h1>Title</h1>
                         <button onclick="openDialog('Change Label')">

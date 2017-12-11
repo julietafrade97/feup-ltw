@@ -433,7 +433,7 @@ main {
 /*
 * PROJECT GRID
 */
-#list_box,
+.list_box,
 .project_box {
   display: flex;
   flex-direction: column;
@@ -688,7 +688,7 @@ main {
 
 /*---*/
 
-#list_box {
+.list_box{
   padding: 0 1em 0em 1em;
   word-break: break-all;
 }
