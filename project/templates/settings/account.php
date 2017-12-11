@@ -1,4 +1,5 @@
 <?php include_once(__DIR__.'/../../includes/init.php'); ?>
+
 <h1>Personal Information</h1>
 <div id="content">
     <div id="account">
@@ -26,9 +27,9 @@
 
         </div>
         <div id="photo_field">
-            <form method="post">
+            <form action="../actions/upload.php" method="post" enctype="multipart/form-data">
                 <label>Photo</label>
-                <img id="photo" src="../assets/portrait.png" alt="Profile Picture">
+                <img id="photo" src="<?php echo  '../profilePictures/'.$_SESSION['userinfo']['Photo'] ?>" alt="Profile Picture">
                 <input type="file" name="fileToUpload" id="fileToUpload">
                 <input type="submit" name="Submit" value="Upload">
             </form>

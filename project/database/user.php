@@ -43,7 +43,7 @@
   function getUser($username) {
     global $dbh;
     try {
-      $stmt = $dbh->prepare('SELECT Name, Username, Email FROM User WHERE Username = ?');
+      $stmt = $dbh->prepare('SELECT Name, Username, Email , Photo FROM User WHERE Username = ?');
       $stmt->execute(array($username));
       return $stmt->fetch();
     
@@ -109,6 +109,31 @@
       $stmt = $dbh->prepare('SELECT username FROM User WHERE lower(username) LIKE lower(?) LIMIT 4');
       $stmt->execute(array("$username%"));
       return $stmt->fetchAll();
+    
+    }catch(PDOException $e) {
+      return null;
+    }
+  }
+
+  function updateUserPhoto($userID, $photoPath) {
+    global $dbh;
+    try {
+      $stmt = $dbh->prepare('UPDATE User SET Photo = ? WHERE ID = ?');
+      if($stmt->execute(array($photoPath, $userID)))
+          return true;
+      else
+          return false;
+    }catch(PDOException $e) {
+      return false;
+    }
+  } 
+
+  function getUserPhoto($userID) {
+    global $dbh;
+    try {
+      $stmt = $dbh->prepare('SELECT Photo FROM User WHERE ID = ?');
+      $stmt->execute(array($userID));
+      return $stmt->fetch();
     
     }catch(PDOException $e) {
       return null;
