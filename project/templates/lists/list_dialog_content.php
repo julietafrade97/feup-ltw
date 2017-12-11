@@ -1,5 +1,5 @@
 <div class="list_popup">
-    <div id="pop_up_header">
+    <form id="pop_up_header" action="#">
         <button onclick="openDialog('Delete List')">
             <span class="lnr lnr-trash"></span>
         </button>
@@ -9,7 +9,7 @@
         <button onclick="closeDialog('List')">
             <span class="lnr lnr-cross"></span>
         </button>
-    </div>
+    </form>
     <div id="pop_up_title">
         <label> Title </label>
         <input type="text">

@@ -47,14 +47,21 @@ function openDialog(value, id) {
       dialog7.style.display = "block";
       break;
     case "Change Label":
+      document.getElementById("pick-label-btn").value = "Submit";
+      //document.getElementById("pick-label-btn").onclick = Bar;
       dialog8.style.display = "block";
       break;
     case "List":
-        getTasks(id);
-        dialog9.style.display = "block";
+      getTasks(id);
+      dialog9.style.display = "block";
       break;
     case "Add Project":
       dialog10.style.display = "block";
+      break;
+    case "Add List":
+      document.getElementById("pick-label-btn").value = "Next";
+      document.getElementById("pick-label-btn").onclick = openDialog("List", -1);
+      dialog8.style.display = "block";
       break;
   }
 }

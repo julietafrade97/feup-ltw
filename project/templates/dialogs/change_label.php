@@ -22,8 +22,8 @@
             <label for="radioF">Label 6</label>
 
             <div class="buttons">
-                <input type="button" value="Cancel">
-                <input type="submit" value="Submit">
+                <input onclick="closeDialog('Change Label')" type="button" value="Cancel">
+                <input id="pick-label-btn" type="submit">
             </div>
         </form>
     </div>
