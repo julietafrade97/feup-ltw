@@ -434,7 +434,7 @@ main {
 * PROJECT GRID
 */
 #list_box,
-#project_box {
+.project_box {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -444,13 +444,13 @@ main {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
-#project_box h1 {
+.project_box h1 {
   color: black;
   font-size: 1.2em;
   font-weight: 500;
 }
 
-#project_box p {
+.project_box p {
   display: -webkit-box;
   font-size: 0.7em;
   font-weight: 300;
@@ -461,29 +461,29 @@ main {
   -webkit-box-orient: vertical;
 }
 
-#project_box a {
+.project_box a {
   align-self: flex-end;
   margin-top: auto;
 }
 
-#project_box button {
+.project_box button {
   font-size: 1em;
 }
 
-#project_box #tiny_members {
+.project_box .tiny_members {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
 }
 
-#tiny_members p {
+.tiny_members p {
   font-weight: 500;
   letter-spacing: 0.5em;
   align-self: flex-end;
 }
 
-#tiny_members .member {
+.tiny_members .member {
   width: 2em;
   height: 2em;
   object-fit: cover;
@@ -1002,7 +1002,7 @@ footer p {
   padding: 1.3em 0 0 0;
 }
 
-#settings #content {
+#settings .content {
   grid-area: content;
 }
 

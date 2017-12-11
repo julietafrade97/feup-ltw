@@ -1,5 +1,5 @@
 <h1>Archive</h1>
-<div id="content">
+<div class="content">
     <div id="archive">
         <h2>Lists</h2>
         <ul>

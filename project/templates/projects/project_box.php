@@ -1,8 +1,8 @@
 <?php foreach($projects as $project) {?>
-    <div id="project_box">
+    <div class="project_box">
         <h1><?php echo $project['Name']?></h1>
         <p><?php echo $project['Description']?></p>
-        <div id="tiny_members">
+        <div class="tiny_members">
             <img class="member" src="../assets/portrait.png" alt="Project Member">
             <img class="member" src="../assets/portrait.png" alt="Project Member">
             <img class="member" src="../assets/portrait.png" alt="Project Member">

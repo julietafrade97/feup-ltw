@@ -1,5 +1,5 @@
 <h1>About</h1>
-<div id="content">
+<div class="content">
     <div id="about">
         <p> Meraki is a word that modern Greeks often use to describe doing something with soul, creativity, or love - when you
             put

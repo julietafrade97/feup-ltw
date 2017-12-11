@@ -1,7 +1,7 @@
 <?php include_once(__DIR__.'/../../includes/init.php'); ?>
 
 <h1>Personal Information</h1>
-<div id="content">
+<div class="content">
     <div id="account">
         <div id="fields">
             <form action="action_login.php" method="post" class="register_form">
