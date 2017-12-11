@@ -84,7 +84,7 @@ function searchLabel(color) {
   if(selected == null)
     return;
   for (var i = 0; i < selected.length; i++) {
-    selected[i].style.display = "block";
+    selected[i].style.display = "flex";
   }
 
 }
@@ -94,6 +94,6 @@ function resetSearchLabel() {
   if(all == null)
     return;
   for (var i = 0; i < all.length; i++) {
-    all[i].style.display = "block";
+    all[i].style.display = "flex";
   }
 }
