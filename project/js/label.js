@@ -1,10 +1,10 @@
 
 var color;
+var isUserVar;
 
 function addLabel() {
 
   nameValue = document.querySelector("#color_form input[name=labelName]").value;
-  alert(nameValue);
 
   color = document.querySelectorAll(
     "#color_form input[type=radio][name=labelColor]:checked"
@@ -97,4 +97,21 @@ function resetSearchLabel() {
   for (var i = 0; i < all.length; i++) {
     all[i].style.display = "flex";
   }
+}
+
+function getLabels(isUserValue) {
+  if(isUserValue != 1 && isUserValue != 0)
+    return false;
+  isUserVar = isUserValue;
+  let request = new XMLHttpRequest();
+  request.addEventListener("load", finishGetLabels);
+  request.open("post", "../actions/api_get_labels.php", true);
+  request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+  request.send(encodeForAjax({isUser: isUserValue}));
+}
+
+function finishGetLabels(event) {
+  let dialog8 = document.getElementById('dialog8');
+  if(dialog8!= null) dialog8.innerHTML = this.responseText;
+  event.preventDefault();
 }

@@ -9,7 +9,7 @@
  * dialog 8: change label
  * dialog 9: list
  * dialog 10: add project
- * dialog 11: clear archive
+ * dialog 11: clear archive;
  */
 
 // Load the dialogs
@@ -49,9 +49,7 @@ function openDialog(value, id) {
       dialog7.style.display = "block";
       break;
     case "Change Label":
-      document.getElementById("pick-label-btn").value = "Submit";
-      //document.getElementById("pick-label-btn").onclick = Bar;
-      dialog8.style.display = "block";
+      dialog1.style.display = "block";
       break;
     case "List":
       getTasks(id);
@@ -61,8 +59,11 @@ function openDialog(value, id) {
       dialog10.style.display = "block";
       break;
     case "Add List":
-      document.getElementById("pick-label-btn").value = "Next";
-      document.getElementById("pick-label-btn").onclick = openDialog("List", -1);
+      addNewList();
+      dialog8.style.display = "none";
+      break;
+    case "Choose Label":
+      getLabels(id);
       dialog8.style.display = "block";
       break;
     case "Clear Archive":
@@ -141,7 +142,7 @@ window.onclick = function(event) {
     case dialog10:
       dialog10.style.display = "none";
       break;
-    case dialog11:
+    case "Clear Archive":
       dialog11.style.display = "none";
       break;
   }

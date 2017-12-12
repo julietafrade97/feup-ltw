@@ -181,25 +181,19 @@ var updateCheckbox = function(checkbox){
 
 
 function getTasks(listIDValue) {
-    if(listIDValue == -1) {
-      createListUser();
+      listIDNumber = listIDValue; 
+      let request = new XMLHttpRequest();
+      request.addEventListener("load", finishGetTasks);
+      request.open("post", "../actions/api_get_list.php", true);
+      request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      request.send(encodeForAjax({listID: listIDValue}));
 
-    } else if(listIDValue == -2) {
-      createListProject();
-
-    } else {
-        listIDNumber = listIDValue; 
-        let request = new XMLHttpRequest();
-        request.addEventListener("load", finishGetTasks);
-        request.open("post", "../actions/api_get_list.php", true);
-        request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        request.send(encodeForAjax({listID: listIDValue}));
-    }
 }
 
 function finishGetTasks(event) {
-  console.log(this.responseText);
-  document.getElementById('dialog9').innerHTML = this.responseText;
+
+  let dialog9 = document.getElementById('dialog9');
+  if(dialog9!= null) dialog9.innerHTML = this.responseText;
   event.preventDefault();
 }
 
@@ -213,7 +207,6 @@ function updateTitleListAjax() {
 }
 
 function addTaskAjax(textValue) {
-
   let request = new XMLHttpRequest();
   request.addEventListener("load", finishAddTask);
   request.open("post", "../actions/api_add_task.php");
@@ -291,57 +284,4 @@ function finishEditTaskName(event) {
   if(this.responseText != "") {
     alert(this.responseText);
   }
-}
-
-
-function saveTasksList() {
-
-  /*let TP = new Array(), T = new Array(), TDP = new Array(), TD = new Array(), TitleV = new Array();
-  let title = document.querySelector("#pop_up_title h1");
-  if(title && title.getAttribute("id") != null) {
-    TitleV[0] = 'arg[]=' + encodeURIComponent(title.innerText);
-    TitleV[1] = 'arg[]=' + encodeURIComponent(title.getAttribute("id"));
-    TitleV.join('&')
-  }
-  let tasksPriority = document.querySelectorAll("#incomplete-tasks .priorityMode");
-  if(tasksPriority) {
-    for(let i=0; i<tasksPriority.length; i++) {
-      TP.push(tasksPriority[i].innerText);
-      TP.push(tasksPriority[i].getAttribute("id"));
-    }
-  }
-  let tasks = document.querySelectorAll("#incomplete-tasks li:not(.priorityMode)");
-  if(tasks) {
-    for(let i=0; i<tasks.length; i++) {
-      T.push(tasks[i].innerText);
-      T.push(tasks[i].getAttribute("id"));
-    }
-  }
-  let tasksdonePriority = document.querySelectorAll("#completed-tasks .priorityMode");
-  if(tasksdonePriority) {
-    for(let i=0; i<tasksdonePriority.length; i++) {
-      TDP.push(tasksdonePriority[i].innerText);
-      TDP.push(tasksdonePriority[i].getAttribute("id"));
-    }
-  }
-  let tasksdone = document.querySelectorAll("#completed-tasks li:not(.priorityMode)");
-  if(tasksdone) {
-    for(let i=0; i<tasksdone.length; i++) {
-      TD.push(tasksdone[i].innerText);
-      TD.push(tasksdone[i].getAttribute("id"));
-    }
-  }
-
-  let request = new XMLHttpRequest();
-  request.addEventListener("load", finishSaveTasks);
-  request.open("post", "../actions/api_save_tasks.php");
-  request.setRequestHeader("Content-Type", "application/json");
-  request.send(encodeForAjax({titleValue: TitleV, TPValue: TP, TValue: T, TDPValue: TDP, TDValue: TD}));
-  
-
-}
-
-function finishSaveTasks(event) {
-  event.preventDefault();
-  alert(this.responseText);*/
 }
