@@ -24,7 +24,7 @@ function addLabel() {
     isUserValue = true;
   }
   window.$_GET = new URLSearchParams(location.search);
-  foreign = $_GET.get("project_id");
+  if(window.$_GET) foreign = $_GET.get("project_id");
 
   if(foreign == null)
     foreign = -1;
@@ -85,7 +85,7 @@ function searchLabel(color) {
   if(selected == null)
     return;
   for (var i = 0; i < selected.length; i++) {
-    selected[i].style.display = "block";
+    selected[i].style.display = "flex";
   }
 
 }
