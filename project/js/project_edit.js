@@ -74,6 +74,38 @@ function finishGetMembers(event) {
   event.preventDefault();
 }
 
+function addMember(submitButton){
+
+  let addMemberButtonsDiv = submitButton.parentNode;
+  let addMemberDiv = addMemberButtonsDiv.parentNode;
+  let input = addMemberDiv.querySelector("input[name=memberUsername]");
+
+  let username = input.value;
+  let foreign;
+
+  window.$_GET = new URLSearchParams(location.search);
+  if($_GET.get("project_id") != null) foreign = $_GET.get("project_id");
+
+  if(username != null && foreign != null){
+    addMemberAjax(foreign, username);
+  }
+
+  closeDialog("Add Member");
+
+}
+
+function addMemberAjax(projectID, memberUsername){
+  let request = new XMLHttpRequest();
+  request.addEventListener("load", finishAddMember);
+  request.open("post", "../actions/api_add_member.php", true);
+  request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+  request.send(encodeForAjax({project_ID: projectID, member_Username: memberUsername}));
+}
+  
+function finishAddMember(event) {
+  event.preventDefault();
+}
+
 
 function finishProjectBio(event) {
   event.preventDefault();

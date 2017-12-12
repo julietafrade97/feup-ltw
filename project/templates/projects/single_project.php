@@ -20,7 +20,7 @@
     <div id="members">
         <div class="header">
             <h1>Members</h1>
-            <button onclick="openDialog('Add Member')">
+            <button onclick="openDialog('Add Member', <?php echo $projectID ?>)">
                 <span class="lnr lnr-users"></span>
             </button>
         </div>

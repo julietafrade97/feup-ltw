@@ -33,7 +33,7 @@
 
             $stmt = $dbh->prepare('INSERT INTO ProjectUser(UserID, ProjectID) VALUES(:UserID, :ProjectID)');
             $stmt->bindParam(':UserID', $userID);
-            $stmt->bindParam('projectID', $projectID);
+            $stmt->bindParam(':ProjectID', $projectID);
             if($stmt->execute())
                 return true;
             else
