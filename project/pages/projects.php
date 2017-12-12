@@ -6,6 +6,7 @@ $projects = getUserProjects(getUserID(), 'FALSE');
 for($i=0; $i<count($projects); $i++) {
     $users[$i] = getProjectUsers($projects[$i]['ID']);
 }
+
 include_once('../templates/common/header.php');
 include_once('../templates/common/aside.php');
 include_once('../templates/dialogs/add_project.php');

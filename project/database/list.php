@@ -60,6 +60,18 @@
 		}
 	}
 
+	function getProjectLists($projectID, $isArchived) {
+		global $dbh;
+		try {
+			$stmt = $dbh->prepare('SELECT List.ID, List.Name, Category.Color FROM List JOIN Category ON Category.ID = List.CategoryID WHERE Category.ProjectID = ? AND List.isArchived = ? ORDER BY Category.Color');
+			$stmt->execute(array($projectID, $isArchived));
+			return $stmt->fetchAll();
+		
+		} catch(PDOException $e) {
+			return null;
+		}
+	}
+
 	function getCategoryLists($categoryID, $isArchived) {
 		global $dbh;
 		try {

@@ -12,7 +12,11 @@ if(!is_numeric($projectID))
     header('Location:notfound.php');    
 
 $categories = getProjectCategories($projectID);
-
+$lists = getProjectLists($projectID, 'FALSE');
+$tasks = null;
+for($i=0; $i<count($lists); $i++) {
+    $tasks[$i] = getTasksDone($lists[$i]['ID'], 'FALSE');
+}
 if(empty($categories) || $categories == null)
     header('Location:notfound.php');
 
