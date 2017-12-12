@@ -1,4 +1,7 @@
-<?php include_once(__DIR__.'/../../includes/init.php'); ?>
+<?php
+    include_once(__DIR__.'/../../includes/init.php');
+    include_once(__DIR__.'/../dialogs/delete_account.php');
+?>
 
 <h1>Personal Information</h1>
 <div class="content">
@@ -36,8 +39,3 @@
         </div>
     </div>
 </div>
-
-
-<?php
-include_once(__DIR__.'/../dialogs/delete_account.php');
-?>

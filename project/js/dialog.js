@@ -9,6 +9,7 @@
  * dialog 8: change label
  * dialog 9: list
  * dialog 10: add project
+ * dialog 11: clear archive;
  */
 
 // Load the dialogs
@@ -22,6 +23,7 @@ let dialog7 = document.getElementById("dialog7");
 let dialog8 = document.getElementById("dialog8");
 let dialog9 = document.getElementById("dialog9");
 let dialog10 = document.getElementById("dialog10");
+let dialog11 = document.getElementById("dialog11");
 
 function openDialog(value, id) {
   switch (value) {
@@ -47,9 +49,7 @@ function openDialog(value, id) {
       dialog7.style.display = "block";
       break;
     case "Change Label":
-      document.getElementById("pick-label-btn").value = "Submit";
-      //document.getElementById("pick-label-btn").onclick = Bar;
-      dialog8.style.display = "block";
+      dialog1.style.display = "block";
       break;
     case "List":
       getTasks(id);
@@ -59,9 +59,15 @@ function openDialog(value, id) {
       dialog10.style.display = "block";
       break;
     case "Add List":
-      document.getElementById("pick-label-btn").value = "Next";
-      document.getElementById("pick-label-btn").onclick = openDialog("List", -1);
+      addNewList();
+      dialog8.style.display = "none";
+      break;
+    case "Choose Label":
+      getLabels(id);
       dialog8.style.display = "block";
+      break;
+    case "Clear Archive":
+      dialog11.style.display = "block";
       break;
   }
 }
@@ -98,6 +104,9 @@ function closeDialog(value) {
     case "Add Project":
       dialog10.style.display = "none";
       break;
+    case "Clear Archive":
+      dialog11.style.display = "none";
+      break;
   }
 }
 
@@ -132,6 +141,9 @@ window.onclick = function(event) {
       break;
     case dialog10:
       dialog10.style.display = "none";
+      break;
+    case "Clear Archive":
+      dialog11.style.display = "none";
       break;
   }
 };

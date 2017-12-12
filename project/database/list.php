@@ -5,11 +5,11 @@
 		global $dbh;
 		try {
 
-			$stmt = $dbh->prepare('INSERT INTO List(Name, CategoryID ,isArchived) VALUES (:Name, :CategoryID ,:isArchived)');
+			$stmt = $dbh->prepare('INSERT INTO List(Name, CategoryID) VALUES (:Name, :CategoryID)');
 			$stmt->bindParam(':Name', $listName);
 			$stmt->bindParam(':CategoryID', $categoryID);
 			if($stmt->execute())
-		 		$listID = $dbh->lastInsertId();
+		 		return $dbh->lastInsertId();
 			else
 				return -1;
 		} catch(PDOException $e) {

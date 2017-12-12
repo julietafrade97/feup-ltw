@@ -12,11 +12,9 @@ if (bioContainer !== null) {
   var editDescription = bioContainer.querySelector("textarea");
   var labelTitle = bioContainer.querySelector("h1");
   var labelDescription = bioContainer.querySelector("p");
-
 }
 
 let editProject = function() {
-
   let containsClass = bioContainer.classList.contains("editMode");
 
   if (containsClass) {
@@ -32,17 +30,22 @@ let editProject = function() {
 };
 
 let bindProjectEvents = function() {
-  let editButton = bioContainer.querySelector("button.edit");
-  editButton.onclick = editProject;
+  if (bioContainer !== null) {
+    let editButton = bioContainer.querySelector("button.edit");
+    editButton.onclick = editProject;
+  }
 };
 
 bindProjectEvents();
 
 //update project bio information in database
 function changeProjectBio() {
-  if(editTitle.value == labelTitle.innerText && editDescription.value == labelDescription.innerText)
+  if (
+    editTitle.value == labelTitle.innerText &&
+    editDescription.value == labelDescription.innerText
+  )
     return true;
-    
+
   let request = new XMLHttpRequest();
   request.open("POST", "../actions/action_change_project_bio.php", true);
   request.addEventListener("load", finishProjectBio);
@@ -72,11 +75,10 @@ function addUserProject(input) {
     clearTimeout(timeoutCurrentValue);
 
     //clearlist
-    let dataList = document.getElementById('usernamesList');
+    let dataList = document.getElementById("usernamesList");
     while (dataList.firstChild) {
-        dataList.removeChild(dataList.firstChild);
+      dataList.removeChild(dataList.firstChild);
     }
-
   }
   timeoutCurrentValue = setTimeout(function() {
     getSimilarUsers(input.value);
@@ -96,16 +98,14 @@ function getSimilarUsers(input) {
 }
 
 function usersReceived() {
+  let users = JSON.parse(this.responseText);
 
-    let users = JSON.parse(this.responseText);
+  for (let i = 0; i < users.length; i++) {
+    let dataList = document.getElementById("usernamesList");
 
-    for (let i = 0; i < users.length; i++) {
-      let dataList = document.getElementById('usernamesList');
+    let option = document.createElement("option");
 
-      let option = document.createElement('option');
-
-      option.value = users[i].Username;
-      dataList.appendChild(option);
-    }
-
+    option.value = users[i].Username;
+    dataList.appendChild(option);
+  }
 }

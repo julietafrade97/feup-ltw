@@ -12,6 +12,7 @@
 <script src="../js/dialog.js"></script>
 <script src="../js/user_info.js"></script>
 <script src="../js/label.js"></script>
+<script src="../js/list.js"></script>
 </body>
 
 </html>
