@@ -40,6 +40,7 @@ function openDialog(value, id1, id2) {
       dialog4.style.display = "block";
       break;
     case "All Members":
+      getMembers(id1);
       dialog5.style.display = "block";
       break;
     case "Delete List":

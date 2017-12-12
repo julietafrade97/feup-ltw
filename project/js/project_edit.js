@@ -60,6 +60,21 @@ function changeProjectBio() {
   );
 }
 
+function getMembers(ProjectID){
+  let request = new XMLHttpRequest();
+  request.addEventListener("load", finishGetMembers);
+  request.open("post", "../actions/api_get_members.php", true);
+  request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+  request.send(encodeForAjax({projectID: ProjectID}));
+}
+
+function finishGetMembers(event) {
+  let dialog5 = document.getElementById('dialog5');
+  if(dialog5!= null) dialog5.innerHTML = this.responseText;
+  event.preventDefault();
+}
+
+
 function finishProjectBio(event) {
   event.preventDefault();
   if (this.responseText !== "") {
