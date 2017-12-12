@@ -216,6 +216,11 @@ header #header_buttons {
   display: flex;
 }
 
+#error_messages{
+  color:white;
+  text-transform: uppercase;
+}
+
 header span {
   font-size: 1.5em;
   padding: 0 0.5em;
