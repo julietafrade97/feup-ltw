@@ -1,15 +1,17 @@
 <div class="list_popup">
-    <form id="pop_up_header" action="#">
-        <button onclick="openDialog('Delete List')">
+    <div id="pop_up_header">
+        <button onclick="openDialog('Delete List', '<?php echo $listID ?>')">
             <span class="lnr lnr-trash"></span>
         </button>
-        <button>
-            <span class="lnr lnr-inbox"></span>
-        </button>
+        <form action="../actions/action_archieve_list.php" method="post">
+            <input type="hidden" name="archieveListID" value="<?php echo $listID ?>">
+            <span class="lnr lnr-inbox"></span>         
+            <input type="submit"  value="Submit"/>
+        </form>
         <button onclick="closeDialog('List')">
             <span class="lnr lnr-cross"></span>
         </button>
-    </form>
+    </div>
     <div id="pop_up_title">
         <label> Title </label>
         <input type="text">
