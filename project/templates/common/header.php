@@ -55,7 +55,7 @@
 
             <div id="header_buttons">
 
-                <a onclick="plus_button()">
+                <a onclick="plus_button(1)">
                     <div class="plus">
                         <span class="lnr lnr-cross"></span>
                     </div>

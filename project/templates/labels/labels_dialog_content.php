@@ -8,8 +8,8 @@
         <?php }?>
 
         <div class="buttons">
-            <input onclick="closeDialog('Change Label')" type="button" value="Cancel">
-            <input id="pick-label-btn" type="button" value="Next" onclick="openDialog('Add List')">
+            <input onclick="closeDialog('Pick Label')" type="button" value="Cancel">
+            <input id="pick-label-btn" type="button">
         </div>
     </form>
 </div>

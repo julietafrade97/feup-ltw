@@ -2,7 +2,7 @@
 <div  class="list_box <?php echo "color".substr($lists[$i]['Color'],1)?>">
     <div id="list_box_header">
         <h1><?php echo $lists[$i]['Name']?></h1>
-        <button onclick="openDialog('Change Label')">
+        <button onclick="plus_button(0, <?php echo $lists[$i]['ID'] ?>)">
             <i class="fa fa-bookmark" aria-hidden="true" style="color: <?php echo $lists[$i]['Color']?>"></i>
         </button>
     </div>

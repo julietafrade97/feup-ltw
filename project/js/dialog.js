@@ -25,7 +25,7 @@ let dialog9 = document.getElementById("dialog9");
 let dialog10 = document.getElementById("dialog10");
 let dialog11 = document.getElementById("dialog11");
 
-function openDialog(value, id) {
+function openDialog(value, id1, id2) {
   switch (value) {
     case "Add Label":
       dialog1.style.display = "block";
@@ -48,11 +48,12 @@ function openDialog(value, id) {
     case "Delete Account":
       dialog7.style.display = "block";
       break;
-    case "Change Label":
-      dialog1.style.display = "block";
+    case "Pick Label":
+      getLabels(id1, id2);
+      dialog8.style.display = "block";
       break;
     case "List":
-      getTasks(id);
+      getTasks(id1);
       dialog9.style.display = "block";
       break;
     case "Add Project":
@@ -61,10 +62,6 @@ function openDialog(value, id) {
     case "Add List":
       addNewList();
       dialog8.style.display = "none";
-      break;
-    case "Choose Label":
-      getLabels(id);
-      dialog8.style.display = "block";
       break;
     case "Clear Archive":
       dialog11.style.display = "block";
@@ -95,7 +92,7 @@ function closeDialog(value) {
     case "Delete Account":
       dialog7.style.display = "none";
       break;
-    case "Change Label":
+    case "Pick Label":
       dialog8.style.display = "none";
       break;
     case "List":
@@ -142,7 +139,7 @@ window.onclick = function(event) {
     case dialog10:
       dialog10.style.display = "none";
       break;
-    case "Clear Archive":
+    case dialog11:
       dialog11.style.display = "none";
       break;
   }
