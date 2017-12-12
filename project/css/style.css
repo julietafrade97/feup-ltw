@@ -1134,14 +1134,24 @@ form input.invalid + form .hint {
   margin: 2.5em 0;
 }
 
-#archive li button {
+#archive .submit_button {
+  display: none;
+}
+
+#archive li .archive_button {
   font-size: 1em;
+  margin-left: 1em;
+  cursor: pointer;
 }
 
 #archive li:hover {
-  cursor: pointer;
   font-weight: normal;
   background-color: #f6f5f36e;
+}
+
+#archive .lnr-heart-pulse,
+#archive .lnr-cross {
+  color: #222a3f;
 }
 
 #archive .lnr-heart-pulse:hover,
