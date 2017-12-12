@@ -11,9 +11,7 @@
             </a>
         </nav>
         <div id="aside_content">
-
             <hr>
-
             <section id="labels_section">
                 <h2>Labels</h2>
 
