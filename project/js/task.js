@@ -184,6 +184,7 @@ var taskCompleted = function(checkbox) {
   var completedTasksHolder = document.getElementById("completed-tasks");
   completedTasksHolder.appendChild(listItem);
 
+
 };
 
 // Mark a task as incomplete

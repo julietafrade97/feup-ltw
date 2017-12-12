@@ -24,10 +24,10 @@ function addLabel() {
   ) {
     isUserValue = true;
   }
+  let foreign = -1;
   window.$_GET = new URLSearchParams(location.search);
   if($_GET.get("project_id") != null) foreign = $_GET.get("project_id");
 
-  if (foreign == null) foreign = -1;
   let request = new XMLHttpRequest();
   request.addEventListener("load", finishAddLabel);
   request.open("post", "../actions/api_add_label.php", true);
