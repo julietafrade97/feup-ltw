@@ -1,15 +1,21 @@
 <?php
+include_once('../includes/init.php');
+include_once('../database/list.php');
 
-$title = $_POS['listTitle'];
+$title = $_POST['listTitle'];
 $id = $_POST['listID'];
 
-if(!is_numeric($id))
-    return false;
+if(!is_numeric($id)) {
+    $_SESSION['ERROR'] = "Error changing list Title";
+    echo json_encode(-1);
+}
+    
 
 if(updateListName($title, $id)) {
-    return true;
+    echo json_encode(0);
 } else {
-    return false;
+    $_SESSION['ERROR'] = "Error changing list Title";
+    echo json_encode(-1);
 }
 
 ?>

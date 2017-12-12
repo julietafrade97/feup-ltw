@@ -1,7 +1,5 @@
 var idCounter = -1; //id for new checkbox
 
-var listIDNumber = -1;
-
 //New Task List Item
 var createNewTaskElement = function(taskString) {
 
@@ -94,7 +92,9 @@ var addTask = function() {
     //Append listItem to incompleteTasksHolder
     let incompleteTasksHolder = document.getElementById("incomplete-tasks");
     if(incompleteTasksHolder) incompleteTasksHolder.appendChild(listItem);
-    addTaskAjax(taskString);
+    let listID = document.querySelector('label[name=labelListName]');
+    if(listID != null) listID = listID.getAttribute("id");
+    addTaskAjax(taskString, listID);
     taskInput.value = "";
   }
 };
@@ -135,9 +135,12 @@ var editListTitle = function(editButton) {
   let label = listTitle.querySelector("label");
  
   let containsClass = listTitle.classList.contains("editMode");
+  let listID = document.querySelector('label[name=labelListName]');
+  if(listID != null) listID = listID.getAttribute("id");
  
   if (containsClass) {
     label.innerText = editInput.value;
+    updateTitleListAjax(label.innerText, listID);
   } else {
     editInput.value = label.innerText;
   }
@@ -203,7 +206,6 @@ var updateCheckbox = function(checkbox){
 
 
 function getTasks(listIDValue) {
-      listIDNumber = listIDValue; 
       let request = new XMLHttpRequest();
       request.addEventListener("load", finishGetTasks);
       request.open("post", "../actions/api_get_list.php", true);
@@ -219,21 +221,27 @@ function finishGetTasks(event) {
   event.preventDefault();
 }
 
-function updateTitleListAjax() {
-
+function updateTitleListAjax(newTitle, listIDValue) {
+  listIDValue = listIDValue.substr(4);
   let request = new XMLHttpRequest();
-  request.addEventListener("load", finishSaveTasks);
+  request.addEventListener("load", finishUpdateTitle);
   request.open("post", "../actions/api_change_list_name.php");
   request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-  request.send(encodeForAjax({listTitle: titleText, listID: listIDNumber}));
+  request.send(encodeForAjax({listTitle: newTitle, listID: listIDValue}));
 }
 
-function addTaskAjax(textValue) {
+function finishUpdateTitle(event) {
+  event.preventDefault();
+  let result = JSON.parse(this.responseText);
+}
+
+function addTaskAjax(textValue, listIDValue) {
+  listIDValue = listIDValue.substr(4);
   let request = new XMLHttpRequest();
   request.addEventListener("load", finishAddTask);
   request.open("post", "../actions/api_add_task.php");
   request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-  request.send(encodeForAjax({text: textValue, listID: listIDNumber}));
+  request.send(encodeForAjax({text: textValue, listID: listIDValue}));
 }
 
 function finishAddTask(event) {

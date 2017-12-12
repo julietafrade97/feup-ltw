@@ -6,7 +6,7 @@ $listID = $_POST['listID'];
 
 if(!is_numeric($listID))
     echo "";
-$listName = getListName($listID);
+$list = getList($listID);
 $tasks = getTasks($listID, 'FALSE');
 $tasksdone = getTasks($listID, 'TRUE');
 

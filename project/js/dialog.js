@@ -53,7 +53,7 @@ function openDialog(value, id1, id2) {
       break;
     case "Pick Label":
       getLabels(id1, id2);
-      dialog1.style.display = "block";
+      dialog8.style.display = "block";
       break;
     case "List":
       getTasks(id1);
@@ -95,7 +95,7 @@ function closeDialog(value) {
     case "Delete Account":
       dialog7.style.display = "none";
       break;
-    case "Change Label":
+    case "Pick Label":
       dialog8.style.display = "none";
       break;
     case "List":

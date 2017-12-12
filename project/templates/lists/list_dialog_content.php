@@ -13,12 +13,12 @@
         </button>
     </div>
     <div id="pop_up_title">
-        <label> Title </label>
+        <label name="labelListName" id="List<?php echo $listID ?>"><?php echo $list['Name'] ?></label>
         <input type="text">
         <button class="edit" onclick="editListTitle(this)">
             <span class="lnr lnr-pencil icon"></span>
         </button>
-        <div id="rectangle" style="background: #865766"></div>
+        <div id="rectangle" style="background: <?php echo $list['Color']?>"></div>
     </div>
     <h3>Todo</h3>
     <ul id="incomplete-tasks">

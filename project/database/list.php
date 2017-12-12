@@ -18,11 +18,11 @@
 		
 	}
 
-	function getListName($listID) {
+	function getList($listID) {
 		global $dbh;
 		try {
 
-			$stmt = $dbh->prepare('SELECT Name FROM List WHERE ID = ?');
+			$stmt = $dbh->prepare('SELECT List.Name, Category.Color FROM List JOIN Category ON List.CategoryID = Category.ID WHERE List.ID = ?');
 			$stmt->execute(array($listID));
 			return $stmt->fetch();
 
