@@ -69,7 +69,6 @@ input[type="email"] {
   padding: 0.5em;
   margin: 0.5em 0;
   width: 100%;
-  height: 10%;
   box-sizing: border-box;
   outline: none;
 }
@@ -146,10 +145,8 @@ input[type="email"] {
 
 .register_content {
   grid-area: content;
-  display: flex;
+  display: block;
   justify-self: center;
-  flex-direction: column;
-  align-items: flex-start;
   background-color: #f6f5f3;
   height: min-content;
   padding: 2em 3em;
@@ -159,7 +156,6 @@ input[type="email"] {
 
 .register_content.signup {
   align-self: center;
-  min-height: min-content;
 }
 
 .register_content h1 {
@@ -167,10 +163,6 @@ input[type="email"] {
   font-weight: 600;
   text-transform: uppercase;
   color: #222a3f;
-}
-
-.register_content form {
-  width: 100%;
 }
 
 .register_content input[type="submit"] {
@@ -693,7 +685,7 @@ main {
 
 /*---*/
 
-.list_box{
+.list_box {
   padding: 0 1em 0em 1em;
   word-break: break-all;
 }
@@ -826,20 +818,20 @@ main {
   z-index: 1;
 }
 
-#pop_up_title button{
-  display:none;
+#pop_up_title button {
+  display: none;
 }
 
-#pop_up_title:hover > button{
-  display:block;
+#pop_up_title:hover > button {
+  display: block;
   background-color: white;
-  z-index:2;
+  z-index: 2;
 }
 
 #pop_up_title input[type="text"] {
   display: none;
   font-weight: 300;
-  font-size:1.7em;
+  font-size: 1.7em;
   height: 1.7em;
   font-size: 1.3em;
   padding-left: 0.7em;
@@ -1082,11 +1074,11 @@ form .hint {
 }
 
 form input.invalid {
-  border: 1px solid red;
-  box-shadow: red 0 0 2px 2px;
+  border: 1px solid rgba(255, 0, 0, 0.5);
+  box-shadow: rgba(255, 0, 0, 0.5) 0 0 2px 2px;
 }
 
-form input.invalid + .hint {
+form input.invalid + form .hint {
   display: block;
 }
 
