@@ -1,7 +1,11 @@
 <?php
 include_once('../includes/init.php');
 include_once('../database/project.php');
-$projects = getUserProjects(getUserID(), 'FALSE');
+$userID = getUserID();
+if(!is_numeric($userID))
+    header('Location:notfound.php');
+
+$projects = getUserProjects($userID, 'FALSE');
  
 for($i=0; $i<count($projects); $i++) {
     $users[$i] = getProjectUsers($projects[$i]['ID']);

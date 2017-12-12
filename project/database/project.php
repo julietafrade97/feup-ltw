@@ -1,26 +1,23 @@
 <?php
 
 
-    function createProject($userID, $Name, $Description) {
+    function createProject($userID, $NameTeste, $DescriptionTeste) {
 
         global $dbh;
-        try {
+		try {
 
-            $stmt = $dbh->prepare('INSERT INTO Project(Name, Description, isArchived) VALUES(:Name, :Description, : isArchived)');
-            $stmt->bindParam(':Name', $Name);
-            $stmt->bindParam(':Description', $Description);
-            $stmt->bindParam(':isArchived', FALSE);
-            if($stmt->execute())
-                $projectID =  $dbh->lastInsertedId();
-            else
-                return -1;
+			$stmt = $dbh->prepare('INSERT INTO Project(Name, Description) VALUES(:Name, :Description)');
+			$stmt->bindParam(':Name', $NameTeste);
+			$stmt->bindParam(':Description', $DescriptionTeste);
+			if($stmt->execute())
+		 		$projectID = $dbh->lastInsertId();
+			else
+				return -1;
+		} catch(PDOException $e) {
+			return -1;
+		}
 
-        } catch(PDOException $e) {
-            
-            return -1;
-        }
-
-        if(addUsertoProject($userID, $projectID))
+       if(addUsertoProject($userID, $projectID))
             return $projectID;
         else
             return -1;

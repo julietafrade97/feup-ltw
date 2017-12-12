@@ -34,7 +34,7 @@ DROP TABLE IF EXISTS Project;
 CREATE TABLE Project (
     ID          INTEGER PRIMARY KEY AUTOINCREMENT,
     Name        STRING  NOT NULL,
-    Description TEXT    NOT NULL,
+    Description STRING   NOT NULL,
     isArchived  BOOLEAN NOT NULL
                         DEFAULT FALSE
 );
