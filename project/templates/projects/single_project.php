@@ -30,7 +30,7 @@
             <img class="member" src="../assets/portrait.png" alt="Project Member">
             <img class="member" src="../assets/portrait.png" alt="Project Member">
         </div>
-        <button class="button_text" onclick="openDialog('All Members')">See All</button>
+        <button class="button_text" onclick="openDialog('All Members', <?php echo $projectID ?>)">See All</button>
     </div>
     <div id="lists">
         <h1>Lists</h1>

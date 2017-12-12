@@ -119,4 +119,22 @@
 		}
 	}
 
+	function changeLabelList($listID, $newLabelID) {
+		global $dbh;
+		try {
+
+			$stmt = $dbh->prepare('UPDATE List SET CategoryID = :CategoryID WHERE ID = :ID');
+			$stmt->bindParam(':CategoryID', $newLabelID);
+			$stmt->bindParam(':ID', $listID);
+			if($stmt->execute())
+				return true;
+			else
+				return false;
+		
+		} catch(PDOException $e) {
+
+			return false;
+		}
+	}
+
 ?>

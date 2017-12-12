@@ -25,7 +25,7 @@ function addLabel() {
     isUserValue = true;
   }
   window.$_GET = new URLSearchParams(location.search);
-  if(window.$_GET) foreign = $_GET.get("project_id");
+  if($_GET.get("project_id") != null) foreign = $_GET.get("project_id");
 
   if (foreign == null) foreign = -1;
   let request = new XMLHttpRequest();
@@ -108,16 +108,19 @@ function getLabels(isUserValue, isAddValue) {
     return false;
   isUserVar = isUserValue;
   isAddVar = isAddValue;
+  let id= -1;
+  window.$_GET = new URLSearchParams(location.search);
+  if($_GET.get("project_id") != null) id = $_GET.get("project_id");
   let request = new XMLHttpRequest();
   request.addEventListener("load", finishGetLabels);
   request.open("post", "../actions/api_get_labels.php", true);
   request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-  request.send(encodeForAjax({ isUser: isUserValue }));
+  request.send(encodeForAjax({ isUser: isUserValue, foreignID: id }));
 }
 
 function finishGetLabels(event) {
   let dialog8 = document.getElementById("dialog8");
-  if (dialog8 != null) {
+  if (dialog8 != null && this.responseText != "error") {
     dialog8.innerHTML = this.responseText;
     changeButton();
   }
@@ -133,11 +136,11 @@ function changeButton() {
   } else {
     document.getElementById("pick-label-btn").value = "Submit";
     document.getElementById("pick-label-btn").onclick = function() {
-      //função que muda categoria na base de dados da lista cujo id é listID, sim, um onclick pode chamar duas funções
-      /*
-      changeLabel(listID);
-      closeDialog("Pick Label");
-      */
+
+      let label = document.querySelector("input[type=radio][name=radioLabels]:checked");
+      if(label != null) label = label.getAttribute("id");
+      if(label != null) label = label.substr(5);
+      changeLabel(listID, label);
       closeDialog("Pick Label");
     };
   }
@@ -152,4 +155,16 @@ function plus_button(isPlusButton, id) {
   } else if (document.getElementById("project_grid") !== null) {
     openDialog("Add Project");
   }
+}
+
+function changeLabel(listIDValue, newLabelValue) {
+  let request = new XMLHttpRequest();
+  request.addEventListener("load", finishChangeLabelList);
+  request.open("post", "../actions/api_change_label_list.php", true);
+  request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+  request.send(encodeForAjax({listID: listIDValue, newLabelID: newLabelValue}));
+}
+
+function finishChangeLabelList(event) {
+  event.preventDefault();
 }
