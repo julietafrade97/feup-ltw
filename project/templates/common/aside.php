@@ -17,11 +17,9 @@
 
                 <?php if($categories !== null) {
                     foreach($categories as $category) { ?>
-                <div onclick="searchLabel('<?php echo " color ".substr($category['Color'],1)?>')" class="label_option">
+                <div onclick="searchLabel('<?php echo "color".substr($category['Color'],1)?>')" class="label_option">
                     <div class="circle" style="background: <?php echo $category['Color'] ?>"></div>
-                    <p>
-                        <?php echo $category['Name'] ?>
-                    </p>
+                    <p><?php echo $category['Name'] ?></p>
                     <button>
                         <span class="lnr lnr-pencil"></span>
                     </button>
