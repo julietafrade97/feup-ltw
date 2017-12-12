@@ -51,6 +51,10 @@
                 <img src="../assets/logo.svg" alt="Meraki Logo (Cup of Coffee)">
                 <h1>Meraki</h1>
             </a>
+            
+            <p id="error_messages">
+                <?php echo $error?>
+            </p>
 
             <div id="header_buttons">
                 <a href="../actions/action_logout.php">

@@ -72,4 +72,20 @@
 		}
 	}
 
+	function deleteList($listID) {
+		global $dbh;
+		try {
+
+			$stmt = $dbh->prepare('DELETE FROM List WHERE ID = :ID');
+			$stmt->bindParam(':ID', $listID);
+			if($stmt->execute())
+				return true;
+			else
+				return false;
+		
+		} catch(PDOException $e) {
+			return false;
+		}
+	}
+
 ?>

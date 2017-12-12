@@ -53,6 +53,10 @@
                 <h1>Meraki</h1>
             </a>
 
+            <p id="error_messages">
+                <?php echo $error?>
+            </p>
+
             <div id="header_buttons">
 
                 <a onclick="plus_button(1)">

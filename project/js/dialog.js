@@ -43,6 +43,8 @@ function openDialog(value, id1, id2) {
       dialog5.style.display = "block";
       break;
     case "Delete List":
+      let setID = document.querySelector("input[name=deletelistID]");
+      if(setID && id != null) setID.value = id;
       dialog6.style.display = "block";
       break;
     case "Delete Account":

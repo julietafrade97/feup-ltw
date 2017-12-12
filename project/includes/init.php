@@ -3,9 +3,9 @@
   include_once(__DIR__.'/../database/connection.php');
 
   if(isset($_SESSION['ERROR'])){
-  	$error = $_SESSION['ERROR'];
+    $error = $_SESSION['ERROR'];
   	unset($_SESSION['ERROR']);
-
+    
   } else {
   	$error = "";
   }
