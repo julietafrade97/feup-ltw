@@ -10,7 +10,7 @@ include_once('database/user.php');
 		$_SESSION['ERROR'] = 'Duplicated Email';
 		header("Location:".$_SERVER['HTTP_REFERER']."");
 	}
- 	else if (($userID = createUser($_POST['username'], $_POST['password'], $_POST['name'], $_POST['email'], $_POST['profilePhoto'])) != -1) {
+ 	else if (($userID = createUser($_POST['username'], $_POST['password'], $_POST['name'], $_POST['email'])) != -1) {
 
   		echo 'User Registered successfully';
  		setCurrentUser($userID, $_POST['username']);

@@ -21,12 +21,11 @@
     $passwordhashed = hash('sha256', $password);
     global $dbh;
     try {
-  	  $stmt = $dbh->prepare('INSERT INTO User(Username, Password, Name, Email, Photo) VALUES (:Username,:Password,:Name,:Email,:Photo)');
+  	  $stmt = $dbh->prepare('INSERT INTO User(Username, Password, Name, Email) VALUES (:Username,:Password,:Name,:Email)');
   	  $stmt->bindParam(':Username', $username);
   	  $stmt->bindParam(':Password', $passwordhashed);
   	  $stmt->bindParam(':Name', $name);
   	  $stmt->bindParam(':Email', $email);
-  	  $stmt->bindParam(':Photo', $profilePhoto);
       if($stmt->execute()){
         $id = getID($username);
         return $id;
