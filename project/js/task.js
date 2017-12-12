@@ -4,11 +4,6 @@ var listIDNumber = -1;
 
 //New Task List Item
 var createNewTaskElement = function(taskString) {
-  if (taskString == "") {
-    taskString = "New Task";
-  }
-
-  addTaskAjax(taskString);
 
   //Create List Item
   let listItem = document.createElement("li");
@@ -32,11 +27,12 @@ var createNewTaskElement = function(taskString) {
   //Each element needs modifying
   listItem.className = "task_line checkboxAndLabel";
 
-  checkBox.id = "" + idCounter;
+  checkBox.id = "Task" + idCounter;
   checkBox.onchange = function() {
     updateCheckbox(this);
   }
-  label.htmlFor = "" + idCounter;
+  label.htmlFor = "Task" + idCounter;
+  listItem.id= ""+idCounter;
   idCounter = idCounter-1;
 
   checkBox.type = "checkbox";
@@ -84,15 +80,21 @@ var addTask = function() {
   console.log("Add task...");
 
   let taskInput = document.getElementById("new-task");
-
+  let taskString;
   let elems = document.getElementsByClassName("editMode");
 
-  if (elems.length == 0) {
+  if (elems != null && elems.length == 0 && taskInput != null) {
+    if (taskInput.value == "") {
+       taskString = "New Task";
+    } else {
+      taskString = taskInput.value;
+    }
     //Create a new list item with the text from #new-task:
-    let listItem = createNewTaskElement(taskInput.value);
+    let listItem = createNewTaskElement(taskString);
     //Append listItem to incompleteTasksHolder
     let incompleteTasksHolder = document.getElementById("incomplete-tasks");
-    incompleteTasksHolder.appendChild(listItem);
+    if(incompleteTasksHolder) incompleteTasksHolder.appendChild(listItem);
+    addTaskAjax(taskString);
     taskInput.value = "";
   }
 };
@@ -236,8 +238,14 @@ function addTaskAjax(textValue) {
 
 function finishAddTask(event) {
   event.preventDefault();
-  if(this.responseText != "") {
-    alert(this.responseText);
+  let taskID = JSON.parse(this.responseText);
+  if(taskID != -1) {
+    let listItem = document.getElementById("-1");
+    if(listItem) listItem.id = ""+taskID;
+    let inputItem = document.getElementById("Task-1");
+    if(inputItem) inputItem.id="Task"+taskID;
+    let labelItem = document.querySelector("label[for=Task-1]");
+    if(labelItem) labelItem.setAttribute("for", "Task"+taskID);
   }
 }
 
