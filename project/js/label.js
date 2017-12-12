@@ -24,10 +24,10 @@ function addLabel() {
   ) {
     isUserValue = true;
   }
+  let foreign = -1;
   window.$_GET = new URLSearchParams(location.search);
-  if(window.$_GET) foreign = $_GET.get("project_id");
+  if($_GET.get("project_id") != null) foreign = $_GET.get("project_id");
 
-  if (foreign == null) foreign = -1;
   let request = new XMLHttpRequest();
   request.addEventListener("load", finishAddLabel);
   request.open("post", "../actions/api_add_label.php", true);
@@ -46,7 +46,9 @@ function finishAddLabel(event) {
   event.preventDefault();
   let section = document.getElementById("labels_section");
   let space = document.getElementById("labels_section").lastChild;
-  if (space == null || section == null) return;
+  let mobileSection = document.getElementById("mobile_labels_section");
+  let mobileSpace = document.getElementById("mobile_labels_section").lastChild;
+  if (space == null || section == null || mobileSpace == null || mobileSection == null ) return;
   let categories = JSON.parse(this.responseText);
   if (categories == "") {
     return;
@@ -60,13 +62,9 @@ function finishAddLabel(event) {
       let element = document.createElement("DIV");
       element.className += "label_option";
       element.innerHTML =
-        '<div class="circle" style="background: ' +
-        categories[i].Color +
-        '"></div><p>' +
-        categories[i].Name +
-        '</p><button><span class="lnr lnr-pencil"></span></button><button onclick="openDialog(' +
-        delete_label +
-        ')"><span class="lnr lnr-cross"></span></button>';
+        '<div class="circle" style="background: ' + categories[i].Color + '"></div><p>' + categories[i].Name +
+        '</p><button onclick="openDialog(' + delete_label + ')"><span class="lnr lnr-cross"></span></button>';
+      mobileSection.insertBefore(element.cloneNode(true), mobileSpace);
       section.insertBefore(element, space);
     }
   }
@@ -108,16 +106,19 @@ function getLabels(isUserValue, isAddValue) {
     return false;
   isUserVar = isUserValue;
   isAddVar = isAddValue;
+  let id= -1;
+  window.$_GET = new URLSearchParams(location.search);
+  if($_GET.get("project_id") != null) id = $_GET.get("project_id");
   let request = new XMLHttpRequest();
   request.addEventListener("load", finishGetLabels);
   request.open("post", "../actions/api_get_labels.php", true);
   request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-  request.send(encodeForAjax({ isUser: isUserValue }));
+  request.send(encodeForAjax({ isUser: isUserValue, foreignID: id }));
 }
 
 function finishGetLabels(event) {
   let dialog8 = document.getElementById("dialog8");
-  if (dialog8 != null) {
+  if (dialog8 != null && this.responseText != "error") {
     dialog8.innerHTML = this.responseText;
     changeButton();
   }
@@ -133,11 +134,11 @@ function changeButton() {
   } else {
     document.getElementById("pick-label-btn").value = "Submit";
     document.getElementById("pick-label-btn").onclick = function() {
-      //função que muda categoria na base de dados da lista cujo id é listID, sim, um onclick pode chamar duas funções
-      /*
-      changeLabel(listID);
-      closeDialog("Pick Label");
-      */
+
+      let label = document.querySelector("input[type=radio][name=radioLabels]:checked");
+      if(label != null) label = label.getAttribute("id");
+      if(label != null) label = label.substr(5);
+      changeLabel(listID, label);
       closeDialog("Pick Label");
     };
   }
@@ -152,4 +153,16 @@ function plus_button(isPlusButton, id) {
   } else if (document.getElementById("project_grid") !== null) {
     openDialog("Add Project");
   }
+}
+
+function changeLabel(listIDValue, newLabelValue) {
+  let request = new XMLHttpRequest();
+  request.addEventListener("load", finishChangeLabelList);
+  request.open("post", "../actions/api_change_label_list.php", true);
+  request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+  request.send(encodeForAjax({listID: listIDValue, newLabelID: newLabelValue}));
+}
+
+function finishChangeLabelList(event) {
+  event.preventDefault();
 }

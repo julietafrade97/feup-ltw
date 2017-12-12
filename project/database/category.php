@@ -134,4 +134,20 @@
 
     }
 
+    function deleteCategory($categoryID) {
+		global $dbh;
+		try {
+
+			$stmt = $dbh->prepare('DELETE FROM Category WHERE ID = :ID');
+			$stmt->bindParam(':ID', $categoryID);
+			if($stmt->execute())
+				return true;
+			else
+				return false;
+		
+		} catch(PDOException $e) {
+			return false;
+		}
+	}
+
 ?>

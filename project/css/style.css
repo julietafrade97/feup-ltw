@@ -208,8 +208,8 @@ header #header_buttons {
   display: flex;
 }
 
-#error_messages{
-  color:white;
+#error_messages {
+  color: white;
   text-transform: uppercase;
 }
 
@@ -792,6 +792,22 @@ main {
 
 #pop_up_header span {
   font-size: 1.6em;
+}
+
+#pop_up_header label {
+  color: #222a3f;
+  text-align: center;
+  font-size: 0.7em;
+  padding: 0.45em 0.8em 0.2em 0.8em;
+  cursor: pointer;
+}
+
+#pop_up_header label:hover {
+  color: #948f8c;
+}
+
+#pop_up_header #archive_btn {
+  display: none;
 }
 
 #pop_up_title {

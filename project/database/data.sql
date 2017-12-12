@@ -19,6 +19,7 @@ INSERT INTO List (ID, Name, CategoryID, isArchived) VALUES (3, 'List3', 6, 'FALS
 INSERT INTO List (ID, Name, CategoryID, isArchived) VALUES (4, 'List4', 1, 'FALSE');
 INSERT INTO List (ID, Name, CategoryID, isArchived) VALUES (5, 'List5', 1, 'FALSE');
 INSERT INTO List (ID, Name, CategoryID, isArchived) VALUES (6, 'List6', 3, 'FALSE');
+INSERT INTO List (ID, Name, CategoryID, isArchived) VALUES (7, 'List7', 7, 'FALSE');
 
 INSERT INTO Task (ID, ListID, Name, Priority) VALUES (1, 1, 'Task1', 1);
 INSERT INTO Task (ID, ListID, Name, Priority, isDone) VALUES (2, 1, 'Task2', 1, 'TRUE');

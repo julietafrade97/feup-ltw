@@ -39,11 +39,24 @@
 
                     <div id="mobile_labels">
                         <hr>
-                        <section>
+                        <section id="mobile_labels_section">
                             <h2>Labels</h2>
+
+                            <?php if($categories !== null) {
+                                foreach($categories as $category) { ?>
+                            <div onclick="searchLabel('<?php echo "color".substr($category['Color'],1)?>')" class="label_option">
+                            <div class="circle" style="background: <?php echo $category['Color'] ?>"></div>
+                            <p><?php echo $category['Name'] ?></p>
+                            <button onclick="openDialog('Delete Label', <?php echo $category['ID'] ?>)">
+                                <span class="lnr lnr-cross"></span>
+                            </button>
+                            </div>
+                            <?php } ?>
+                            <?php } ?>
                         </section>
 
-                        <button class="addlabel" onclick="openDialog('Add Label')">Add Label</button>
+                        <button class="managelabel" onclick="resetSearchLabel()">Reset</button>
+                        <button class="managelabel" onclick="openDialog('Add Label')">Add Label</button>
                     </div>
                 </div>
             </nav>

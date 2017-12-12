@@ -60,6 +60,18 @@
 		}
 	}
 
+	function getProjectLists($projectID, $isArchived) {
+		global $dbh;
+		try {
+			$stmt = $dbh->prepare('SELECT List.ID, List.Name, Category.Color FROM List JOIN Category ON Category.ID = List.CategoryID WHERE Category.ProjectID = ? AND List.isArchived = ? ORDER BY Category.Color');
+			$stmt->execute(array($projectID, $isArchived));
+			return $stmt->fetchAll();
+		
+		} catch(PDOException $e) {
+			return null;
+		}
+	}
+
 	function getCategoryLists($categoryID, $isArchived) {
 		global $dbh;
 		try {
@@ -95,6 +107,24 @@
 
 			$stmt = $dbh->prepare('UPDATE List SET isArchived = :isArchived WHERE ID = :ID');
 			$stmt->bindParam(':isArchived', $isArchived);
+			$stmt->bindParam(':ID', $listID);
+			if($stmt->execute())
+				return true;
+			else
+				return false;
+		
+		} catch(PDOException $e) {
+
+			return false;
+		}
+	}
+
+	function changeLabelList($listID, $newLabelID) {
+		global $dbh;
+		try {
+
+			$stmt = $dbh->prepare('UPDATE List SET CategoryID = :CategoryID WHERE ID = :ID');
+			$stmt->bindParam(':CategoryID', $newLabelID);
 			$stmt->bindParam(':ID', $listID);
 			if($stmt->execute())
 				return true;

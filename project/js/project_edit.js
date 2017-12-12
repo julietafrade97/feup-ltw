@@ -51,6 +51,7 @@ function changeProjectBio() {
   request.addEventListener("load", finishProjectBio);
   request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
   window.$_GET = new URLSearchParams(location.search);
+  if($_GET.get("project_id") == null) return false;
   request.send(
     encodeForAjax({
       title: editTitle,

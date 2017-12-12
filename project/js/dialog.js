@@ -19,11 +19,11 @@ let dialog3 = document.getElementById("dialog3");
 let dialog4 = document.getElementById("dialog4");
 let dialog5 = document.getElementById("dialog5");
 let dialog6 = document.getElementById("dialog6");
-
+let dialog7 = document.getElementById("dialog7");
 let dialog8 = document.getElementById("dialog8");
 let dialog9 = document.getElementById("dialog9");
 let dialog10 = document.getElementById("dialog10");
-
+let dialog11 = document.getElementById("dialog11");
 
 function openDialog(value, id1, id2) {
   event.preventDefault();
@@ -32,6 +32,8 @@ function openDialog(value, id1, id2) {
       dialog1.style.display = "block";
       break;
     case "Delete Label":
+      var setID = document.querySelector("input[name=deleteCategoryID]");
+      if (setID && id1 != null) setID.value = id1;
       dialog2.style.display = "block";
       break;
     case "Leave Project":
@@ -45,14 +47,13 @@ function openDialog(value, id1, id2) {
       dialog5.style.display = "block";
       break;
     case "Delete List":
-      let setID = document.querySelector("input[name=deletelistID]");
-      if(setID && id1 != null) setID.value = id1;
+      var setID = document.querySelector("input[name=deletelistID]");
+      if (setID && id1 != null) setID.value = id1;
       dialog6.style.display = "block";
       break;
     case "Delete Account":
-      let dialog7 = document.getElementById("dialog7");
-      if(dialog7 != null)
-        dialog7.style.display = "block";
+      dialog7 = document.getElementById("dialog7");
+      if (dialog7 != null) dialog7.style.display = "block";
       break;
     case "Pick Label":
       getLabels(id1, id2);
@@ -70,9 +71,8 @@ function openDialog(value, id1, id2) {
       dialog8.style.display = "none";
       break;
     case "Clear Archive":
-      let dialog11 = document.getElementById("dialog11");
-      if(dialog11 != null)
-        dialog11.style.display = "block";
+      dialog11 = document.getElementById("dialog11");
+      if (dialog11 != null) dialog11.style.display = "block";
       break;
   }
 }
@@ -98,11 +98,11 @@ function closeDialog(value) {
       dialog6.style.display = "none";
       break;
     case "Delete Account":
-      let dialog7 = document.getElementById("dialog7");
-      if(dialog7 != null)
-        dialog7.style.display = "none";
+      dialog7 = document.getElementById("dialog7");
+      if (dialog7 != null) dialog7.style.display = "none";
       break;
     case "Pick Label":
+      location.reload();
       dialog8.style.display = "none";
       break;
     case "List":
@@ -113,9 +113,8 @@ function closeDialog(value) {
       dialog10.style.display = "none";
       break;
     case "Clear Archive":
-      let dialog11 = document.getElementById("dialog11");
-      if(dialog11 != null)
-        dialog11.style.display = "none";
+      dialog11 = document.getElementById("dialog11");
+      if (dialog11 != null) dialog11.style.display = "none";
       break;
   }
 }
@@ -141,11 +140,11 @@ window.onclick = function(event) {
       dialog6.style.display = "none";
       break;
     case dialog7:
-      let dialog7 = document.getElementById("dialog7");
-      if(dialog7 != null)
-        dialog7.style.display = "none";
+      dialog7 = document.getElementById("dialog7");
+      if (dialog7 != null) dialog7.style.display = "none";
       break;
     case dialog8:
+      location.reload();
       dialog8.style.display = "none";
       break;
     case dialog9:
@@ -156,9 +155,8 @@ window.onclick = function(event) {
       dialog10.style.display = "none";
       break;
     case dialog11:
-      let dialog11 = document.getElementById("dialog11");
-      if(dialog11 != null)
-        dialog11.style.display = "none";
+      dialog11 = document.getElementById("dialog11");
+      if (dialog11 != null) dialog11.style.display = "none";
       break;
   }
 };

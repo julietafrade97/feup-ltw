@@ -20,10 +20,7 @@
                 <div onclick="searchLabel('<?php echo "color".substr($category['Color'],1)?>')" class="label_option">
                     <div class="circle" style="background: <?php echo $category['Color'] ?>"></div>
                     <p><?php echo $category['Name'] ?></p>
-                    <button>
-                        <span class="lnr lnr-pencil"></span>
-                    </button>
-                    <button onclick="openDialog('Delete Label')">
+                    <button onclick="openDialog('Delete Label', <?php echo $category['ID'] ?>)">
                         <span class="lnr lnr-cross"></span>
                     </button>
                 </div>
