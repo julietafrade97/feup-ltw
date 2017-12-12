@@ -182,7 +182,7 @@ var taskCompleted = function(checkbox) {
   //Append the task list item to the #completed-tasks
   var listItem = checkbox.parentNode;
   var completedTasksHolder = document.getElementById("completed-tasks");
-  completedTasksHolder.appendChild(listItem);
+  if(completedTasksHolder) completedTasksHolder.appendChild(listItem);
 
 
 };
@@ -194,13 +194,17 @@ var taskIncomplete = function(checkbox) {
   // Append the task list item #incomplete-tasks
   var listItem = checkbox.parentNode;
   var incompleteTasksHolder = document.getElementById("incomplete-tasks");
-  incompleteTasksHolder.appendChild(listItem);
+  if(incompleteTasksHolder) incompleteTasksHolder.appendChild(listItem);
 };
 
 var updateCheckbox = function(checkbox){
-  if(checkbox.checked)
+  if(checkbox.checked){
     taskCompleted(checkbox);
-  else taskIncomplete(checkbox);
+  }
+   
+  else{
+    taskIncomplete(checkbox);
+  }
 }
 
 //-- AJAX --//

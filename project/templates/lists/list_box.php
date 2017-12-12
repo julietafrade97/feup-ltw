@@ -8,7 +8,7 @@
     </div>
     <div class="checkboxAndLabel">
         <?php for($j=0; $j<count($tasks[$i]); $j++) {?>
-            <input type="checkbox" id=<?php echo $tasks[$i][$j]['ID']?>>
+            <input type="checkbox" onchange="updateCheckbox(this)" id=<?php echo $tasks[$i][$j]['ID']?>>
             <label class="<?php if($tasks[$i][$j]['Priority'] == 1) echo 'priorityMode' ?>" for= <?php echo $tasks[$i][$j]['ID']?>> <?php echo $tasks[$i][$j]['Name']?> </label>
         <?php } ?>
     </div>
