@@ -114,19 +114,6 @@
     }
   }
 
-  function updateUserPhoto($userID, $photoPath) {
-    global $dbh;
-    try {
-      $stmt = $dbh->prepare('UPDATE User SET Photo = ? WHERE ID = ?');
-      if($stmt->execute(array($photoPath, $userID)))
-          return true;
-      else
-          return false;
-    }catch(PDOException $e) {
-      return false;
-    }
-  } 
-
   function updateUserInfo($userID, $name, $username, $email){
     global $dbh;
 
@@ -141,6 +128,36 @@
       return false;
     }
   }
+
+  function updateUserPassword($userID, $newpassword){
+    $passwordhashed = hash('sha256', $newpassword);
+    global $dbh;
+
+    try {
+      $stmt = $dbh->prepare('UPDATE User SET Password = ? WHERE ID = ?');
+      if($stmt->execute(array($passwordhashed, $userID)))
+          return true;
+      else{
+        return false;
+      }   
+    }catch(PDOException $e) {
+      return false;
+    }
+  }
+
+  function updateUserPhoto($userID, $photoPath) {
+    global $dbh;
+    try {
+      $stmt = $dbh->prepare('UPDATE User SET Photo = ? WHERE ID = ?');
+      if($stmt->execute(array($photoPath, $userID)))
+          return true;
+      else
+          return false;
+    }catch(PDOException $e) {
+      return false;
+    }
+  } 
+  
 
   function getUserPhoto($userID) {
     global $dbh;
