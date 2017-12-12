@@ -16,22 +16,21 @@
     <div id="register_container">
         <div class="register_header">
             <a href="login.php" class="register_button">Login</a>
-            <p>Welcome.<br>Thanks for joining us.</p>
+            <p>Welcome.
+                <br>Thanks for joining us.</p>
         </div>
         <div class="register_content signup">
             <h1>Sign Up</h1>
             <form action="../action_sign_up.php" method="post" class="register_form">
                 <input name="name" class="w3-input w3-border" type="text" placeholder="Name" required="required">
                 <input name="username" class="w3-input w3-border" type="text" placeholder="Username" required="required">
-                <span class="hint">Only lowercase and numbers, at least 6 characters</span>
+                <span class="hint">Only lowercase and numbers, at least 6 characters.</span>
                 <input name="email" class="w3-input w3-border" type="email" placeholder="Email" required="required">
                 <input name="password" class="w3-input w3-border" type="password" placeholder="Password">
-                <span class="hint">One uppercase, 1 symbol, 1 number, at least 6 characters</span>
+                <span class="hint">One uppercase, 1 symbol, 1 number, at least 6 characters.</span>
                 <input name="passwordagain" class="w3-input w3-border" type="password" placeholder="Repeat Password">
-                <span class="hint">Must match new password</span>
+                <span class="hint">Must match new password.</span>
                 <input name="Submit" class="w3-input w3-border" type="submit" value="Next">
             </form>
+            <p> <?php echo $error ?> </p>
         </div>
-        <p>
-            <?php echo $error ?>
-        </p>
