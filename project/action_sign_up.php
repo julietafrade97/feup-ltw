@@ -21,7 +21,4 @@ include_once('database/user.php');
   		$_SESSION['ERROR'] = 'ERROR';
   		header("Location:".$_SERVER['HTTP_REFERER']."");
  	}
-
-
-
  ?>

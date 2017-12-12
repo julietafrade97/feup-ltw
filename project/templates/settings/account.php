@@ -4,7 +4,7 @@
 <div class="content">
     <div id="account">
         <div id="fields">
-            <form action="action_login.php" method="post" class="register_form">
+            <form action="../actions/action_update_user.php" method="post" class="register_form">
                 <label>Name</label>
                 <input name="name" class="w3-input w3-border" type="text" placeholder="Name" value="<?php echo $_SESSION['userinfo']['Name'] ?>" required="required">
                 <label>Username</label>

@@ -128,6 +128,21 @@
     }
   } 
 
+  function updateUserInfo($userID, $name, $username, $email){
+    global $dbh;
+
+    try {
+      $stmt = $dbh->prepare('UPDATE User SET Name = ?, Username = ?, Email = ? WHERE ID = ?');
+      if($stmt->execute(array($name, $username, $email, $userID)))
+          return true;
+      else{
+        return false;
+      }   
+    }catch(PDOException $e) {
+      return false;
+    }
+  }
+
   function getUserPhoto($userID) {
     global $dbh;
     try {
