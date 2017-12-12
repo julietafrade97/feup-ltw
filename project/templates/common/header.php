@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="../assets/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../assets/linearicons/Web Font/style.css">
+    <link rel="stylesheet" href="../assets/linearicons/Web%20Font/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -39,81 +39,10 @@
 
                     <div id="mobile_labels">
                         <hr>
-                        <h2>Labels</h2>
-
                         <section>
 
-                            <input type="radio" id="mobile_reset" name="label" />
-                            <label for="mobile_reset" class="label_option">
-                                <div class="circle" style="background: black"></div>
-                                <p>Reset</p>
-                                <button>
-                                    <span class="lnr lnr-pencil"></span>
-                                </button>
-                                <button>
-                                    <span class="lnr lnr-cross"></span>
-                                </button>
-                            </label>
+                            <h2>Labels</h2>
 
-                            <input type="radio" id="mobile_red" name="label" />
-                            <label for="mobile_red" class="label_option">
-                                <div class="circle" style="background: #865757"></div>
-                                <p>Red</p>
-                                <button>
-                                    <span class="lnr lnr-pencil"></span>
-                                </button>
-                                <button>
-                                    <span class="lnr lnr-cross"></span>
-                                </button>
-                            </label>
-
-                            <input type="radio" id="mobile_pink" name="label" />
-                            <label for="mobile_pink" class="label_option">
-                                <div class="circle" style="background: #865786"></div>
-                                <p>Pink</p>
-                                <button>
-                                    <span class="lnr lnr-pencil"></span>
-                                </button>
-                                <button>
-                                    <span class="lnr lnr-cross"></span>
-                                </button>
-                            </label>
-
-                            <input type="radio" id="mobile_blue" name="label" />
-                            <label for="mobile_blue" class="label_option">
-                                <div class="circle" style="background: #576886"></div>
-                                <p>Blue</p>
-                                <button>
-                                    <span class="lnr lnr-pencil"></span>
-                                </button>
-                                <button>
-                                    <span class="lnr lnr-cross"></span>
-                                </button>
-                            </label>
-
-                            <input type="radio" id="mobile_purple" name="label" />
-                            <label for="mobile_purple" class="label_option">
-                                <div class="circle" style="background: #705786"></div>
-                                <p>Purple</p>
-                                <button>
-                                    <span class="lnr lnr-pencil"></span>
-                                </button>
-                                <button>
-                                    <span class="lnr lnr-cross"></span>
-                                </button>
-                            </label>
-
-                            <input type="radio" id="mobile_brown" name="label" />
-                            <label for="mobile_brown" class="label_option">
-                                <div class="circle" style="background: #866B57"></div>
-                                <p>Brown</p>
-                                <button>
-                                    <span class="lnr lnr-pencil"></span>
-                                </button>
-                                <button>
-                                    <span class="lnr lnr-cross"></span>
-                                </button>
-                            </label>
                         </section>
 
                         <button class="addlabel" onclick="openDialog('Add Label')">Add Label</button>

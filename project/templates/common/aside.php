@@ -13,29 +13,32 @@
         <div id="aside_content">
 
             <hr>
-            <h2>Labels</h2>
 
             <section id="labels_section">
+                <h2>Labels</h2>
+
                 <?php if($categories !== null) {
                     foreach($categories as $category) { ?>
-                        <div onclick="searchLabel('<?php echo "color".substr($category['Color'],1)?>')" class="label_option">
-                            <div class="circle" style="background: <?php echo $category['Color'] ?>"></div>
-                            <p><?php echo $category['Name'] ?></p>
-                            <button>
-                                <span class="lnr lnr-pencil"></span>
-                            </button>
-                            <button onclick="openDialog('Delete Label')">
-                                <span class="lnr lnr-cross"></span>
-                            </button>
-                        </div>
-                    <?php } ?>
+                <div onclick="searchLabel('<?php echo " color ".substr($category['Color'],1)?>')" class="label_option">
+                    <div class="circle" style="background: <?php echo $category['Color'] ?>"></div>
+                    <p>
+                        <?php echo $category['Name'] ?>
+                    </p>
+                    <button>
+                        <span class="lnr lnr-pencil"></span>
+                    </button>
+                    <button onclick="openDialog('Delete Label')">
+                        <span class="lnr lnr-cross"></span>
+                    </button>
+                </div>
+                <?php } ?>
                 <?php } ?>
             </section>
 
             <button class="managelabel" onclick="resetSearchLabel()">Reset</button>
             <button class="managelabel" onclick="openDialog('Add Label')">Add Label</button>
         </div>
-
+    </div>
 </aside>
 
 <?php

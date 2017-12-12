@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="../assets/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../assets/linearicons/Web Font/style.css">
+    <link rel="stylesheet" href="../assets/linearicons/Web%20Font/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -35,4 +35,3 @@
         <p>
             <?php echo $error ?>
         </p>
-    </div>
