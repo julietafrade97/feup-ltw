@@ -60,13 +60,8 @@ function finishAddLabel(event) {
       let element = document.createElement("DIV");
       element.className += "label_option";
       element.innerHTML =
-        '<div class="circle" style="background: ' +
-        categories[i].Color +
-        '"></div><p>' +
-        categories[i].Name +
-        '</p><button><span class="lnr lnr-pencil"></span></button><button onclick="openDialog(' +
-        delete_label +
-        ')"><span class="lnr lnr-cross"></span></button>';
+        '<div class="circle" style="background: ' + categories[i].Color + '"></div><p>' + categories[i].Name +
+        '</p><button onclick="openDialog(' + delete_label + ')"><span class="lnr lnr-cross"></span></button>';
       section.insertBefore(element, space);
     }
   }

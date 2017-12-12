@@ -5,8 +5,8 @@
         </button>
         <form action="../actions/action_archieve_list.php" method="post">
             <input type="hidden" name="archieveListID" value="<?php echo $listID ?>">
-            <span class="lnr lnr-inbox"></span>         
-            <input type="submit"  value="Submit"/>
+            <label for="archive_btn"><span class="lnr lnr-inbox"></span></label>
+            <input id="archive_btn" type="submit" value="Submit"/>
         </form>
         <button onclick="closeDialog('List')">
             <span class="lnr lnr-cross"></span>
