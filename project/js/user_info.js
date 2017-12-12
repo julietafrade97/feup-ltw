@@ -13,8 +13,10 @@ if (passwordagain)
     false
   );
 
-let register = document.querySelector(".register_form form");
-if (register) register.addEventListener("submit", validateRegister, false);
+let register = document.querySelector("register_form");
+if (register){
+  register.addEventListener("submit", validateRegister, false);
+}
 
 function validateUsername() {
   if (!/^[0-9a-z]{6,}$/.test(this.value)) this.classList.add("invalid");
