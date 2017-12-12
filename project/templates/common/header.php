@@ -40,9 +40,7 @@
                     <div id="mobile_labels">
                         <hr>
                         <section>
-
                             <h2>Labels</h2>
-
                         </section>
 
                         <button class="addlabel" onclick="openDialog('Add Label')">Add Label</button>
