@@ -6,13 +6,15 @@ $text = $_POST['text'];
 $listID = $_POST['listID'];
 
 if(!is_numeric($listID)) {
-    echo "Error adding task";
+    $_SESSION['ERROR'] = "Error adding task";
+    echo json_encode(-1);
 }
 
-if(createTask($listID, $text)) {
-    echo "";
+if(($taskID = createTask($listID, $text)) != -1) {
+    echo json_encode($taskID);
 } else {
-    echo "Error adding task";
+    $_SESSION['ERROR'] = "Error adding task";
+    echo json_encode(-1);
 }
 
 ?>
