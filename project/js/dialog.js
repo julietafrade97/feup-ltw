@@ -19,11 +19,11 @@ let dialog3 = document.getElementById("dialog3");
 let dialog4 = document.getElementById("dialog4");
 let dialog5 = document.getElementById("dialog5");
 let dialog6 = document.getElementById("dialog6");
-let dialog7 = document.getElementById("dialog7");
+
 let dialog8 = document.getElementById("dialog8");
 let dialog9 = document.getElementById("dialog9");
 let dialog10 = document.getElementById("dialog10");
-let dialog11 = document.getElementById("dialog11");
+
 
 function openDialog(value, id1, id2) {
   event.preventDefault();
@@ -50,7 +50,9 @@ function openDialog(value, id1, id2) {
       dialog6.style.display = "block";
       break;
     case "Delete Account":
-      dialog7.style.display = "block";
+      let dialog7 = document.getElementById("dialog7");
+      if(dialog7 != null)
+        dialog7.style.display = "block";
       break;
     case "Pick Label":
       getLabels(id1, id2);
@@ -68,7 +70,9 @@ function openDialog(value, id1, id2) {
       dialog8.style.display = "none";
       break;
     case "Clear Archive":
-      dialog11.style.display = "block";
+      let dialog11 = document.getElementById("dialog11");
+      if(dialog11 != null)
+        dialog11.style.display = "block";
       break;
   }
 }
@@ -94,7 +98,9 @@ function closeDialog(value) {
       dialog6.style.display = "none";
       break;
     case "Delete Account":
-      dialog7.style.display = "none";
+      let dialog7 = document.getElementById("dialog7");
+      if(dialog7 != null)
+        dialog7.style.display = "none";
       break;
     case "Pick Label":
       dialog8.style.display = "none";
@@ -107,7 +113,9 @@ function closeDialog(value) {
       dialog10.style.display = "none";
       break;
     case "Clear Archive":
-      dialog11.style.display = "none";
+      let dialog11 = document.getElementById("dialog11");
+      if(dialog11 != null)
+        dialog11.style.display = "none";
       break;
   }
 }
@@ -133,7 +141,9 @@ window.onclick = function(event) {
       dialog6.style.display = "none";
       break;
     case dialog7:
-      dialog7.style.display = "none";
+      let dialog7 = document.getElementById("dialog7");
+      if(dialog7 != null)
+        dialog7.style.display = "none";
       break;
     case dialog8:
       dialog8.style.display = "none";
@@ -146,7 +156,9 @@ window.onclick = function(event) {
       dialog10.style.display = "none";
       break;
     case dialog11:
-      dialog11.style.display = "none";
+      let dialog11 = document.getElementById("dialog11");
+      if(dialog11 != null)
+        dialog11.style.display = "none";
       break;
   }
 };
