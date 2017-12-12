@@ -46,7 +46,9 @@ function finishAddLabel(event) {
   event.preventDefault();
   let section = document.getElementById("labels_section");
   let space = document.getElementById("labels_section").lastChild;
-  if (space == null || section == null) return;
+  let mobileSection = document.getElementById("mobile_labels_section");
+  let mobileSpace = document.getElementById("mobile_labels_section").lastChild;
+  if (space == null || section == null || mobileSpace == null || mobileSection == null ) return;
   let categories = JSON.parse(this.responseText);
   if (categories == "") {
     return;
@@ -62,6 +64,7 @@ function finishAddLabel(event) {
       element.innerHTML =
         '<div class="circle" style="background: ' + categories[i].Color + '"></div><p>' + categories[i].Name +
         '</p><button onclick="openDialog(' + delete_label + ')"><span class="lnr lnr-cross"></span></button>';
+      mobileSection.insertBefore(element.cloneNode(true), mobileSpace);
       section.insertBefore(element, space);
     }
   }
