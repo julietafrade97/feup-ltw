@@ -88,4 +88,23 @@
 		}
 	}
 
+	function archieveList($listID, $isArchived) {
+		
+		global $dbh;
+		try {
+
+			$stmt = $dbh->prepare('UPDATE List SET isArchived = :isArchived WHERE ID = :ID');
+			$stmt->bindParam(':isArchived', $isArchived);
+			$stmt->bindParam(':ID', $listID);
+			if($stmt->execute())
+				return true;
+			else
+				return false;
+		
+		} catch(PDOException $e) {
+
+			return false;
+		}
+	}
+
 ?>
