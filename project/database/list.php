@@ -101,7 +101,6 @@
 	}
 
 	function archieveList($listID, $isArchived) {
-		
 		global $dbh;
 		try {
 
@@ -115,6 +114,22 @@
 		
 		} catch(PDOException $e) {
 
+			return false;
+		}
+	}
+
+	function clearArchive($isArchived) {
+		global $dbh;
+		try {
+
+			$stmt = $dbh->prepare('DELETE FROM List WHERE isArchived = :isArchived');
+			$stmt->bindParam(':isArchived', $isArchived);
+			if($stmt->execute())
+				return true;
+			else
+				return false;
+		
+		} catch(PDOException $e) {
 			return false;
 		}
 	}
