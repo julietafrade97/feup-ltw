@@ -33,6 +33,20 @@ function updateTaskPriority($taskID, $newPriority) {
     }
 }
 
+function updateTaskChecked($taskID, $checked) {
+    global $dbh;
+    try {
+        $stmt = $dbh->prepare('UPDATE Task SET isDone = ? WHERE ID = ?');
+        if($stmt->execute(array($checked, $taskID)))
+            return true;
+        else
+            return false;
+
+    }catch(PDOException $e) {
+        return false;
+    }
+}
+
 function deleteTask($taskID) {
     global $dbh;
     try{

@@ -183,8 +183,6 @@ var taskCompleted = function(checkbox) {
   var listItem = checkbox.parentNode;
   var completedTasksHolder = document.getElementById("completed-tasks");
   if(completedTasksHolder) completedTasksHolder.appendChild(listItem);
-
-
 };
 
 // Mark a task as incomplete
@@ -198,12 +196,23 @@ var taskIncomplete = function(checkbox) {
 };
 
 var updateCheckbox = function(checkbox){
+ 
+  let listItem = checkbox.parentNode;
+
+  let isListDialog = listItem.classList.contains("task_line");
+
+  
   if(checkbox.checked){
     taskCompleted(checkbox);
+    if(isListDialog)
+      checkTaskAjax(1, listItem);
+    else checkTaskAjax(1, checkbox);
   }
-   
   else{
     taskIncomplete(checkbox);
+    if(isListDialog)
+      checkTaskAjax(0, listItem);
+    else checkTaskAjax(0, checkbox);
   }
 }
 
@@ -325,4 +334,31 @@ function finishEditTaskName(event) {
   if(this.responseText != "") {
     alert(this.responseText);
   }
+}
+
+
+function checkTaskAjax(isCheckedNumber, listItem){
+  if(listItem == null)
+    return false;
+  let id = listItem.getAttribute("id");
+  if(id == null)
+    return false;
+
+  let isChecked;
+
+  if(isCheckedNumber == 1)
+    isChecked = 'TRUE';
+  else isChecked = 'FALSE';
+
+
+  let request = new XMLHttpRequest();
+  request.addEventListener("load", finishCheckTask);
+  request.open("post", "../actions/api_check_task.php");
+  request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+  request.send(encodeForAjax({is_checked: isChecked, task_id: id}));
+
+}
+
+function finishCheckTask(event) {
+  event.preventDefault();
 }
