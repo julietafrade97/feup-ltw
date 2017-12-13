@@ -17,13 +17,13 @@
                     <p><?php echo $archived_lists[$i]['Name']?></p>
                     <form action="../actions/action_unarchive_list.php" method="post">
                         <input type="hidden" name="archievedListID" value="<?php echo $archived_lists[$i]['ID']?>">
-                        <label class="archive_button" for="revive_btn"><span class="lnr lnr-heart-pulse"></span></label>
-                        <input id="revive_btn" class="submit_button" type="submit" value="Submit"/>
+                        <label class="archive_button"><span class="lnr lnr-heart-pulse"></span>
+                        <input class="submit_button" type="submit" value="Submit"/></label>
                     </form>
                     <form action="../actions/action_delete_list.php" method="post">
                         <input type="hidden" name="deletelistID" value="<?php echo $archived_lists[$i]['ID']?>">
-                        <label class="archive_button" for="delete_btn"><span class="lnr lnr-cross"></span></label>
-                        <input id="delete_btn" class="submit_button" type="submit" value="Submit"/>
+                        <label class="archive_button"><span class="lnr lnr-cross"></span>
+                        <input class="submit_button" type="submit" value="Submit"/></label>
                     </form>
                 </li>
                 <?php }?>
