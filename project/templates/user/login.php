@@ -23,7 +23,7 @@
         </div>
         <div class="register_content">
             <h1>Login</h1>
-            <form action="../action_login.php" method="post" class="register_form">
+            <form action="../actions/action_login.php" method="post" class="register_form">
                 <input name="username" class="w3-input w3-border" type="text" placeholder="Username" required="required">
                 <input name="password" class="w3-input w3-border" type="password" placeholder="Password" required="required">
                 <input type="submit" name="Submit" value="Next">

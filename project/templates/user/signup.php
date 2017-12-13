@@ -21,7 +21,7 @@
         </div>
         <div class="register_content signup">
             <h1>Sign Up</h1>
-            <form action="../action_sign_up.php" method="post" class="register_form">
+            <form action="../actions/action_sign_up.php" method="post" class="register_form">
                 <input name="name" class="w3-input w3-border" type="text" placeholder="Name" required="required">
                 <input name="username" class="w3-input w3-border" type="text" placeholder="Username" required="required">
                 <span class="hint">Only lowercase and numbers, at least 6 characters.</span>

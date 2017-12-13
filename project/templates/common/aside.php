@@ -17,10 +17,10 @@
 
                 <?php if($categories !== null) {
                     foreach($categories as $category) { ?>
-                <div onclick="searchLabel('<?php echo "color".substr($category['Color'],1)?>')" class="label_option">
-                    <div class="circle" style="background: <?php echo $category['Color'] ?>"></div>
+                <div onclick="searchLabel('<?php echo "color".htmlentities(substr($category['Color'],1))?>')" class="label_option">
+                    <div class="circle" style="background: <?php echo htmlentities($category['Color']) ?>"></div>
                     <p><?php echo $category['Name'] ?></p>
-                    <button onclick="openDialog('Delete Label', <?php echo $category['ID'] ?>)">
+                    <button onclick="openDialog('Delete Label', <?php echo htmlentities($category['ID']) ?>)">
                         <span class="lnr lnr-cross"></span>
                     </button>
                 </div>
