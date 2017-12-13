@@ -1,6 +1,6 @@
 <?php
-include_once('includes/init.php');
-include_once('database/user.php');
+include_once('../includes/init.php');
+include_once('../database/user.php');
 
 	if(duplicateUsername($_POST['username'])){
 		$_SESSION['ERROR'] = 'Duplicated Username';
@@ -14,7 +14,7 @@ include_once('database/user.php');
 
   		echo 'User Registered successfully';
  		setCurrentUser($userID, $_POST['username']);
- 		header("Location:index.php");	
+ 		header("Location:../index.php");	
  	}
  	else{
 
