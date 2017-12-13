@@ -18,9 +18,9 @@ let editProject = function() {
   let containsClass = bioContainer.classList.contains("editMode");
 
   if (containsClass) {
+    changeProjectBio();
     labelTitle.innerText = editTitle.value;
     labelDescription.innerText = editDescription.value;
-    changeProjectBio();
   } else {
     editTitle.value = labelTitle.innerText;
     editDescription.value = labelDescription.innerText;
@@ -40,10 +40,8 @@ bindProjectEvents();
 
 //update project bio information in database
 function changeProjectBio() {
-  if (
-    editTitle.value == labelTitle.innerText &&
-    editDescription.value == labelDescription.innerText
-  )
+
+  if (editTitle.value == labelTitle.innerText && editDescription.value == labelDescription.innerText)
     return true;
 
   let request = new XMLHttpRequest();
@@ -54,8 +52,8 @@ function changeProjectBio() {
   if($_GET.get("project_id") == null) return false;
   request.send(
     encodeForAjax({
-      title: editTitle,
-      description: editDescription,
+      title: editTitle.value,
+      description: editDescription.value,
       projectID: $_GET.get("project_id")
     })
   );
