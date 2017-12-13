@@ -5,12 +5,11 @@ var listID;
 
 function addLabel() {
   nameValue = document.querySelector("#color_form input[name=labelName]").value;
-
   color = document.querySelectorAll(
     "#color_form input[type=radio][name=labelColor]:checked"
   )[0];
 
-  if (nameValue == null || color == null) return false;
+  if (nameValue == "" || color == null) return false;
 
   let colorValue = color.value;
 
@@ -61,7 +60,7 @@ function finishAddLabel(event) {
       element.className += "label_option";
       element.innerHTML =
         '<div class="circle" style="background: ' + categories[i].Color + '"></div><p>' + categories[i].Name +
-        '</p><button onclick="openDialog(' + delete_label + ')"><span class="lnr lnr-cross"></span></button>';
+        '</p><button onclick="openDialog(' + delete_label + ', ' + categories[i].ID + ')"><span class="lnr lnr-cross"></span></button>';
       mobileSection.insertBefore(element.cloneNode(true), mobileSpace);
       section.insertBefore(element, space);
     }

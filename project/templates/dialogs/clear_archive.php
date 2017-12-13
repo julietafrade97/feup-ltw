@@ -3,7 +3,7 @@
         <p>Are you sure you want to clear the archive? All archived lists will be deleted.</p>
         <div class="buttons">
             <input onclick="closeDialog('Clear Archive')" type="button" value="Cancel">
-            <form action="#" method="post">
+            <form action="../actions/action_clear_archive.php" method="post">
                 <input type="submit" name="Submit" value="Clear">
             </form>
         </div>

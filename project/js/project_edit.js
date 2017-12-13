@@ -40,8 +40,10 @@ bindProjectEvents();
 
 //update project bio information in database
 function changeProjectBio() {
-
-  if (editTitle.value == labelTitle.innerText && editDescription.value == labelDescription.innerText)
+  if (
+    editTitle.value == labelTitle.innerText &&
+    editDescription.value == labelDescription.innerText
+  )
     return true;
 
   let request = new XMLHttpRequest();
@@ -49,7 +51,7 @@ function changeProjectBio() {
   request.addEventListener("load", finishProjectBio);
   request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
   window.$_GET = new URLSearchParams(location.search);
-  if($_GET.get("project_id") == null) return false;
+  if ($_GET.get("project_id") == null) return false;
   request.send(
     encodeForAjax({
       title: editTitle.value,
@@ -59,22 +61,21 @@ function changeProjectBio() {
   );
 }
 
-function getMembers(ProjectID){
+function getMembers(ProjectID) {
   let request = new XMLHttpRequest();
   request.addEventListener("load", finishGetMembers);
   request.open("post", "../actions/api_get_members.php", true);
   request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-  request.send(encodeForAjax({projectID: ProjectID}));
+  request.send(encodeForAjax({ projectID: ProjectID }));
 }
 
 function finishGetMembers(event) {
-  let dialog5 = document.getElementById('dialog5');
-  if(dialog5!= null) dialog5.innerHTML = this.responseText;
+  let dialog5 = document.getElementById("dialog5");
+  if (dialog5 != null) dialog5.innerHTML = this.responseText;
   event.preventDefault();
 }
 
-function addMember(submitButton){
-
+function addMember(submitButton) {
   let addMemberButtonsDiv = submitButton.parentNode;
   let addMemberDiv = addMemberButtonsDiv.parentNode;
   let input = addMemberDiv.querySelector("input[name=memberUsername]");
@@ -83,28 +84,28 @@ function addMember(submitButton){
   let foreign;
 
   window.$_GET = new URLSearchParams(location.search);
-  if($_GET.get("project_id") != null) foreign = $_GET.get("project_id");
+  if ($_GET.get("project_id") != null) foreign = $_GET.get("project_id");
 
-  if(username != null && foreign != null){
+  if (username != null && foreign != null) {
     addMemberAjax(foreign, username);
   }
-
   closeDialog("Add Member");
-
+  location.reload();
 }
 
-function addMemberAjax(projectID, memberUsername){
+function addMemberAjax(projectID, memberUsername) {
   let request = new XMLHttpRequest();
   request.addEventListener("load", finishAddMember);
   request.open("post", "../actions/api_add_member.php", true);
   request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-  request.send(encodeForAjax({project_ID: projectID, member_Username: memberUsername}));
+  request.send(
+    encodeForAjax({ project_ID: projectID, member_Username: memberUsername })
+  );
 }
-  
+
 function finishAddMember(event) {
   event.preventDefault();
 }
-
 
 function finishProjectBio(event) {
   event.preventDefault();

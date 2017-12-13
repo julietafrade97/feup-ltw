@@ -287,9 +287,6 @@ function changePriorityAjax(newPriorityValue, listItem) {
 
 function finishChangePriority(event) {
   event.preventDefault();
-  if(this.responseText != "") {
-    alert(this.responseText);
-  }
 }
 
 function deleteTaskAjax(listItem) {
@@ -309,9 +306,6 @@ function deleteTaskAjax(listItem) {
 
 function finishDeleteTask(event) {
   event.preventDefault();
-  if(this.responseText != "") {
-    alert(this.responseText);
-  }
 }
 
 function editTaskAjax(newName, listItem) {
@@ -331,9 +325,6 @@ function editTaskAjax(newName, listItem) {
 
 function finishEditTaskName(event) {
   event.preventDefault();
-  if(this.responseText != "") {
-    alert(this.responseText);
-  }
 }
 
 
