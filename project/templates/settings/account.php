@@ -9,12 +9,12 @@
         <div id="fields">
             <form action="../actions/action_update_user.php" method="post" class="register_form">
                 <label>Name</label>
-                <input name="name" class="w3-input w3-border" type="text" placeholder="Name" value="<?php echo $_SESSION['userinfo']['Name'] ?>" required="required">
+                <input name="name" class="w3-input w3-border" type="text" placeholder="Name" value="<?php echo htmlentities($_SESSION['userinfo']['Name']) ?>" required="required">
                 <label>Username</label>
-                <input name="username" class="w3-input w3-border" type="text" placeholder="Username" value="<?php echo $_SESSION['userinfo']['Username'] ?>" required="required">
+                <input name="username" class="w3-input w3-border" type="text" placeholder="Username" value="<?php echo htmlentities($_SESSION['userinfo']['Username']) ?>" required="required">
                 <span class="hint">Only lowercase and numbers, at least 6 characters</span>
                 <label>Email</label>
-                <input name="email" class="w3-input w3-border" type="email" placeholder="Email" value="<?php echo $_SESSION['userinfo']['Email'] ?>" required="required">
+                <input name="email" class="w3-input w3-border" type="email" placeholder="Email" value="<?php echo htmlentities($_SESSION['userinfo']['Email']) ?>" required="required">
                 <label>Password</label>
                 <input name="currpassword" class="w3-input w3-border" type="password" placeholder="Password" required="required">
                 <span class="hint">One uppercase, 1 symbol, 1 number, at least 6 characters</span>
@@ -32,7 +32,7 @@
         <div id="photo_field">
             <form action="../actions/api_upload_photo.php" method="post" enctype="multipart/form-data">
                 <label>Photo</label>
-                <img id="photo" src="<?php echo  '../profilePictures/'.$_SESSION['userinfo']['Photo'] ?>" alt="Profile Picture">
+                <img id="photo" src="<?php echo  htmlentities('../profilePictures/'.$_SESSION['userinfo']['Photo']) ?>" alt="Profile Picture">
                 <input type="file" name="fileToUpload" id="fileToUpload">
                 <input type="submit" name="Submit" value="Upload">
             </form>

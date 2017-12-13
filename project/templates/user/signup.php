@@ -32,5 +32,5 @@
                 <span class="hint">Must match new password.</span>
                 <input name="Submit" class="w3-input w3-border" type="submit" value="Next">
             </form>
-            <p> <?php echo $error ?> </p>
+            <p> <?php echo htmlentities($error) ?> </p>
         </div>
