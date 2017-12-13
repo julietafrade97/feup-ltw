@@ -59,8 +59,8 @@ function finishAddLabel(event) {
       let element = document.createElement("DIV");
       element.className += "label_option";
       element.innerHTML =
-        '<div class="circle" style="background: ' + categories[i].Color + '"></div><p>' + categories[i].Name +
-        '</p><button onclick="openDialog(' + delete_label + ', ' + categories[i].ID + ')"><span class="lnr lnr-cross"></span></button>';
+        '<div class="circle" style="background: ' + htmlEntities(categories[i].Color) + '"></div><p>' + htmlEntities(categories[i].Name) +
+        '</p><button onclick="openDialog(' + htmlEntities(delete_label) + ', ' + htmlEntities(categories[i].ID) + ')"><span class="lnr lnr-cross"></span></button>';
       mobileSection.insertBefore(element.cloneNode(true), mobileSpace);
       section.insertBefore(element, space);
     }
@@ -162,4 +162,8 @@ function changeLabel(listIDValue, newLabelValue) {
 
 function finishChangeLabelList(event) {
   event.preventDefault();
+}
+
+function htmlEntities(str) {
+  return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }

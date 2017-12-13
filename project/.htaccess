@@ -1,0 +1,37 @@
+# Disable directory browsing
+Options All -Indexes
+
+<Files ~ "\.db$">
+    Order allow,deny
+    Deny from all
+</Files>
+
+<Files ~ "\.sql$">
+    Order allow,deny
+    Deny from all
+</Files>
+
+<Files ~ "\.jpg$">
+    Order allow,deny
+    Deny from all
+</Files>
+
+<Files ~ "\.png$">
+    Order allow,deny
+    Deny from all
+</Files>
+
+<Files ~ "\.png$">
+    Order allow,deny
+    Deny from all
+</Files>
+
+<Files ~ "\.sql$">
+    Order allow,deny
+    Deny from all
+</Files>
+
+<Files ~ "\.gif$">
+    Order allow,deny
+    Deny from all
+</Files>

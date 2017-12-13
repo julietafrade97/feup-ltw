@@ -97,7 +97,7 @@ function updateTask($taskID, $newPriority, $newName, $newisDone) {
 function getTasks($listID, $isDone) {
     global $dbh;
     try{
-        $stmt = $dbh->prepare('SELECT ID, Name, Priority FROM Task WHERE ListID = ? AND isDone = ?');
+        $stmt = $dbh->prepare('SELECT ID, Name, Priority FROM Task WHERE ListID = ? AND isDone = ? ORDER BY Priority DESC');
         $stmt->execute(array($listID, $isDone));
         return $stmt->fetchAll();
 
@@ -109,7 +109,7 @@ function getTasks($listID, $isDone) {
 function getTasksDone($listID, $isDone) {
     global $dbh;
     try{
-        $stmt = $dbh->prepare('SELECT ID, Name, Priority FROM Task WHERE ListID = ? AND isDone = ? LIMIT 5');
+        $stmt = $dbh->prepare('SELECT ID, Name, Priority FROM Task WHERE ListID = ? AND isDone = ? ORDER BY Priority DESC LIMIT 5');
         $stmt->execute(array($listID, $isDone));
         return $stmt->fetchAll();
 

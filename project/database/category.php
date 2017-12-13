@@ -148,6 +148,25 @@
 		} catch(PDOException $e) {
 			return false;
 		}
-	}
+    }
+    
+    function verifyUserCategory($userID, $categoryID) {
+        global $dbh;
+		try {
+
+			$stmt = $dbh->prepare('SELECT Name FROM Category WHERE ID = :ID AND UserID = :UserID');
+            $stmt->bindParam(':ID', $categoryID);
+            $stmt->bindParam(':UserID', $userID);
+            $stmt->execute();
+            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+            if(!$row)
+				return false;
+			else
+				return true;
+		
+		} catch(PDOException $e) {
+			return false;
+		}
+    }
 
 ?>

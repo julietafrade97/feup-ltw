@@ -27,4 +27,7 @@
                 <input name="password" class="w3-input w3-border" type="password" placeholder="Password" required="required">
                 <input type="submit" name="Submit" value="Next">
             </form>
+            <p id="error_messages" style="color: black">
+                <?php if(isset($_SESSION['ERROR'])) echo htmlentities($_SESSION['ERROR']); unset($_SESSION['ERROR'])?>
+            </p>
         </div>
