@@ -1094,9 +1094,15 @@ form input.invalid {
   box-shadow: rgba(255, 0, 0, 0.5) 0 0 2px 2px;
 }
 
-form input.invalid + form .hint {
+form input.invalid + .hint {
+  display: inline-block;
+}
+
+form input[value=Update]{
   display: block;
 }
+
+
 
 /*
 * ARCHIVE
