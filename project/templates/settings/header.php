@@ -53,7 +53,7 @@
             </a>
             
             <p id="error_messages">
-                <?php echo $error?>
+                <?php echo htmlentities($error)?>
             </p>
 
             <div id="header_buttons">

@@ -8,7 +8,7 @@ $isUser = $_POST['isUser'];
 
 
 
-if($isUser == true){
+if($isUser == 'true'){
 
     $foreignIDUser = getUserID();
     if(!is_numeric($foreignIDUser)) {
@@ -24,7 +24,7 @@ if($isUser == true){
         $categories = "";
     }
 }
-else if($isUser == false){
+else if($isUser == 'false'){
 
     $foreignID = $_POST['foreignID'];
 
@@ -33,7 +33,7 @@ else if($isUser == false){
         $categories = "";
     }
 
-    if(($categoryID = createCategoryProject($categoryName, $categoryColor, $foreignID)) != -1) {
+    if(($categoryID = createCategoryProject($labelName, $labelColor, $foreignID)) != -1) {
         $categories = getProjectCategoriesAfterID($foreignID, $categoryID);
     }
     else{

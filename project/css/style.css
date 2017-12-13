@@ -732,6 +732,7 @@ main {
   border: none;
   border-radius: 1em;
   align-self: center;
+  margin-top: auto;
 }
 
 #more:hover {
