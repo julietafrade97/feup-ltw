@@ -11,10 +11,6 @@ if(!is_numeric($labelID)) {
 	$_SESSION['ERROR'] = "Error adding list";
 	echo json_encode(-1);
 	
-} else if(!verifyUserCategory($userID, $labelID)) {
-	$_SESSION['ERROR'] = "Error adding list";
-	echo json_encode(-1);
-
 } else {
 	if(($getListID = createList("New List", $labelID)) != -1){
 		echo json_encode($getListID);
