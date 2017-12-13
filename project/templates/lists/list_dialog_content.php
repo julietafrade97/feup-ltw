@@ -1,10 +1,10 @@
 <div class="list_popup">
     <div id="pop_up_header">
-        <button onclick="openDialog('Delete List', '<?php echo $listID ?>')">
+        <button onclick="openDialog('Delete List', '<?php echo htmlentities($listID) ?>')">
             <span class="lnr lnr-trash"></span>
         </button>
         <form action="../actions/action_archieve_list.php" method="post">
-            <input type="hidden" name="archieveListID" value="<?php echo $listID ?>">
+            <input type="hidden" name="archieveListID" value="<?php echo htmlentities($listID) ?>">
             <label for="archive_btn"><span class="lnr lnr-inbox"></span></label>
             <input id="archive_btn" type="submit" value="Submit"/>
         </form>
@@ -13,19 +13,19 @@
         </button>
     </div>
     <div id="pop_up_title">
-        <label name="labelListName" id="List<?php echo $listID ?>"><?php echo $list['Name'] ?></label>
+        <label name="labelListName" id="List<?php echo htmlentities($listID) ?>"><?php echo htmlentities($list['Name']) ?></label>
         <input type="text">
         <button class="edit" onclick="editListTitle(this)">
             <span class="lnr lnr-pencil icon"></span>
         </button>
-        <div id="rectangle" style="background: <?php echo $list['Color']?>"></div>
+        <div id="rectangle" style="background: <?php echo htmlentities($list['Color'])?>"></div>
     </div>
     <h3>Todo</h3>
     <ul id="incomplete-tasks">
         <?php foreach($tasks as $task)  {?>
-        <li class="task_line checkboxAndLabel <?php if($task['Priority'] == 1) echo 'priorityMode' ?>" id="<?php echo $task['ID']?>">
-            <input type="checkbox" onchange="updateCheckbox(this)" id="Task<?php echo $task['ID']?>">
-            <label for="Task<?php echo $task['ID']?>"><?php echo $task['Name'] ?></label>
+        <li class="task_line checkboxAndLabel <?php if($task['Priority'] == 1) echo 'priorityMode' ?>" id="<?php echo htmlentities($task['ID'])?>">
+            <input type="checkbox" onchange="updateCheckbox(this)" id="Task<?php echo htmlentities($task['ID'])?>">
+            <label for="Task<?php echo htmlentities($task['ID'])?>"><?php echo htmlentities($task['Name'])?></label>
             <input type="text">
             <button class="edit" onclick="editTask(this)">
                 <span class="lnr lnr-pencil icon"></span>
@@ -43,9 +43,9 @@
     <h3>Completed</h3>
     <ul id="completed-tasks">
         <?php foreach($tasksdone as $taskdone)  {?>
-        <li class="task_line checkboxAndLabel <?php if($taskdone['Priority'] == 1) echo 'priorityMode' ?>" id="<?php echo $taskdone['ID']?>">
-            <input type="checkbox" checked onchange="updateCheckbox(this)" id="Task<?php echo $taskdone['ID']?>">
-            <label for="Task<?php echo $taskdone['ID']?>"><?php echo $taskdone['Name'] ?></label>
+        <li class="task_line checkboxAndLabel <?php if($taskdone['Priority'] == 1) echo 'priorityMode' ?>" id="<?php echo htmlentities($taskdone['ID'])?>">
+            <input type="checkbox" checked onchange="updateCheckbox(this)" id="Task<?php echo htmlentities($taskdone['ID'])?>">
+            <label for="Task<?php echo htmlentities($taskdone['ID'])?>"><?php echo htmlentities($taskdone['Name']) ?></label>
             <input type="text">
             <button class="edit" onclick="editTask(this)">
                 <span class="lnr lnr-pencil"></span>

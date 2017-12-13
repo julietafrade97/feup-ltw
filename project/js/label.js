@@ -17,16 +17,14 @@ function addLabel() {
   let isUserValue = null;
 
   if (document.getElementById("project_container") !== null) {
-    isUserValue = false;
-  } else if (
-    document.getElementById("list_grid") !== null &&
-    document.getElementById("project_grid") === null
-  ) {
-    isUserValue = true;
+    isUserValue = 'false';
+  } else if ( (document.getElementById("list_grid") !== null) && (document.getElementById("project_grid") === null) ) {
+      isUserValue = 'true';
   }
   let foreign = -1;
   window.$_GET = new URLSearchParams(location.search);
   if($_GET.get("project_id") != null) foreign = $_GET.get("project_id");
+
 
   let request = new XMLHttpRequest();
   request.addEventListener("load", finishAddLabel);

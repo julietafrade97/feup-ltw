@@ -13,7 +13,7 @@ if (passwordagain)
     false
   );
 
-let register = document.querySelector("register_form");
+let register = document.querySelector("form.register_form");
 if (register){
   register.addEventListener("submit", validateRegister, false);
 }

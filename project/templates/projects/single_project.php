@@ -2,7 +2,7 @@
     <div id="bio">
         <div class="header">
             <h1>
-                <?php echo $projectBio['Name']?>
+                <?php echo htmlentities($projectBio['Name'])?>
             </h1>
             <input type="text">
             <button class="edit">
@@ -13,14 +13,14 @@
             </button>
         </div>
         <p>
-            <?php echo $projectBio['Description'] ?>
+            <?php echo htmlentities($projectBio['Description'])?>
         </p>
         <textarea></textarea>
     </div>
     <div id="members">
         <div class="header">
             <h1>Members</h1>
-            <button onclick="openDialog('Add Member', <?php echo $projectID ?>)">
+            <button onclick="openDialog('Add Member', <?php echo htmlentities($projectID) ?>)">
                 <span class="lnr lnr-users"></span>
             </button>
         </div>
@@ -31,7 +31,7 @@
         <?php }?>
 
         </div>
-        <button class="button_text" onclick="openDialog('All Members', <?php echo $projectID ?>)">See All</button>
+        <button class="button_text" onclick="openDialog('All Members', <?php echo htmlentities($projectID) ?>)">See All</button>
     </div>
     <div id="lists">
         <h1>Lists</h1>
@@ -39,20 +39,20 @@
             <div id="grid_container">
 
             <?php for($i=0; $i<count($lists); $i++) { ?>
-                <div  class="list_box <?php echo "color".substr($lists[$i]['Color'],1)?>">
+                <div  class="list_box <?php echo "color".htmlentities(substr($lists[$i]['Color'],1))?>">
                     <div id="list_box_header">
-                        <h1><?php echo $lists[$i]['Name']?></h1>
-                        <button onclick="plus_button(0, <?php echo $lists[$i]['ID'] ?>)">
-                            <i class="fa fa-bookmark" aria-hidden="true" style="color: <?php echo $lists[$i]['Color']?>"></i>
+                        <h1><?php echo htmlentities($lists[$i]['Name'])?></h1>
+                        <button onclick="plus_button(0, <?php echo htmlentities($lists[$i]['ID']) ?>)">
+                            <i class="fa fa-bookmark" aria-hidden="true" style="color: <?php echo htmlentities($lists[$i]['Color'])?>"></i>
                         </button>
                     </div>
                     <div class="checkboxAndLabel">
                         <?php for($j=0; $j<count($tasks[$i]); $j++) {?>
-                            <input type="checkbox" id=<?php echo $tasks[$i][$j]['ID']?>>
-                            <label class="<?php if($tasks[$i][$j]['Priority'] == 1) echo 'priorityMode' ?>" for= <?php echo $tasks[$i][$j]['ID']?>> <?php echo $tasks[$i][$j]['Name']?> </label>
+                            <input type="checkbox" id="<?php echo htmlentities($tasks[$i][$j]['ID'])?>">
+                            <label class="<?php if($tasks[$i][$j]['Priority'] == 1) echo 'priorityMode' ?>" for="<?php echo htmlentities($tasks[$i][$j]['ID'])?>"><?php echo htmlentities($tasks[$i][$j]['Name'])?> </label>
                         <?php } ?>
                     </div>
-                    <button id="more" onclick="openDialog('List', <?php echo $lists[$i]['ID'] ?>)">
+                    <button id="more" onclick="openDialog('List', <?php echo htmlentities($lists[$i]['ID']) ?>)">
                         See More
                     </button>
                 </div>
