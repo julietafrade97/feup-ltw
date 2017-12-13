@@ -27,8 +27,7 @@
                     </button>
                     <?php } ?>
                 </div>
-                <?php } ?>
-                <?php } ?>
+                <?php } }?>
             </section>
 
             <button class="managelabel" onclick="resetSearchLabel()">Reset</button>

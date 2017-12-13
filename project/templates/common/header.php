@@ -47,12 +47,15 @@
                             <div onclick="searchLabel('<?php echo "color".htmlentities(substr($category['Color'],1))?>')" class="label_option">
                             <div class="circle" style="background: <?php echo htmlentities($category['Color']) ?>"></div>
                             <p><?php echo $category['Name'] ?></p>
+
+                            <?php if ($category['Name'] != 'Default') { ?>
                             <button onclick="openDialog('Delete Label', <?php echo htmlentities($category['ID']) ?>)">
                                 <span class="lnr lnr-cross"></span>
                             </button>
+                            <?php } ?>
+                            
                             </div>
-                            <?php } ?>
-                            <?php } ?>
+                            <?php } }?>
                         </section>
 
                         <button class="managelabel" onclick="resetSearchLabel()">Reset</button>

@@ -25,10 +25,11 @@
             </button>
         </div>
         <div id="member_list">
-            <img class="member" src="../assets/portrait.png" alt="Project Member">
-            <img class="member" src="../assets/portrait.png" alt="Project Member">
-            <img class="member" src="../assets/portrait.png" alt="Project Member">
-            <img class="member" src="../assets/portrait.png" alt="Project Member">
+
+        <?php $i = 0; foreach($members as $member) { if (++$i == 5) break; ?>
+            <img class="member" src="<?php echo  '../profilePictures/'. $member['Photo'] ?>" alt="<?php echo $member['Name']?>">
+        <?php }?>
+
         </div>
         <button class="button_text" onclick="openDialog('All Members', <?php echo $projectID ?>)">See All</button>
     </div>

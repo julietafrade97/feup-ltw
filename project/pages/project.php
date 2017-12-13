@@ -11,6 +11,7 @@ $categories = null;
 if(!is_numeric($projectID))
     header('Location:notfound.php');    
 
+$members = getProjectUsers($projectID);
 $categories = getProjectCategories($projectID);
 $lists = getProjectLists($projectID, 'FALSE');
 $tasks = null;
