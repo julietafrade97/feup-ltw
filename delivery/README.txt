@@ -4,5 +4,5 @@ Julieta Pintado Jorge Frade
 Luís Noites Martins
 
 Credentials Needed to Access the Website
-Username: Julietafrade_1
+Username: julietafrade
 Passoword: Pass*word1
