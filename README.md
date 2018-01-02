@@ -14,6 +14,8 @@ Create a web application where users can store and share to-do lists. Requiremen
 - Use PHP to generate those web pages after retrieving/changing data from the database.
 - Use Javascript to enhance the user experience (for example using Ajax).
 
+The Sketch App was used to develop Meraki's design, you can check it out on [my behance](https://www.behance.net/gallery/59839535/Meraki-Website). Oh, and there's a [youtube video](https://youtu.be/wCbD5VHyycw).
+
 ### Screenshots
 
 <img src="https://github.com/literallysofia/feup-ltw/blob/master/images/image1.jpg" width="800"><br><br>
